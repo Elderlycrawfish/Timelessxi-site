@@ -13,29 +13,72 @@
 body{margin:0;background:#0A0B12}
 a{color:#D6E1F0}a:hover{color:#ffffff}
 </style>
-<style>:root{--s:1.6} html{scroll-behavior:smooth}</style>
+<style>:root{--s:1.6} html{scroll-behavior:smooth}
+.tx-menu{display:none}
+.tx-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #283040;border-radius:8px;color:#E6ECF5;font:500 14px/1 Inter,system-ui,sans-serif;min-height:44px;box-sizing:border-box}
+.tx-menu summary::-webkit-details-marker{display:none}
+.tx-menu .tx-ic-close{display:none}
+.tx-menu[open] .tx-ic-close{display:block}
+.tx-menu[open] .tx-ic-open{display:none}
+.tx-menu-panel{position:absolute;left:0;right:0;top:100%;background:#0c0d16;border-top:1px solid #1a1f2c;border-bottom:1px solid #283040;padding:6px 24px 22px;display:flex;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.tx-menu-panel>a{display:block;padding:14px 0;border-bottom:1px solid #1a1f2c;font:400 17px/1.2 Inter,system-ui,sans-serif;text-decoration:none}
+.tx-menu-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.tx-menu-actions a{flex:1 1 140px;text-align:center;padding:13px 16px;border-radius:6px;text-decoration:none;font:600 15px/1 Inter,system-ui,sans-serif}
+.tx-menu-primary{background:#8FB2E6;color:#0A0B12}
+.tx-menu-secondary{border:1px solid #3a4558;color:#E6ECF5}
+@media (max-width: 900px){
+ .tx-links,.tx-cta{display:none !important}
+ .tx-menu{display:block}
+}
+@media (max-width: 640px){
+ section[style*="padding: 112px 24px"]{padding-top:64px !important}
+ section[style*="padding: 96px 24px"]{padding-top:56px !important;padding-bottom:56px !important}
+ section[style*="padding: 88px 24px"]{padding-top:56px !important;padding-bottom:48px !important}
+ main[style*="padding: 72px 24px 96px"]{padding-top:48px !important;gap:64px !important}
+ .tx-table{min-width:0 !important}
+ .tx-table thead{display:none}
+ .tx-table tr{display:block;padding:14px 18px;border-bottom:1px solid #1e2533}
+ .tx-table tr:last-child{border-bottom:0}
+ .tx-table th,.tx-table td{display:flex !important;gap:12px;padding:3px 0 !important;border:0 !important;white-space:normal !important;text-align:left}
+ .tx-table tbody th{font-size:17px;padding-bottom:6px !important}
+ .tx-table td::before{content:attr(data-label);flex:0 0 84px;color:#98A3B8;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding-top:3px}
+}
+</style>
 </head>
 <body>
 <div style="background: #0A0B12; color: #E6ECF5; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.65; min-height: 100vh">
 
-<header style="background: #0c0d16">
-<nav aria-label="Main" style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<header style="background: #0c0d16; position: relative; z-index: 30">
+<nav aria-label="Main" style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px 32px">
 <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #E6ECF5">
 <svg width="22" height="30" viewBox="0 0 22 30" aria-hidden="true" fill="none" stroke="#D6E1F0" stroke-width="1.2"><path d="M2 1.5h18M3.5 3.5h15M2 28.5h18M3.5 26.5h15"/><path d="M5 3.5C5 10 10.2 12.5 10.6 15C10.2 17.5 5 20 5 26.5M17 3.5C17 10 11.8 12.5 11.4 15C11.8 17.5 17 20 17 26.5"/><path d="M11 9.5l1.2 1.6-1.2 1.6-1.2-1.6z" fill="#8FB2E6" stroke="none"/></svg>
 <span style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 22px; letter-spacing: 0.18em">TIMELESS XI</span>
 </a>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 26px; font-size: 14px; letter-spacing: 0.02em">
+<div class="tx-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 26px; font-size: 14px; letter-spacing: 0.02em">
 <a href="index.html" style="color: #98A3B8; text-decoration: none; padding: 10px 0">Home</a>
 <a href="index.html#about" style="color: #98A3B8; text-decoration: none; padding: 10px 0">About</a>
 <a href="index.html#features" style="color: #98A3B8; text-decoration: none; padding: 10px 0">Features</a>
 <a href="index.html#jobs" style="color: #98A3B8; text-decoration: none; padding: 10px 0">Jobs</a>
 <a href="getting-started.html" style="color: #98A3B8; text-decoration: none; padding: 10px 0">Getting Started</a>
-<a href="new-player-guide.html" style="color: #E6ECF5; text-decoration: none; padding: 10px 0" aria-current="page">New Player Guide</a>
+<a href="new-player-guide.html" aria-current="page" style="color: #E6ECF5; text-decoration: none; padding: 10px 0">New Player Guide</a>
 <a href="news.html" style="color: #98A3B8; text-decoration: none; padding: 10px 0">News</a>
 </div>
-<div style="display: flex; align-items: center; gap: 12px">
+<div class="tx-cta" style="display: flex; align-items: center; gap: 12px">
 <a href="getting-started.html" style="background: #8FB2E6; color: #0A0B12; text-decoration: none; font-size: 14px; font-weight: 600; padding: 10px 18px; border-radius: 6px">Play now</a>
 </div>
+<details class="tx-menu">
+<summary aria-label="Menu"><svg class="tx-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="tx-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
+<div class="tx-menu-panel">
+<a href="index.html" style="color: #C9D3E2">Home</a>
+<a href="index.html#about" style="color: #C9D3E2">About</a>
+<a href="index.html#features" style="color: #C9D3E2">Features</a>
+<a href="index.html#jobs" style="color: #C9D3E2">Jobs</a>
+<a href="getting-started.html" style="color: #C9D3E2">Getting Started</a>
+<a href="new-player-guide.html" aria-current="page" style="color: #E6ECF5">New Player Guide</a>
+<a href="news.html" style="color: #C9D3E2">News</a>
+<div class="tx-menu-actions"><a class="tx-menu-primary" href="getting-started.html">Play now</a><a class="tx-menu-secondary" href="https://discord.gg/NUnJErbmh">Join the Discord</a></div>
+</div>
+</details>
 </nav>
 </header>
 
@@ -124,7 +167,7 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 <p style="margin: 0; color: #98A3B8; max-width: 760px">About 1 ordinary monster in 200 turns out to be a Champion: tougher, with special traits, and worth bonus experience, gil, crafting materials and trophies. It's decided the first time someone fights it, and only for monsters worth experience to you.</p>
 
 <div style="overflow-x: auto; border: 1px solid #283040; border-radius: 12px">
-<table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px">
+<table class="tx-table" style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px">
 <caption style="text-align: left; padding: 18px 22px 6px; font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #E6ECF5">Champion ranks</caption>
 <thead><tr style="color: #98A3B8; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-align: left">
 <th scope="col" style="padding: 12px 22px; font-weight: 500; border-bottom: 1px solid #283040">Rank</th>
@@ -134,9 +177,9 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 <th scope="col" style="padding: 12px 22px; font-weight: 500; border-bottom: 1px solid #283040">Rewards</th>
 </tr></thead>
 <tbody>
-<tr><th scope="row" style="padding: 14px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Champion</th><td style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Most of them</td><td style="padding: 14px 16px; border-bottom: 1px solid #1e2533">×2</td><td style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">1 (sometimes 2 from level 50)</td><td style="padding: 14px 22px; color: #98A3B8; border-bottom: 1px solid #1e2533">Normal</td></tr>
-<tr><th scope="row" style="padding: 14px 22px; text-align: left; font-weight: 500; color: #D6E1F0; border-bottom: 1px solid #1e2533">Elite</th><td style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">15%, level 20+</td><td style="padding: 14px 16px; border-bottom: 1px solid #1e2533">×3</td><td style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">2</td><td style="padding: 14px 22px; color: #98A3B8; border-bottom: 1px solid #1e2533">×2; the whole zone is told</td></tr>
-<tr><th scope="row" style="padding: 14px 22px; text-align: left; font-weight: 500; color: #8FB2E6">Legendary</th><td style="padding: 14px 16px; color: #98A3B8">3%, level 40+</td><td style="padding: 14px 16px">×4</td><td style="padding: 14px 16px; color: #98A3B8">3</td><td style="padding: 14px 22px; color: #98A3B8">×5, often rare furniture; the linkshell is told</td></tr>
+<tr><th scope="row" style="padding: 14px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Champion</th><td data-label="How often" style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Most of them</td><td data-label="HP" style="padding: 14px 16px; border-bottom: 1px solid #1e2533">×2</td><td data-label="Traits" style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">1 (sometimes 2 from level 50)</td><td data-label="Rewards" style="padding: 14px 22px; color: #98A3B8; border-bottom: 1px solid #1e2533">Normal</td></tr>
+<tr><th scope="row" style="padding: 14px 22px; text-align: left; font-weight: 500; color: #D6E1F0; border-bottom: 1px solid #1e2533">Elite</th><td data-label="How often" style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">15%, level 20+</td><td data-label="HP" style="padding: 14px 16px; border-bottom: 1px solid #1e2533">×3</td><td data-label="Traits" style="padding: 14px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">2</td><td data-label="Rewards" style="padding: 14px 22px; color: #98A3B8; border-bottom: 1px solid #1e2533">×2; the whole zone is told</td></tr>
+<tr><th scope="row" style="padding: 14px 22px; text-align: left; font-weight: 500; color: #8FB2E6">Legendary</th><td data-label="How often" style="padding: 14px 16px; color: #98A3B8">3%, level 40+</td><td data-label="HP" style="padding: 14px 16px">×4</td><td data-label="Traits" style="padding: 14px 16px; color: #98A3B8">3</td><td data-label="Rewards" style="padding: 14px 22px; color: #98A3B8">×5, often rare furniture; the linkshell is told</td></tr>
 </tbody>
 </table>
 </div>
@@ -180,7 +223,7 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 26px">Furniture bonuses: the Hearth</h3>
 <p style="margin: 0; color: #98A3B8; font-size: 15px">Each piece adds points to its element, and pieces crafters can make count double. At 12, 30 and 60 points an element reaches tiers 1, 2 and 3.</p>
 <div style="overflow-x: auto; border: 1px solid #283040; border-radius: 10px">
-<table style="width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px">
+<table class="tx-table" style="width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px">
 <thead><tr style="color: #98A3B8; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-align: left">
 <th scope="col" style="padding: 12px 18px; font-weight: 500; border-bottom: 1px solid #283040">Element</th>
 <th scope="col" style="padding: 12px 18px; font-weight: 500; border-bottom: 1px solid #283040">What it improves</th>
@@ -188,21 +231,21 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 </tr></thead>
 <tbody>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Fire</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Rested synths banked per hour</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+1 / +2 / +3</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Fire</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Rested synths banked per hour</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+1 / +2 / +3</td></tr>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Ice</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Companion errands finish sooner</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">10% / 20% / 30%</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Ice</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Companion errands finish sooner</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">10% / 20% / 30%</td></tr>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Wind</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Digging experience</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+10% / +20% / +30%</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Wind</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Digging experience</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+10% / +20% / +30%</td></tr>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Earth</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Gathering experience</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+10% / +20% / +30%</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Earth</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Gathering experience</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+10% / +20% / +30%</td></tr>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Lightning</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Flash of Insight chance</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+1 / +2 / +3 points</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Lightning</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Flash of Insight chance</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+1 / +2 / +3 points</td></tr>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Water</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">High-quality synth rate</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+5 / +10 / +15</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Water</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">High-quality synth rate</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+5 / +10 / +15</td></tr>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Light</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Extra bond with companions</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">25% / 50% / 75% chance</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Light</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Extra bond with companions</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">25% / 50% / 75% chance</td></tr>
 
-<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Dark</th><td style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Champion chance</td><td style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+20% / +40% / +60%</td></tr>
+<tr><th scope="row" style="padding: 12px 18px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533">Dark</th><td data-label="What it improves" style="padding: 12px 18px; color: #98A3B8; border-bottom: 1px solid #1e2533">Champion chance</td><td data-label="Tier 1 / 2 / 3" style="padding: 12px 18px; border-bottom: 1px solid #1e2533; white-space: nowrap">+20% / +40% / +60%</td></tr>
 
 </tbody>
 </table>
@@ -234,7 +277,7 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 44px; line-height: 1.15">Job quests and special rewards</h2>
 <p style="margin: 0; color: #98A3B8; max-width: 760px">Every job has its own quest line with a weapon you can't get anywhere else. Most need level 60+ with that job as your main job. The rewards are Rare/Ex (one per character), and each quest tests what the job is good at, so expect a duel or a fight with a rule attached.</p>
 <div style="overflow-x: auto; border: 1px solid #283040; border-radius: 12px">
-<table style="width: 100%; min-width: 720px; border-collapse: collapse; font-size: 15px">
+<table class="tx-table" style="width: 100%; min-width: 720px; border-collapse: collapse; font-size: 15px">
 <thead><tr style="color: #98A3B8; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-align: left">
 <th scope="col" style="padding: 12px 22px; font-weight: 500; border-bottom: 1px solid #283040">Job</th>
 <th scope="col" style="padding: 12px 16px; font-weight: 500; border-bottom: 1px solid #283040">Quest</th>
@@ -243,43 +286,43 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 </tr></thead>
 <tbody>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Warrior</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Test of Arms</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Dulmagh, Bastok Markets</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Unbroken (great axe)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Warrior</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Test of Arms</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Dulmagh, Bastok Markets</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Unbroken (great axe)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Monk</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Way of the Fist</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Hojin, the old master</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Iron Lotus (hand-to-hand)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Monk</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Way of the Fist</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Hojin, the old master</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Iron Lotus (hand-to-hand)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">White Mage</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Healer&#x27;s Pilgrimage</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Sister Odeline, Northern San d’Oria Cathedral</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Pilgrim&#x27;s Mercy (club)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">White Mage</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Healer&#x27;s Pilgrimage</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Sister Odeline, Northern San d’Oria Cathedral</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Pilgrim&#x27;s Mercy (club)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Black Mage</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Forbidden Tome</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Sukuku-Ruku, Windurst Walls</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Unwritten Flame (staff)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Black Mage</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Forbidden Tome</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Sukuku-Ruku, Windurst Walls</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Unwritten Flame (staff)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Red Mage</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Crimson Duelist</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Dame Ysabeau, Upper Jeuno</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Crimson Duelist (sword)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Red Mage</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Crimson Duelist</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Dame Ysabeau, Upper Jeuno</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Crimson Duelist (sword)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Thief</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Calling Card</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Kagetsu, Tenshodo in Lower Jeuno</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Calling Card (dagger)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Thief</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Calling Card</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Kagetsu, Tenshodo in Lower Jeuno</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Calling Card (dagger)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Paladin</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">Oath of the Two-Handed Blade (50+)</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Galardeaux, Chateau d&#x27;Oraguille</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Oathsworn Blade (great sword)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Paladin</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">Oath of the Two-Handed Blade (50+)</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Galardeaux, Chateau d&#x27;Oraguille</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Oathsworn Blade (great sword)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Dark Knight</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">Nightfall (50+)</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Morgrimm, Bastok Mines</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Abyssal Vigil (great sword)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Dark Knight</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">Nightfall (50+)</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Morgrimm, Bastok Mines</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Abyssal Vigil (great sword)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Dark Knight</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Reaper&#x27;s Due (50+)</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Hesketh, Port Bastok</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Reaper&#x27;s Due (scythe)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Dark Knight</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Reaper&#x27;s Due (50+)</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Hesketh, Port Bastok</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Reaper&#x27;s Due (scythe)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Beastmaster</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Tamer&#x27;s Oath</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Varrik, Upper Jeuno stables</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Pridewarden (axe)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Beastmaster</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Tamer&#x27;s Oath</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Varrik, Upper Jeuno stables</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Pridewarden (axe)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Bard</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Rival&#x27;s Song</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Maestro Corvin, Lower Jeuno</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Corvin&#x27;s Flute; then Final Encore (dagger) from The Last Performance</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Bard</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Rival&#x27;s Song</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Maestro Corvin, Lower Jeuno</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Corvin&#x27;s Flute; then Final Encore (dagger) from The Last Performance</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Ranger</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Great Hunt (a hunt, not a quest)</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Silverstripe, Wajaom Woodlands</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Great Hunt (bow), likelier the better you hunt her</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Ranger</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Great Hunt (a hunt, not a quest)</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Silverstripe, Wajaom Woodlands</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Great Hunt (bow), likelier the better you hunt her</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Samurai</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Way of the Blade</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Tsukikage, Norg</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Mushin-maru (great katana)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Samurai</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Way of the Blade</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Tsukikage, Norg</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Mushin-maru (great katana)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Ninja</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Hidden Village</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Kasumi, Norg</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Yamikaze and Kirigakure (katanas)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Ninja</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Hidden Village</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Kasumi, Norg</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Yamikaze and Kirigakure (katanas)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Dragoon</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Last Dragoon</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Ambroix, Northern San d&#x27;Oria</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Last Dragoon (polearm)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Dragoon</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Last Dragoon</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Ambroix, Northern San d&#x27;Oria</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Last Dragoon (polearm)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Summoner</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Ruby Covenant</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Mayuyu-Rayuyu, Windurst Walls</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Ruby Covenant (staff)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Summoner</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Ruby Covenant</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Mayuyu-Rayuyu, Windurst Walls</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Ruby Covenant (staff)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Blue Mage</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Azure Oath</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Fadhil, Aht Urhgan Whitegate</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Azure Oath (sword)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Blue Mage</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Azure Oath</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Fadhil, Aht Urhgan Whitegate</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Azure Oath (sword)</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Corsair</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">Luzaf&#x27;s Wager</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Rahim, Nashmau docks</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Luzaf&#x27;s Wager (gun) and Luzaf&#x27;s Loaded Dice</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Corsair</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">Luzaf&#x27;s Wager</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Rahim, Nashmau docks</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Luzaf&#x27;s Wager (gun) and Luzaf&#x27;s Loaded Dice</td></tr>
 
-<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Puppetmaster</th><td style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Masterwork</td><td style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Lahid, Aht Urhgan Whitegate</td><td style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Stringmaster (claws)</td></tr>
+<tr><th scope="row" style="padding: 12px 22px; text-align: left; font-weight: 500; border-bottom: 1px solid #1e2533; white-space: nowrap">Puppetmaster</th><td data-label="Quest" style="padding: 12px 16px; border-bottom: 1px solid #1e2533">The Masterwork</td><td data-label="Where it starts" style="padding: 12px 16px; color: #98A3B8; border-bottom: 1px solid #1e2533">Lahid, Aht Urhgan Whitegate</td><td data-label="Reward" style="padding: 12px 22px; color: #8FB2E6; border-bottom: 1px solid #1e2533">Stringmaster (claws)</td></tr>
 
 </tbody>
 </table>
@@ -462,5 +505,6 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 </div>
 
 
+<script>document.querySelectorAll('.tx-menu-panel a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.removeAttribute('open');});});</script>
 </body>
 </html>
