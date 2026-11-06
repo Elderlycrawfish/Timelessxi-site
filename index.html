@@ -12,6 +12,11 @@
 <style>
 body{margin:0;background:#0A0B12}
 a{color:#D6E1F0}a:hover{color:#ffffff}
+@keyframes txPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(143,178,230,0.55)}50%{opacity:0.55;box-shadow:0 0 0 6px rgba(143,178,230,0)}}
+.tx-pulse{animation:txPulse 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.tx-pulse{animation:none}}
+.tx-soon-inline{display:none}
+@media (max-width: 640px){.tx-soon-hero{display:none !important}.tx-soon-inline{display:inline-flex}}
 </style>
 <style>:root{--s:1.6} html{scroll-behavior:smooth}</style>
 </head>
@@ -111,10 +116,18 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 </svg>
 </div>
 </div>
+<a class="tx-soon-hero" href="https://discord.gg/NUnJErbmh" aria-label="Coming soon: the server hasn't launched yet. Join the Discord for the opening date." style="position: absolute; z-index: 2; top: clamp(12px, 2.2vw, 32px); right: clamp(12px, 3vw, 48px); display: flex; align-items: center; gap: clamp(8px, 1vw, 14px); padding: clamp(8px, 0.9vw, 14px) clamp(12px, 1.4vw, 22px); border: 1px solid rgba(143,178,230,0.45); border-radius: 999px; background: rgba(12,13,22,0.62); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); text-decoration: none; color: #E6ECF5; box-shadow: 0 0 24px rgba(61,95,148,0.35)">
+<span aria-hidden="true" class="tx-pulse" style="flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: #8FB2E6"></span>
+<span style="display: flex; flex-direction: column; line-height: 1.15">
+<span style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(15px, 1.5vw, 22px); letter-spacing: 0.22em">COMING SOON</span>
+<span style="font-size: clamp(10px, 0.8vw, 12px); letter-spacing: 0.08em; color: #98A3B8">Opening date in the Discord</span>
+</span>
+</a>
 </section>
 
 <section style="position: relative; z-index: 1; margin-top: calc(-108px * var(--s)); padding: 0 24px 72px">
 <div style="max-width: 800px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px">
+<a class="tx-soon-inline" href="https://discord.gg/NUnJErbmh" style="align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid rgba(143,178,230,0.45); border-radius: 999px; background: rgba(12,13,22,0.62); text-decoration: none; color: #E6ECF5; margin-bottom: 4px"><span aria-hidden="true" class="tx-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #8FB2E6"></span><span style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.22em">COMING SOON</span></a>
 <p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.26em; color: #8FB2E6">A LEVEL 75 FINAL FANTASY XI PRIVATE SERVER</p>
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(36px, 5vw, 58px); line-height: 1.1; color: #F1F3F7">The classic you love, carefully reforged.</h1>
 <p style="margin: 0; max-width: 680px; color: #98A3B8; font-size: 17px">Vana'diel as you remember it, from Rise of the Zilart through Treasures of Aht Urhgan. Every job has been reworked, AI companions fill out your party, and there's always something worth doing: Champion monsters and bounties, faster crafting and gathering, a crafters' guild with its own currency, and a Mog House that pays you back for coming home.</p>
