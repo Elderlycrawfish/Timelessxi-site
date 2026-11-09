@@ -1,16 +1,16 @@
 {
- "version": "2026.11.09",
- "published": "2026-11-09T15:20:25Z",
- "notes": "Same Timeless patches; adds the data the launcher needs to repair files changed by the old installers.",
+ "version": "2026.11.09b",
+ "published": "2026-11-09T15:42:33Z",
+ "notes": "New Timeless linkpearl icon: flatter pearl with a lighter border, less glare, slimmer hourglass.",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.09/timeless_patches.json",
-  "sha1": "50d2e28c9e9ea240e7cb73fbd1b5471e6e74e771",
-  "size": 805181
+  "url": "https://timelessxi.gg/patches/2026.11.09b/timeless_patches.json",
+  "sha1": "1982258b9da543d72ac96ce8b1fc33661d3815fe",
+  "size": 805182
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.09/timeless_patches.bin",
-  "sha1": "109e1d993ebc81bd8792943bd6340f3038c4adce",
-  "size": 1190029
+  "url": "https://timelessxi.gg/patches/2026.11.09b/timeless_patches.bin",
+  "sha1": "26ea9a9462d2df52c2157c614171acd89882f682",
+  "size": 1190033
  },
  "launcher": {
   "version": "1.12.0",
