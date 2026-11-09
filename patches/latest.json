@@ -1,0 +1,15 @@
+{
+ "version": "2026.11.08b",
+ "published": "2026-11-09T14:45:30Z",
+ "notes": "New Timeless linkshell icon (v7).",
+ "json": {
+  "url": "https://timelessxi.gg/patches/2026.11.08b/timeless_patches.json",
+  "sha1": "cc07c81000818b4267da5b457e4c60ad8e75dbcb",
+  "size": 804356
+ },
+ "bin": {
+  "url": "https://timelessxi.gg/patches/2026.11.08b/timeless_patches.bin",
+  "sha1": "109e1d993ebc81bd8792943bd6340f3038c4adce",
+  "size": 1190029
+ }
+}
