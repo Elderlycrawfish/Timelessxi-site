@@ -1,15 +1,21 @@
 {
- "version": "2026.11.08b",
- "published": "2026-11-09T14:45:30Z",
- "notes": "New Timeless linkshell icon (v7).",
+ "version": "2026.11.09",
+ "published": "2026-11-09T15:20:25Z",
+ "notes": "Same Timeless patches; adds the data the launcher needs to repair files changed by the old installers.",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.08b/timeless_patches.json",
-  "sha1": "cc07c81000818b4267da5b457e4c60ad8e75dbcb",
-  "size": 804356
+  "url": "https://timelessxi.gg/patches/2026.11.09/timeless_patches.json",
+  "sha1": "50d2e28c9e9ea240e7cb73fbd1b5471e6e74e771",
+  "size": 805181
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.08b/timeless_patches.bin",
+  "url": "https://timelessxi.gg/patches/2026.11.09/timeless_patches.bin",
   "sha1": "109e1d993ebc81bd8792943bd6340f3038c4adce",
   "size": 1190029
+ },
+ "launcher": {
+  "version": "1.12.0",
+  "url": "https://timelessxi.gg/downloads/TimelessXI-Setup-1.12.0.zip",
+  "sha1": "fb411057fe153f2a29216bde5d84f02bdb938121",
+  "size": 18531395
  }
 }
