@@ -1,6 +1,6 @@
 {
  "version": "2026.11.09b",
- "published": "2026-11-09T15:42:33Z",
+ "published": "2026-11-09T16:12:10Z",
  "notes": "New Timeless linkpearl icon: flatter pearl with a lighter border, less glare, slimmer hourglass.",
  "json": {
   "url": "https://timelessxi.gg/patches/2026.11.09b/timeless_patches.json",
@@ -13,9 +13,15 @@
   "size": 1190033
  },
  "launcher": {
-  "version": "1.12.0",
-  "url": "https://timelessxi.gg/downloads/TimelessXI-Setup-1.12.0.zip",
-  "sha1": "fb411057fe153f2a29216bde5d84f02bdb938121",
-  "size": 18531395
+  "version": "1.13.0",
+  "url": "https://timelessxi.gg/downloads/TimelessXI-Setup-1.13.0.zip",
+  "sha1": "cf18832b5a6398d7158707d9ce877f95174d617d",
+  "size": 18533953
+ },
+ "setup": {
+  "version": "1.13.0",
+  "url": "https://timelessxi.gg/downloads/TimelessXI-Setup.exe",
+  "sha1": "a9a3eb5f670e5a82dec29e62f98a848311b92a26",
+  "size": 18939392
  }
 }
