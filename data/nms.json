@@ -986,8 +986,8 @@
 ],
 "respawn": 7200,
 "drop": {
-"item": "Quus",
-"itemId": 5793,
+"item": "Valor Minuet IV (Scroll)",
+"itemId": 5005,
 "rate": 1.0,
 "th2": 2.0
 }
