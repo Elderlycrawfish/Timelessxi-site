@@ -55,7 +55,7 @@ code,.cmd{font-family:var(--mono);color:var(--accent);font-size:.92em}
 .tx-menu-label{padding:16px 0 4px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 .tx-menu-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
 .tx-menu-actions a{flex:1 1 140px}
-@media (max-width:1060px){.tx-links,.tx-cta{display:none !important}.tx-menu{display:block}}
+@media (max-width:1180px){.tx-links,.tx-cta{display:none !important}.tx-menu{display:block}}
 
 /* coming soon */
 .tx-pulse{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--accent);animation:txPulse 2.4s ease-in-out infinite}
