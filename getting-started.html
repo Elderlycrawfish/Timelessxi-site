@@ -11,7 +11,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
 <link rel="stylesheet" href="site.css">
-
+<style>
+.gs-wrap{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start}
+.gs-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.gs-step{display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 26px}
+.npg-n{flex:0 0 40px;height:40px;border-radius:50%;border:1px solid var(--line3);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;color:var(--accent)}
+.gs-body{display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-width:0}
+.gs-body p{margin:0;color:var(--muted);line-height:1.6}
+.gs-body .h3{margin:4px 0 0}
+.gs-note{font-size:13.5px}
+.gs-mini{margin:2px 0 4px}
+.gs-side{display:flex;flex-direction:column;gap:16px;position:sticky;top:96px}
+.gs-side .card p{color:var(--muted)}
+.npg-cmd{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:0 0 6px;font-size:14px}
+.npg-cmd dt{white-space:nowrap}.npg-cmd dd{margin:0;color:var(--muted)}
+.btn-ghost.sm{padding:8px 16px;font-size:14px}
+@media (max-width:980px){.gs-wrap{grid-template-columns:1fr}.gs-side{position:static}}
+@media (max-width:480px){.gs-step{padding:20px 18px;gap:14px}}
+</style>
 </head>
 <body>
 <div class="tx-launch"><a href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span>Timeless XI launches <b>DECEMBER 2026</b></span><span class="go">Follow along in the Discord &rarr;</span></a></div>
@@ -25,103 +42,22 @@
 </details>
 </nav>
 </header>
-
-
-<section style="background: linear-gradient(180deg, #0c0d16 0%, #141826 45%, #1d2836 80%, #0A0B12 100%); padding: 96px 24px 88px">
-<div style="max-width: 820px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #8FB2E6">Getting Started</p>
-<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(40px, 5.5vw, 64px); line-height: 1.08; color: #F1F3F7">Back to Vana'diel in five steps</h1>
-<p style="margin: 0; max-width: 600px; color: #98A3B8; font-size: 17px">You'll need a Windows PC with FINAL FANTASY XI installed. Everything else comes with the Timeless Launcher.</p>
-<div aria-hidden="true" style="display: flex; align-items: center; gap: 12px; margin-top: 6px"><span style="width: 90px; height: 1px; background: #3a4558"></span><span style="width: 6px; height: 6px; transform: rotate(45deg); border: 1px solid #8FB2E6"></span><span style="width: 90px; height: 1px; background: #3a4558"></span></div>
-</div>
-</section>
-
-<section style="padding: 24px 24px 96px">
-<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px">
-
-<ol style="flex: 999 1 640px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px">
-
-<li style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px 30px; display: flex; gap: 24px">
-<span aria-hidden="true" style="flex: 0 0 48px; height: 48px; border: 1px solid #8FB2E6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #D6E1F0">1</span>
-<div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; line-height: 1.2">Join the Discord</h2>
-<p style="margin: 0; color: #98A3B8">Announcements, the launcher download and help all live there, so it\'s the best first stop. The invite opens on the server rules.</p>
-<a href="https://discord.gg/NUnJErbmh" style="align-self: flex-start; margin-top: 6px; background: #8FB2E6; color: #0A0B12; text-decoration: none; font-weight: 600; font-size: 15px; padding: 11px 20px; border-radius: 6px">Join the Discord</a>
-</div>
-</li>
-
-<li style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px 30px; display: flex; gap: 24px">
-<span aria-hidden="true" style="flex: 0 0 48px; height: 48px; border: 1px solid #8FB2E6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #D6E1F0">2</span>
-<div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; line-height: 1.2">Install FINAL FANTASY XI</h2>
-<p style="margin: 0; color: #98A3B8">Install the PC game and let it fully update. Already have it installed? Skip ahead.</p>
-</div>
-</li>
-
-<li style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px 30px; display: flex; gap: 24px">
-<span aria-hidden="true" style="flex: 0 0 48px; height: 48px; border: 1px solid #8FB2E6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #D6E1F0">3</span>
-<div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; line-height: 1.2">Download the Timeless Launcher</h2>
-<p style="margin: 0; color: #98A3B8">The launcher includes Ashita v4 and xiloader, so there's nothing else to set up. Unzip it anywhere you like and open Timeless Launcher.</p>
-<p style="margin: 0; color: #D6E1F0; font-size: 15px">The download link is posted in the Discord's #announcements channel and will appear here soon.</p>
-</div>
-</li>
-
-<li style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px 30px; display: flex; gap: 24px">
-<span aria-hidden="true" style="flex: 0 0 48px; height: 48px; border: 1px solid #8FB2E6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #D6E1F0">4</span>
-<div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; line-height: 1.2">Install the Timeless game files</h2>
-<p style="margin: 0; color: #98A3B8">The new Records of Eminence pages, the hourglass linkshell icon and Timeless items need a few updated game files. Close the game first; Windows will ask for permission once.</p>
-</div>
-</li>
-
-<li style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px 30px; display: flex; gap: 24px">
-<span aria-hidden="true" style="flex: 0 0 48px; height: 48px; border: 1px solid #8FB2E6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #D6E1F0">5</span>
-<div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; line-height: 1.2">Press Play</h2>
-<p style="margin: 0; color: #98A3B8">The first time, choose to create a new account in the login window (creating one means you agree to the <a href="rules.html">server rules</a>); after that, just sign in. Choose your add-ons and graphics, and play. The launcher makes sure your macros and settings save, and backs them up before each session.</p>
-<p style="margin: 0; color: #D6E1F0">Once you're in, say hello in the Timeless linkshell, then step outside the city gates and open <span style="font-family: ui-monospace, Consolas, monospace">/cm</span> to call your companions. The <a href="new-player-guide.html">New Player Guide</a> covers everything else.</p>
-</div>
-</li>
-
-</ol>
-
-<aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<div style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px">Your first commands</h2>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Type these in the chat box once you're in.</p>
-<dl style="margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 16px; font-size: 15px">
-<dt style="font-family: ui-monospace, Consolas, monospace; color: #D6E1F0">/cm</dt><dd style="margin: 0; color: #98A3B8">Companion manager: call and set up your companions</dd>
-<dt style="font-family: ui-monospace, Consolas, monospace; color: #D6E1F0">/craft</dt><dd style="margin: 0; color: #98A3B8">The craftbook: recipes, gathering, Hearth, garden and Champions</dd>
-<dt style="font-family: ui-monospace, Consolas, monospace; color: #D6E1F0">!gather</dt><dd style="margin: 0; color: #98A3B8">Gathering levels, and whether you're near the rich spot</dd>
-<dt style="font-family: ui-monospace, Consolas, monospace; color: #D6E1F0">!guild</dt><dd style="margin: 0; color: #98A3B8">Artisans Guild standing and requests</dd>
-<dt style="font-family: ui-monospace, Consolas, monospace; color: #D6E1F0">!bounty</dt><dd style="margin: 0; color: #98A3B8">Today's bounties</dd>
-<dt style="font-family: ui-monospace, Consolas, monospace; color: #D6E1F0">!chores</dt><dd style="margin: 0; color: #98A3B8">Your moogle's two daily chores</dd>
-<dt style="font-family: ui-monospace, Consolas, monospace; color: #D6E1F0">!shop</dt><dd style="margin: 0; color: #98A3B8">Spend Everglass</dd>
-</dl>
-<a href="new-player-guide.html#commands" style="font-size: 15px; padding: 4px 0">Full command list</a>
-</div>
-<div style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 10px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px">Add-ons on Timeless</h2>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Quality-of-life add-ons are welcome. Ones that give an unfair edge are marked in the launcher and can't be switched on.</p>
-<a href="rules.html#approved-add-ons-only" style="font-size: 15px; padding: 4px 0">See the add-on rules</a>
-</div>
-<div style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 10px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px">Need a hand?</h2>
-<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; color: #98A3B8; font-size: 15px">
-<li><strong style="color: #E6ECF5; font-weight: 500">Macros not saving?</strong> Use Maintenance › Fix saving in the launcher.</li>
-<li><strong style="color: #E6ECF5; font-weight: 500">Wrong resolution?</strong> Set it on the launcher's Graphics tab, not in the game's config tool.</li>
-<li><strong style="color: #E6ECF5; font-weight: 500">Not sure what's allowed?</strong> Read the <a href="rules.html" style="color: #8FB2E6">server rules</a>.</li>
-<li><strong style="color: #E6ECF5; font-weight: 500">Still stuck?</strong> Ask in the Discord's help channel.</li>
-</ul>
-<a href="https://discord.gg/NUnJErbmh" style="align-self: flex-start; margin-top: 6px; border: 1px solid #3a4558; color: #E6ECF5; text-decoration: none; font-weight: 500; font-size: 15px; padding: 10px 18px; border-radius: 6px">Join the Discord</a>
-</div>
-</aside>
-
-</div>
-</section>
-
-
+<section class="phero"><div class="narrow">
+<p class="eyebrow">Getting Started</p>
+<h1 class="h1">Back to Vana'diel in six steps</h1>
+<p class="tagline">From download to your first party.</p>
+<p class="lead" style="max-width:680px">All you need is a Windows PC. The Timeless XI installer sets up the launcher and finds or installs FINAL FANTASY XI for you.</p>
+<a class="soon " href="https://discord.gg/NUnJErbmh"><span><b>COMING SOON</b><small>December 2026</small></span></a>
+<div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+</div></section><section class="sec"><div class="wrap"><div class="gs-wrap"><ol class="gs-steps"><li class="gs-step"><span class="npg-n">1</span><div class="gs-body"><h2 class="h3">Join the Discord</h2><p>Announcements, patch notes and help all live there, so it's the best first stop.</p><a class="btn sm" href="https://discord.gg/NUnJErbmh">Join the Discord</a></div></li><li class="gs-step"><span class="npg-n">2</span><div class="gs-body"><h2 class="h3">Read the server rules</h2><p>Timeless XI is a single-box server with no bots, approved add-ons only and a friendly community. A few minutes now saves trouble later; creating an account means you agree to them.</p><ul class="abl gs-mini"><li><strong>One account per person,</strong> up to three characters.</li><li><strong>No bots or automation.</strong> Your companions are the only help you need.</li><li><strong>Approved add-ons only:</strong> the ones the launcher installs.</li></ul><a class="btn-ghost sm" href="rules.html">Read the rules</a></div></li><li class="gs-step"><span class="npg-n">3</span><div class="gs-body"><h2 class="h3">Run the Timeless XI installer</h2><p>Download <strong>TimelessXI-Setup.exe</strong> and run it. It installs the Timeless XI Launcher and checks for FINAL FANTASY XI. Don't have the game? The installer can download Square Enix's official installer for you (about 7 GB), or you can point it at a copy you already have.</p><a class="btn sm" href="downloads/TimelessXI-Setup.exe">Download the installer</a><p class="gs-note">Windows may show a SmartScreen warning for a new program: choose <em>More info</em>, then <em>Run anyway</em>.</p></div></li><li class="gs-step"><span class="npg-n">4</span><div class="gs-body"><h2 class="h3">Let the game update</h2><p>Installed FINAL FANTASY XI fresh? Open PlayOnline once and let the game finish updating; the installer's last page has a button for it. Already up to date? Skip ahead.</p></div></li><li class="gs-step"><span class="npg-n">5</span><div class="gs-body"><h2 class="h3">Press Update, then Play</h2><p>The launcher's main button reads <strong>Update</strong> whenever something new is ready: Timeless XI game files, a newer launcher, or a setup fix. Click it, allow Windows' prompt once, and it turns into <strong>Play</strong>. The first time, choose to create a new account in the login window; after that, just sign in.</p><p class="gs-note">The launcher also keeps your macros and settings saving properly, and backs them up before each session.</p></div></li><li class="gs-step"><span class="npg-n">6</span><div class="gs-body"><h2 class="h3">Step into Vana'diel</h2><p>Say hello in the Timeless linkshell, then head outside the city gates and type <code>!companion</code> to call a full party. The <a href="new-player-guide.html">New Player Guide</a> walks you from level 1 to 75.</p><a class="btn-ghost sm" href="new-player-guide.html">New Player Guide</a></div></li></ol><aside class="gs-side">
+<div class="card"><h2 class="h3">Your first commands</h2><p>Type these in the chat box once you're in.</p><dl class="npg-cmd"><dt><code>!companion</code></dt><dd>Call a full party of companions</dd><dt><code>/cm</code></dt><dd>Companion manager window</dd><dt><code>/craft</code></dt><dd>The craftbook: recipes, gathering, Hearth, garden</dd><dt><code>!bounty</code></dt><dd>Today&#x27;s bounties</dd><dt><code>!chores</code></dt><dd>Your moogle&#x27;s two daily chores</dd><dt><code>!shop</code></dt><dd>Spend Everglass</dd><dt><code>!journal</code></dt><dd>Your quests and what to do next</dd></dl><a href="new-player-guide.html#commands">Full command list &rarr;</a></div>
+<div class="card"><h2 class="h3">Add-ons on Timeless</h2><p>Quality-of-life add-ons come with the launcher. Ones that give an unfair edge are marked there and can't be switched on.</p><a href="rules.html#approved-add-ons-only">See the add-on rules &rarr;</a></div>
+<div class="card"><h2 class="h3">Need a hand?</h2><ul class="abl">
+<li><strong>Macros not saving?</strong> Use Maintenance &rsaquo; Fix saving in the launcher.</li>
+<li><strong>Wrong resolution?</strong> Set it on the launcher's Graphics tab, not in the game's config tool.</li>
+<li><strong>Not sure what's allowed?</strong> Read the <a href="rules.html">server rules</a>.</li>
+<li><strong>Still stuck?</strong> Ask in the Discord's help channel.</li></ul><a href="https://discord.gg/NUnJErbmh">Join the Discord &rarr;</a></div>
+</aside></div></div></section>
 <footer class="tx-foot"><div class="wrap">
 <div class="cols">
 <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
