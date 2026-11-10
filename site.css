@@ -163,3 +163,30 @@ code,.cmd{font-family:var(--mono);color:var(--accent);font-size:.92em}
 .tx-foot nav a{display:block;color:var(--muted);text-decoration:none;font-size:14px;padding:5px 0}
 .tx-foot nav a:hover{color:#fff}
 .tx-foot .legal{margin:36px 0 0;font-size:13px;color:var(--muted);max-width:860px}
+
+/* item pop-out (NM Tracker, job quest rewards) */
+a.drop{color:var(--text);text-decoration:none;border-bottom:1px dotted #5a6a85;cursor:help}
+a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);outline:none}
+.icard{position:fixed;z-index:60;width:300px;max-width:calc(100vw - 24px);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s;
+ background:linear-gradient(180deg,rgba(38,52,92,.97),rgba(20,28,56,.97));border:1px solid #8193bd;border-radius:7px;box-shadow:0 0 0 1px rgba(10,12,24,.9),0 14px 34px rgba(0,0,0,.55);
+ padding:12px 14px 11px;font:400 13.5px/1.5 var(--sans);color:#f2f4fa}
+.icard.on{opacity:1;transform:none;pointer-events:auto}
+.icard .ih{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.icard .in{font-weight:600;font-size:15px;color:#fff;letter-spacing:.01em}
+.icard .tags{display:flex;gap:4px;flex:0 0 auto;padding-top:2px}
+.icard .tags span{font-size:10.5px;font-weight:600;letter-spacing:.06em;padding:1px 6px;border-radius:3px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#e9edf7}
+.icard .tags .rare{color:#f3dc8a;border-color:rgba(243,220,138,.45)}
+.icard .tags .ex{color:#9fd3ff;border-color:rgba(159,211,255,.45)}
+.icard .ik{color:#c9d3ea;margin-top:2px}
+.icard .is{margin-top:6px;color:#fff;white-space:pre-line}
+.icard .ih{align-items:center}.icard .iic{flex:0 0 32px;image-rendering:auto;margin-right:2px}.icard .in{flex:1 1 auto}
+.icard .el{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin:0 2px 0 1px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.35)}
+.el-fire{background:#e2543c}.el-ice{background:#7fd3ee}.el-wind{background:#5cc77a}.el-earth{background:#c9a24a}.el-lightning{background:#a46ee0}.el-water{background:#4a86e0}.el-light{background:#f4f1e4}.el-dark{background:#4b3a66}
+.icard .il{margin-top:6px;color:#e8ecf6}
+.icard .ix{margin-top:9px;padding-top:8px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#aebbd8}
+.icard .ix a{color:#cfe0ff;pointer-events:auto}
+
+.abl,.card ul.abl{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.abl li{font-size:14.5px;line-height:1.55;color:var(--muted);padding-left:16px;position:relative}
+.abl li::before{content:"\25C7";position:absolute;left:0;top:1px;font-size:10px;color:var(--accent)}
+.abl li strong{color:var(--text);font-weight:500}
