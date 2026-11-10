@@ -4,88 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Timeless XI: Reforged</title>
-<meta name="description" content="Timeless XI: a level 75 Final Fantasy XI private server. The classic you love, carefully reforged.">
+<meta name="description" content="Timeless XI: a level 75 Final Fantasy XI private server, launching December 2026. The classic you love, carefully reforged.">
 <meta name="theme-color" content="#0c0d16">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<style>
-body{margin:0;background:#0A0B12}
-a{color:#D6E1F0}a:hover{color:#ffffff}
-@keyframes txPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(143,178,230,0.55)}50%{opacity:0.55;box-shadow:0 0 0 6px rgba(143,178,230,0)}}
-.tx-pulse{animation:txPulse 2.4s ease-in-out infinite}
-@media (prefers-reduced-motion: reduce){.tx-pulse{animation:none}}
-.tx-soon-inline{display:none}
-@media (max-width: 640px){.tx-soon-hero{display:none !important}.tx-soon-inline{display:inline-flex}}
-</style>
-<style>:root{--s:1.6} html{scroll-behavior:smooth}
-.tx-menu{display:none}
-.tx-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #283040;border-radius:8px;color:#E6ECF5;font:500 14px/1 Inter,system-ui,sans-serif;min-height:44px;box-sizing:border-box}
-.tx-menu summary::-webkit-details-marker{display:none}
-.tx-menu .tx-ic-close{display:none}
-.tx-menu[open] .tx-ic-close{display:block}
-.tx-menu[open] .tx-ic-open{display:none}
-.tx-menu-panel{position:absolute;left:0;right:0;top:100%;background:#0c0d16;border-top:1px solid #1a1f2c;border-bottom:1px solid #283040;padding:6px 24px 22px;display:flex;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
-.tx-menu-panel>a{display:block;padding:14px 0;border-bottom:1px solid #1a1f2c;font:400 17px/1.2 Inter,system-ui,sans-serif;text-decoration:none}
-.tx-menu-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
-.tx-menu-actions a{flex:1 1 140px;text-align:center;padding:13px 16px;border-radius:6px;text-decoration:none;font:600 15px/1 Inter,system-ui,sans-serif}
-.tx-menu-primary{background:#8FB2E6;color:#0A0B12}
-.tx-menu-secondary{border:1px solid #3a4558;color:#E6ECF5}
-@media (max-width: 900px){
- .tx-links,.tx-cta{display:none !important}
- .tx-menu{display:block}
-}
-@media (max-width: 640px){
- section[style*="padding: 112px 24px"]{padding-top:64px !important}
- section[style*="padding: 96px 24px"]{padding-top:56px !important;padding-bottom:56px !important}
- section[style*="padding: 88px 24px"]{padding-top:56px !important;padding-bottom:48px !important}
- main[style*="padding: 72px 24px 96px"]{padding-top:48px !important;gap:64px !important}
- .tx-table{min-width:0 !important}
- .tx-table thead{display:none}
- .tx-table tr{display:block;padding:14px 18px;border-bottom:1px solid #1e2533}
- .tx-table tr:last-child{border-bottom:0}
- .tx-table th,.tx-table td{display:flex !important;gap:12px;padding:3px 0 !important;border:0 !important;white-space:normal !important;text-align:left}
- .tx-table tbody th{font-size:17px;padding-bottom:6px !important}
- .tx-table td::before{content:attr(data-label);flex:0 0 84px;color:#98A3B8;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding-top:3px}
-}
-</style>
+<link rel="stylesheet" href="site.css">
+
 </head>
 <body>
-<div style="background: #0A0B12; color: #E6ECF5; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh">
-
-<header style="background: #0c0d16; position: relative; z-index: 30">
-<nav aria-label="Main" style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px 32px">
-<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #E6ECF5">
-<svg width="22" height="30" viewBox="0 0 22 30" aria-hidden="true" fill="none" stroke="#D6E1F0" stroke-width="1.2"><path d="M2 1.5h18M3.5 3.5h15M2 28.5h18M3.5 26.5h15"/><path d="M5 3.5C5 10 10.2 12.5 10.6 15C10.2 17.5 5 20 5 26.5M17 3.5C17 10 11.8 12.5 11.4 15C11.8 17.5 17 20 17 26.5"/><path d="M11 9.5l1.2 1.6-1.2 1.6-1.2-1.6z" fill="#8FB2E6" stroke="none"/></svg>
-<span style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 22px; letter-spacing: 0.18em">TIMELESS XI</span>
-</a>
-<div class="tx-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 26px; font-size: 14px; letter-spacing: 0.02em">
-<a href="index.html" aria-current="page" style="color: #E6ECF5; text-decoration: none; padding: 10px 0">Home</a>
-<a href="#about" style="color: #98A3B8; text-decoration: none; padding: 10px 0">About</a>
-<a href="#features" style="color: #98A3B8; text-decoration: none; padding: 10px 0">Features</a>
-<a href="#jobs" style="color: #98A3B8; text-decoration: none; padding: 10px 0">Jobs</a>
-<a href="getting-started.html" style="color: #98A3B8; text-decoration: none; padding: 10px 0">Getting Started</a>
-<a href="new-player-guide.html" style="color: #98A3B8; text-decoration: none; padding: 10px 0">New Player Guide</a>
-<a href="news.html" style="color: #98A3B8; text-decoration: none; padding: 10px 0">News</a>
-</div>
-<div class="tx-cta" style="display: flex; align-items: center; gap: 12px">
-<a href="getting-started.html" style="background: #8FB2E6; color: #0A0B12; text-decoration: none; font-size: 14px; font-weight: 600; padding: 10px 18px; border-radius: 6px">Play now</a>
-</div>
-<details class="tx-menu">
-<summary aria-label="Menu"><svg class="tx-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="tx-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
-<div class="tx-menu-panel">
-<a href="index.html" aria-current="page" style="color: #E6ECF5">Home</a>
-<a href="#about" style="color: #C9D3E2">About</a>
-<a href="#features" style="color: #C9D3E2">Features</a>
-<a href="#jobs" style="color: #C9D3E2">Jobs</a>
-<a href="getting-started.html" style="color: #C9D3E2">Getting Started</a>
-<a href="new-player-guide.html" style="color: #C9D3E2">New Player Guide</a>
-<a href="news.html" style="color: #C9D3E2">News</a>
-<div class="tx-menu-actions"><a class="tx-menu-primary" href="getting-started.html">Play now</a><a class="tx-menu-secondary" href="https://discord.gg/NUnJErbmh">Join the Discord</a></div>
-</div>
+<div class="tx-launch"><a href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span>Timeless XI launches <b>DECEMBER 2026</b></span><span class="go">Follow along in the Discord &rarr;</span></a></div>
+<header class="tx-head">
+<nav class="tx-nav" aria-label="Main">
+<a class="tx-brand" href="index.html"><svg width="22" height="30" viewBox="0 0 22 30" aria-hidden="true" fill="none" stroke="#D6E1F0" stroke-width="1.2"><path d="M2 1.5h18M3.5 3.5h15M2 28.5h18M3.5 26.5h15"/><path d="M5 3.5C5 10 10.2 12.5 10.6 15C10.2 17.5 5 20 5 26.5M17 3.5C17 10 11.8 12.5 11.4 15C11.8 17.5 17 20 17 26.5"/><path d="M11 9.5l1.2 1.6-1.2 1.6-1.2-1.6z" fill="#8FB2E6" stroke="none"/></svg><span>TIMELESS XI</span></a>
+<div class="tx-links"><a href="index.html" aria-current="page">Home</a><details class="tx-drop"><summary>Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="tx-drop-panel"><a href="companions.html"><b>Your party is always ready</b><small>AI companions for every job</small></a><a href="jobs.html"><b>Your job, with new tricks</b><small>18 reworked jobs, unique quest weapons</small></a><a href="hunting.html"><b>Always something to hunt</b><small>Champions, rifts, Eternal Sand, bounties</small></a><a href="economy.html"><b>Every hour pays off</b><small>Treasure caskets, crafting, Everglass</small></a><a href="home-life.html"><b>A home worth coming back to</b><small>Mog House bonuses, garden, chores</small></a><a href="classic.html"><b>Classic at heart</b><small>Level 75, kinder to your time</small></a></div></details><a href="nm-tracker.html">NM Tracker</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a></div>
+<div class="tx-cta"><a class="btn sm" href="https://discord.gg/NUnJErbmh">Join the Discord</a></div>
+<details class="tx-menu"><summary aria-label="Menu"><svg class="tx-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="tx-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
+<div class="tx-menu-panel"><a href="index.html" aria-current="page">Home</a><div class="tx-menu-label">Features</div><a class="sub" href="companions.html">Your party is always ready</a><a class="sub" href="jobs.html">Your job, with new tricks</a><a class="sub" href="hunting.html">Always something to hunt</a><a class="sub" href="economy.html">Every hour pays off</a><a class="sub" href="home-life.html">A home worth coming back to</a><a class="sub" href="classic.html">Classic at heart</a><div class="tx-menu-label">Play</div><a href="nm-tracker.html">NM Tracker</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a><div class="tx-menu-actions"><a class="btn" href="https://discord.gg/NUnJErbmh">Join the Discord</a><a class="btn-ghost" href="getting-started.html">Get ready</a></div></div>
 </details>
 </nav>
 </header>
+
 
 <section id="hero" aria-label="Timeless XI: Reforged" style="position: relative; overflow: hidden; height: calc(560px * var(--s)); background: linear-gradient(180deg, #0c0d16 0%, #141826 38%, #1d2836 60%, #233740 70%, #12181d 84%, #0A0B12 100%)">
 <div aria-hidden="true" style="position: absolute; inset: 0 0 38% 0; -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 calc(50% - 640px * var(--s)), transparent calc(50% - 360px * var(--s)), transparent calc(50% + 360px * var(--s)), #000 calc(50% + 640px * var(--s)), #000 100%); mask-image: linear-gradient(90deg, #000 0%, #000 calc(50% - 640px * var(--s)), transparent calc(50% - 360px * var(--s)), transparent calc(50% + 360px * var(--s)), #000 calc(50% + 640px * var(--s)), #000 100%)">
@@ -175,16 +115,15 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(36px, 5vw, 58px); line-height: 1.1; color: #F1F3F7">The classic you love, carefully reforged.</h1>
 <p style="margin: 0; max-width: 680px; color: #98A3B8; font-size: 17px">The Vana'diel you know and love, from Rise of the Zilart through Treasures of Aht Urhgan, carefully reforged. Quality-of-life improvements like fast home point travel smooth out the old frustrations, every job has been reworked with new mechanics and a signature quest, and highly intelligent AI companions fill out your party and play their jobs like seasoned adventurers. Crafting and gathering level faster and pay off more, Champion monsters bring new challenges to the field, and high-value notorious monsters are within reach without the endless lottery camps.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px">
-<a href="getting-started.html" style="background: #8FB2E6; color: #0A0B12; text-decoration: none; font-weight: 600; padding: 14px 26px; border-radius: 6px">Start playing</a>
-<a href="getting-started.html" style="border: 1px solid #3a4558; color: #E6ECF5; text-decoration: none; font-weight: 500; padding: 13px 26px; border-radius: 6px">How to play</a>
-<a href="https://discord.gg/NUnJErbmh" style="color: #D6E1F0; text-decoration: none; font-weight: 500; padding: 14px 18px; display: flex; align-items: center; gap: 8px">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Join the Discord</a>
+<a class="btn" href="https://discord.gg/NUnJErbmh"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Join the Discord</a>
+<a class="btn-ghost" href="#features">Explore the features</a>
+<a class="btn-ghost" href="getting-started.html">Get ready</a>
 </div>
 </div>
 </section>
 
 
-<section id="about" style="padding: 112px 24px 40px">
+<section class="sec" id="features"><div class="wrap"><div class="sec-head center"><p class="eyebrow">Six promises</p><h2 class="h2">Everything new, in six ideas</h2><p class="lead">More than forty systems, one simple picture. Pick the promise that speaks to you and dive in.</p></div><div class="pillars"><a class="pillar" href="companions.html"><span class="num">01</span><h3>Your party is always ready</h3><p class="tl">Never wait for a party again.</p><p>Call a full party of AI companions who tank, heal, skillchain and magic burst like seasoned players. Keep your favorites and they grow stronger with you.</p><span class="go">Meet your companions &rarr;</span></a><a class="pillar" href="jobs.html"><span class="num">02</span><h3>Your job, with new tricks</h3><p class="tl">The job you love, deeper than ever.</p><p>All 18 jobs keep their classic role and gain new mechanics, a quest line for a weapon only they can earn, and a mastered two-hour.</p><span class="go">See every job &rarr;</span></a><a class="pillar" href="hunting.html"><span class="num">03</span><h3>Always something to hunt</h3><p class="tl">Every pull could be the one.</p><p>Champion monsters, Time Rifts, journeys into the past with Eternal Sand, daily bounties, and notorious monsters on timers instead of a lottery.</p><span class="go">Start the hunt &rarr;</span></a><a class="pillar" href="economy.html"><span class="num">04</span><h3>Every hour pays off</h3><p class="tl">Treasure worth hunting for.</p><p>Treasure Caskets pay out sums of gil and gear from every hunt, and crafting, gathering and fishing all feed a guild economy with its own currency.</p><span class="go">Follow the treasure &rarr;</span></a><a class="pillar" href="home-life.html"><span class="num">05</span><h3>A home worth coming back to</h3><p class="tl">Your Mog House works for you.</p><p>The furniture you place powers bonuses everywhere you go. Daily moogle chores, a levelling garden and a welcome-back summary at every login.</p><span class="go">Step inside &rarr;</span></a><a class="pillar" href="classic.html"><span class="num">06</span><h3>Classic at heart, kinder to your time</h3><p class="tl">All of the nostalgia, none of the old frustrations.</p><p>The level 75 game you remember, with the friction sanded off: fast travel, fair alliance EXP, timed NMs and a launcher that just works.</p><span class="go">What stays, what changed &rarr;</span></a></div></div></section><section id="about" style="padding: 40px 24px 40px">
 <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px 72px">
 <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #8FB2E6">Classic at heart</p>
@@ -201,314 +140,33 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #8FB2E6">Reforged, top to bottom</p>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 42px; line-height: 1.15">Deeper jobs. A busier world. A party whenever you need one.</h2>
-<p style="margin: 0; color: #98A3B8">Every job has new mechanics and a quest for its own signature weapon. Out in the field, any monster might turn out to be a Champion, and the Bounty Board always has a hunt posted. Crafting, gathering and digging level far faster and feed a guild that pays in grubstakes. Your Mog House furniture and garden power bonuses you carry everywhere. And with AI companions, you never wait on a full party to see any of it.</p>
+<p style="margin: 0; color: #98A3B8">Every job has new mechanics and a quest for its own signature weapon. Any monster might turn out to be a Champion, a Time Rift might open beside you, and every kill can leave a Treasure Casket full of gil or gear. Crafting, gathering and your Mog House all feed a guild economy that pays in Everglass. And with AI companions, you never wait on a full party to see any of it.</p>
 <figure style="margin: 8px 0 0; padding: 26px 28px 22px; background: #11141D; border: 1px solid #283040; border-radius: 10px; display: flex; flex-direction: column; gap: 14px">
 <blockquote style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-style: italic; font-size: 24px; line-height: 1.42; color: #D6E1F0; text-wrap: pretty">“<span style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-style: normal; font-size: 0.84em; letter-spacing: 0.1em; margin-left: 0.16em; margin-right: -0.04em; text-transform: uppercase; background: linear-gradient(90deg, #c2c9d6 0%, #f1f3f7 45%, #bcd3ee 80%, #8fb8e4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 6px rgba(159, 187, 224, 0.35))">Timeless XI</span> was born from the heart: a way to rekindle the community and sense of adventure that made Final Fantasy XI's early years unlike anything else. It's a passion project, through and through.”</blockquote>
 <figcaption style="display: flex; align-items: center; gap: 10px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #98A3B8"><span aria-hidden="true" style="width: 28px; height: 1px; background: #3a4558"></span>The Timeless XI team</figcaption>
 </figure>
 </div>
 </div>
-</section>
-
-<section aria-label="Timeless by the numbers" style="padding: 48px 24px 0">
-<div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: #283040; border: 1px solid #283040; border-radius: 10px; overflow: hidden">
-<div style="background: #0A0B12; padding: 26px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 46px; line-height: 1; color: #F1F3F7">18</span><span style="color: #98A3B8; font-size: 14px">jobs reworked, each with its own quest</span></div>
-<div style="background: #0A0B12; padding: 26px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 46px; line-height: 1; color: #F1F3F7">21</span><span style="color: #98A3B8; font-size: 14px">one-of-a-kind quest reward items</span></div>
-<div style="background: #0A0B12; padding: 26px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 46px; line-height: 1; color: #F1F3F7">448</span><span style="color: #98A3B8; font-size: 14px">Records of Eminence training pages</span></div>
-<div style="background: #0A0B12; padding: 26px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 46px; line-height: 1; color: #F1F3F7">4×</span><span style="color: #98A3B8; font-size: 14px">faster chocobo raising than retail</span></div>
-<div style="background: #0A0B12; padding: 26px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 46px; line-height: 1; color: #F1F3F7">2 hrs</span><span style="color: #98A3B8; font-size: 14px">per gathering expedition, around the clock</span></div>
+</section><section class="sec tight"><div class="wrap"><div class="nums">
+<div><b>18</b><span>jobs reworked, each with its own quest</span></div>
+<div><b>21</b><span>one-of-a-kind quest reward items</span></div>
+<div><b>219</b><span>notorious monsters on timers, no lottery</span></div>
+<div><b>13</b><span>Champion traits to learn and hunt</span></div>
+<div><b>448</b><span>Records of Eminence training pages</span></div>
+</div></div></section><section class="sec tight"><div class="wrap"><a class="nmban" href="nm-tracker.html">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p class="eyebrow">Notorious Monster Tracker</p>
+<h2 class="h2">Know when they're up.</h2>
+<p class="lead">Search 219 notorious monsters by name or zone. See who's up, the countdown to the next spawn, each NM's primary drop and its drop rate, how many kills since it last dropped, and who defeated it last.</p>
+<span class="btn" style="align-self:flex-start">Open the NM Tracker</span>
 </div>
-</section>
-
-<section id="features" style="padding: 112px 24px 40px">
-<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #8FB2E6">What's new on Timeless</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 46px; line-height: 1.15">Reforged features</h2>
-<div aria-hidden="true" style="display: flex; align-items: center; gap: 12px; margin-top: 4px"><span style="width: 90px; height: 1px; background: #3a4558"></span><span style="width: 6px; height: 6px; transform: rotate(45deg); border: 1px solid #8FB2E6"></span><span style="width: 90px; height: 1px; background: #3a4558"></span></div>
+<div class="rows" aria-hidden="true">
+<div class="row"><b>Leaping Lizzy</b><span>Bounding Boots &middot; 10%</span></div>
+<div class="row"><b>Valkurm Emperor</b><span>Empress Hairpin &middot; 15%</span></div>
+<div class="row"><b>Fafnir</b><span>Ridill &middot; 5%</span></div>
+<div class="row"><b>Live status</b><span>from December 2026</span></div>
 </div>
-
-<div style="display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; border-bottom: 1px solid #283040; padding-bottom: 14px">
-<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px">Adventure</h3>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">How you fight, who you fight with, and what's waiting out there.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px">
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Every job, reworked</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">All 18 jobs gain new mechanics: Warrior weapon mastery, Monk Ki, White Mage Miracles, Black Mage Overloads, Samurai Iaijutsu and more. Each has a quest line for a signature Rare/Ex weapon.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">See every job below</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Companions</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Call AI recruits who play like real players of their job: they tank, heal, skillchain and magic burst. They grow stronger as your bond rises, and call out tips when a Champion appears.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">/cm · /cv · !companion</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Champions and bounties</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">About 1 monster in 200 is a Champion, and the rarest are Elite or Legendary, with up to four times the HP and three traits. Earn trophies, fill your Bestiary, and take daily and weekly bounties.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">!champions · !trophies · !bounty</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Records of Eminence, reimagined</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">448 repeatable training pages, sorted by zone and level across the home nations, the Outlands and Aht Urhgan. Hunt a monster type for gil, tabs and EXP.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">Open the Records of Eminence menu</p>
-</article>
-
-</div>
-</div>
-
-<div style="display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; border-bottom: 1px solid #283040; padding-bottom: 14px">
-<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px">Making a living</h3>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Crafting, gathering and a guild economy that rewards every hour you put in.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px">
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Crafting, reforged</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Rested synths, a Flash of Insight, lessons from broken synths and recipe mastery speed every craft along. Three daily craft orders, and the craftbook shows what you can make and what it sells for.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">/craft · !craft orders</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Gathering, digging and chocobos</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Logging, mining, harvesting and excavation each level from 1 to 100, with a rich spot that moves every day. Chocobo digging levels six times faster, and raising your own chocobo is four times faster than retail.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">!gather · !dig · !chocobo</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">The Artisans Guild</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Four AI crafters in Lower Jeuno take commissions, post material requests and stock the auction house. Their crew is always out on a gathering expedition you can supply.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">!guild · !expedition</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Grubstakes and the shop</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">The server&#x27;s own currency, from the guild, expeditions and bounties. Spend it on vault rare finds, supply crates, extra companion slots, Champion lures, a server-wide feast, or cash it out for gil.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">!shop</p>
-</article>
-
-</div>
-</div>
-
-<div style="display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; border-bottom: 1px solid #283040; padding-bottom: 14px">
-<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px">Home and comfort</h3>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">A Mog House worth coming back to, better treasure, and fewer old headaches.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px">
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Your Mog House, empowered</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Every piece of furniture adds to its element, and each element boosts something you carry everywhere: rested synths, digging and gathering experience, high-quality synths, companion bond, even Champion chance.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">!hearth · /craft mog</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Gardening and moogle chores</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Gardening has its own levels and rare crossbreed crops. Your moogle asks for two small chores a day, paying Mog Tokens for rare furniture, seeds and treats.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">!garden · !chores · !moogle</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Treasure Caskets, rebuilt</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">Any monster that gives EXP can leave a casket. Blue holds gil and crafting materials, brown holds gear, and the rare rainbow casket holds an upgrade for your own job and level.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">No guessing games: just open it</p>
-</article>
-
-<article style="background: #11141D; border: 1px solid #283040; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<h4 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; line-height: 1.2">Timeless XI Launcher</h4>
-<p style="margin: 0; color: #98A3B8; font-size: 15px">One click to play, with the add-on windows built in. Choose your graphics and stop losing macros: the launcher fixes saving and backs up your settings. Everyone shares the Timeless linkshell.</p>
-<p style="margin: 4px 0 0; font-size: 13px; color: #8FB2E6; letter-spacing: 0.02em">Windows</p>
-</article>
-
-</div>
-</div>
-</div>
-</section>
-
-<section id="jobs" style="padding: 96px 24px">
-<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: #8FB2E6">Every job, reworked</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 46px; line-height: 1.15">Your job, with new tricks</h2>
-<p style="margin: 0; max-width: 680px; color: #98A3B8">Each job keeps its classic identity and gains mechanics that reward playing it well, plus a quest for a Rare/Ex weapon only that job can earn. Recruits learn the new tricks too.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1px; background: #283040; border: 1px solid #283040; border-radius: 12px; overflow: hidden">
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">WAR</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Warrior</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Weapon Mastery perks and NM trophies for every weapon type; Never Yield keeps you standing.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Unbroken</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">MNK</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Monk</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Ki builds with every blow; five Pressure Points turn your next weapon skill into Dim Mak.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Iron Lotus</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">WHM</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">White Mage</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Overhealing becomes Regen, and Faith builds toward a Miracle cure, Raise or Banish.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Pilgrim&#x27;s Mercy</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">BLM</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Black Mage</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Attune to an element, then release it as an Overload. Spell Echo and ancient magic effects.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Unwritten Flame</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">RDM</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Red Mage</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Duelist&#x27;s Rhythm weaves spells and blades; En Garde adds your enspell to every weapon skill hit.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Crimson Duelist</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">THF</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Thief</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Honor Amongst Thieves: more gil and Treasure Hunter when Thieves hunt together.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Calling Card</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">PLD</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Paladin</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">A great sword damage stance with Oathblade weapon skills, plus Cover on recruits.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Oathsworn Blade</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">DRK</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Dark Knight</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Reaper&#x27;s Art scythe skills and Soul Feast, or the Abyssal Guard tanking road.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Reaper&#x27;s Due · Abyssal Vigil</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">BST</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Beastmaster</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Blood Scent marks your prey, and Wild Bond makes your pet stronger with every worthy kill.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Pridewarden</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">BRD</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Bard</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Crescendo strengthens re-sung songs, and Encore sings every fifth song twice as fast.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Corvin&#x27;s Flute · Final Encore</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">RNG</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Ranger</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Haste speeds up ranged attacks, Mark Prey grows your damage, and sweet-spot hits build to a sure critical.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Great Hunt</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">SAM</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Samurai</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Iaijutsu opening strikes, a growing Hasso, and Bond of Blades: party TP for every skillchain you close.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Mushin-maru</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">NIN</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Ninja</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Kawarimi grants free shadows, and the Elemental Wheel stacks ninjutsu damage.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Yamikaze · Kirigakure</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">DRG</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Dragoon</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Shorter Jump recasts, and Bonds of the Wyvern: breaths that burst into skillchains.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Last Dragoon</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">SMN</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Summoner</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Pact Bond levels up each avatar, and Pact Weaving chains one Blood Pact into the next avatar.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Ruby Covenant</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">BLU</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Blue Mage</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Beast Essence builds to Unleash: 30 seconds of stronger, free blue magic.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Azure Oath</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">COR</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Corsair</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Hot Streak protects lucky rolls, and Powder Keg makes Quick Draw hit hard.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Luzaf&#x27;s Wager · Marzaha&#x27;s Ladybug</span>
-</div>
-</div>
-
-<div style="background: #0F121A; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
-<span style="flex: 0 0 46px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 0.08em; color: #D6E1F0; padding-top: 2px">PUP</span>
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<span style="font-weight: 500; font-size: 15px">Puppetmaster</span>
-<span style="color: #98A3B8; font-size: 14px; line-height: 1.5">Dancing on Strings combos you and your automaton, and Steam Vent turns overloads into damage.</span>
-<span style="color: #8FB2E6; font-size: 13px; margin-top: 4px">Quest reward: Stringmaster</span>
-</div>
-</div>
-
-</div>
-<p style="margin: 0; text-align: center"><a href="new-player-guide.html#job-quests" style="font-size: 15px; padding: 8px 0">Where each job quest starts →</a></p>
-</div>
-</section>
-
-<section id="news" style="padding: 40px 24px 96px">
+</a></div></section><section id="news" style="padding: 40px 24px 96px">
 <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
 <div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px">
 <div style="display: flex; flex-direction: column; gap: 10px">
@@ -538,42 +196,29 @@ a{color:#D6E1F0}a:hover{color:#ffffff}
 </article>
 </div>
 </div>
-</section>
-
-<section style="padding: 0 24px 96px">
-<div style="max-width: 1240px; margin: 0 auto; border: 1px solid #283040; border-radius: 14px; padding: 64px 32px; text-align: center; background: radial-gradient(ellipse at 50% 0%, #1d2836 0%, #11141D 65%); display: flex; flex-direction: column; align-items: center; gap: 18px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(34px, 4vw, 48px); line-height: 1.15">Your story in Vana'diel isn't finished.</h2>
-<p style="margin: 0; color: #98A3B8; max-width: 560px">Grab the launcher, make your account, and you'll be standing in your home nation in a few minutes, with companions ready whenever you call them.</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px">
-<a href="getting-started.html" style="background: #8FB2E6; color: #0A0B12; text-decoration: none; font-weight: 600; padding: 14px 26px; border-radius: 6px">Start playing</a>
-<a href="https://discord.gg/NUnJErbmh" style="border: 1px solid #3a4558; color: #E6ECF5; text-decoration: none; font-weight: 500; padding: 13px 26px; border-radius: 6px">Join the Discord</a>
+</section><section class="sec"><div class="wrap"><div class="callout" style="align-items:center;text-align:center;padding:56px 28px;gap:16px">
+<a class="soon " href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span><b>COMING SOON</b><small>December 2026</small></span></a>
+<h2 class="h2">Launching December 2026</h2>
+<p style="max-width:580px">Join the Discord for the opening date, early news and a place to find your first party. Get the game ready now, and you'll be in Vana'diel on day one.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center"><a class="btn" href="https://discord.gg/NUnJErbmh"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Join the Discord</a><a class="btn-ghost" href="getting-started.html">Get ready</a></div>
+</div></div></section>
+<footer class="tx-foot"><div class="wrap">
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+<div><div style="font-family:var(--serif);font-size:24px;letter-spacing:.18em">TIMELESS XI</div><div style="font-size:12px;letter-spacing:.32em;color:#9FBBE0">REFORGED</div></div>
+<a class="soon " href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span><b>COMING SOON</b><small>December 2026</small></span></a>
 </div>
+<nav aria-label="Features"><h4>Features</h4><a href="companions.html">Your party is always ready</a><a href="jobs.html">Your job, with new tricks</a><a href="hunting.html">Always something to hunt</a><a href="economy.html">Every hour pays off</a><a href="home-life.html">A home worth coming back to</a><a href="classic.html">Classic at heart</a></nav>
+<nav aria-label="Play"><h4>Play</h4><a href="nm-tracker.html">NM Tracker</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a></nav>
+<nav aria-label="Community"><h4>Community</h4><a href="https://discord.gg/NUnJErbmh">Discord</a><a href="https://discord.gg/NUnJErbmh">Rules</a></nav>
 </div>
-</section>
-
-<footer style="border-top: 1px solid #1a1f2c; background: #07080b; padding: 48px 24px 40px">
-<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 0.18em">TIMELESS XI</span>
-<span style="font-size: 12px; letter-spacing: 0.32em; color: #9FBBE0">REFORGED</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px">
-<a href="#about" style="color: #98A3B8; text-decoration: none; padding: 8px 0">About</a>
-<a href="#jobs" style="color: #98A3B8; text-decoration: none; padding: 8px 0">Jobs</a>
-<a href="getting-started.html" style="color: #98A3B8; text-decoration: none; padding: 8px 0">Getting Started</a>
-<a href="new-player-guide.html" style="color: #98A3B8; text-decoration: none; padding: 8px 0">New Player Guide</a>
-<a href="https://discord.gg/NUnJErbmh" style="color: #98A3B8; text-decoration: none; padding: 8px 0">Rules</a>
-<a href="https://discord.gg/NUnJErbmh" style="color: #98A3B8; text-decoration: none; padding: 8px 0">Discord</a>
-</div>
-</div>
-<p style="margin: 0; font-size: 13px; color: #98A3B8; max-width: 860px">Timeless XI is a free, fan-run project. It is not affiliated with, endorsed by or sponsored by Square Enix. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. All game content belongs to its respective owners.</p>
-</div>
-</footer>
-
-</div>
-
+<p class="legal">Timeless XI is a free, fan-run project. It is not affiliated with, endorsed by or sponsored by Square Enix. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. All game content belongs to its respective owners.</p>
+</div></footer>
+<script>
+document.querySelectorAll('.tx-menu-panel a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.removeAttribute('open');});});
+document.addEventListener('click',function(e){document.querySelectorAll('.tx-drop[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details[open]').forEach(function(d){d.removeAttribute('open');});});
+</script>
 <script>(function(){function fit(){var w=document.documentElement.clientWidth||1440;var s=Math.max(0.4,Math.min(1.6,w/880));document.documentElement.style.setProperty('--s',s.toFixed(4));}fit();addEventListener('resize',fit);})();</script>
-<script>document.querySelectorAll('.tx-menu-panel a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.removeAttribute('open');});});</script>
 </body>
 </html>

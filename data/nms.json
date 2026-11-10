@@ -1,0 +1,3721 @@
+{
+"source": "Timeless-XI/timeless-server",
+"count": 219,
+"nms": [
+{
+"id": 17301537,
+"key": "Valley_of_Sorrows/Adamantoise",
+"name": "Adamantoise",
+"zone": "Valley of Sorrows",
+"type": "HNM",
+"level": [
+70,
+70
+],
+"respawn": null,
+"drop": {
+"item": "Heavy Cuirass",
+"itemId": 13794,
+"rate": 5.0
+}
+},
+{
+"id": 17567901,
+"key": "Ordelles_Caves/Agar_Agar",
+"name": "Agar Agar",
+"zone": "Ordelle's Caves",
+"type": "NM",
+"level": [
+64,
+66
+],
+"respawn": 3600,
+"drop": {
+"item": "Soarer Earring",
+"itemId": 16030,
+"rate": 10.0
+}
+},
+{
+"id": 17571903,
+"key": "Outer_Horutoto_Ruins/Ah_Puch",
+"name": "Ah Puch",
+"zone": "Outer Horutoto Ruins",
+"type": "NM",
+"level": [
+29,
+30
+],
+"respawn": 3600,
+"drop": {
+"item": "Spiro Staff",
+"itemId": 18610,
+"rate": 24.0
+}
+},
+{
+"id": 16806249,
+"key": "Attohwa_Chasm/Ambusher_Antlion",
+"name": "Ambusher Antlion",
+"zone": "Attohwa Chasm",
+"type": "NM",
+"level": [
+75,
+77
+],
+"respawn": 3600,
+"drop": {
+"item": "Archer's Jupon",
+"itemId": 14467,
+"rate": 100.0
+}
+},
+{
+"id": 17490016,
+"key": "Kuftal_Tunnel/Amemet",
+"name": "Amemet",
+"zone": "Kuftal Tunnel",
+"type": "NM",
+"level": [
+65,
+66
+],
+"respawn": 4500,
+"drop": {
+"item": "Amemet Skin",
+"itemId": 1275,
+"rate": 100.0
+}
+},
+{
+"id": 17645774,
+"key": "Gustav_Tunnel/Amikiri",
+"name": "Amikiri",
+"zone": "Gustav Tunnel",
+"type": "NM",
+"level": [
+80,
+82
+],
+"respawn": 25200,
+"drop": {
+"item": "Kamewari",
+"itemId": 16968,
+"rate": 100.0
+}
+},
+{
+"id": 17629412,
+"key": "Quicksand_Caves/Antican_Magister",
+"name": "Antican Magister",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+65,
+66
+],
+"respawn": 3600,
+"drop": {
+"item": "Arcanabane",
+"itemId": 16686,
+"rate": 10.0
+}
+},
+{
+"id": 17629281,
+"key": "Quicksand_Caves/Antican_Praefectus",
+"name": "Antican Praefectus",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+65,
+65
+],
+"respawn": 3600,
+"drop": {
+"item": "Save the Queen",
+"itemId": 16604,
+"rate": 10.0
+}
+},
+{
+"id": 17629421,
+"key": "Quicksand_Caves/Antican_Proconsul",
+"name": "Antican Proconsul",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+65,
+65
+],
+"respawn": 3600,
+"drop": {
+"item": "Scroll of Stone IV",
+"itemId": 4770,
+"rate": 10.0
+}
+},
+{
+"id": 17629483,
+"key": "Quicksand_Caves/Antican_Tribunus",
+"name": "Antican Tribunus",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+65,
+65
+],
+"respawn": 3600,
+"drop": {
+"item": "Pharaoh's Bow",
+"itemId": 17191,
+"rate": 10.0
+}
+},
+{
+"id": 17404000,
+"key": "The_Boyahda_Tree/Aquarius",
+"name": "Aquarius",
+"zone": "The Boyahda Tree",
+"type": "NM",
+"level": [
+69,
+71
+],
+"respawn": 3600,
+"drop": {
+"item": "Fransisca",
+"itemId": 17925,
+"rate": 90.0
+}
+},
+{
+"id": 17490217,
+"key": "Kuftal_Tunnel/Arachne",
+"name": "Arachne",
+"zone": "Kuftal Tunnel",
+"type": "NM",
+"level": [
+67,
+69
+],
+"respawn": 3600,
+"drop": {
+"item": "Arachne Web",
+"itemId": 1270,
+"rate": 100.0
+}
+},
+{
+"id": 17461433,
+"key": "Bostaunieux_Oubliette/Arioch",
+"name": "Arioch",
+"zone": "Bostaunieux Oubliette",
+"type": "NM",
+"level": [
+56,
+62
+],
+"respawn": 3600,
+"drop": {
+"item": "Vial of Beastman Blood",
+"itemId": 930,
+"rate": 15.0
+}
+},
+{
+"id": 17358932,
+"key": "Yughott_Grotto/Ashmaker_Gotblut",
+"name": "Ashmaker Gotblut",
+"zone": "Yughott Grotto",
+"type": "NM",
+"level": [
+17,
+18
+],
+"respawn": 3600,
+"drop": {
+"item": "Priest's Robe",
+"itemId": 13729,
+"rate": 15.0
+}
+},
+{
+"id": 17301538,
+"key": "Valley_of_Sorrows/Aspidochelone",
+"name": "Aspidochelone",
+"zone": "Valley of Sorrows",
+"type": "HNM",
+"level": [
+85,
+85
+],
+"respawn": null,
+"drop": {
+"item": "Heavy Cuirass",
+"itemId": 13794,
+"rate": 5.0
+}
+},
+{
+"id": 17645719,
+"key": "Gustav_Tunnel/Baobhan_Sith",
+"name": "Baobhan Sith",
+"zone": "Gustav Tunnel",
+"type": "NM",
+"level": [
+79,
+81
+],
+"respawn": 14400,
+"drop": {
+"item": "Square of Cheviot Cloth",
+"itemId": 1281,
+"rate": 100.0
+}
+},
+{
+"id": 17236027,
+"key": "Xarcabard/Barbaric_Weapon",
+"name": "Barbaric Weapon",
+"zone": "Xarcabard",
+"type": "NM",
+"level": [
+73,
+74
+],
+"respawn": 7200,
+"drop": {
+"item": "Rover's Gloves",
+"itemId": 15056,
+"rate": 15.0
+}
+},
+{
+"id": 17440963,
+"key": "Castle_Zvahl_Keep/Baron_Vapula",
+"name": "Baron Vapula",
+"zone": "Castle Zvahl Keep",
+"type": "NM",
+"level": [
+68,
+68
+],
+"respawn": 7200,
+"drop": {
+"item": "Demon Horn",
+"itemId": 902,
+"rate": 15.0
+}
+},
+{
+"id": 17440986,
+"key": "Castle_Zvahl_Keep/Baronet_Romwe",
+"name": "Baronet Romwe",
+"zone": "Castle Zvahl Keep",
+"type": "NM",
+"level": [
+68,
+68
+],
+"respawn": 7200,
+"drop": {
+"item": "Demon's Axe",
+"itemId": 16711,
+"rate": 10.0
+}
+},
+{
+"id": 17268788,
+"key": "Sauromugue_Champaign/Bashe",
+"name": "Bashe",
+"zone": "Sauromugue Champaign",
+"type": "NM",
+"level": [
+54,
+55
+],
+"respawn": 3600,
+"drop": {
+"item": "Affinity Earring",
+"itemId": 16031,
+"rate": 15.0
+}
+},
+{
+"id": 17363258,
+"key": "Palborough_Mines/BeHya_Hundredwall",
+"name": "Be'Hya Hundredwall",
+"zone": "Palborough Mines",
+"type": "NM",
+"level": [
+23,
+24
+],
+"respawn": 3600,
+"drop": {
+"item": "Ingot of Quadav Silver",
+"itemId": 2841,
+"rate": 15.0
+}
+},
+{
+"id": 17297440,
+"key": "Behemoths_Dominion/Behemoth",
+"name": "Behemoth",
+"zone": "Behemoth's Dominion",
+"type": "HNM",
+"level": [
+70,
+70
+],
+"respawn": null,
+"drop": {
+"item": "Comet Tail",
+"itemId": 17294,
+"rate": 10.0
+}
+},
+{
+"id": 17379351,
+"key": "Beadeaux/BiGho_Headtaker_B",
+"name": "Bi'Gho Headtaker",
+"zone": "Beadeaux",
+"type": "NM",
+"level": [
+25,
+25
+],
+"respawn": 3600,
+"drop": {
+"item": "Plantbane",
+"itemId": 16720,
+"rate": 10.0
+}
+},
+{
+"id": 17191196,
+"key": "East_Ronfaure/Bigmouth_Billy",
+"name": "Bigmouth Billy",
+"zone": "East Ronfaure",
+"type": "NM",
+"level": [
+9,
+10
+],
+"respawn": 1300,
+"drop": {
+"item": "Red Rock",
+"itemId": 769,
+"rate": 1.0
+}
+},
+{
+"id": 17432845,
+"key": "Den_of_Rancor/Bistre-hearted_Malberry",
+"name": "Bistre-hearted Malberry",
+"zone": "Den of Rancor",
+"type": "NM",
+"level": [
+71,
+73
+],
+"respawn": 3600,
+"drop": {
+"item": "Skirnir's Wand",
+"itemId": 17455,
+"rate": 10.0
+}
+},
+{
+"id": 17227972,
+"key": "Rolanberry_Fields/Black_Triple_Stars",
+"name": "Black Triple Stars",
+"zone": "Rolanberry Fields",
+"type": "NM",
+"level": [
+26,
+27
+],
+"respawn": 3600,
+"drop": {
+"item": "Bat Fang",
+"itemId": 891,
+"rate": 100.0
+}
+},
+{
+"id": 17269016,
+"key": "Sauromugue_Champaign/Blighting_Brand",
+"name": "Blighting Brand",
+"zone": "Sauromugue Champaign",
+"type": "NM",
+"level": [
+54,
+55
+],
+"respawn": 5400,
+"drop": {
+"item": "Cassandra's Earring",
+"itemId": 16038,
+"rate": 15.0
+}
+},
+{
+"id": 17224019,
+"key": "Pashhow_Marshlands/Bloodpool_Vorax",
+"name": "Bloodpool Vorax",
+"zone": "Pashhow Marshlands",
+"type": "NM",
+"level": [
+24,
+25
+],
+"respawn": 3600,
+"drop": {
+"item": "Bloodbead Amulet",
+"itemId": 13058,
+"rate": 10.0
+}
+},
+{
+"id": 17195318,
+"key": "La_Theine_Plateau/Bloodtear_Baldurf",
+"name": "Bloodtear Baldurf",
+"zone": "La Theine Plateau",
+"type": "NM",
+"level": [
+55,
+56
+],
+"respawn": 75600,
+"drop": {
+"item": "Viking Shield",
+"itemId": 12356,
+"rate": 15.0
+}
+},
+{
+"id": 17490159,
+"key": "Kuftal_Tunnel/Bloodthirster_Madkix",
+"name": "Bloodthirster Madkix",
+"zone": "Kuftal Tunnel",
+"type": "NM",
+"level": [
+70,
+72
+],
+"respawn": 7200,
+"drop": {
+"item": "Acha Darmas",
+"itemId": 17926,
+"rate": 15.0
+}
+},
+{
+"id": 16998655,
+"key": "Arrapago_Reef/Bloody_Bones",
+"name": "Bloody Bones",
+"zone": "Arrapago Reef",
+"type": "NM",
+"level": [
+83,
+83
+],
+"respawn": 75600,
+"drop": {
+"item": "Ace's Locket",
+"itemId": 15529,
+"rate": 10.0
+}
+},
+{
+"id": 17387920,
+"key": "Davoi/Blubbery_Bulge",
+"name": "Blubbery Bulge",
+"zone": "Davoi",
+"type": "NM",
+"level": [
+45,
+47
+],
+"respawn": 3600,
+"drop": {
+"item": "Vial of Slime Oil",
+"itemId": 637,
+"rate": 27.8
+}
+},
+{
+"id": 17056156,
+"key": "Aydeewa_Subterrane/Bluestreak_Gyugyuroon",
+"name": "Bluestreak Gyugyuroon",
+"zone": "Aydeewa Subterrane",
+"type": "NM",
+"level": [
+80,
+80
+],
+"respawn": 7200,
+"drop": {
+"item": "Qiqirn Collar",
+"itemId": 15531,
+"rate": 10.0
+}
+},
+{
+"id": 16798056,
+"key": "Uleguerand_Range/Bonnacon",
+"name": "Bonnacon",
+"zone": "Uleguerand Range",
+"type": "NM",
+"level": [
+69,
+69
+],
+"respawn": 3600,
+"drop": {
+"item": "Tredecim Scythe",
+"itemId": 18052,
+"rate": 10.0
+}
+},
+{
+"id": 17363181,
+"key": "Palborough_Mines/BuGhi_Howlblade",
+"name": "Bu'Ghi Howlblade",
+"zone": "Palborough Mines",
+"type": "NM",
+"level": [
+12,
+12
+],
+"respawn": 3600,
+"drop": {
+"item": "Scale Gorget",
+"itemId": 13071,
+"rate": 5.0
+}
+},
+{
+"id": 17261003,
+"key": "Buburimu_Peninsula/Buburimboo",
+"name": "Buburimboo",
+"zone": "Buburimu Peninsula",
+"type": "NM",
+"level": [
+30,
+31
+],
+"respawn": 3600,
+"drop": {
+"item": "Buburimu Gorget",
+"itemId": 13057,
+"rate": 15.0
+}
+},
+{
+"id": 17289560,
+"key": "Western_Altepa_Desert/Cactuar_Cantautor",
+"name": "Cactuar Cantautor",
+"zone": "Western Altepa Desert",
+"type": "NM",
+"level": [
+55,
+59
+],
+"respawn": 3600,
+"drop": {
+"item": "Kung Fu Shoes",
+"itemId": 14128,
+"rate": 10.0
+}
+},
+{
+"id": 17289547,
+"key": "Western_Altepa_Desert/Calchas",
+"name": "Calchas",
+"zone": "Western Altepa Desert",
+"type": "NM",
+"level": [
+74,
+75
+],
+"respawn": 3600,
+"drop": {
+"item": "Fuchingiri",
+"itemId": 19278,
+"rate": 10.0
+}
+},
+{
+"id": 17469578,
+"key": "Toraimarai_Canal/Canal_Moocher",
+"name": "Canal Moocher",
+"zone": "Toraimarai Canal",
+"type": "NM",
+"level": [
+73,
+74
+],
+"respawn": 3600,
+"drop": {
+"item": "Aptant of Pera",
+"itemId": 2817,
+"rate": 10.0
+}
+},
+{
+"id": 17485980,
+"key": "Korroloka_Tunnel/Cargo_Crab_Colin",
+"name": "Cargo Crab Colin",
+"zone": "Korroloka Tunnel",
+"type": "NM",
+"level": [
+34,
+37
+],
+"respawn": 5400,
+"drop": {
+"item": "Nadrs",
+"itemId": 17650,
+"rate": 10.0
+}
+},
+{
+"id": 17432659,
+"key": "Den_of_Rancor/Carmine-tailed_Janberry",
+"name": "Carmine-tailed Janberry",
+"zone": "Den of Rancor",
+"type": "NM",
+"level": [
+66,
+67
+],
+"respawn": 3600,
+"drop": {
+"item": "Asklepios",
+"itemId": 17454,
+"rate": 100.0
+}
+},
+{
+"id": 17432624,
+"key": "Den_of_Rancor/Celeste-eyed_Tozberry",
+"name": "Celeste-eyed Tozberry",
+"zone": "Den of Rancor",
+"type": "NM",
+"level": [
+67,
+69
+],
+"respawn": 7200,
+"drop": {
+"item": "Kitsutsuki",
+"itemId": 16912,
+"rate": 10.0
+}
+},
+{
+"id": 17289453,
+"key": "Western_Altepa_Desert/Celphie",
+"name": "Celphie",
+"zone": "Western Altepa Desert",
+"type": "NM",
+"level": [
+47,
+50
+],
+"respawn": 7200,
+"drop": {
+"item": "Dhalmel Whistle",
+"itemId": 15505,
+"rate": 15.0
+}
+},
+{
+"id": 17629238,
+"key": "Quicksand_Caves/Centurio_X-I",
+"name": "Centurio X-I",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+56,
+58
+],
+"respawn": 9000,
+"drop": {
+"item": "Shaman's Cloak",
+"itemId": 13803,
+"rate": 15.0
+}
+},
+{
+"id": 17498522,
+"key": "Sea_Serpent_Grotto/Charybdis",
+"name": "Charybdis",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+79,
+81
+],
+"respawn": 28800,
+"drop": {
+"item": "Joyeuse",
+"itemId": 17652,
+"rate": 100.0
+}
+},
+{
+"id": 16806162,
+"key": "Attohwa_Chasm/Citipati",
+"name": "Citipati",
+"zone": "Attohwa Chasm",
+"type": "NM",
+"level": [
+67,
+70
+],
+"respawn": 10800,
+"drop": {
+"item": "Harpe",
+"itemId": 18001,
+"rate": 5.0
+}
+},
+{
+"id": 17072150,
+"key": "Alzadaal_Undersea_Ruins/Cookieduster_Lipiroon",
+"name": "Cookieduster Lipiroon",
+"zone": "Alzadaal Undersea Ruins",
+"type": "NM",
+"level": [
+80,
+82
+],
+"respawn": 3600,
+"drop": {
+"item": "Lyft Crossbow",
+"itemId": 19233,
+"rate": 10.0
+}
+},
+{
+"id": 17440969,
+"key": "Castle_Zvahl_Keep/Count_Bifrons",
+"name": "Count Bifrons",
+"zone": "Castle Zvahl Keep",
+"type": "NM",
+"level": [
+68,
+68
+],
+"respawn": 7200,
+"drop": {
+"item": "Goshisho's Scythe",
+"itemId": 16792,
+"rate": 10.0
+}
+},
+{
+"id": 17576054,
+"key": "The_Eldieme_Necropolis/Cwn_Cyrff",
+"name": "Cwn Cyrff",
+"zone": "The Eldieme Necropolis",
+"type": "NM",
+"level": [
+63,
+63
+],
+"respawn": 3600,
+"drop": {
+"item": "Swan Bilbo",
+"itemId": 17709,
+"rate": 24.0
+}
+},
+{
+"id": 17379427,
+"key": "Beadeaux/DaDha_Hundredmask",
+"name": "Da'Dha Hundredmask",
+"zone": "Beadeaux",
+"type": "NM",
+"level": [
+30,
+30
+],
+"respawn": 5400,
+"drop": {
+"item": "Mithran Scimitar",
+"itemId": 16819,
+"rate": 10.0
+}
+},
+{
+"id": 17264818,
+"key": "Meriphataud_Mountains/Daggerclaw_Dracos",
+"name": "Daggerclaw Dracos",
+"zone": "Meriphataud Mountains",
+"type": "NM",
+"level": [
+27,
+28
+],
+"respawn": 3600,
+"drop": {
+"item": "Sonic Knuckles",
+"itemId": 16434,
+"rate": 10.0
+}
+},
+{
+"id": 17486129,
+"key": "Korroloka_Tunnel/Dame_Blanche",
+"name": "Dame Blanche",
+"zone": "Korroloka Tunnel",
+"type": "NM",
+"level": [
+34,
+35
+],
+"respawn": 7200,
+"drop": {
+"item": "Square of Sarcenet Cloth",
+"itemId": 1280,
+"rate": 100.0
+}
+},
+{
+"id": 17268851,
+"key": "Sauromugue_Champaign/Deadly_Dodo",
+"name": "Deadly Dodo",
+"zone": "Sauromugue Champaign",
+"type": "NM",
+"level": [
+39,
+40
+],
+"respawn": 3600,
+"drop": {
+"item": "Dodo Skin",
+"itemId": 1014,
+"rate": 15.0
+}
+},
+{
+"id": 17584398,
+"key": "Crawlers_Nest/Demonic_Tiphia",
+"name": "Demonic Tiphia",
+"zone": "Crawlers' Nest",
+"type": "NM",
+"level": [
+60,
+60
+],
+"respawn": 7200,
+"drop": {
+"item": "Tiphia Sting",
+"itemId": 18254,
+"rate": 15.0
+}
+},
+{
+"id": 17498464,
+"key": "Sea_Serpent_Grotto/Denn_the_Orcavoiced",
+"name": "Denn the Orcavoiced",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+64,
+65
+],
+"respawn": 7200,
+"drop": {
+"item": "Quus",
+"itemId": 5793,
+"rate": 1.0
+}
+},
+{
+"id": 17571870,
+"key": "Outer_Horutoto_Ruins/Desmodont",
+"name": "Desmodont",
+"zone": "Outer Horutoto Ruins",
+"type": "NM",
+"level": [
+26,
+27
+],
+"respawn": 3600,
+"drop": {
+"item": "Fidelity Mantle",
+"itemId": 11531,
+"rate": 15.0
+}
+},
+{
+"id": 17309954,
+"key": "RuAun_Gardens/Despot",
+"name": "Despot",
+"zone": "Ru'Aun Gardens",
+"type": "NM",
+"level": [
+80,
+82
+],
+"respawn": 7200,
+"drop": {
+"item": "Scarecrow Scythe",
+"itemId": 18044,
+"rate": 10.0
+}
+},
+{
+"id": 17629430,
+"key": "Quicksand_Caves/Diamond_Daig",
+"name": "Diamond Daig",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+70,
+70
+],
+"respawn": 3600,
+"drop": {
+"item": "Protecting Bangles",
+"itemId": 14063,
+"rate": 100.0
+}
+},
+{
+"id": 17244268,
+"key": "Eastern_Altepa_Desert/Donnergugi",
+"name": "Donnergugi",
+"zone": "Eastern Altepa Desert",
+"type": "NM",
+"level": [
+60,
+60
+],
+"respawn": 3600,
+"drop": {
+"item": "Piece of Thunder Coral",
+"itemId": 2833,
+"rate": 10.0
+}
+},
+{
+"id": 17228236,
+"key": "Rolanberry_Fields/Drooling_Daisy",
+"name": "Drooling Daisy",
+"zone": "Rolanberry Fields",
+"type": "NM",
+"level": [
+39,
+40
+],
+"respawn": 3600,
+"drop": {
+"item": "Dodge Headband",
+"itemId": 13838,
+"rate": 15.0
+}
+},
+{
+"id": 17244396,
+"key": "Eastern_Altepa_Desert/Dune_Widow",
+"name": "Dune Widow",
+"zone": "Eastern Altepa Desert",
+"type": "NM",
+"level": [
+45,
+47
+],
+"respawn": 3600,
+"drop": {
+"item": "Spider Torque",
+"itemId": 13137,
+"rate": 5.0
+}
+},
+{
+"id": 17613109,
+"key": "FeiYin/Eastern_Shadow",
+"name": "Eastern Shadow",
+"zone": "Fei'Yin",
+"type": "NM",
+"level": [
+63,
+63
+],
+"respawn": 57600,
+"drop": {
+"item": "Valis Bow",
+"itemId": 18714,
+"rate": 10.0
+}
+},
+{
+"id": 17228150,
+"key": "Rolanberry_Fields/Eldritch_Edge",
+"name": "Eldritch Edge",
+"zone": "Rolanberry Fields",
+"type": "NM",
+"level": [
+55,
+55
+],
+"respawn": 5400,
+"drop": {
+"item": "Helenus's Earring",
+"itemId": 16037,
+"rate": 15.0
+}
+},
+{
+"id": 17403939,
+"key": "The_Boyahda_Tree/Ellyllon",
+"name": "Ellyllon",
+"zone": "The Boyahda Tree",
+"type": "NM",
+"level": [
+65,
+66
+],
+"respawn": 7200,
+"drop": {
+"item": "Mushroom Helm",
+"itemId": 13913,
+"rate": 15.0
+}
+},
+{
+"id": 16990376,
+"key": "Bhaflau_Thickets/Emergent_Elm",
+"name": "Emergent Elm",
+"zone": "Bhaflau Thickets",
+"type": "NM",
+"level": [
+77,
+78
+],
+"respawn": 7200,
+"drop": {
+"item": "Arborist Nails",
+"itemId": 15701,
+"rate": 10.0
+}
+},
+{
+"id": 17027466,
+"key": "Mount_Zhayolm/Energetic_Eruca",
+"name": "Energetic Eruca",
+"zone": "Mount Zhayolm",
+"type": "NM",
+"level": [
+80,
+80
+],
+"respawn": 86400,
+"drop": {
+"item": "Hanzo Tekko",
+"itemId": 14947,
+"rate": 10.0
+}
+},
+{
+"id": 17420324,
+"key": "Middle_Delkfutts_Tower/Eurytos",
+"name": "Eurytos",
+"zone": "Middle Delkfutts Tower",
+"type": "NM",
+"level": [
+32,
+32
+],
+"respawn": 7200,
+"drop": {
+"item": "Gigas Bracelets",
+"itemId": 14018,
+"rate": 10.0
+}
+},
+{
+"id": 17207608,
+"key": "Batallia_Downs/Eyegouger",
+"name": "Eyegouger",
+"zone": "Batallia Downs",
+"type": "NM",
+"level": [
+46,
+46
+],
+"respawn": 3600,
+"drop": {
+"item": "Brawn Earring",
+"itemId": 16021,
+"rate": 15.0
+}
+},
+{
+"id": 17408018,
+"key": "Dragons_Aery/Fafnir",
+"name": "Fafnir",
+"zone": "Dragon's Aery",
+"type": "HNM",
+"level": [
+90,
+90
+],
+"respawn": null,
+"drop": {
+"item": "Ridill",
+"itemId": 16555,
+"rate": 5.0
+}
+},
+{
+"id": 17486031,
+"key": "Korroloka_Tunnel/Falcatus_Aranei",
+"name": "Falcatus Aranei",
+"zone": "Korroloka Tunnel",
+"type": "NM",
+"level": [
+32,
+32
+],
+"respawn": 7200,
+"drop": {
+"item": "Webcutter",
+"itemId": 18040,
+"rate": 15.0
+}
+},
+{
+"id": 17043779,
+"key": "Mamook/Firedance_Magmaal_Ja",
+"name": "Firedance Magmaal Ja",
+"zone": "Mamook",
+"type": "NM",
+"level": [
+80,
+82
+],
+"respawn": 3600,
+"drop": {
+"item": "Lyft Hexagun",
+"itemId": 19234,
+"rate": 10.0
+}
+},
+{
+"id": 17428737,
+"key": "Temple_of_Uggalepih/Flauros",
+"name": "Flauros",
+"zone": "Temple of Uggalepih",
+"type": "NM",
+"level": [
+59,
+61
+],
+"respawn": 3600,
+"drop": {
+"item": "Coeurl Whisker",
+"itemId": 927,
+"rate": 5.0
+}
+},
+{
+"id": 17617062,
+"key": "Ifrits_Cauldron/Foreseer_Oramix",
+"name": "Foreseer Oramix",
+"zone": "Ifrit's Cauldron",
+"type": "NM",
+"level": [
+69,
+72
+],
+"respawn": 3600,
+"drop": {
+"item": "Power Staff",
+"itemId": 17563,
+"rate": 15.0
+}
+},
+{
+"id": 17203448,
+"key": "Jugner_Forest/Fradubio",
+"name": "Fradubio",
+"zone": "Jugner Forest",
+"type": "NM",
+"level": [
+59,
+60
+],
+"respawn": 75600,
+"drop": {
+"item": "Bellicose Mantle",
+"itemId": 15469,
+"rate": 24.0
+}
+},
+{
+"id": 17432640,
+"key": "Den_of_Rancor/Friar_Rush",
+"name": "Friar Rush",
+"zone": "Den of Rancor",
+"type": "NM",
+"level": [
+70,
+70
+],
+"respawn": 3600,
+"drop": {
+"item": "Bomb Core",
+"itemId": 18139,
+"rate": 100.0
+}
+},
+{
+"id": 17240376,
+"key": "Cape_Teriggan/Frostmane",
+"name": "Frostmane",
+"zone": "Cape Teriggan",
+"type": "NM",
+"level": [
+80,
+80
+],
+"respawn": 3600,
+"drop": {
+"item": "Lockheart",
+"itemId": 16944,
+"rate": 5.0
+}
+},
+{
+"id": 17187047,
+"key": "West_Ronfaure/Fungus_Beetle",
+"name": "Fungus Beetle",
+"zone": "West Ronfaure",
+"type": "NM",
+"level": [
+10,
+15
+],
+"respawn": 900,
+"drop": {
+"item": "Clipeus",
+"itemId": 12371,
+"rate": 100.0
+}
+},
+{
+"id": 17498269,
+"key": "Sea_Serpent_Grotto/Fyuu_the_Seabellow",
+"name": "Fyuu the Seabellow",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+48,
+48
+],
+"respawn": 7200,
+"drop": {
+"item": "Frog Trousers",
+"itemId": 14286,
+"rate": 15.0
+}
+},
+{
+"id": 17379626,
+"key": "Beadeaux/GaBhu_Unvanquished",
+"name": "Ga'Bhu Unvanquished",
+"zone": "Beadeaux",
+"type": "NM",
+"level": [
+47,
+48
+],
+"respawn": 3600,
+"drop": {
+"item": "Valkyrie's Mask",
+"itemId": 13841,
+"rate": 10.0
+}
+},
+{
+"id": 17232079,
+"key": "Beaucedine_Glacier/Gargantua",
+"name": "Gargantua",
+"zone": "Beaucedine Glacier",
+"type": "NM",
+"level": [
+47,
+48
+],
+"respawn": 3600,
+"drop": {
+"item": "Elemental Charm",
+"itemId": 13115,
+"rate": 15.0
+}
+},
+{
+"id": 17379450,
+"key": "Beadeaux/GeDha_Evileye",
+"name": "Ge'Dha Evileye",
+"zone": "Beadeaux",
+"type": "NM",
+"level": [
+30,
+30
+],
+"respawn": 3600,
+"drop": {
+"item": "Faerie Tunic",
+"itemId": 13731,
+"rate": 5.0
+}
+},
+{
+"id": 17457204,
+"key": "Ranguemont_Pass/Gloom_Eye",
+"name": "Gloom Eye",
+"zone": "Ranguemont Pass",
+"type": "NM",
+"level": [
+73,
+74
+],
+"respawn": 3600,
+"drop": {
+"item": "Wit Pendant",
+"itemId": 16300,
+"rate": 15.0
+}
+},
+{
+"id": 17645609,
+"key": "Gustav_Tunnel/Goblinsavior_Heronox",
+"name": "Goblinsavior Heronox",
+"zone": "Gustav Tunnel",
+"type": "NM",
+"level": [
+51,
+52
+],
+"respawn": 10800,
+"drop": {
+"item": "Eisentaenzer",
+"itemId": 16727,
+"rate": 15.0
+}
+},
+{
+"id": 17199564,
+"key": "Valkurm_Dunes/Golden_Bat",
+"name": "Golden Bat",
+"zone": "Valkurm Dunes",
+"type": "NM",
+"level": [
+26,
+27
+],
+"respawn": 3600,
+"drop": {
+"item": "Night Cape",
+"itemId": 13576,
+"rate": 15.0
+}
+},
+{
+"id": 17555664,
+"key": "King_Ranperres_Tomb/Gwyllgi",
+"name": "Gwyllgi",
+"zone": "King Ranperre's Tomb",
+"type": "NM",
+"level": [
+31,
+32
+],
+"respawn": 3600,
+"drop": {
+"item": "Gosha Sarashi",
+"itemId": 15940,
+"rate": 15.0
+}
+},
+{
+"id": 16814320,
+"key": "PsoXja/Gyre-Carlin_PX",
+"name": "Gyre-Carlin PX",
+"zone": "Pso'Xja",
+"type": "NM",
+"level": [
+50,
+50
+],
+"respawn": 1800,
+"drop": {
+"item": "Concealing Cuffs",
+"itemId": 14866,
+"rate": 10.0
+}
+},
+{
+"id": 17629561,
+"key": "Quicksand_Caves/Hastatus_XI-XII",
+"name": "Hastatus XI-XII",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+65,
+68
+],
+"respawn": 3600,
+"drop": {
+"item": "Xhifhut Head",
+"itemId": 1479,
+"rate": 100.0
+}
+},
+{
+"id": 17387567,
+"key": "Davoi/Hawkeyed_Dnatbat",
+"name": "Hawkeyed Dnatbat",
+"zone": "Davoi",
+"type": "NM",
+"level": [
+26,
+28
+],
+"respawn": 3600,
+"drop": {
+"item": "Assassin's Bow",
+"itemId": 17184,
+"rate": 10.0
+}
+},
+{
+"id": 17596520,
+"key": "Garlaige_Citadel/Hazmat",
+"name": "Hazmat",
+"zone": "Garlaige Citadel",
+"type": "NM",
+"level": [
+57,
+58
+],
+"respawn": 3600,
+"drop": {
+"item": "Promptitude Solea",
+"itemId": 11404,
+"rate": 15.0
+}
+},
+{
+"id": 17260907,
+"key": "Buburimu_Peninsula/Helldiver",
+"name": "Helldiver",
+"zone": "Buburimu Peninsula",
+"type": "NM",
+"level": [
+29,
+30
+],
+"respawn": 3600,
+"drop": {
+"item": "Wingedge",
+"itemId": 17281,
+"rate": 24.0
+}
+},
+{
+"id": 17649795,
+"key": "Labyrinth_of_Onzozo/Hellion",
+"name": "Hellion",
+"zone": "Labyrinth of Onzozo",
+"type": "NM",
+"level": [
+66,
+66
+],
+"respawn": 7200,
+"drop": {
+"item": "A l'Outrance",
+"itemId": 18041,
+"rate": 100.0
+}
+},
+{
+"id": 17256836,
+"key": "Tahrongi_Canyon/Herbage_Hunter",
+"name": "Herbage Hunter",
+"zone": "Tahrongi Canyon",
+"type": "NM",
+"level": [
+29,
+29
+],
+"respawn": 3600,
+"drop": {
+"item": "Precision Bandana",
+"itemId": 11493,
+"rate": 15.0
+}
+},
+{
+"id": 17285394,
+"key": "Yhoator_Jungle/Hoar-knuckled_Rimberry",
+"name": "Hoar-knuckled Rimberry",
+"zone": "Yhoator Jungle",
+"type": "NM",
+"level": [
+73,
+73
+],
+"respawn": 5400,
+"drop": {
+"item": "Sarabande Earring",
+"itemId": 16034,
+"rate": 5.0
+}
+},
+{
+"id": 17371515,
+"key": "Giddeus/Hoo_Mjuu_the_Torrent",
+"name": "Hoo Mjuu the Torrent",
+"zone": "Giddeus",
+"type": "NM",
+"level": [
+16,
+17
+],
+"respawn": 3600,
+"drop": {
+"item": "Monster Signa",
+"itemId": 17132,
+"rate": 5.0
+}
+},
+{
+"id": 17596628,
+"key": "Garlaige_Citadel/Hovering_Hotpot",
+"name": "Hovering Hotpot",
+"zone": "Garlaige Citadel",
+"type": "NM",
+"level": [
+58,
+60
+],
+"respawn": 5400,
+"drop": {
+"item": "Sleight Kukri",
+"itemId": 19121,
+"rate": 10.0
+}
+},
+{
+"id": 17354828,
+"key": "Fort_Ghelsba/Hundredscar_Hajwaj",
+"name": "Hundredscar Hajwaj",
+"zone": "Fort Ghelsba",
+"type": "NM",
+"level": [
+12,
+13
+],
+"respawn": 3600,
+"drop": {
+"item": "Wild Cudgel",
+"itemId": 17412,
+"rate": 10.0
+}
+},
+{
+"id": 17457236,
+"key": "Ranguemont_Pass/Hyakume",
+"name": "Hyakume",
+"zone": "Ranguemont Pass",
+"type": "NM",
+"level": [
+43,
+43
+],
+"respawn": 3600,
+"drop": null
+},
+{
+"id": 17027423,
+"key": "Mount_Zhayolm/Ignamoth",
+"name": "Ignamoth",
+"zone": "Mount Zhayolm",
+"type": "NM",
+"level": [
+84,
+84
+],
+"respawn": 7200,
+"drop": {
+"item": "Octant",
+"itemId": 19232,
+"rate": 10.0
+}
+},
+{
+"id": 16793742,
+"key": "Bibiki_Bay/Intulo",
+"name": "Intulo",
+"zone": "Bibiki Bay",
+"type": "NM",
+"level": [
+46,
+47
+],
+"respawn": 3600,
+"drop": {
+"item": "Curaga Earring",
+"itemId": 14759,
+"rate": 15.0
+}
+},
+{
+"id": 17424475,
+"key": "Upper_Delkfutts_Tower/Ixtab",
+"name": "Ixtab",
+"zone": "Upper Delkfutts Tower",
+"type": "NM",
+"level": [
+71,
+71
+],
+"respawn": 3600,
+"drop": {
+"item": "Revival Tree Root",
+"itemId": 940,
+"rate": 10.0
+}
+},
+{
+"id": 16986378,
+"key": "Wajaom_Woodlands/Jaded_Jody",
+"name": "Jaded Jody",
+"zone": "Wajaom Woodlands",
+"type": "NM",
+"level": [
+80,
+80
+],
+"respawn": 7200,
+"drop": {
+"item": "Jet Seraweels",
+"itemId": 15613,
+"rate": 10.0
+}
+},
+{
+"id": 17187111,
+"key": "West_Ronfaure/Jaggedy-Eared_Jack",
+"name": "Jaggedy-Eared Jack",
+"zone": "West Ronfaure",
+"type": "NM",
+"level": [
+9,
+10
+],
+"respawn": 2400,
+"drop": {
+"item": "Rabbit Charm",
+"itemId": 13112,
+"rate": 1.0
+}
+},
+{
+"id": 17371300,
+"key": "Giddeus/Juu_Duzu_the_Whirlwind",
+"name": "Juu Duzu the Whirlwind",
+"zone": "Giddeus",
+"type": "NM",
+"level": [
+13,
+13
+],
+"respawn": 3600,
+"drop": {
+"item": "Light Soleas",
+"itemId": 13052,
+"rate": 85.0
+}
+},
+{
+"id": 17272978,
+"key": "The_Sanctuary_of_ZiTah/Keeper_of_Halidom",
+"name": "Keeper of Halidom",
+"zone": "The Sanctuary of Zi'Tah",
+"type": "NM",
+"level": [
+56,
+58
+],
+"respawn": 7200,
+"drop": {
+"item": "Daihannya",
+"itemId": 16990,
+"rate": 0.1
+}
+},
+{
+"id": 17240180,
+"key": "Cape_Teriggan/Killer_Jonny",
+"name": "Killer Jonny",
+"zone": "Cape Teriggan",
+"type": "NM",
+"level": [
+85,
+85
+],
+"respawn": 7200,
+"drop": {
+"item": "Fendoir",
+"itemId": 17969,
+"rate": 10.0
+}
+},
+{
+"id": 17297441,
+"key": "Behemoths_Dominion/King_Behemoth",
+"name": "King Behemoth",
+"zone": "Behemoth's Dominion",
+"type": "HNM",
+"level": [
+85,
+85
+],
+"respawn": null,
+"drop": {
+"item": "Defending Ring",
+"itemId": 13566,
+"rate": 5.0
+}
+},
+{
+"id": 17232044,
+"key": "Beaucedine_Glacier/Kirata",
+"name": "Kirata",
+"zone": "Beaucedine Glacier",
+"type": "NM",
+"level": [
+41,
+41
+],
+"respawn": 3600,
+"drop": {
+"item": "Boreas Cesti",
+"itemId": 18359,
+"rate": 24.0
+}
+},
+{
+"id": 17469632,
+"key": "Toraimarai_Canal/Konjac",
+"name": "Konjac",
+"zone": "Toraimarai Canal",
+"type": "NM",
+"level": [
+78,
+78
+],
+"respawn": 3600,
+"drop": {
+"item": "Aptant of Aecus",
+"itemId": 2812,
+"rate": 15.0
+}
+},
+{
+"id": 17215868,
+"key": "South_Gustaberg/Leaping_Lizzy",
+"name": "Leaping Lizzy",
+"zone": "South Gustaberg",
+"type": "NM",
+"level": [
+10,
+11
+],
+"respawn": 3600,
+"drop": {
+"item": "Bounding Boots",
+"itemId": 15351,
+"rate": 10.0
+}
+},
+{
+"id": 17404300,
+"key": "The_Boyahda_Tree/Leshonki",
+"name": "Leshonki",
+"zone": "The Boyahda Tree",
+"type": "NM",
+"level": [
+79,
+81
+],
+"respawn": 3600,
+"drop": {
+"item": "Treant Bulb",
+"itemId": 953,
+"rate": 10.0
+}
+},
+{
+"id": 17617013,
+"key": "Ifrits_Cauldron/Lindwurm",
+"name": "Lindwurm",
+"zone": "Ifrit's Cauldron",
+"type": "NM",
+"level": [
+74,
+76
+],
+"respawn": 3600,
+"drop": {
+"item": "Valiant Knife",
+"itemId": 17983,
+"rate": 10.0
+}
+},
+{
+"id": 17649731,
+"key": "Labyrinth_of_Onzozo/Lord_of_Onzozo",
+"name": "Lord of Onzozo",
+"zone": "Labyrinth of Onzozo",
+"type": "NM",
+"level": [
+74,
+77
+],
+"respawn": 57600,
+"drop": {
+"item": "Octave Club",
+"itemId": 18852,
+"rate": 5.0
+}
+},
+{
+"id": 17195317,
+"key": "La_Theine_Plateau/Lumbering_Lambert",
+"name": "Lumbering Lambert",
+"zone": "La Theine Plateau",
+"type": "NM",
+"level": [
+27,
+28
+],
+"respawn": 1200,
+"drop": {
+"item": "Ram Horn",
+"itemId": 895,
+"rate": 42.2
+}
+},
+{
+"id": 16797968,
+"key": "Uleguerand_Range/Magnotaur",
+"name": "Magnotaur",
+"zone": "Uleguerand Range",
+"type": "NM",
+"level": [
+83,
+83
+],
+"respawn": 3600,
+"drop": {
+"item": "Pygme Sainti",
+"itemId": 18770,
+"rate": 10.0
+}
+},
+{
+"id": 16990306,
+"key": "Bhaflau_Thickets/Mahishasura",
+"name": "Mahishasura",
+"zone": "Bhaflau Thickets",
+"type": "NM",
+"level": [
+80,
+80
+],
+"respawn": 10800,
+"drop": {
+"item": "Veuglaire",
+"itemId": 19235,
+"rate": 10.0
+}
+},
+{
+"id": 17211702,
+"key": "North_Gustaberg/Maighdean_Uaine",
+"name": "Maighdean Uaine",
+"zone": "North Gustaberg",
+"type": "NM",
+"level": [
+11,
+11
+],
+"respawn": 900,
+"drop": {
+"item": "Optical Earring",
+"itemId": 14803,
+"rate": 100.0
+}
+},
+{
+"id": 17461471,
+"key": "Bostaunieux_Oubliette/Manes",
+"name": "Manes",
+"zone": "Bostaunieux Oubliette",
+"type": "NM",
+"level": [
+72,
+73
+],
+"respawn": 3600,
+"drop": {
+"item": "Square of Taffeta Cloth",
+"itemId": 1279,
+"rate": 100.0
+}
+},
+{
+"id": 17436881,
+"key": "Castle_Zvahl_Baileys/Marquis_Sabnock",
+"name": "Marquis Sabnock",
+"zone": "Castle Zvahl Baileys",
+"type": "NM",
+"level": [
+73,
+75
+],
+"respawn": 7200,
+"drop": {
+"item": "Astrolabe",
+"itemId": 19239,
+"rate": 15.0
+}
+},
+{
+"id": 17498159,
+"key": "Sea_Serpent_Grotto/Masan",
+"name": "Masan",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+39,
+39
+],
+"respawn": 14400,
+"drop": {
+"item": "Vial of Beastman Blood",
+"itemId": 930,
+"rate": 15.0
+}
+},
+{
+"id": 17395800,
+"key": "Castle_Oztroja/Mee_Deggi_the_Punisher",
+"name": "Mee Deggi the Punisher",
+"zone": "Castle Oztroja",
+"type": "NM",
+"level": [
+35,
+36
+],
+"respawn": 3000,
+"drop": {
+"item": "Ochimusha Kote",
+"itemId": 14986,
+"rate": 10.0
+}
+},
+{
+"id": 16875741,
+"key": "Lufaise_Meadows/Megalobugard",
+"name": "Megalobugard",
+"zone": "Lufaise Meadows",
+"type": "NM",
+"level": [
+50,
+50
+],
+"respawn": 3600,
+"drop": {
+"item": "Hercules Ring",
+"itemId": 14659,
+"rate": 10.0
+}
+},
+{
+"id": 17612859,
+"key": "FeiYin/Mind_Hoarder",
+"name": "Mind Hoarder",
+"zone": "Fei'Yin",
+"type": "NM",
+"level": [
+61,
+62
+],
+"respawn": 5400,
+"drop": {
+"item": "Lleu's Charm",
+"itemId": 16299,
+"rate": 10.0
+}
+},
+{
+"id": 17281149,
+"key": "Yuhtunga_Jungle/Mischievous_Micholas",
+"name": "Mischievous Micholas",
+"zone": "Yuhtunga Jungle",
+"type": "NM",
+"level": [
+53,
+55
+],
+"respawn": 3600,
+"drop": {
+"item": "Kidney Dagger",
+"itemId": 17618,
+"rate": 5.0
+}
+},
+{
+"id": 17395816,
+"key": "Castle_Oztroja/Moo_Ouzi_the_Swiftblade",
+"name": "Moo Ouzi the Swiftblade",
+"zone": "Castle Oztroja",
+"type": "NM",
+"level": [
+30,
+30
+],
+"respawn": 3600,
+"drop": {
+"item": "Demonic Sword",
+"itemId": 16936,
+"rate": 10.0
+}
+},
+{
+"id": 17498356,
+"key": "Sea_Serpent_Grotto/Mouu_the_Waverider",
+"name": "Mouu the Waverider",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+64,
+66
+],
+"respawn": 7200,
+"drop": {
+"item": "Monsoon Spear",
+"itemId": 16883,
+"rate": 10.0
+}
+},
+{
+"id": 17264768,
+"key": "Meriphataud_Mountains/Naa_Zeku_the_Unwaiting",
+"name": "Naa Zeku the Unwaiting",
+"zone": "Meriphataud Mountains",
+"type": "NM",
+"level": [
+49,
+49
+],
+"respawn": 3600,
+"drop": {
+"item": "Ataraxy Earring",
+"itemId": 16018,
+"rate": 15.0
+}
+},
+{
+"id": 17498184,
+"key": "Sea_Serpent_Grotto/Namtar",
+"name": "Namtar",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+39,
+41
+],
+"respawn": 3600,
+"drop": {
+"item": "Revival Tree Root",
+"itemId": 940,
+"rate": 10.0
+}
+},
+{
+"id": 17649784,
+"key": "Labyrinth_of_Onzozo/Narasimha",
+"name": "Narasimha",
+"zone": "Labyrinth of Onzozo",
+"type": "NM",
+"level": [
+75,
+77
+],
+"respawn": 21600,
+"drop": {
+"item": "Manticore Fang",
+"itemId": 1123,
+"rate": 35.4
+}
+},
+{
+"id": 17223797,
+"key": "Pashhow_Marshlands/NiZho_Bladebender",
+"name": "Ni'Zho Bladebender",
+"zone": "Pashhow Marshlands",
+"type": "NM",
+"level": [
+43,
+45
+],
+"respawn": 3600,
+"drop": {
+"item": "Muffle Earring",
+"itemId": 16032,
+"rate": 15.0
+}
+},
+{
+"id": 17408019,
+"key": "Dragons_Aery/Nidhogg",
+"name": "Nidhogg",
+"zone": "Dragon's Aery",
+"type": "HNM",
+"level": [
+90,
+90
+],
+"respawn": null,
+"drop": {
+"item": "Slice of Dragon Meat",
+"itemId": 4272,
+"rate": 5.0
+}
+},
+{
+"id": 17276982,
+"key": "RoMaeve/Nightmare_Vase",
+"name": "Nightmare Vase",
+"zone": "Ro'Maeve",
+"type": "NM",
+"level": [
+70,
+73
+],
+"respawn": 3600,
+"drop": {
+"item": "Shinogi",
+"itemId": 16913,
+"rate": 5.0
+}
+},
+{
+"id": 16990403,
+"key": "Bhaflau_Thickets/Nis_Puk",
+"name": "Nis Puk",
+"zone": "Bhaflau Thickets",
+"type": "NM",
+"level": [
+77,
+77
+],
+"respawn": 43200,
+"drop": {
+"item": "Tempest Belt",
+"itemId": 15946,
+"rate": 10.0
+}
+},
+{
+"id": 17563801,
+"key": "Inner_Horutoto_Ruins/Nocuous_Weapon",
+"name": "Nocuous Weapon",
+"zone": "Inner Horutoto Ruins",
+"type": "NM",
+"level": [
+25,
+27
+],
+"respawn": 3600,
+"drop": {
+"item": "Disciple Grip",
+"itemId": 19044,
+"rate": 15.0
+}
+},
+{
+"id": 17613102,
+"key": "FeiYin/Northern_Shadow",
+"name": "Northern Shadow",
+"zone": "Fei'Yin",
+"type": "NM",
+"level": [
+63,
+63
+],
+"respawn": 57600,
+"drop": {
+"item": "Executioner",
+"itemId": 16723,
+"rate": 10.0
+}
+},
+{
+"id": 17498445,
+"key": "Sea_Serpent_Grotto/Novv_the_Whitehearted",
+"name": "Novv the Whitehearted",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+66,
+67
+],
+"respawn": 7200,
+"drop": {
+"item": "Minstrel's Coat",
+"itemId": 13804,
+"rate": 15.0
+}
+},
+{
+"id": 17231971,
+"key": "Beaucedine_Glacier/Nue",
+"name": "Nue",
+"zone": "Beaucedine Glacier",
+"type": "NM",
+"level": [
+41,
+42
+],
+"respawn": 3600,
+"drop": {
+"item": "Nue Fang",
+"itemId": 1012,
+"rate": 15.0
+}
+},
+{
+"id": 17248517,
+"key": "West_Sarutabaruta/Nunyenunc",
+"name": "Nunyenunc",
+"zone": "West Sarutabaruta",
+"type": "NM",
+"level": [
+12,
+12
+],
+"respawn": 3600,
+"drop": {
+"item": "Pilgrim's Wand",
+"itemId": 18394,
+"rate": 100.0
+}
+},
+{
+"id": 17629403,
+"key": "Quicksand_Caves/Nussknacker",
+"name": "Nussknacker",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+60,
+61
+],
+"respawn": 3600,
+"drop": {
+"item": "Sand Gloves",
+"itemId": 14064,
+"rate": 10.0
+}
+},
+{
+"id": 17432974,
+"key": "Den_of_Rancor/Ogama",
+"name": "Ogama",
+"zone": "Den of Rancor",
+"type": "NM",
+"level": [
+80,
+82
+],
+"respawn": 3600,
+"drop": {
+"item": "Amanojaku",
+"itemId": 16911,
+"rate": 100.0
+}
+},
+{
+"id": 17420592,
+"key": "Middle_Delkfutts_Tower/Ogygos",
+"name": "Ogygos",
+"zone": "Middle Delkfutts Tower",
+"type": "NM",
+"level": [
+35,
+35
+],
+"respawn": 7200,
+"drop": {
+"item": "Ogygos's Bracelets",
+"itemId": 14019,
+"rate": 10.0
+}
+},
+{
+"id": 16879847,
+"key": "Misareaux_Coast/Okyupete",
+"name": "Okyupete",
+"zone": "Misareaux Coast",
+"type": "NM",
+"level": [
+57,
+60
+],
+"respawn": 3600,
+"drop": {
+"item": "Shepherd's Chain",
+"itemId": 16297,
+"rate": 5.0
+}
+},
+{
+"id": 17420529,
+"key": "Middle_Delkfutts_Tower/Ophion",
+"name": "Ophion",
+"zone": "Middle Delkfutts Tower",
+"type": "NM",
+"level": [
+34,
+34
+],
+"respawn": 7200,
+"drop": {
+"item": "Gigas Bracelets",
+"itemId": 14018,
+"rate": 10.0
+}
+},
+{
+"id": 16785676,
+"key": "Carpenters_Landing/Orctrap",
+"name": "Orctrap",
+"zone": "Carpenters' Landing",
+"type": "NM",
+"level": [
+37,
+38
+],
+"respawn": 3600,
+"drop": {
+"item": "Hojutsu Belt",
+"itemId": 15291,
+"rate": 5.0
+}
+},
+{
+"id": 17649822,
+"key": "Labyrinth_of_Onzozo/Ose",
+"name": "Ose",
+"zone": "Labyrinth of Onzozo",
+"type": "NM",
+"level": [
+74,
+76
+],
+"respawn": 3600,
+"drop": {
+"item": "Assault Jerkin",
+"itemId": 13805,
+"rate": 15.0
+}
+},
+{
+"id": 17498341,
+"key": "Sea_Serpent_Grotto/Pahh_the_Gullcaller",
+"name": "Pahh the Gullcaller",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+56,
+58
+],
+"respawn": 7200,
+"drop": {
+"item": "Calamar",
+"itemId": 16882,
+"rate": 24.0
+}
+},
+{
+"id": 17264972,
+"key": "Meriphataud_Mountains/Patripatan",
+"name": "Patripatan",
+"zone": "Meriphataud Mountains",
+"type": "NM",
+"level": [
+27,
+30
+],
+"respawn": 3600,
+"drop": {
+"item": "Nous Arbalest",
+"itemId": 19230,
+"rate": 15.0
+}
+},
+{
+"id": 17101143,
+"key": "Caedarva_Mire/Peallaidh",
+"name": "Peallaidh",
+"zone": "Caedarva Mire",
+"type": "NM",
+"level": [
+75,
+75
+],
+"respawn": 3600,
+"drop": {
+"item": "Nightmare Gloves",
+"itemId": 14946,
+"rate": 24.0
+}
+},
+{
+"id": 17649761,
+"key": "Labyrinth_of_Onzozo/Peg_Powler",
+"name": "Peg Powler",
+"zone": "Labyrinth of Onzozo",
+"type": "NM",
+"level": [
+61,
+62
+],
+"respawn": 7200,
+"drop": {
+"item": "Schwarz Axt",
+"itemId": 16728,
+"rate": 100.0
+}
+},
+{
+"id": 17490101,
+"key": "Kuftal_Tunnel/Pelican",
+"name": "Pelican",
+"zone": "Kuftal Tunnel",
+"type": "NM",
+"level": [
+80,
+81
+],
+"respawn": 14400,
+"drop": {
+"item": "Astral Aspis",
+"itemId": 12382,
+"rate": 100.0
+}
+},
+{
+"id": 17289638,
+"key": "Western_Altepa_Desert/Picolaton",
+"name": "Picolaton",
+"zone": "Western Altepa Desert",
+"type": "NM",
+"level": [
+61,
+64
+],
+"respawn": 6400,
+"drop": {
+"item": "Thrakon Breastplate",
+"itemId": 11343,
+"rate": 15.0
+}
+},
+{
+"id": 17387644,
+"key": "Davoi/Poisonhand_Gnadgad",
+"name": "Poisonhand Gnadgad",
+"zone": "Davoi",
+"type": "NM",
+"level": [
+39,
+40
+],
+"respawn": 3600,
+"drop": {
+"item": "Jujitsu Gi",
+"itemId": 13728,
+"rate": 10.0
+}
+},
+{
+"id": 17420382,
+"key": "Middle_Delkfutts_Tower/Polybotes",
+"name": "Polybotes",
+"zone": "Middle Delkfutts Tower",
+"type": "NM",
+"level": [
+34,
+34
+],
+"respawn": 7200,
+"drop": {
+"item": "Gigas Bracelets",
+"itemId": 14018,
+"rate": 10.0
+}
+},
+{
+"id": 17207640,
+"key": "Batallia_Downs/Prankster_Maverix",
+"name": "Prankster Maverix",
+"zone": "Batallia Downs",
+"type": "NM",
+"level": [
+51,
+52
+],
+"respawn": 3600,
+"drop": {
+"item": "Volant Belt",
+"itemId": 15945,
+"rate": 15.0
+}
+},
+{
+"id": 17498285,
+"key": "Sea_Serpent_Grotto/Qull_the_Shellbuster",
+"name": "Qull the Shellbuster",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+49,
+51
+],
+"respawn": 7200,
+"drop": {
+"item": "Exocets",
+"itemId": 17503,
+"rate": 15.0
+}
+},
+{
+"id": 17395870,
+"key": "Castle_Oztroja/Quu_Domi_the_Gallant",
+"name": "Quu Domi the Gallant",
+"zone": "Castle Oztroja",
+"type": "NM",
+"level": [
+35,
+36
+],
+"respawn": 3600,
+"drop": {
+"item": "Sarutobi Kyahan",
+"itemId": 15737,
+"rate": 10.0
+}
+},
+{
+"id": 17219886,
+"key": "Konschtat_Highlands/Rampaging_Ram",
+"name": "Rampaging Ram",
+"zone": "Konschtat Highlands",
+"type": "NM",
+"level": [
+27,
+28
+],
+"respawn": 1200,
+"drop": {
+"item": "Ram Horn",
+"itemId": 895,
+"rate": 42.2
+}
+},
+{
+"id": 17420555,
+"key": "Middle_Delkfutts_Tower/Rhoikos",
+"name": "Rhoikos",
+"zone": "Middle Delkfutts Tower",
+"type": "NM",
+"level": [
+34,
+34
+],
+"respawn": 7200,
+"drop": {
+"item": "Gigas Bracelets",
+"itemId": 14018,
+"rate": 10.0
+}
+},
+{
+"id": 17420417,
+"key": "Middle_Delkfutts_Tower/Rhoitos",
+"name": "Rhoitos",
+"zone": "Middle Delkfutts Tower",
+"type": "NM",
+"level": [
+34,
+34
+],
+"respawn": 7200,
+"drop": {
+"item": "Gigas Bracelets",
+"itemId": 14018,
+"rate": 10.0
+}
+},
+{
+"id": 17277079,
+"key": "RoMaeve/Rogue_Receptacle",
+"name": "Rogue Receptacle",
+"zone": "Ro'Maeve",
+"type": "NM",
+"level": [
+67,
+68
+],
+"respawn": 7200,
+"drop": {
+"item": "Lyricist's Gonnelle",
+"itemId": 11533,
+"rate": 10.0
+}
+},
+{
+"id": 17629264,
+"key": "Quicksand_Caves/Sabotender_Bailarin",
+"name": "Sabotender Bailarin",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+59,
+61
+],
+"respawn": 9000,
+"drop": {
+"item": "Bailathorn",
+"itemId": 18138,
+"rate": 50.9
+}
+},
+{
+"id": 17629587,
+"key": "Quicksand_Caves/Sabotender_Bailarina",
+"name": "Sabotender Bailarina",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+80,
+81
+],
+"respawn": 9000,
+"drop": {
+"item": "Dune Boots",
+"itemId": 14168,
+"rate": 100.0
+}
+},
+{
+"id": 17489980,
+"key": "Kuftal_Tunnel/Sabotender_Mariachi",
+"name": "Sabotender Mariachi",
+"zone": "Kuftal Tunnel",
+"type": "NM",
+"level": [
+68,
+70
+],
+"respawn": 10800,
+"drop": {
+"item": "Bano del Sol",
+"itemId": 17981,
+"rate": 10.0
+}
+},
+{
+"id": 17629301,
+"key": "Quicksand_Caves/Sagittarius_X-XIII",
+"name": "Sagittarius X-XIII",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+55,
+57
+],
+"respawn": 14400,
+"drop": {
+"item": "Loxley Bow",
+"itemId": 17199,
+"rate": 24.0
+}
+},
+{
+"id": 17498420,
+"key": "Sea_Serpent_Grotto/Sea_Hog",
+"name": "Sea Hog",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+62,
+63
+],
+"respawn": 3600,
+"drop": {
+"item": "Southern Pearl",
+"itemId": 1274,
+"rate": 100.0
+}
+},
+{
+"id": 17256563,
+"key": "Tahrongi_Canyon/Serpopard_Ishtar",
+"name": "Serpopard Ishtar",
+"zone": "Tahrongi Canyon",
+"type": "NM",
+"level": [
+19,
+20
+],
+"respawn": 3600,
+"drop": {
+"item": "Cerulean Pendant",
+"itemId": 13086,
+"rate": 15.0
+}
+},
+{
+"id": 16793646,
+"key": "Bibiki_Bay/Serra",
+"name": "Serra",
+"zone": "Bibiki Bay",
+"type": "NM",
+"level": [
+44,
+46
+],
+"respawn": 3600,
+"drop": {
+"item": "Volans Greaves",
+"itemId": 15347,
+"rate": 10.0
+}
+},
+{
+"id": 17461307,
+"key": "Bostaunieux_Oubliette/Sewer_Syrup",
+"name": "Sewer Syrup",
+"zone": "Bostaunieux Oubliette",
+"type": "NM",
+"level": [
+64,
+66
+],
+"respawn": 7200,
+"drop": {
+"item": "Jelly Ring",
+"itemId": 13303,
+"rate": 95.0
+}
+},
+{
+"id": 17498301,
+"key": "Sea_Serpent_Grotto/Seww_the_Squidlimbed",
+"name": "Seww the Squidlimbed",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+48,
+49
+],
+"respawn": 3600,
+"drop": {
+"item": "Mermaid Tail",
+"itemId": 1483,
+"rate": 100.0
+}
+},
+{
+"id": 17236180,
+"key": "Xarcabard/Shadow_Eye",
+"name": "Shadow Eye",
+"zone": "Xarcabard",
+"type": "NM",
+"level": [
+48,
+49
+],
+"respawn": 3600,
+"drop": {
+"item": "Moon Amulet",
+"itemId": 13114,
+"rate": 15.0
+}
+},
+{
+"id": 17252489,
+"key": "East_Sarutabaruta/Sharp-Eared_Ropipi",
+"name": "Sharp-Eared Ropipi",
+"zone": "East Sarutabaruta",
+"type": "NM",
+"level": [
+10,
+11
+],
+"respawn": 300,
+"drop": {
+"item": "Entrancing Ribbon",
+"itemId": 15218,
+"rate": 100.0
+}
+},
+{
+"id": 17461315,
+"key": "Bostaunieux_Oubliette/Shii",
+"name": "Shii",
+"zone": "Bostaunieux Oubliette",
+"type": "NM",
+"level": [
+70,
+71
+],
+"respawn": 3600,
+"drop": {
+"item": "Sukesada",
+"itemId": 16980,
+"rate": 100.0
+}
+},
+{
+"id": 16797770,
+"key": "Uleguerand_Range/Skvader",
+"name": "Skvader",
+"zone": "Uleguerand Range",
+"type": "NM",
+"level": [
+77,
+78
+],
+"respawn": 3600,
+"drop": {
+"item": "Aptant of Geoc",
+"itemId": 2820,
+"rate": 10.0
+}
+},
+{
+"id": 17563785,
+"key": "Inner_Horutoto_Ruins/Slendlix_Spindlethumb",
+"name": "Slendlix Spindlethumb",
+"zone": "Inner Horutoto Ruins",
+"type": "NM",
+"level": [
+33,
+34
+],
+"respawn": 3600,
+"drop": {
+"item": "Circe's Hat",
+"itemId": 11494,
+"rate": 10.0
+}
+},
+{
+"id": 17293389,
+"key": "Qufim_Island/Slippery_Sucker",
+"name": "Slippery Sucker",
+"zone": "Qufim Island",
+"type": "NM",
+"level": [
+41,
+42
+],
+"respawn": 3600,
+"drop": {
+"item": "Mystique Earring",
+"itemId": 16023,
+"rate": 15.0
+}
+},
+{
+"id": 17649818,
+"key": "Labyrinth_of_Onzozo/Soulstealer_Skullnix",
+"name": "Soulstealer Skullnix",
+"zone": "Labyrinth of Onzozo",
+"type": "NM",
+"level": [
+69,
+72
+],
+"respawn": 7200,
+"drop": {
+"item": "Kard",
+"itemId": 17982,
+"rate": 15.0
+}
+},
+{
+"id": 17613120,
+"key": "FeiYin/Southern_Shadow",
+"name": "Southern Shadow",
+"zone": "Fei'Yin",
+"type": "NM",
+"level": [
+63,
+63
+],
+"respawn": 57600,
+"drop": {
+"item": "Master Shield",
+"itemId": 12344,
+"rate": 15.0
+}
+},
+{
+"id": 17428554,
+"key": "Temple_of_Uggalepih/Sozu_Sarberry",
+"name": "Sozu Sarberry",
+"zone": "Temple of Uggalepih",
+"type": "NM",
+"level": [
+66,
+66
+],
+"respawn": 3600,
+"drop": {
+"item": "Hocho",
+"itemId": 16924,
+"rate": 1.0
+}
+},
+{
+"id": 17428611,
+"key": "Temple_of_Uggalepih/Sozu_Terberry",
+"name": "Sozu Terberry",
+"zone": "Temple of Uggalepih",
+"type": "NM",
+"level": [
+65,
+65
+],
+"respawn": 3600,
+"drop": null
+},
+{
+"id": 17252657,
+"key": "East_Sarutabaruta/Spiny_Spipi",
+"name": "Spiny Spipi",
+"zone": "East Sarutabaruta",
+"type": "NM",
+"level": [
+9,
+10
+],
+"respawn": 2700,
+"drop": {
+"item": "Mist Silk Cape",
+"itemId": 13607,
+"rate": 15.0
+}
+},
+{
+"id": 16793776,
+"key": "Bibiki_Bay/Splacknuck",
+"name": "Splacknuck",
+"zone": "Bibiki Bay",
+"type": "NM",
+"level": [
+69,
+70
+],
+"respawn": 3600,
+"drop": {
+"item": "Knack Pendant",
+"itemId": 16298,
+"rate": 10.0
+}
+},
+{
+"id": 17387585,
+"key": "Davoi/Steelbiter_Gudrud",
+"name": "Steelbiter Gudrud",
+"zone": "Davoi",
+"type": "NM",
+"level": [
+33,
+34
+],
+"respawn": 3600,
+"drop": {
+"item": "Sentinel's Mantle",
+"itemId": 13615,
+"rate": 10.0
+}
+},
+{
+"id": 17219887,
+"key": "Konschtat_Highlands/Steelfleece_Baldarich",
+"name": "Steelfleece Baldarich",
+"zone": "Konschtat Highlands",
+"type": "NM",
+"level": [
+55,
+56
+],
+"respawn": 75600,
+"drop": {
+"item": "Viking Shield",
+"itemId": 12356,
+"rate": 15.0
+}
+},
+{
+"id": 17219795,
+"key": "Konschtat_Highlands/Stray_Mary",
+"name": "Stray Mary",
+"zone": "Konschtat Highlands",
+"type": "NM",
+"level": [
+19,
+20
+],
+"respawn": 3600,
+"drop": {
+"item": "Mary's Horn",
+"itemId": 17366,
+"rate": 15.0
+}
+},
+{
+"id": 17203475,
+"key": "Jugner_Forest/Supplespine_Mujwuj",
+"name": "Supplespine Mujwuj",
+"zone": "Jugner Forest",
+"type": "NM",
+"level": [
+50,
+50
+],
+"respawn": 3600,
+"drop": {
+"item": "Blue Jasper",
+"itemId": 2847,
+"rate": 15.0
+}
+},
+{
+"id": 17191189,
+"key": "East_Ronfaure/Swamfisk",
+"name": "Swamfisk",
+"zone": "East Ronfaure",
+"type": "NM",
+"level": [
+11,
+15
+],
+"respawn": 3600,
+"drop": {
+"item": "Gelong Staff",
+"itemId": 17594,
+"rate": 100.0
+}
+},
+{
+"id": 16826510,
+"key": "Newton_Movalpolos/Swashstox_Beadblinker",
+"name": "Swashstox Beadblinker",
+"zone": "Newton Movalpolos",
+"type": "NM",
+"level": [
+80,
+80
+],
+"respawn": 10800,
+"drop": {
+"item": "Pachamac's Collar",
+"itemId": 13172,
+"rate": 10.0
+}
+},
+{
+"id": 17432798,
+"key": "Den_of_Rancor/Tawny-fingered_Mugberry",
+"name": "Tawny-fingered Mugberry",
+"zone": "Den of Rancor",
+"type": "NM",
+"level": [
+70,
+72
+],
+"respawn": 3600,
+"drop": {
+"item": "Uggalepih Necklace",
+"itemId": 13147,
+"rate": 100.0
+}
+},
+{
+"id": 17645742,
+"key": "Gustav_Tunnel/Taxim",
+"name": "Taxim",
+"zone": "Gustav Tunnel",
+"type": "NM",
+"level": [
+78,
+80
+],
+"respawn": 7200,
+"drop": {
+"item": "Cocytus Pole",
+"itemId": 17564,
+"rate": 15.0
+}
+},
+{
+"id": 17559584,
+"key": "Dangruf_Wadi/Teporingo",
+"name": "Teporingo",
+"zone": "Dangruf Wadi",
+"type": "NM",
+"level": [
+20,
+20
+],
+"respawn": 3600,
+"drop": {
+"item": "Succubus Grip",
+"itemId": 19045,
+"rate": 24.0
+}
+},
+{
+"id": 17350826,
+"key": "Ghelsba_Outpost/Thousandarm_Deshglesh",
+"name": "Thousandarm Deshglesh",
+"zone": "Ghelsba Outpost",
+"type": "NM",
+"level": [
+11,
+13
+],
+"respawn": 3600,
+"drop": {
+"item": "Plate Belt",
+"itemId": 13227,
+"rate": 5.0
+}
+},
+{
+"id": 17387606,
+"key": "Davoi/Tigerbane_Bakdak",
+"name": "Tigerbane Bakdak",
+"zone": "Davoi",
+"type": "NM",
+"level": [
+31,
+32
+],
+"respawn": 3600,
+"drop": {
+"item": "Warrior's Axe",
+"itemId": 16673,
+"rate": 90.0
+}
+},
+{
+"id": 17236045,
+"key": "Xarcabard/Timeworn_Warrior",
+"name": "Timeworn Warrior",
+"zone": "Xarcabard",
+"type": "NM",
+"level": [
+57,
+58
+],
+"respawn": 5400,
+"drop": {
+"item": "Jasper Tathlum",
+"itemId": 19238,
+"rate": 10.0
+}
+},
+{
+"id": 17248468,
+"key": "West_Sarutabaruta/Tom_Tit_Tat",
+"name": "Tom Tit Tat",
+"zone": "West Sarutabaruta",
+"type": "NM",
+"level": [
+9,
+10
+],
+"respawn": 3600,
+"drop": {
+"item": "Fruit Punches",
+"itemId": 16443,
+"rate": 15.0
+}
+},
+{
+"id": 17428677,
+"key": "Temple_of_Uggalepih/Tonberry_Kinq",
+"name": "Tonberry Kinq",
+"zone": "Temple of Uggalepih",
+"type": "NM",
+"level": [
+65,
+66
+],
+"respawn": 21600,
+"drop": {
+"item": "Water Spirit Pact",
+"itemId": 4901,
+"rate": 5.0
+}
+},
+{
+"id": 17207476,
+"key": "Batallia_Downs/Tottering_Toby",
+"name": "Tottering Toby",
+"zone": "Batallia Downs",
+"type": "NM",
+"level": [
+27,
+28
+],
+"respawn": 3600,
+"drop": {
+"item": "Stumbling Sandals",
+"itemId": 13013,
+"rate": 15.0
+}
+},
+{
+"id": 17588278,
+"key": "Maze_of_Shakhrami/Trembler_Tabitha",
+"name": "Trembler Tabitha",
+"zone": "Maze of Shakhrami",
+"type": "NM",
+"level": [
+55,
+55
+],
+"respawn": 3600,
+"drop": {
+"item": "Grimy Bronze Sheet",
+"itemId": 2848,
+"rate": 15.0
+}
+},
+{
+"id": 17629524,
+"key": "Quicksand_Caves/Triarius_X-XV",
+"name": "Triarius X-XV",
+"zone": "Quicksand Caves",
+"type": "NM",
+"level": [
+72,
+74
+],
+"respawn": 7200,
+"drop": {
+"item": "Pendragon Axe",
+"itemId": 16734,
+"rate": 15.0
+}
+},
+{
+"id": 17293537,
+"key": "Qufim_Island/Trickster_Kinetix",
+"name": "Trickster Kinetix",
+"zone": "Qufim Island",
+"type": "NM",
+"level": [
+35,
+36
+],
+"respawn": 3600,
+"drop": {
+"item": "Tabar",
+"itemId": 16657,
+"rate": 15.0
+}
+},
+{
+"id": 17195259,
+"key": "La_Theine_Plateau/Tumbling_Truffle",
+"name": "Tumbling Truffle",
+"zone": "La Theine Plateau",
+"type": "NM",
+"level": [
+19,
+20
+],
+"respawn": 3600,
+"drop": {
+"item": "Fungus Hat",
+"itemId": 12485,
+"rate": 15.0
+}
+},
+{
+"id": 17616999,
+"key": "Ifrits_Cauldron/Tyrannic_Tunnok",
+"name": "Tyrannic Tunnok",
+"zone": "Ifrit's Cauldron",
+"type": "NM",
+"level": [
+74,
+76
+],
+"respawn": 3600,
+"drop": {
+"item": "Lohar",
+"itemId": 17927,
+"rate": 100.0
+}
+},
+{
+"id": 17645755,
+"key": "Gustav_Tunnel/Ungur",
+"name": "Ungur",
+"zone": "Gustav Tunnel",
+"type": "NM",
+"level": [
+81,
+83
+],
+"respawn": 7200,
+"drop": {
+"item": "Ungur Boomerang",
+"itemId": 18141,
+"rate": 100.0
+}
+},
+{
+"id": 17404029,
+"key": "The_Boyahda_Tree/Unut",
+"name": "Unut",
+"zone": "The Boyahda Tree",
+"type": "NM",
+"level": [
+69,
+71
+],
+"respawn": 7200,
+"drop": {
+"item": "Luna Subligar",
+"itemId": 14287,
+"rate": 10.0
+}
+},
+{
+"id": 17199438,
+"key": "Valkurm_Dunes/Valkurm_Emperor",
+"name": "Valkurm Emperor",
+"zone": "Valkurm Dunes",
+"type": "NM",
+"level": [
+29,
+30
+],
+"respawn": 3600,
+"drop": {
+"item": "Empress Hairpin",
+"itemId": 15224,
+"rate": 15.0
+}
+},
+{
+"id": 17498428,
+"key": "Sea_Serpent_Grotto/Voll_the_Sharkfinned",
+"name": "Voll the Sharkfinned",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+64,
+66
+],
+"respawn": 7200,
+"drop": {
+"item": "Monsoon Jinpachi",
+"itemId": 13875,
+"rate": 10.0
+}
+},
+{
+"id": 17404331,
+"key": "The_Boyahda_Tree/Voluptuous_Vivian",
+"name": "Voluptuous Vivian",
+"zone": "The Boyahda Tree",
+"type": "NM",
+"level": [
+80,
+81
+],
+"respawn": 57600,
+"drop": {
+"item": "Black Ribbon",
+"itemId": 13574,
+"rate": 10.0
+}
+},
+{
+"id": 17617130,
+"key": "Ifrits_Cauldron/Vouivre",
+"name": "Vouivre",
+"zone": "Ifrit's Cauldron",
+"type": "NM",
+"level": [
+79,
+81
+],
+"respawn": 7200,
+"drop": {
+"item": "Gae Bolg",
+"itemId": 16885,
+"rate": 100.0
+}
+},
+{
+"id": 17371578,
+"key": "Giddeus/Vuu_Puqu_the_Beguiler",
+"name": "Vuu Puqu the Beguiler",
+"zone": "Giddeus",
+"type": "NM",
+"level": [
+21,
+22
+],
+"respawn": 900,
+"drop": {
+"item": "Bonze's Circlet",
+"itemId": 13837,
+"rate": 10.0
+}
+},
+{
+"id": 17613095,
+"key": "FeiYin/Western_Shadow",
+"name": "Western Shadow",
+"zone": "Fei'Yin",
+"type": "NM",
+"level": [
+63,
+63
+],
+"respawn": 57600,
+"drop": {
+"item": "Retaliators",
+"itemId": 18752,
+"rate": 10.0
+}
+},
+{
+"id": 17498413,
+"key": "Sea_Serpent_Grotto/Worr_the_Clawfisted",
+"name": "Worr the Clawfisted",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+60,
+61
+],
+"respawn": 7200,
+"drop": {
+"item": "Pagures",
+"itemId": 17504,
+"rate": 15.0
+}
+},
+{
+"id": 17498199,
+"key": "Sea_Serpent_Grotto/Wuur_the_Sandcomber",
+"name": "Wuur the Sandcomber",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+42,
+44
+],
+"respawn": 7200,
+"drop": {
+"item": "Holy Ampulla",
+"itemId": 18137,
+"rate": 10.0
+}
+},
+{
+"id": 17645640,
+"key": "Gustav_Tunnel/Wyvernpoacher_Drachlox",
+"name": "Wyvernpoacher Drachlox",
+"zone": "Gustav Tunnel",
+"type": "NM",
+"level": [
+70,
+72
+],
+"respawn": 7200,
+"drop": {
+"item": "Othinus' Bow",
+"itemId": 17244,
+"rate": 15.0
+}
+},
+{
+"id": 17395954,
+"key": "Castle_Oztroja/Yaa_Haqa_the_Profane",
+"name": "Yaa Haqa the Profane",
+"zone": "Castle Oztroja",
+"type": "NM",
+"level": [
+43,
+43
+],
+"respawn": 3600,
+"drop": {
+"item": "Earth Doublet",
+"itemId": 13732,
+"rate": 10.0
+}
+},
+{
+"id": 17498436,
+"key": "Sea_Serpent_Grotto/Yarr_the_Pearleyed",
+"name": "Yarr the Pearleyed",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+64,
+66
+],
+"respawn": 3600,
+"drop": {
+"item": "Scroll of Cure V",
+"itemId": 4613,
+"rate": 1.0
+}
+},
+{
+"id": 17490204,
+"key": "Kuftal_Tunnel/Yowie",
+"name": "Yowie",
+"zone": "Kuftal Tunnel",
+"type": "NM",
+"level": [
+69,
+71
+],
+"respawn": 3600,
+"drop": {
+"item": "Raptor Skin",
+"itemId": 853,
+"rate": 15.0
+}
+},
+{
+"id": 17363208,
+"key": "Palborough_Mines/ZiGhi_Boneeater",
+"name": "Zi'Ghi Boneeater",
+"zone": "Palborough Mines",
+"type": "NM",
+"level": [
+15,
+16
+],
+"respawn": 3600,
+"drop": {
+"item": "Braveheart",
+"itemId": 16934,
+"rate": 10.0
+}
+},
+{
+"id": 17043554,
+"key": "Mamook/Zizzy_Zillah",
+"name": "Zizzy Zillah",
+"zone": "Mamook",
+"type": "NM",
+"level": [
+83,
+83
+],
+"respawn": 3600,
+"drop": {
+"item": "Namikirimaru",
+"itemId": 18437,
+"rate": 10.0
+}
+},
+{
+"id": 17379564,
+"key": "Beadeaux/ZoKhu_Blackcloud",
+"name": "Zo'Khu Blackcloud",
+"zone": "Beadeaux",
+"type": "NM",
+"level": [
+36,
+38
+],
+"respawn": 3600,
+"drop": {
+"item": "Marine Hat",
+"itemId": 13839,
+"rate": 90.0
+}
+},
+{
+"id": 16986197,
+"key": "Wajaom_Woodlands/Zoraal_Jas_Pkuucha",
+"name": "Zoraal Jas Pkuucha",
+"zone": "Wajaom Woodlands",
+"type": "NM",
+"level": [
+75,
+75
+],
+"respawn": 1800,
+"drop": {
+"item": "Zoraal Jas Axe",
+"itemId": 17953,
+"rate": 15.0
+}
+},
+{
+"id": 17498516,
+"key": "Sea_Serpent_Grotto/Zuug_the_Shoreleaper",
+"name": "Zuug the Shoreleaper",
+"zone": "Sea Serpent Grotto",
+"type": "NM",
+"level": [
+70,
+70
+],
+"respawn": 7200,
+"drop": {
+"item": "Narval",
+"itemId": 16884,
+"rate": 15.0
+}
+}
+]
+}

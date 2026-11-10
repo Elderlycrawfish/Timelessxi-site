@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notorious Monster Tracker — Timeless XI: Reforged</title>
+<meta name="description" content="Timeless XI: a level 75 Final Fantasy XI private server, launching December 2026. The classic you love, carefully reforged.">
+<meta name="theme-color" content="#0c0d16">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.nmst{background:var(--bg);padding:18px 20px;display:flex;flex-direction:column;gap:2px}
+.nmst b{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1;color:var(--bright)}
+.nmst span{color:var(--muted);font-size:13.5px}
+.fld{display:flex;flex-direction:column;gap:6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.fld input,.fld select{font:400 15px var(--sans);letter-spacing:0;text-transform:none;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 12px;min-height:44px;box-sizing:border-box;width:100%}
+.fld input:focus,.fld select:focus{outline:2px solid var(--accent);outline-offset:1px}
+.nmtbl td:first-child,.nmtbl th:first-child{min-width:220px}
+.nm-name{font-weight:500;color:var(--text)}
+.nm-sub{display:block;color:var(--muted);font-size:13px}
+.st{display:inline-flex;align-items:center;gap:7px;font-size:14px;white-space:nowrap}
+.st i{width:8px;height:8px;border-radius:50%;background:#4a5568;display:inline-block}
+.st.up i{background:#8FB2E6;box-shadow:0 0 0 3px rgba(143,178,230,.25)}
+.st.up{color:var(--text);font-weight:500}
+.st.due i{background:#d6c08f}
+.rate{color:var(--accent);font-size:13px}
+.hnm{display:inline-block;margin-left:8px;font-size:10.5px;letter-spacing:.12em;padding:2px 6px;border:1px solid var(--line3);border-radius:4px;color:var(--ice);vertical-align:2px}
+.pg{min-width:44px;min-height:40px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:8px;cursor:pointer;font:500 14px var(--sans);padding:0 14px}
+.pg[disabled]{opacity:.4;cursor:default}
+@media (max-width:640px){.nmtbl tbody th{display:block}}
+</style>
+</head>
+<body>
+<div class="tx-launch"><a href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span>Timeless XI launches <b>DECEMBER 2026</b></span><span class="go">Follow along in the Discord &rarr;</span></a></div>
+<header class="tx-head">
+<nav class="tx-nav" aria-label="Main">
+<a class="tx-brand" href="index.html"><svg width="22" height="30" viewBox="0 0 22 30" aria-hidden="true" fill="none" stroke="#D6E1F0" stroke-width="1.2"><path d="M2 1.5h18M3.5 3.5h15M2 28.5h18M3.5 26.5h15"/><path d="M5 3.5C5 10 10.2 12.5 10.6 15C10.2 17.5 5 20 5 26.5M17 3.5C17 10 11.8 12.5 11.4 15C11.8 17.5 17 20 17 26.5"/><path d="M11 9.5l1.2 1.6-1.2 1.6-1.2-1.6z" fill="#8FB2E6" stroke="none"/></svg><span>TIMELESS XI</span></a>
+<div class="tx-links"><a href="index.html">Home</a><details class="tx-drop"><summary>Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="tx-drop-panel"><a href="companions.html"><b>Your party is always ready</b><small>AI companions for every job</small></a><a href="jobs.html"><b>Your job, with new tricks</b><small>18 reworked jobs, unique quest weapons</small></a><a href="hunting.html"><b>Always something to hunt</b><small>Champions, rifts, Eternal Sand, bounties</small></a><a href="economy.html"><b>Every hour pays off</b><small>Treasure caskets, crafting, Everglass</small></a><a href="home-life.html"><b>A home worth coming back to</b><small>Mog House bonuses, garden, chores</small></a><a href="classic.html"><b>Classic at heart</b><small>Level 75, kinder to your time</small></a></div></details><a href="nm-tracker.html" aria-current="page">NM Tracker</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a></div>
+<div class="tx-cta"><a class="btn sm" href="https://discord.gg/NUnJErbmh">Join the Discord</a></div>
+<details class="tx-menu"><summary aria-label="Menu"><svg class="tx-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="tx-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
+<div class="tx-menu-panel"><a href="index.html">Home</a><div class="tx-menu-label">Features</div><a class="sub" href="companions.html">Your party is always ready</a><a class="sub" href="jobs.html">Your job, with new tricks</a><a class="sub" href="hunting.html">Always something to hunt</a><a class="sub" href="economy.html">Every hour pays off</a><a class="sub" href="home-life.html">A home worth coming back to</a><a class="sub" href="classic.html">Classic at heart</a><div class="tx-menu-label">Play</div><a href="nm-tracker.html" aria-current="page">NM Tracker</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a><div class="tx-menu-actions"><a class="btn" href="https://discord.gg/NUnJErbmh">Join the Discord</a><a class="btn-ghost" href="getting-started.html">Get ready</a></div></div>
+</details>
+</nav>
+</header>
+<section class="phero" style="padding-bottom:40px"><div class="narrow">
+<p class="eyebrow">Notorious Monster Tracker</p>
+<h1 class="h1">Know when they're up.</h1>
+<p class="lead" style="max-width:680px">Every notorious monster on Timeless, searchable by name, zone or drop: whether it's up, the countdown to its next spawn, its primary drop and drop rate, kills since that last dropped, and who defeated it last.</p>
+<div class="divider" aria-hidden="true"><span></span><i></i><span></span></div>
+</div></section>
+<section class="sec" style="padding-top:8px"><div class="wrap">
+<div id="nm-live" class="callout" style="flex-direction:row;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:22px">
+<span class="tx-pulse" aria-hidden="true"></span>
+<div style="flex:1 1 380px"><strong style="color:var(--text)">Live status turns on at launch, December 2026.</strong> <span class="muted">Until then you can browse every NM, its respawn timer and its primary drop. Up / awaiting status, countdowns, kills since the last drop and the last victor appear once the server is open.</span></div>
+</div>
+<div class="nm-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:22px">
+<div class="nmst"><b id="st-total">–</b><span>notorious monsters tracked</span></div>
+<div class="nmst"><b id="st-up">–</b><span>up now</span></div>
+<div class="nmst"><b id="st-wait">–</b><span>awaiting spawn</span></div>
+<div class="nmst"><b id="st-hnm">–</b><span>high-level NMs (HNMs)</span></div>
+</div>
+<form id="nm-form" role="search" style="display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:16px" onsubmit="return false">
+<label class="fld" style="flex:2 1 320px"><span>Search NMs, zones or drops</span><input id="nm-q" type="search" placeholder="e.g. Leaping Lizzy, Beadeaux, Ridill" autocomplete="off"></label>
+<label class="fld" style="flex:1 1 170px"><span>Status</span><select id="nm-status"><option value="all">All</option><option value="up">Up now</option><option value="waiting">Awaiting spawn</option></select></label>
+<label class="fld" style="flex:1 1 170px"><span>Type</span><select id="nm-type"><option value="all">All</option><option value="NM">NMs</option><option value="HNM">HNMs</option></select></label>
+<label class="fld" style="flex:1 1 200px"><span>Sort by</span><select id="nm-sort"><option value="status">Spawned first</option><option value="name">Name A–Z</option><option value="zone">Zone</option><option value="level">Level</option><option value="respawn">Respawn timer</option><option value="rate">Drop rate (rarest first)</option><option value="kills">Kills since drop</option></select></label>
+</form>
+<p id="nm-count" class="muted" style="margin:0 0 10px;font-size:14px" aria-live="polite"></p>
+<div class="tblbox"><table class="tbl nmtbl"><thead><tr><th scope="col">Notorious Monster</th><th scope="col">Status</th><th scope="col">Respawn</th><th scope="col">Primary drop</th><th scope="col">Kills since drop</th><th scope="col">Last defeated by</th></tr></thead><tbody id="nm-body"><tr><td colspan="6" class="muted">Loading notorious monsters…</td></tr></tbody></table></div>
+<nav id="nm-pages" aria-label="Pages" style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:18px"></nav>
+<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); rates are base rates from the server's drop tables, before Treasure Hunter. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on.</p>
+</div></section>
+<footer class="tx-foot"><div class="wrap">
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+<div><div style="font-family:var(--serif);font-size:24px;letter-spacing:.18em">TIMELESS XI</div><div style="font-size:12px;letter-spacing:.32em;color:#9FBBE0">REFORGED</div></div>
+<a class="soon " href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span><b>COMING SOON</b><small>December 2026</small></span></a>
+</div>
+<nav aria-label="Features"><h4>Features</h4><a href="companions.html">Your party is always ready</a><a href="jobs.html">Your job, with new tricks</a><a href="hunting.html">Always something to hunt</a><a href="economy.html">Every hour pays off</a><a href="home-life.html">A home worth coming back to</a><a href="classic.html">Classic at heart</a></nav>
+<nav aria-label="Play"><h4>Play</h4><a href="nm-tracker.html">NM Tracker</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a></nav>
+<nav aria-label="Community"><h4>Community</h4><a href="https://discord.gg/NUnJErbmh">Discord</a><a href="https://discord.gg/NUnJErbmh">Rules</a></nav>
+</div>
+<p class="legal">Timeless XI is a free, fan-run project. It is not affiliated with, endorsed by or sponsored by Square Enix. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. All game content belongs to its respective owners.</p>
+</div></footer>
+<script>
+document.querySelectorAll('.tx-menu-panel a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.removeAttribute('open');});});
+document.addEventListener('click',function(e){document.querySelectorAll('.tx-drop[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details[open]').forEach(function(d){d.removeAttribute('open');});});
+</script>
+<script>
+(function(){
+  // Live feed: set this to the server's status endpoint at launch. JSON shape (keyed by NM id):
+  // {"updated":"ISO time","nms":{"<id>":{"status":"up"|"waiting","nextSpawn":<unix s|null>,"lastKill":<unix s>,"lastKiller":"Name","killsSinceDrop":<n>}}}
+  var LIVE_URL = '';
+  var PER = 25, page = 0, all = [], live = null;
+  var $ = function(id){return document.getElementById(id);};
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function dur(sec){ if(sec==null) return '—'; sec=Math.max(0,Math.round(sec)); var h=Math.floor(sec/3600), m=Math.floor(sec%3600/60), s=sec%60;
+    if(h>=24){var d=Math.floor(h/24); return d+'d '+(h%24)+'h';} if(h) return h+'h'+(m?' '+m+'m':''); if(m) return m+'m'+(s?' '+s+'s':''); return s+'s'; }
+  function L(n){ return live && live.nms ? live.nms[n.id] : null; }
+  function state(n){ var x=L(n), now=Date.now()/1000; if(!x) return {k:'na'}; if(x.status==='up') return {k:'up'};
+    if(x.nextSpawn && x.nextSpawn>now) return {k:'eta', t:x.nextSpawn-now}; return {k:'due'}; }
+  function statusHtml(n){ var s=state(n);
+    if(s.k==='up') return '<span class="st up"><i></i>Up now</span>';
+    if(s.k==='eta') return '<span class="st"><i></i>Spawns in '+dur(s.t)+'</span>';
+    if(s.k==='due') return '<span class="st due"><i></i>Due now</span>';
+    return '<span class="st"><i></i>At launch</span>'; }
+  function rank(n){ var s=state(n); return s.k==='up'?0:s.k==='due'?1:s.k==='eta'?2+s.t/1e6:3; }
+  function filtered(){
+    var q=$('nm-q').value.trim().toLowerCase(), st=$('nm-status').value, ty=$('nm-type').value, so=$('nm-sort').value;
+    var r=all.filter(function(n){
+      if(ty!=='all' && n.type!==ty) return false;
+      if(st!=='all'){ var s=state(n).k; if(st==='up' && s!=='up') return false; if(st==='waiting' && !(s==='eta'||s==='due')) return false; }
+      if(!q) return true;
+      return (n.name+' '+n.zone+' '+(n.drop?n.drop.item:'')).toLowerCase().indexOf(q)>=0; });
+    var by={name:function(a,b){return a.name.localeCompare(b.name);},
+      zone:function(a,b){return a.zone.localeCompare(b.zone)||a.name.localeCompare(b.name);},
+      level:function(a,b){return ((a.level||[0])[0]-(b.level||[0])[0])||a.name.localeCompare(b.name);},
+      respawn:function(a,b){return ((a.respawn||9e9)-(b.respawn||9e9))||a.name.localeCompare(b.name);},
+      rate:function(a,b){return ((a.drop?a.drop.rate:999)-(b.drop?b.drop.rate:999))||a.name.localeCompare(b.name);},
+      kills:function(a,b){var x=L(a),y=L(b);return ((y?y.killsSinceDrop||0:-1)-(x?x.killsSinceDrop||0:-1))||a.name.localeCompare(b.name);},
+      status:function(a,b){return (rank(a)-rank(b))||a.name.localeCompare(b.name);}};
+    return r.sort(by[so]||by.status); }
+  function render(){
+    var r=filtered(), pages=Math.max(1,Math.ceil(r.length/PER)); if(page>=pages) page=pages-1;
+    var rows=r.slice(page*PER,(page+1)*PER).map(function(n){ var x=L(n);
+      var lv=n.level?(n.level[0]===n.level[1]?'Lv. '+n.level[0]:'Lv. '+n.level[0]+'–'+n.level[1]):'';
+      var drop=n.drop?esc(n.drop.item)+' <span class="rate">'+n.drop.rate+'%</span>':'—';
+      return '<tr><th scope="row"><span class="nm-name">'+esc(n.name)+'</span>'+(n.type==='HNM'?'<span class="hnm">HNM</span>':'')+'<span class="nm-sub">'+esc(n.zone)+(lv?' · '+lv:'')+'</span></th>'
+        +'<td data-label="Status">'+statusHtml(n)+'</td>'
+        +'<td data-label="Respawn">'+(n.respawn?dur(n.respawn):'Window')+'</td>'
+        +'<td data-label="Primary drop">'+drop+'</td>'
+        +'<td data-label="Kills since drop">'+(x&&x.killsSinceDrop!=null?x.killsSinceDrop:'—')+'</td>'
+        +'<td data-label="Last defeated by">'+(x&&x.lastKiller?esc(x.lastKiller):'—')+'</td></tr>'; }).join('');
+    $('nm-body').innerHTML=rows||'<tr><td colspan="6" class="muted">No notorious monsters match that search.</td></tr>';
+    $('nm-count').textContent=r.length+' of '+all.length+' notorious monsters'+(r.length>PER?' · page '+(page+1)+' of '+pages:'');
+    var nav=$('nm-pages'); nav.innerHTML='';
+    if(pages>1){ var mk=function(t,p,dis){var b=document.createElement('button');b.type='button';b.className='pg';b.textContent=t;b.disabled=dis;b.onclick=function(){page=p;render();document.getElementById('nm-form').scrollIntoView({behavior:'smooth'});};nav.appendChild(b);};
+      mk('Previous',page-1,page===0); var sp=document.createElement('span');sp.className='muted';sp.style.fontSize='14px';sp.textContent=(page+1)+' / '+pages;nav.appendChild(sp); mk('Next',page+1,page>=pages-1); }
+    var up=0,wait=0; all.forEach(function(n){var k=state(n).k; if(k==='up')up++; else if(k==='eta'||k==='due')wait++;});
+    $('st-total').textContent=all.length; $('st-hnm').textContent=all.filter(function(n){return n.type==='HNM';}).length;
+    $('st-up').textContent=live?up:'–'; $('st-wait').textContent=live?wait:'–';
+  }
+  ['nm-q','nm-status','nm-type','nm-sort'].forEach(function(id){ $(id).addEventListener('input',function(){page=0;render();}); });
+  var q=new URLSearchParams(location.search).get('q'); if(q) $('nm-q').value=q;
+  fetch('data/nms.json').then(function(r){return r.json();}).then(function(d){ all=d.nms; render(); pollLive(); });
+  function pollLive(){ if(!LIVE_URL) return;
+    fetch(LIVE_URL,{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){ live=d;
+      $('nm-live').innerHTML='<span class="tx-pulse" aria-hidden="true"></span><div><strong style="color:var(--text)">Live from the server.</strong> <span class="muted">Updated '+new Date(d.updated).toLocaleTimeString()+'.</span></div>'; render(); })
+    .catch(function(){}).then(function(){ setTimeout(pollLive,60000); }); }
+  setInterval(function(){ if(live) render(); },1000);
+})();
+</script>
+</body>
+</html>
