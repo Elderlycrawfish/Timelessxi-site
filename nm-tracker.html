@@ -52,6 +52,9 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 .icard .il{margin-top:6px;color:#e8ecf6}
 .icard .ix{margin-top:9px;padding-top:8px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#aebbd8}
 .icard .ix a{color:#cfe0ff;pointer-events:auto}
+.ncard{width:260px}.ncard .nimg{margin:-2px -4px 10px;height:200px;border-radius:5px;background:rgba(5,8,20,.55);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ncard .nimg img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.ncard .nload{color:#aebbd8;font-size:12.5px}
 .icard .irt{color:#c9d3ea;font-size:12.5px}.icard .irt b{color:#fff;font-weight:600}.icard .irt .sep{display:inline-block;width:14px}
 </style>
 </head>
@@ -152,7 +155,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
     var rows=r.slice(page*PER,(page+1)*PER).map(function(n){ var x=L(n);
       var lv=n.level?(n.level[0]===n.level[1]?'Lv. '+n.level[0]:'Lv. '+n.level[0]+'–'+n.level[1]):'';
       var drop=n.drop?'<a class="drop" data-item="'+n.drop.itemId+'" data-rate="'+n.drop.rate+'" data-th2="'+(n.drop.th2!=null?n.drop.th2:n.drop.rate)+'" href="https://www.ffxiah.com/item/'+n.drop.itemId+'" target="_blank" rel="noopener">'+esc(n.drop.item)+'</a><span class="rate">Drop rate: '+n.drop.rate+'%</span>':'—';
-      return '<tr><th scope="row"><a class="nm-name" href="https://www.bg-wiki.com/ffxi/'+encodeURIComponent(n.name.replace(/ /g,'_')).replace(/%27/g,"'")+'" target="_blank" rel="noopener" title="Open '+esc(n.name)+' on BG Wiki">'+esc(n.name)+'</a>'+(n.type==='HNM'?'<span class="hnm">HNM</span>':'')+'<span class="nm-sub">'+esc(n.zone)+(lv?' · '+lv:'')+'</span></th>'
+      return '<tr><th scope="row"><a class="nm-name" data-nm="'+esc(n.name)+'" data-zone="'+esc(n.zone)+(lv?' · '+lv:'')+'" href="'+wikiUrl(n.name)+'" target="_blank" rel="noopener">'+esc(n.name)+'</a>'+(n.type==='HNM'?'<span class="hnm">HNM</span>':'')+'<span class="nm-sub">'+esc(n.zone)+(lv?' · '+lv:'')+'</span></th>'
         +'<td data-label="Status">'+statusHtml(n)+'</td>'
         +'<td data-label="Respawn">'+(n.respawn?dur(n.respawn):'Window')+'</td>'
         +'<td data-label="Primary drop">'+drop+'</td>'
@@ -175,6 +178,50 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
       $('nm-live').innerHTML='<span class="tx-pulse" aria-hidden="true"></span><div><strong style="color:var(--text)">Live from the server.</strong> <span class="muted">Updated '+new Date(d.updated).toLocaleTimeString()+'.</span></div>'; render(); })
     .catch(function(){}).then(function(){ setTimeout(pollLive,60000); }); }
   setInterval(function(){ if(live && !card.classList.contains('on')) render(); },1000);
+  // ---- NM picture card (image from BG Wiki, fetched on first hover through its public API)
+  var WIKI_FIX={'Gyre-Carlin PX':'Gyre-Carlin','Ixtab':'Ixtab (Monster)'};
+  var WIKI_NONE={'Firedance Magmaal Ja':1,'Ignamoth':1,'Mahishasura':1,'Nis Puk':1};
+  var FAMILY_FIX={'Bloodthirster Madkix':'Goblin','Swashstox Beadblinker':'Goblin','Hawkeyed Dnatbat':'Orc','Ni\'Zho Bladebender':'Quadav','Zi\'Ghi Boneeater':'Quadav','Skvader':'Rabbit','Hoar-knuckled Rimberry':'Tonberry'};
+  function wikiTitle(n){return WIKI_FIX[n]||n;}
+  function wikiUrl(n){ return WIKI_NONE[n]?'https://www.bg-wiki.com/index.php?search='+encodeURIComponent(n):'https://www.bg-wiki.com/ffxi/'+encodeURIComponent(wikiTitle(n).replace(/ /g,'_')).replace(/%27/g,"'").replace(/%28/g,'(').replace(/%29/g,')'); }
+  var API='https://www.bg-wiki.com/api.php?format=json&origin=*&action=query&prop=imageinfo&iiprop=url&iiurlwidth=320&redirects=1&';
+  var pics={};
+  function pickPic(n){
+    if(pics[n]) return pics[n];
+    if(WIKI_NONE[n]) return pics[n]=Promise.resolve(null);
+    var fam=FAMILY_FIX[n];
+    var q=fam?API+'titles='+encodeURIComponent('File:Category-'+fam+'.jpg'):API+'generator=images&gimlimit=100&titles='+encodeURIComponent(wikiTitle(n));
+    return pics[n]=fetch(q).then(function(r){return r.json();}).then(function(j){
+      var pages=j.query&&j.query.pages?Object.values(j.query.pages):[], t=wikiTitle(n).toLowerCase(), best=null;
+      pages.forEach(function(p){ var ii=(p.imageinfo||[])[0]; if(!ii) return; var f=p.title.replace(/^File:/,''), base=f.replace(/\.\w+$/,'').toLowerCase();
+        if(!/\.(jpe?g|png|gif)$/i.test(f) || /icon|description|qmark|aggro|ffxidb|crystal|logo|map/i.test(f) || (ii.width||999)<64) return;
+        var score = base===t ? 3 : /^category-/.test(base) ? 2 : 1;
+        if(!best || score>best.s) best={s:score, u:ii.thumburl||ii.url, fam:/^category-/.test(base)?f.replace(/^Category-/,'').replace(/\.\w+$/,'').replace(/_/g,' '):''};
+      });
+      return best;
+    }).catch(function(){ delete pics[n]; return null; });
+  }
+  var ncard=document.createElement('div'); ncard.className='icard ncard'; ncard.setAttribute('role','tooltip'); ncard.id='ncard'; document.body.appendChild(ncard);
+  var ncur=null, nhideT=null;
+  function place(el,a){ var r=a.getBoundingClientRect(), w=el.offsetWidth||300, h=el.offsetHeight, x=Math.min(Math.max(12,r.left), innerWidth-w-12), y=r.bottom+8;
+    if(y+h>innerHeight-8) y=Math.max(8,r.top-h-8); el.style.left=x+'px'; el.style.top=y+'px'; }
+  function nshow(a){ var n=a.dataset.nm; ncur=a; clearTimeout(nhideT);
+    ncard.innerHTML='<div class="nimg"><span class="nload">Loading image…</span></div><div class="ih"><span class="in">'+esc(n)+'</span></div><div class="ik">'+esc(a.dataset.zone)+'</div>'
+      +'<div class="ix"><span class="ncap">&nbsp;</span><span>BG Wiki &#8599;</span></div>';
+    a.setAttribute('aria-describedby','ncard'); place(ncard,a); ncard.classList.add('on');
+    pickPic(n).then(function(p){ if(ncur!==a) return; var box=ncard.querySelector('.nimg'), cap=ncard.querySelector('.ncap');
+      if(p){ var img=new Image(); img.alt=n; img.onload=function(){ if(ncur!==a) return; box.innerHTML=''; box.appendChild(img); place(ncard,a); }; img.onerror=function(){ box.innerHTML='<span class="nload">No image available</span>'; }; img.src=p.u;
+        cap.textContent=p.fam?('Image: '+p.fam+' family · BG Wiki'):'Image: BG Wiki'; }
+      else { box.innerHTML='<span class="nload">'+(WIKI_NONE[n]?'No BG Wiki page yet':'No image available')+'</span>'; cap.textContent=''; }
+      place(ncard,a); }); }
+  function nhide(){ nhideT=setTimeout(function(){ncard.classList.remove('on'); if(ncur) ncur.removeAttribute('aria-describedby'); ncur=null;},120); }
+  $('nm-body').addEventListener('mouseover',function(e){var a=e.target.closest('a.nm-name'); if(a) nshow(a);});
+  $('nm-body').addEventListener('mouseout',function(e){if(e.target.closest('a.nm-name')) nhide();});
+  $('nm-body').addEventListener('focusin',function(e){var a=e.target.closest('a.nm-name'); if(a) nshow(a);});
+  $('nm-body').addEventListener('focusout',function(e){if(e.target.closest('a.nm-name')) nhide();});
+  ncard.addEventListener('mouseover',function(){clearTimeout(nhideT);}); ncard.addEventListener('mouseout',nhide);
+  addEventListener('scroll',function(){ if(ncur && !('ontouchstart' in window)) nhide(); },{passive:true});
+
   // ---- item help card (like the in-game item window / FFXIAH hover)
   var items={}, card=document.createElement('div'); card.className='icard'; card.setAttribute('role','tooltip'); card.id='icard'; document.body.appendChild(card);
   fetch('data/items.json').then(function(r){return r.json();}).then(function(d){items=d;});
