@@ -19,7 +19,8 @@
 .fld input,.fld select{font:400 15px var(--sans);letter-spacing:0;text-transform:none;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 12px;min-height:44px;box-sizing:border-box;width:100%}
 .fld input:focus,.fld select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .nmtbl td:first-child,.nmtbl th:first-child{min-width:220px}
-.nm-name{font-weight:500;color:var(--text)}
+.nm-name{font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid transparent}
+a.nm-name:hover,a.nm-name:focus{color:var(--bright);border-bottom-color:var(--accent)}
 .nm-sub{display:block;color:var(--muted);font-size:13px}
 .st{display:inline-flex;align-items:center;gap:7px;font-size:14px;white-space:nowrap}
 .st i{width:8px;height:8px;border-radius:50%;background:#4a5568;display:inline-block}
@@ -92,7 +93,7 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;margin:0 0 10px;font-size:14px"><p id="nm-count" class="muted" style="margin:0" aria-live="polite"></p><p class="muted" style="margin:0"><span style="color:var(--accent)">&#9670;</span> Drop rates are base rates with <strong style="color:var(--text)">no Treasure Hunter applied</strong>. Hover a drop for its item details and its rate with Treasure Hunter 2 (TH2).</p></div>
 <div class="tblbox"><table class="tbl nmtbl"><thead><tr><th scope="col">Notorious Monster</th><th scope="col">Status</th><th scope="col">Respawn</th><th scope="col">Primary drop</th><th scope="col">Kills since drop</th><th scope="col">Last defeated by</th></tr></thead><tbody id="nm-body"><tr><td colspan="6" class="muted">Loading notorious monsters…</td></tr></tbody></table></div>
 <nav id="nm-pages" aria-label="Pages" style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:18px"></nav>
-<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); drop rates are the base rates from the server's drop tables with no Treasure Hunter (TH) applied, so Treasure Hunter will raise them; each item's pop-out also shows its rate at TH2, using the server's Treasure Hunter table. Drops that come from a guaranteed group (for example "always one of these") aren't changed by Treasure Hunter. Item details and icons are the game's own item text; click an item to open it on FFXIAH. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on.</p>
+<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); drop rates are the base rates from the server's drop tables with no Treasure Hunter (TH) applied, so Treasure Hunter will raise them; each item's pop-out also shows its rate at TH2, using the server's Treasure Hunter table. Drops that come from a guaranteed group (for example "always one of these") aren't changed by Treasure Hunter. Item details and icons are the game's own item text; click an item to open it on FFXIAH, or an NM's name to open its BG Wiki page. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on.</p>
 </div></section>
 <footer class="tx-foot"><div class="wrap">
 <div class="cols">
@@ -150,7 +151,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
     var rows=r.slice(page*PER,(page+1)*PER).map(function(n){ var x=L(n);
       var lv=n.level?(n.level[0]===n.level[1]?'Lv. '+n.level[0]:'Lv. '+n.level[0]+'–'+n.level[1]):'';
       var drop=n.drop?'<a class="drop" data-item="'+n.drop.itemId+'" data-rate="'+n.drop.rate+'" data-th2="'+(n.drop.th2!=null?n.drop.th2:n.drop.rate)+'" href="https://www.ffxiah.com/item/'+n.drop.itemId+'" target="_blank" rel="noopener">'+esc(n.drop.item)+'</a><span class="rate">Drop rate: '+n.drop.rate+'%</span>':'—';
-      return '<tr><th scope="row"><span class="nm-name">'+esc(n.name)+'</span>'+(n.type==='HNM'?'<span class="hnm">HNM</span>':'')+'<span class="nm-sub">'+esc(n.zone)+(lv?' · '+lv:'')+'</span></th>'
+      return '<tr><th scope="row"><a class="nm-name" href="https://www.bg-wiki.com/ffxi/'+encodeURIComponent(n.name.replace(/ /g,'_')).replace(/%27/g,"'")+'" target="_blank" rel="noopener" title="Open '+esc(n.name)+' on BG Wiki">'+esc(n.name)+'</a>'+(n.type==='HNM'?'<span class="hnm">HNM</span>':'')+'<span class="nm-sub">'+esc(n.zone)+(lv?' · '+lv:'')+'</span></th>'
         +'<td data-label="Status">'+statusHtml(n)+'</td>'
         +'<td data-label="Respawn">'+(n.respawn?dur(n.respawn):'Window')+'</td>'
         +'<td data-label="Primary drop">'+drop+'</td>'
