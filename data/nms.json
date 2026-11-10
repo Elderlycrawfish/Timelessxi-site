@@ -16,7 +16,8 @@
 "drop": {
 "item": "Heavy Cuirass",
 "itemId": 13794,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -33,7 +34,8 @@
 "drop": {
 "item": "Soarer Earring",
 "itemId": 16030,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -50,7 +52,8 @@
 "drop": {
 "item": "Spiro Staff",
 "itemId": 18610,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -67,7 +70,8 @@
 "drop": {
 "item": "Archer's Jupon",
 "itemId": 14467,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -84,7 +88,8 @@
 "drop": {
 "item": "Amemet Skin",
 "itemId": 1275,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -101,7 +106,8 @@
 "drop": {
 "item": "Kamewari",
 "itemId": 16968,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -118,7 +124,8 @@
 "drop": {
 "item": "Arcanabane",
 "itemId": 16686,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -135,7 +142,8 @@
 "drop": {
 "item": "Save the Queen",
 "itemId": 16604,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -152,7 +160,8 @@
 "drop": {
 "item": "Scroll of Stone IV",
 "itemId": 4770,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -169,7 +178,8 @@
 "drop": {
 "item": "Pharaoh's Bow",
 "itemId": 17191,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -186,7 +196,8 @@
 "drop": {
 "item": "Fransisca",
 "itemId": 17925,
-"rate": 90.0
+"rate": 90.0,
+"th2": 90.0
 }
 },
 {
@@ -203,7 +214,8 @@
 "drop": {
 "item": "Arachne Web",
 "itemId": 1270,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -220,7 +232,8 @@
 "drop": {
 "item": "Vial of Beastman Blood",
 "itemId": 930,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -237,7 +250,8 @@
 "drop": {
 "item": "Priest's Robe",
 "itemId": 13729,
-"rate": 15.0
+"rate": 15.0,
+"th2": 15.0
 }
 },
 {
@@ -254,7 +268,8 @@
 "drop": {
 "item": "Heavy Cuirass",
 "itemId": 13794,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -271,7 +286,8 @@
 "drop": {
 "item": "Square of Cheviot Cloth",
 "itemId": 1281,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -288,7 +304,8 @@
 "drop": {
 "item": "Rover's Gloves",
 "itemId": 15056,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -305,7 +322,8 @@
 "drop": {
 "item": "Demon Horn",
 "itemId": 902,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -322,7 +340,8 @@
 "drop": {
 "item": "Demon's Axe",
 "itemId": 16711,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -339,7 +358,8 @@
 "drop": {
 "item": "Affinity Earring",
 "itemId": 16031,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -356,7 +376,8 @@
 "drop": {
 "item": "Ingot of Quadav Silver",
 "itemId": 2841,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -373,7 +394,8 @@
 "drop": {
 "item": "Comet Tail",
 "itemId": 17294,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -390,7 +412,8 @@
 "drop": {
 "item": "Plantbane",
 "itemId": 16720,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -407,7 +430,8 @@
 "drop": {
 "item": "Red Rock",
 "itemId": 769,
-"rate": 1.0
+"rate": 1.0,
+"th2": 2.0
 }
 },
 {
@@ -424,7 +448,8 @@
 "drop": {
 "item": "Skirnir's Wand",
 "itemId": 17455,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -441,7 +466,8 @@
 "drop": {
 "item": "Bat Fang",
 "itemId": 891,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -458,7 +484,8 @@
 "drop": {
 "item": "Cassandra's Earring",
 "itemId": 16038,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -475,7 +502,8 @@
 "drop": {
 "item": "Bloodbead Amulet",
 "itemId": 13058,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -492,7 +520,8 @@
 "drop": {
 "item": "Viking Shield",
 "itemId": 12356,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -509,7 +538,8 @@
 "drop": {
 "item": "Acha Darmas",
 "itemId": 17926,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -526,7 +556,8 @@
 "drop": {
 "item": "Ace's Locket",
 "itemId": 15529,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -543,7 +574,8 @@
 "drop": {
 "item": "Vial of Slime Oil",
 "itemId": 637,
-"rate": 27.8
+"rate": 27.8,
+"th2": 64.0
 }
 },
 {
@@ -560,7 +592,8 @@
 "drop": {
 "item": "Qiqirn Collar",
 "itemId": 15531,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -577,7 +610,8 @@
 "drop": {
 "item": "Tredecim Scythe",
 "itemId": 18052,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -594,7 +628,8 @@
 "drop": {
 "item": "Scale Gorget",
 "itemId": 13071,
-"rate": 5.0
+"rate": 5.0,
+"th2": 5.0
 }
 },
 {
@@ -611,7 +646,8 @@
 "drop": {
 "item": "Buburimu Gorget",
 "itemId": 13057,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -628,7 +664,8 @@
 "drop": {
 "item": "Kung Fu Shoes",
 "itemId": 14128,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -645,7 +682,8 @@
 "drop": {
 "item": "Fuchingiri",
 "itemId": 19278,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -662,7 +700,8 @@
 "drop": {
 "item": "Aptant of Pera",
 "itemId": 2817,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -679,7 +718,8 @@
 "drop": {
 "item": "Nadrs",
 "itemId": 17650,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -696,7 +736,8 @@
 "drop": {
 "item": "Asklepios",
 "itemId": 17454,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -713,7 +754,8 @@
 "drop": {
 "item": "Kitsutsuki",
 "itemId": 16912,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -730,7 +772,8 @@
 "drop": {
 "item": "Dhalmel Whistle",
 "itemId": 15505,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -747,7 +790,8 @@
 "drop": {
 "item": "Shaman's Cloak",
 "itemId": 13803,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -764,7 +808,8 @@
 "drop": {
 "item": "Joyeuse",
 "itemId": 17652,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -781,7 +826,8 @@
 "drop": {
 "item": "Harpe",
 "itemId": 18001,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -798,7 +844,8 @@
 "drop": {
 "item": "Lyft Crossbow",
 "itemId": 19233,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -815,7 +862,8 @@
 "drop": {
 "item": "Goshisho's Scythe",
 "itemId": 16792,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -832,7 +880,8 @@
 "drop": {
 "item": "Swan Bilbo",
 "itemId": 17709,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -849,7 +898,8 @@
 "drop": {
 "item": "Mithran Scimitar",
 "itemId": 16819,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -866,7 +916,8 @@
 "drop": {
 "item": "Sonic Knuckles",
 "itemId": 16434,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -883,7 +934,8 @@
 "drop": {
 "item": "Square of Sarcenet Cloth",
 "itemId": 1280,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -900,7 +952,8 @@
 "drop": {
 "item": "Dodo Skin",
 "itemId": 1014,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -917,7 +970,8 @@
 "drop": {
 "item": "Tiphia Sting",
 "itemId": 18254,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -934,7 +988,8 @@
 "drop": {
 "item": "Quus",
 "itemId": 5793,
-"rate": 1.0
+"rate": 1.0,
+"th2": 2.0
 }
 },
 {
@@ -951,7 +1006,8 @@
 "drop": {
 "item": "Fidelity Mantle",
 "itemId": 11531,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -968,7 +1024,8 @@
 "drop": {
 "item": "Scarecrow Scythe",
 "itemId": 18044,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -985,7 +1042,8 @@
 "drop": {
 "item": "Protecting Bangles",
 "itemId": 14063,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -1002,7 +1060,8 @@
 "drop": {
 "item": "Piece of Thunder Coral",
 "itemId": 2833,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1019,7 +1078,8 @@
 "drop": {
 "item": "Dodge Headband",
 "itemId": 13838,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1036,7 +1096,8 @@
 "drop": {
 "item": "Spider Torque",
 "itemId": 13137,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -1053,7 +1114,8 @@
 "drop": {
 "item": "Valis Bow",
 "itemId": 18714,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1070,7 +1132,8 @@
 "drop": {
 "item": "Helenus's Earring",
 "itemId": 16037,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1087,7 +1150,8 @@
 "drop": {
 "item": "Mushroom Helm",
 "itemId": 13913,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1104,7 +1168,8 @@
 "drop": {
 "item": "Arborist Nails",
 "itemId": 15701,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1121,7 +1186,8 @@
 "drop": {
 "item": "Hanzo Tekko",
 "itemId": 14947,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1138,7 +1204,8 @@
 "drop": {
 "item": "Gigas Bracelets",
 "itemId": 14018,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1155,7 +1222,8 @@
 "drop": {
 "item": "Brawn Earring",
 "itemId": 16021,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1172,7 +1240,8 @@
 "drop": {
 "item": "Ridill",
 "itemId": 16555,
-"rate": 5.0
+"rate": 5.0,
+"th2": 5.0
 }
 },
 {
@@ -1189,7 +1258,8 @@
 "drop": {
 "item": "Webcutter",
 "itemId": 18040,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1206,7 +1276,8 @@
 "drop": {
 "item": "Lyft Hexagun",
 "itemId": 19234,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1223,7 +1294,8 @@
 "drop": {
 "item": "Coeurl Whisker",
 "itemId": 927,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -1240,7 +1312,8 @@
 "drop": {
 "item": "Power Staff",
 "itemId": 17563,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1257,7 +1330,8 @@
 "drop": {
 "item": "Bellicose Mantle",
 "itemId": 15469,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -1274,7 +1348,8 @@
 "drop": {
 "item": "Bomb Core",
 "itemId": 18139,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -1291,7 +1366,8 @@
 "drop": {
 "item": "Lockheart",
 "itemId": 16944,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -1308,7 +1384,8 @@
 "drop": {
 "item": "Clipeus",
 "itemId": 12371,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -1325,7 +1402,8 @@
 "drop": {
 "item": "Frog Trousers",
 "itemId": 14286,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1342,7 +1420,8 @@
 "drop": {
 "item": "Valkyrie's Mask",
 "itemId": 13841,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -1359,7 +1438,8 @@
 "drop": {
 "item": "Elemental Charm",
 "itemId": 13115,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1376,7 +1456,8 @@
 "drop": {
 "item": "Faerie Tunic",
 "itemId": 13731,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -1393,7 +1474,8 @@
 "drop": {
 "item": "Wit Pendant",
 "itemId": 16300,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1410,7 +1492,8 @@
 "drop": {
 "item": "Eisentaenzer",
 "itemId": 16727,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1427,7 +1510,8 @@
 "drop": {
 "item": "Night Cape",
 "itemId": 13576,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1444,7 +1528,8 @@
 "drop": {
 "item": "Gosha Sarashi",
 "itemId": 15940,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1461,7 +1546,8 @@
 "drop": {
 "item": "Concealing Cuffs",
 "itemId": 14866,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1478,7 +1564,8 @@
 "drop": {
 "item": "Xhifhut Head",
 "itemId": 1479,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -1495,7 +1582,8 @@
 "drop": {
 "item": "Assassin's Bow",
 "itemId": 17184,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -1512,7 +1600,8 @@
 "drop": {
 "item": "Promptitude Solea",
 "itemId": 11404,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1529,7 +1618,8 @@
 "drop": {
 "item": "Wingedge",
 "itemId": 17281,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -1546,7 +1636,8 @@
 "drop": {
 "item": "A l'Outrance",
 "itemId": 18041,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -1563,7 +1654,8 @@
 "drop": {
 "item": "Precision Bandana",
 "itemId": 11493,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1580,7 +1672,8 @@
 "drop": {
 "item": "Sarabande Earring",
 "itemId": 16034,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -1597,7 +1690,8 @@
 "drop": {
 "item": "Monster Signa",
 "itemId": 17132,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -1614,7 +1708,8 @@
 "drop": {
 "item": "Sleight Kukri",
 "itemId": 19121,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1631,7 +1726,8 @@
 "drop": {
 "item": "Wild Cudgel",
 "itemId": 17412,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -1661,7 +1757,8 @@
 "drop": {
 "item": "Octant",
 "itemId": 19232,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1678,7 +1775,8 @@
 "drop": {
 "item": "Curaga Earring",
 "itemId": 14759,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1695,7 +1793,8 @@
 "drop": {
 "item": "Revival Tree Root",
 "itemId": 940,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1712,7 +1811,8 @@
 "drop": {
 "item": "Jet Seraweels",
 "itemId": 15613,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1729,7 +1829,8 @@
 "drop": {
 "item": "Rabbit Charm",
 "itemId": 13112,
-"rate": 1.0
+"rate": 1.0,
+"th2": 2.0
 }
 },
 {
@@ -1746,7 +1847,8 @@
 "drop": {
 "item": "Light Soleas",
 "itemId": 13052,
-"rate": 85.0
+"rate": 85.0,
+"th2": 85.0
 }
 },
 {
@@ -1763,7 +1865,8 @@
 "drop": {
 "item": "Daihannya",
 "itemId": 16990,
-"rate": 0.1
+"rate": 0.1,
+"th2": 0.3
 }
 },
 {
@@ -1780,7 +1883,8 @@
 "drop": {
 "item": "Fendoir",
 "itemId": 17969,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1797,7 +1901,8 @@
 "drop": {
 "item": "Defending Ring",
 "itemId": 13566,
-"rate": 5.0
+"rate": 5.0,
+"th2": 5.0
 }
 },
 {
@@ -1814,7 +1919,8 @@
 "drop": {
 "item": "Boreas Cesti",
 "itemId": 18359,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -1831,7 +1937,8 @@
 "drop": {
 "item": "Aptant of Aecus",
 "itemId": 2812,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -1848,7 +1955,8 @@
 "drop": {
 "item": "Bounding Boots",
 "itemId": 15351,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1865,7 +1973,8 @@
 "drop": {
 "item": "Treant Bulb",
 "itemId": 953,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1882,7 +1991,8 @@
 "drop": {
 "item": "Valiant Knife",
 "itemId": 17983,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1899,7 +2009,8 @@
 "drop": {
 "item": "Octave Club",
 "itemId": 18852,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -1916,7 +2027,8 @@
 "drop": {
 "item": "Ram Horn",
 "itemId": 895,
-"rate": 42.2
+"rate": 42.2,
+"th2": 80.6
 }
 },
 {
@@ -1933,7 +2045,8 @@
 "drop": {
 "item": "Pygme Sainti",
 "itemId": 18770,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1950,7 +2063,8 @@
 "drop": {
 "item": "Veuglaire",
 "itemId": 19235,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -1967,7 +2081,8 @@
 "drop": {
 "item": "Optical Earring",
 "itemId": 14803,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -1984,7 +2099,8 @@
 "drop": {
 "item": "Square of Taffeta Cloth",
 "itemId": 1279,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2001,7 +2117,8 @@
 "drop": {
 "item": "Astrolabe",
 "itemId": 19239,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2018,7 +2135,8 @@
 "drop": {
 "item": "Vial of Beastman Blood",
 "itemId": 930,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2035,7 +2153,8 @@
 "drop": {
 "item": "Ochimusha Kote",
 "itemId": 14986,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -2052,7 +2171,8 @@
 "drop": {
 "item": "Hercules Ring",
 "itemId": 14659,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2069,7 +2189,8 @@
 "drop": {
 "item": "Lleu's Charm",
 "itemId": 16299,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2086,7 +2207,8 @@
 "drop": {
 "item": "Kidney Dagger",
 "itemId": 17618,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -2103,7 +2225,8 @@
 "drop": {
 "item": "Demonic Sword",
 "itemId": 16936,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -2120,7 +2243,8 @@
 "drop": {
 "item": "Monsoon Spear",
 "itemId": 16883,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2137,7 +2261,8 @@
 "drop": {
 "item": "Ataraxy Earring",
 "itemId": 16018,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2154,7 +2279,8 @@
 "drop": {
 "item": "Revival Tree Root",
 "itemId": 940,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2171,7 +2297,8 @@
 "drop": {
 "item": "Manticore Fang",
 "itemId": 1123,
-"rate": 35.4
+"rate": 35.4,
+"th2": 73.6
 }
 },
 {
@@ -2188,7 +2315,8 @@
 "drop": {
 "item": "Muffle Earring",
 "itemId": 16032,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2205,7 +2333,8 @@
 "drop": {
 "item": "Slice of Dragon Meat",
 "itemId": 4272,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -2222,7 +2351,8 @@
 "drop": {
 "item": "Shinogi",
 "itemId": 16913,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -2239,7 +2369,8 @@
 "drop": {
 "item": "Tempest Belt",
 "itemId": 15946,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2256,7 +2387,8 @@
 "drop": {
 "item": "Disciple Grip",
 "itemId": 19044,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2273,7 +2405,8 @@
 "drop": {
 "item": "Executioner",
 "itemId": 16723,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2290,7 +2423,8 @@
 "drop": {
 "item": "Minstrel's Coat",
 "itemId": 13804,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2307,7 +2441,8 @@
 "drop": {
 "item": "Nue Fang",
 "itemId": 1012,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2324,7 +2459,8 @@
 "drop": {
 "item": "Pilgrim's Wand",
 "itemId": 18394,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2341,7 +2477,8 @@
 "drop": {
 "item": "Sand Gloves",
 "itemId": 14064,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2358,7 +2495,8 @@
 "drop": {
 "item": "Amanojaku",
 "itemId": 16911,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2375,7 +2513,8 @@
 "drop": {
 "item": "Ogygos's Bracelets",
 "itemId": 14019,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2392,7 +2531,8 @@
 "drop": {
 "item": "Shepherd's Chain",
 "itemId": 16297,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -2409,7 +2549,8 @@
 "drop": {
 "item": "Gigas Bracelets",
 "itemId": 14018,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2426,7 +2567,8 @@
 "drop": {
 "item": "Hojutsu Belt",
 "itemId": 15291,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -2443,7 +2585,8 @@
 "drop": {
 "item": "Assault Jerkin",
 "itemId": 13805,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2460,7 +2603,8 @@
 "drop": {
 "item": "Calamar",
 "itemId": 16882,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -2477,7 +2621,8 @@
 "drop": {
 "item": "Nous Arbalest",
 "itemId": 19230,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2494,7 +2639,8 @@
 "drop": {
 "item": "Nightmare Gloves",
 "itemId": 14946,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -2511,7 +2657,8 @@
 "drop": {
 "item": "Schwarz Axt",
 "itemId": 16728,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2528,7 +2675,8 @@
 "drop": {
 "item": "Astral Aspis",
 "itemId": 12382,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2545,7 +2693,8 @@
 "drop": {
 "item": "Thrakon Breastplate",
 "itemId": 11343,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2562,7 +2711,8 @@
 "drop": {
 "item": "Jujitsu Gi",
 "itemId": 13728,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -2579,7 +2729,8 @@
 "drop": {
 "item": "Gigas Bracelets",
 "itemId": 14018,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2596,7 +2747,8 @@
 "drop": {
 "item": "Volant Belt",
 "itemId": 15945,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2613,7 +2765,8 @@
 "drop": {
 "item": "Exocets",
 "itemId": 17503,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2630,7 +2783,8 @@
 "drop": {
 "item": "Sarutobi Kyahan",
 "itemId": 15737,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -2647,7 +2801,8 @@
 "drop": {
 "item": "Ram Horn",
 "itemId": 895,
-"rate": 42.2
+"rate": 42.2,
+"th2": 80.6
 }
 },
 {
@@ -2664,7 +2819,8 @@
 "drop": {
 "item": "Gigas Bracelets",
 "itemId": 14018,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2681,7 +2837,8 @@
 "drop": {
 "item": "Gigas Bracelets",
 "itemId": 14018,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2698,7 +2855,8 @@
 "drop": {
 "item": "Lyricist's Gonnelle",
 "itemId": 11533,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2715,7 +2873,8 @@
 "drop": {
 "item": "Bailathorn",
 "itemId": 18138,
-"rate": 50.9
+"rate": 50.9,
+"th2": 88.4
 }
 },
 {
@@ -2732,7 +2891,8 @@
 "drop": {
 "item": "Dune Boots",
 "itemId": 14168,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2749,7 +2909,8 @@
 "drop": {
 "item": "Bano del Sol",
 "itemId": 17981,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2766,7 +2927,8 @@
 "drop": {
 "item": "Loxley Bow",
 "itemId": 17199,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -2783,7 +2945,8 @@
 "drop": {
 "item": "Southern Pearl",
 "itemId": 1274,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2800,7 +2963,8 @@
 "drop": {
 "item": "Cerulean Pendant",
 "itemId": 13086,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2817,7 +2981,8 @@
 "drop": {
 "item": "Volans Greaves",
 "itemId": 15347,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2834,7 +2999,8 @@
 "drop": {
 "item": "Jelly Ring",
 "itemId": 13303,
-"rate": 95.0
+"rate": 95.0,
+"th2": 95.0
 }
 },
 {
@@ -2851,7 +3017,8 @@
 "drop": {
 "item": "Mermaid Tail",
 "itemId": 1483,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2868,7 +3035,8 @@
 "drop": {
 "item": "Moon Amulet",
 "itemId": 13114,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2885,7 +3053,8 @@
 "drop": {
 "item": "Entrancing Ribbon",
 "itemId": 15218,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2902,7 +3071,8 @@
 "drop": {
 "item": "Sukesada",
 "itemId": 16980,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -2919,7 +3089,8 @@
 "drop": {
 "item": "Aptant of Geoc",
 "itemId": 2820,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2936,7 +3107,8 @@
 "drop": {
 "item": "Circe's Hat",
 "itemId": 11494,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -2953,7 +3125,8 @@
 "drop": {
 "item": "Mystique Earring",
 "itemId": 16023,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2970,7 +3143,8 @@
 "drop": {
 "item": "Kard",
 "itemId": 17982,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -2987,7 +3161,8 @@
 "drop": {
 "item": "Master Shield",
 "itemId": 12344,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3004,7 +3179,8 @@
 "drop": {
 "item": "Hocho",
 "itemId": 16924,
-"rate": 1.0
+"rate": 1.0,
+"th2": 2.0
 }
 },
 {
@@ -3034,7 +3210,8 @@
 "drop": {
 "item": "Mist Silk Cape",
 "itemId": 13607,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3051,7 +3228,8 @@
 "drop": {
 "item": "Knack Pendant",
 "itemId": 16298,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3068,7 +3246,8 @@
 "drop": {
 "item": "Sentinel's Mantle",
 "itemId": 13615,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -3085,7 +3264,8 @@
 "drop": {
 "item": "Viking Shield",
 "itemId": 12356,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3102,7 +3282,8 @@
 "drop": {
 "item": "Mary's Horn",
 "itemId": 17366,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3119,7 +3300,8 @@
 "drop": {
 "item": "Blue Jasper",
 "itemId": 2847,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3136,7 +3318,8 @@
 "drop": {
 "item": "Gelong Staff",
 "itemId": 17594,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -3153,7 +3336,8 @@
 "drop": {
 "item": "Pachamac's Collar",
 "itemId": 13172,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3170,7 +3354,8 @@
 "drop": {
 "item": "Uggalepih Necklace",
 "itemId": 13147,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -3187,7 +3372,8 @@
 "drop": {
 "item": "Cocytus Pole",
 "itemId": 17564,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3204,7 +3390,8 @@
 "drop": {
 "item": "Succubus Grip",
 "itemId": 19045,
-"rate": 24.0
+"rate": 24.0,
+"th2": 56.0
 }
 },
 {
@@ -3221,7 +3408,8 @@
 "drop": {
 "item": "Plate Belt",
 "itemId": 13227,
-"rate": 5.0
+"rate": 5.0,
+"th2": 5.0
 }
 },
 {
@@ -3238,7 +3426,8 @@
 "drop": {
 "item": "Warrior's Axe",
 "itemId": 16673,
-"rate": 90.0
+"rate": 90.0,
+"th2": 90.0
 }
 },
 {
@@ -3255,7 +3444,8 @@
 "drop": {
 "item": "Jasper Tathlum",
 "itemId": 19238,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3272,7 +3462,8 @@
 "drop": {
 "item": "Fruit Punches",
 "itemId": 16443,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3289,7 +3480,8 @@
 "drop": {
 "item": "Water Spirit Pact",
 "itemId": 4901,
-"rate": 5.0
+"rate": 5.0,
+"th2": 7.0
 }
 },
 {
@@ -3306,7 +3498,8 @@
 "drop": {
 "item": "Stumbling Sandals",
 "itemId": 13013,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3323,7 +3516,8 @@
 "drop": {
 "item": "Grimy Bronze Sheet",
 "itemId": 2848,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3340,7 +3534,8 @@
 "drop": {
 "item": "Pendragon Axe",
 "itemId": 16734,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3357,7 +3552,8 @@
 "drop": {
 "item": "Tabar",
 "itemId": 16657,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3374,7 +3570,8 @@
 "drop": {
 "item": "Fungus Hat",
 "itemId": 12485,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3391,7 +3588,8 @@
 "drop": {
 "item": "Lohar",
 "itemId": 17927,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -3408,7 +3606,8 @@
 "drop": {
 "item": "Ungur Boomerang",
 "itemId": 18141,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -3425,7 +3624,8 @@
 "drop": {
 "item": "Luna Subligar",
 "itemId": 14287,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3442,7 +3642,8 @@
 "drop": {
 "item": "Empress Hairpin",
 "itemId": 15224,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3459,7 +3660,8 @@
 "drop": {
 "item": "Monsoon Jinpachi",
 "itemId": 13875,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3476,7 +3678,8 @@
 "drop": {
 "item": "Black Ribbon",
 "itemId": 13574,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3493,7 +3696,8 @@
 "drop": {
 "item": "Gae Bolg",
 "itemId": 16885,
-"rate": 100.0
+"rate": 100.0,
+"th2": 100.0
 }
 },
 {
@@ -3510,7 +3714,8 @@
 "drop": {
 "item": "Bonze's Circlet",
 "itemId": 13837,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -3527,7 +3732,8 @@
 "drop": {
 "item": "Retaliators",
 "itemId": 18752,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3544,7 +3750,8 @@
 "drop": {
 "item": "Pagures",
 "itemId": 17504,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3561,7 +3768,8 @@
 "drop": {
 "item": "Holy Ampulla",
 "itemId": 18137,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3578,7 +3786,8 @@
 "drop": {
 "item": "Othinus' Bow",
 "itemId": 17244,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3595,7 +3804,8 @@
 "drop": {
 "item": "Earth Doublet",
 "itemId": 13732,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -3612,7 +3822,8 @@
 "drop": {
 "item": "Scroll of Cure V",
 "itemId": 4613,
-"rate": 1.0
+"rate": 1.0,
+"th2": 2.0
 }
 },
 {
@@ -3629,7 +3840,8 @@
 "drop": {
 "item": "Raptor Skin",
 "itemId": 853,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3646,7 +3858,8 @@
 "drop": {
 "item": "Braveheart",
 "itemId": 16934,
-"rate": 10.0
+"rate": 10.0,
+"th2": 10.0
 }
 },
 {
@@ -3663,7 +3876,8 @@
 "drop": {
 "item": "Namikirimaru",
 "itemId": 18437,
-"rate": 10.0
+"rate": 10.0,
+"th2": 15.0
 }
 },
 {
@@ -3680,7 +3894,8 @@
 "drop": {
 "item": "Marine Hat",
 "itemId": 13839,
-"rate": 90.0
+"rate": 90.0,
+"th2": 90.0
 }
 },
 {
@@ -3697,7 +3912,8 @@
 "drop": {
 "item": "Zoraal Jas Axe",
 "itemId": 17953,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 },
 {
@@ -3714,7 +3930,8 @@
 "drop": {
 "item": "Narval",
 "itemId": 16884,
-"rate": 15.0
+"rate": 15.0,
+"th2": 40.0
 }
 }
 ]
