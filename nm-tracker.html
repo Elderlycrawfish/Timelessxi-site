@@ -31,6 +31,23 @@
 .pg{min-width:44px;min-height:40px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:8px;cursor:pointer;font:500 14px var(--sans);padding:0 14px}
 .pg[disabled]{opacity:.4;cursor:default}
 @media (max-width:640px){.nmtbl tbody th{display:block}}
+a.drop{color:var(--text);text-decoration:none;border-bottom:1px dotted #5a6a85;cursor:help}
+a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);outline:none}
+.icard{position:fixed;z-index:60;width:300px;max-width:calc(100vw - 24px);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s;
+ background:linear-gradient(180deg,rgba(38,52,92,.97),rgba(20,28,56,.97));border:1px solid #8193bd;border-radius:7px;box-shadow:0 0 0 1px rgba(10,12,24,.9),0 14px 34px rgba(0,0,0,.55);
+ padding:12px 14px 11px;font:400 13.5px/1.5 var(--sans);color:#f2f4fa}
+.icard.on{opacity:1;transform:none;pointer-events:auto}
+.icard .ih{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.icard .in{font-weight:600;font-size:15px;color:#fff;letter-spacing:.01em}
+.icard .tags{display:flex;gap:4px;flex:0 0 auto;padding-top:2px}
+.icard .tags span{font-size:10.5px;font-weight:600;letter-spacing:.06em;padding:1px 6px;border-radius:3px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#e9edf7}
+.icard .tags .rare{color:#f3dc8a;border-color:rgba(243,220,138,.45)}
+.icard .tags .ex{color:#9fd3ff;border-color:rgba(159,211,255,.45)}
+.icard .ik{color:#c9d3ea;margin-top:2px}
+.icard .is{margin-top:6px;display:flex;flex-wrap:wrap;gap:0 10px;color:#fff}
+.icard .il{margin-top:6px;color:#e8ecf6}
+.icard .ix{margin-top:9px;padding-top:8px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#aebbd8}
+.icard .ix a{color:#cfe0ff;pointer-events:auto}
 </style>
 </head>
 <body>
@@ -68,10 +85,10 @@
 <label class="fld" style="flex:1 1 170px"><span>Type</span><select id="nm-type"><option value="all">All</option><option value="NM">NMs</option><option value="HNM">HNMs</option></select></label>
 <label class="fld" style="flex:1 1 200px"><span>Sort by</span><select id="nm-sort"><option value="status">Spawned first</option><option value="name">Name A–Z</option><option value="zone">Zone</option><option value="level">Level</option><option value="respawn">Respawn timer</option><option value="rate">Drop rate (rarest first)</option><option value="kills">Kills since drop</option></select></label>
 </form>
-<p id="nm-count" class="muted" style="margin:0 0 10px;font-size:14px" aria-live="polite"></p>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;margin:0 0 10px;font-size:14px"><p id="nm-count" class="muted" style="margin:0" aria-live="polite"></p><p class="muted" style="margin:0"><span style="color:var(--accent)">&#9670;</span> Drop rates are base rates with <strong style="color:var(--text)">no Treasure Hunter applied</strong>. Hover a drop for its item details.</p></div>
 <div class="tblbox"><table class="tbl nmtbl"><thead><tr><th scope="col">Notorious Monster</th><th scope="col">Status</th><th scope="col">Respawn</th><th scope="col">Primary drop</th><th scope="col">Kills since drop</th><th scope="col">Last defeated by</th></tr></thead><tbody id="nm-body"><tr><td colspan="6" class="muted">Loading notorious monsters…</td></tr></tbody></table></div>
 <nav id="nm-pages" aria-label="Pages" style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:18px"></nav>
-<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); rates are base rates from the server's drop tables, before Treasure Hunter. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on.</p>
+<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); drop rates are the base rates from the server's drop tables with no Treasure Hunter (TH) applied, so Treasure Hunter will raise them. Item details come from the server's item data; click an item to open it on FFXIAH. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on.</p>
 </div></section>
 <footer class="tx-foot"><div class="wrap">
 <div class="cols">
@@ -128,7 +145,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
     var r=filtered(), pages=Math.max(1,Math.ceil(r.length/PER)); if(page>=pages) page=pages-1;
     var rows=r.slice(page*PER,(page+1)*PER).map(function(n){ var x=L(n);
       var lv=n.level?(n.level[0]===n.level[1]?'Lv. '+n.level[0]:'Lv. '+n.level[0]+'–'+n.level[1]):'';
-      var drop=n.drop?esc(n.drop.item)+' <span class="rate">'+n.drop.rate+'%</span>':'—';
+      var drop=n.drop?'<a class="drop" data-item="'+n.drop.itemId+'" href="https://www.ffxiah.com/item/'+n.drop.itemId+'" target="_blank" rel="noopener">'+esc(n.drop.item)+'</a> <span class="rate">'+n.drop.rate+'%</span>':'—';
       return '<tr><th scope="row"><span class="nm-name">'+esc(n.name)+'</span>'+(n.type==='HNM'?'<span class="hnm">HNM</span>':'')+'<span class="nm-sub">'+esc(n.zone)+(lv?' · '+lv:'')+'</span></th>'
         +'<td data-label="Status">'+statusHtml(n)+'</td>'
         +'<td data-label="Respawn">'+(n.respawn?dur(n.respawn):'Window')+'</td>'
@@ -151,7 +168,34 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
     fetch(LIVE_URL,{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){ live=d;
       $('nm-live').innerHTML='<span class="tx-pulse" aria-hidden="true"></span><div><strong style="color:var(--text)">Live from the server.</strong> <span class="muted">Updated '+new Date(d.updated).toLocaleTimeString()+'.</span></div>'; render(); })
     .catch(function(){}).then(function(){ setTimeout(pollLive,60000); }); }
-  setInterval(function(){ if(live) render(); },1000);
+  setInterval(function(){ if(live && !card.classList.contains('on')) render(); },1000);
+  // ---- item help card (like the in-game item window / FFXIAH hover)
+  var items={}, card=document.createElement('div'); card.className='icard'; card.setAttribute('role','tooltip'); card.id='icard'; document.body.appendChild(card);
+  fetch('data/items.json').then(function(r){return r.json();}).then(function(d){items=d;});
+  var cur=null, hideT=null;
+  function show(a){ var it=items[a.dataset.item]; if(!it) return; cur=a; clearTimeout(hideT);
+    var tags=(it.rare?'<span class="rare">Rare</span>':'')+(it.ex?'<span class="ex">Ex</span>':'');
+    card.innerHTML='<div class="ih"><span class="in">'+esc(it.name)+'</span><span class="tags">'+tags+'</span></div>'
+      +(it.head?'<div class="ik">'+esc(it.head)+'</div>':'')
+      +(it.stats&&it.stats.length?'<div class="is">'+it.stats.map(function(x){return '<span>'+esc(x)+'</span>';}).join('')+'</div>':'')
+      +(it.foot?'<div class="il">'+esc(it.foot)+'</div>':'')
+      +'<div class="ix"><span>No Treasure Hunter: '+esc(a.nextElementSibling?a.nextElementSibling.textContent:'')+'</span><a href="'+a.href+'" target="_blank" rel="noopener">FFXIAH &#8599;</a></div>';
+    a.setAttribute('aria-describedby','icard');
+    var r=a.getBoundingClientRect(), w=card.offsetWidth||300, h=card.offsetHeight, x=Math.min(Math.max(12,r.left), innerWidth-w-12), y=r.bottom+8;
+    if(y+h>innerHeight-8) y=Math.max(8,r.top-h-8);
+    card.style.left=x+'px'; card.style.top=y+'px'; card.classList.add('on'); }
+  function hide(){ hideT=setTimeout(function(){card.classList.remove('on'); if(cur) cur.removeAttribute('aria-describedby'); cur=null;},120); }
+  var body=$('nm-body');
+  body.addEventListener('mouseover',function(e){var a=e.target.closest('a.drop'); if(a) show(a);});
+  body.addEventListener('mouseout',function(e){var a=e.target.closest('a.drop'); if(a) hide();});
+  body.addEventListener('focusin',function(e){var a=e.target.closest('a.drop'); if(a) show(a);});
+  body.addEventListener('focusout',function(e){if(e.target.closest('a.drop')) hide();});
+  card.addEventListener('mouseover',function(){clearTimeout(hideT);}); card.addEventListener('mouseout',hide);
+  var touch=false; addEventListener('touchstart',function(){touch=true;},{passive:true});
+  body.addEventListener('click',function(e){var a=e.target.closest('a.drop'); if(a && touch && cur!==a){ e.preventDefault(); show(a);} });
+  document.addEventListener('click',function(e){ if(touch && cur && !e.target.closest('a.drop') && !card.contains(e.target)) hide(); });
+  addEventListener('scroll',function(){ if(cur && !touch) hide(); },{passive:true});
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && cur) hide(); });
 })();
 </script>
 </body>
