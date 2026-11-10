@@ -202,3 +202,7 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 @keyframes txGlow{0%,100%{box-shadow:0 0 10px 0 rgba(111,146,200,.18),0 0 0 0 rgba(143,178,230,0)}50%{box-shadow:0 0 34px 8px rgba(111,146,200,.5),0 0 0 3px rgba(143,178,230,.12)}}
 @media (prefers-reduced-motion:reduce){.soon,.tx-soon-hero,.tx-soon-inline{animation:none}}
 @media (max-width:374px){.tx-menu summary span{display:none}.tx-name{font-size:17px;letter-spacing:.16em}.tx-sub{font-size:6.5px;letter-spacing:.1em}}
+
+/* animated hourglass from the main logo, in the header */
+.tx-mark{display:block;width:24px;height:44px;flex:0 0 auto;margin:-6px 0}
+@media (max-width:420px){.tx-mark{width:21px;height:38px}}
