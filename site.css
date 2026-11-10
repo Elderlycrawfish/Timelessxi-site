@@ -21,7 +21,10 @@ code,.cmd{font-family:var(--mono);color:var(--accent);font-size:.92em}
 .tx-head{background:var(--bg2);position:relative;z-index:30}
 .tx-nav{max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px 28px}
 .tx-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
-.tx-brand span{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:.18em}
+.tx-word{display:flex;flex-direction:column;gap:3px}
+.tx-name{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:.18em;line-height:1.05}
+.tx-sub{font-family:var(--sans);font-weight:500;font-size:8.5px;letter-spacing:.17em;color:#8FB2E6;white-space:nowrap;line-height:1}
+@media (max-width:420px){.tx-name{font-size:19px}.tx-sub{font-size:7px;letter-spacing:.12em}}
 .tx-links{display:flex;align-items:center;gap:4px 24px;font-size:14px;letter-spacing:.02em}
 .tx-links>a,.tx-drop>summary{color:var(--muted);text-decoration:none;padding:10px 0;cursor:pointer}
 .tx-links>a[aria-current],.tx-drop.cur>summary{color:var(--text)}
@@ -198,3 +201,4 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 .soon,.tx-soon-hero,.tx-soon-inline{animation:txGlow 3.6s ease-in-out infinite}
 @keyframes txGlow{0%,100%{box-shadow:0 0 10px 0 rgba(111,146,200,.18),0 0 0 0 rgba(143,178,230,0)}50%{box-shadow:0 0 34px 8px rgba(111,146,200,.5),0 0 0 3px rgba(143,178,230,.12)}}
 @media (prefers-reduced-motion:reduce){.soon,.tx-soon-hero,.tx-soon-inline{animation:none}}
+@media (max-width:374px){.tx-menu summary span{display:none}.tx-name{font-size:17px;letter-spacing:.16em}.tx-sub{font-size:6.5px;letter-spacing:.1em}}
