@@ -1741,7 +1741,12 @@
 43
 ],
 "respawn": 3600,
-"drop": null
+"drop": {
+"item": "Booster Earring",
+"itemId": 16029,
+"rate": null,
+"th2": null
+}
 },
 {
 "id": 17027423,
