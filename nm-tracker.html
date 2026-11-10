@@ -97,7 +97,7 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;margin:0 0 10px;font-size:14px"><p id="nm-count" class="muted" style="margin:0" aria-live="polite"></p><p class="muted" style="margin:0"><span style="color:var(--accent)">&#9670;</span> Drop rates are base rates with <strong style="color:var(--text)">no Treasure Hunter applied</strong>. Hover over (or tap) a drop to see the item's details and its drop rate with Treasure Hunter 2.</p></div>
 <div class="tblbox"><table class="tbl nmtbl"><thead><tr><th scope="col">Notorious Monster</th><th scope="col">Status</th><th scope="col">Respawn</th><th scope="col">Primary drop</th><th scope="col">Kills since drop</th><th scope="col">Last defeated by</th></tr></thead><tbody id="nm-body"><tr><td colspan="6" class="muted">Loading notorious monsters…</td></tr></tbody></table></div>
 <nav id="nm-pages" aria-label="Pages" style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:18px"></nav>
-<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); drop rates are the base rates from the server's drop tables with no Treasure Hunter (TH) applied, so Treasure Hunter will raise them; each item's pop-out also shows its rate at TH2, using the server's Treasure Hunter table. Drops that come from a guaranteed group (for example "always one of these") aren't changed by Treasure Hunter. Item details and icons are the game's own item text; click an item to open it on FFXIAH, or an NM's name to open its BG Wiki page. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on.</p>
+<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); drop rates are the base rates from the server's drop tables with no Treasure Hunter (TH) applied, so Treasure Hunter will raise them; each item's pop-out also shows its rate at TH2, using the server's Treasure Hunter table. Drops that come from a guaranteed group (for example "always one of these") aren't changed by Treasure Hunter. Item details and icons are the game's own item text; click an item to open it on FFXIAH, or an NM's name to open its BG Wiki page. Hovering over an NM's name shows its picture from BG Wiki; where BG Wiki has no picture of that NM, it shows its monster family instead. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on.</p>
 </div></section>
 <footer class="tx-foot"><div class="wrap">
 <div class="cols">
@@ -207,11 +207,11 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
     if(y+h>innerHeight-8) y=Math.max(8,r.top-h-8); el.style.left=x+'px'; el.style.top=y+'px'; }
   function nshow(a){ var n=a.dataset.nm; ncur=a; clearTimeout(nhideT);
     ncard.innerHTML='<div class="nimg"><span class="nload">Loading image…</span></div><div class="ih"><span class="in">'+esc(n)+'</span></div><div class="ik">'+esc(a.dataset.zone)+'</div>'
-      +'<div class="ix"><span class="ncap">&nbsp;</span><span>BG Wiki &#8599;</span></div>';
+      +'<div class="ix"><span class="ncap">&nbsp;</span><span>Click for the BG Wiki page &#8599;</span></div>';
     a.setAttribute('aria-describedby','ncard'); place(ncard,a); ncard.classList.add('on');
     pickPic(n).then(function(p){ if(ncur!==a) return; var box=ncard.querySelector('.nimg'), cap=ncard.querySelector('.ncap');
       if(p){ var img=new Image(); img.alt=n; img.onload=function(){ if(ncur!==a) return; box.innerHTML=''; box.appendChild(img); place(ncard,a); }; img.onerror=function(){ box.innerHTML='<span class="nload">No image available</span>'; }; img.src=p.u;
-        cap.textContent=p.fam?('Image: '+p.fam+' family · BG Wiki'):'Image: BG Wiki'; }
+        cap.textContent=p.fam?(p.fam+' family · BG Wiki'):'Image: BG Wiki'; }
       else { box.innerHTML='<span class="nload">'+(WIKI_NONE[n]?'No BG Wiki page yet':'No image available')+'</span>'; cap.textContent=''; }
       place(ncard,a); }); }
   function nhide(){ nhideT=setTimeout(function(){ncard.classList.remove('on'); if(ncur) ncur.removeAttribute('aria-describedby'); ncur=null;},120); }
