@@ -61,8 +61,7 @@ code,.cmd{font-family:var(--mono);color:var(--accent);font-size:.92em}
 .tx-pulse{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--accent);animation:txPulse 2.4s ease-in-out infinite}
 @keyframes txPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(143,178,230,.55)}50%{opacity:.55;box-shadow:0 0 0 6px rgba(143,178,230,0)}}
 @media (prefers-reduced-motion:reduce){.tx-pulse{animation:none}}
-.tx-soon-inline{display:none}
-@media (max-width:640px){.tx-soon-hero{display:none !important}.tx-soon-inline{display:inline-flex}}
+.tx-soon-inline{display:inline-flex}
 .soon{display:inline-flex;align-items:center;gap:10px;padding:7px 15px;border:1px solid rgba(143,178,230,.45);border-radius:999px;background:rgba(12,13,22,.62);color:var(--text);text-decoration:none}
 .soon>span:last-child{display:flex;flex-direction:column;align-items:center;line-height:1.15}
 .soon b{font-family:var(--serif);font-weight:500;font-size:15px;letter-spacing:.22em;margin-right:-.22em}
@@ -197,5 +196,5 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 
 /* Coming Soon badges: a faint glow pulses behind the badge */
 .soon,.tx-soon-hero,.tx-soon-inline{animation:txGlow 3.6s ease-in-out infinite}
-@keyframes txGlow{0%,100%{box-shadow:0 0 14px 0 rgba(61,95,148,.22)}50%{box-shadow:0 0 30px 6px rgba(111,146,200,.38)}}
+@keyframes txGlow{0%,100%{box-shadow:0 0 10px 0 rgba(111,146,200,.18),0 0 0 0 rgba(143,178,230,0)}50%{box-shadow:0 0 34px 8px rgba(111,146,200,.5),0 0 0 3px rgba(143,178,230,.12)}}
 @media (prefers-reduced-motion:reduce){.soon,.tx-soon-hero,.tx-soon-inline{animation:none}}
