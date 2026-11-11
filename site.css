@@ -285,11 +285,11 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 .wt-qlist li span{color:var(--muted)}.wt-qlist li b{font-weight:500;color:var(--text)}
 /* World Time wallpaper (Misareaux falls at night) + card icons */
 .wt-page{position:relative;isolation:isolate}
-.wt-wall{position:absolute;z-index:-1;left:0;right:0;top:0;height:min(820px,62vw);pointer-events:none;overflow:hidden;
-background:radial-gradient(ellipse 58% 62% at 50% 30%,rgba(40,52,74,.5),rgba(40,52,74,0) 75%);opacity:.7}
-.wt-wall::before{content:"";position:absolute;inset:0;background:url(img/wall-misareaux.webp) center 24px/min(1760px,122vw) auto no-repeat;filter:brightness(.5)}
-.wt-wall::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 30% 34% at 50% 34%,rgba(10,11,18,.45),rgba(10,11,18,0) 100%)}
-@media (max-width:760px){.wt-wall{height:460px}.wt-wall::before{background-size:auto 400px;background-position:42% 30px}}
+.wt-wall{position:fixed;z-index:-1;inset:0;pointer-events:none;overflow:hidden;
+background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40,52,74,0) 80%);opacity:.7}
+.wt-wall::before{content:"";position:absolute;inset:0;background:url(img/wall-misareaux.webp) center 42%/min(1240px,92vw) auto no-repeat;filter:brightness(.5)}
+.wt-wall::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 30% 30% at 50% 40%,rgba(10,11,18,.4),rgba(10,11,18,0) 100%)}
+@media (max-width:760px){.wt-wall::before{background-size:auto 300px;background-position:42% 38%}}
 .wt-card{background:rgba(17,20,29,.92);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .wt-strip{background:rgba(15,18,26,.88);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .wt-card h3{display:flex;align-items:center;gap:12px}
