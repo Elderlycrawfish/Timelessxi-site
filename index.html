@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=9120e17e80">
+<link rel="stylesheet" href="site.css?v=a1b83850fa">
 
 </head>
 <body>
@@ -284,13 +284,13 @@ var VT = (function () {
 })();
 
 (function(){
-  var LIVE_URL = "";
+  var LIVE_URL = "https://live.timelessxi.gg/status.json";
   function set(i,v){var e=document.getElementById(i); if(e&&e.innerHTML!==v) e.innerHTML=v;} function pad(n){return ('0'+n).slice(-2);}
   function tick(){ var o=VT.now(), f=o.ferries.slice(0,1)[0];
     set('h-time',o.weekday+' &middot; '+pad(o.hour)+':'+pad(o.minute)); set('h-moon',o.moon.name+' &middot; '+o.moon.phase+'%');
     set('h-ferry','Selbina &rarr; Mhaura in '+VT.dur(f.d.in)); set('h-rse',o.rse.race); }
   function poll(){ if(!LIVE_URL) return; fetch(LIVE_URL,{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
-    if(d.online!==undefined) set('h-srv',(d.online?'Online':'Offline')+(d.players!==undefined?' &middot; '+d.players+(d.players===1?' player':' players'):'')); }).catch(function(){}); }
+    if(d.online!==undefined) set('h-srv',d.online?'Online'+(d.players!==undefined?' &middot; '+d.players+(d.players===1?' player':' players'):''):'Offline'); }).catch(function(){}); }
   tick(); setInterval(tick,1000); poll(); setInterval(poll,60000);
 })();
 </script>

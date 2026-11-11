@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=9120e17e80">
+<link rel="stylesheet" href="site.css?v=a1b83850fa">
 
 </head>
 <body>
@@ -48,14 +48,14 @@
 <article class="wt-card"><h3>Moon Phase</h3><dl><div class="wt-row"><dt>Phase</dt><dd id="m-name">&mdash;</dd></div><div class="wt-row"><dt>Percent</dt><dd id="m-pct">&mdash;</dd></div><div class="wt-row"><dt>Direction</dt><dd id="m-dir">&mdash;</dd></div><div class="wt-row"><dt>Next phase</dt><dd id="m-next">&mdash;</dd></div><div class="wt-row"><dt>Full moon</dt><dd id="m-full">&mdash;</dd></div><div class="wt-row"><dt>New moon</dt><dd id="m-new">&mdash;</dd></div></dl></article>
 <article class="wt-card"><h3>RSE Schedule</h3><dl><div class="wt-row"><dt>Current target</dt><dd id="r-race">&mdash;</dd></div><div class="wt-row"><dt>Location</dt><dd id="r-zone">&mdash;</dd></div><div class="wt-row"><dt>Ends</dt><dd id="r-ends">&mdash;</dd></div><div class="wt-row"><dt>Next target</dt><dd id="r-next">&mdash;</dd></div></dl></article>
 <article class="wt-card"><h3>Ferry Schedule</h3><div id="ferries" class="wt-ferries"></div><p class="wt-note">Departures run every 8 Vana'diel hours (3h 12m earth time).</p></article>
-<article class="wt-card"><h3>Conquest</h3><dl><div class="wt-row"><dt>Next tally</dt><dd id="q-tally">&mdash;</dd></div><div class="wt-row"><dt>Tally time</dt><dd id="q-when">&mdash;</dd></div><div class="wt-row"><dt>Regions</dt><dd id="q-regions"><span class="wt-soon">At launch</span></dd></div></dl></article>
+<article class="wt-card"><h3>Conquest</h3><dl><div class="wt-row"><dt>Next tally</dt><dd id="q-tally">&mdash;</dd></div><div class="wt-row"><dt>Tally time</dt><dd id="q-when">&mdash;</dd></div><div class="wt-row"><dt>Regions held</dt><dd id="q-regions"><span class="wt-soon">At launch</span></dd></div></dl><details id="q-more" class="wt-more" hidden><summary>All 19 regions</summary><ul id="q-list" class="wt-qlist"></ul></details></article>
 <article class="wt-card"><h3>Server Status</h3><dl><div class="wt-row"><dt>Status</dt><dd id="v-status"><span class="wt-soon">At launch</span></dd></div><div class="wt-row"><dt>Players</dt><dd id="v-players"><span class="wt-soon">At launch</span></dd></div><div class="wt-row"><dt>Uptime</dt><dd id="v-uptime"><span class="wt-soon">At launch</span></dd></div><div class="wt-row"><dt>Last restart</dt><dd id="v-restart"><span class="wt-soon">At launch</span></dd></div></dl></article>
 </div>
 <article class="wt-card wt-ruby">
 <div class="wt-rubyhead"><div><p class="eyebrow">Summoner &middot; I Can Hear a Rainbow</p><h3>Carbuncle's Ruby</h3><p class="muted">Find the seven lights. Only weather that counts in the 25 eligible outdoor areas appears here.</p></div>
 <div class="wt-rubysum" id="r-sum"><b>&mdash;</b><span>of 7 lights<br>available now</span></div></div>
 <ul class="wt-lights"><li class="wt-light" data-el="light"><div class="wt-lh"><span class="wt-dot el-light" aria-hidden="true"></span><b>Clear</b><span class="wt-lc" id="rl-light">At launch</span></div><p>Clear skies or sunshine</p><ul class="wt-lz" id="rz-light"></ul></li><li class="wt-light" data-el="fire"><div class="wt-lh"><span class="wt-dot el-fire" aria-hidden="true"></span><b>Fire</b><span class="wt-lc" id="rl-fire">At launch</span></div><p>Hot spells, heat waves</p><ul class="wt-lz" id="rz-fire"></ul></li><li class="wt-light" data-el="ice"><div class="wt-lh"><span class="wt-dot el-ice" aria-hidden="true"></span><b>Ice</b><span class="wt-lc" id="rl-ice">At launch</span></div><p>Snow, blizzards</p><ul class="wt-lz" id="rz-ice"></ul></li><li class="wt-light" data-el="wind"><div class="wt-lh"><span class="wt-dot el-wind" aria-hidden="true"></span><b>Wind</b><span class="wt-lc" id="rl-wind">At launch</span></div><p>Wind, gales</p><ul class="wt-lz" id="rz-wind"></ul></li><li class="wt-light" data-el="earth"><div class="wt-lh"><span class="wt-dot el-earth" aria-hidden="true"></span><b>Earth</b><span class="wt-lc" id="rl-earth">At launch</span></div><p>Dust storms, sandstorms</p><ul class="wt-lz" id="rz-earth"></ul></li><li class="wt-light" data-el="thunder"><div class="wt-lh"><span class="wt-dot el-thunder" aria-hidden="true"></span><b>Lightning</b><span class="wt-lc" id="rl-thunder">At launch</span></div><p>Thunder, thunderstorms</p><ul class="wt-lz" id="rz-thunder"></ul></li><li class="wt-light" data-el="water"><div class="wt-lh"><span class="wt-dot el-water" aria-hidden="true"></span><b>Water</b><span class="wt-lc" id="rl-water">At launch</span></div><p>Rain, squalls</p><ul class="wt-lz" id="rz-water"></ul></li></ul>
-<p class="wt-note">With the quest active, carry Carbuncle's Ruby and zone into an area while its weather is up to collect that light. This shows where the lights are now, not which ones your character has. <span id="r-foot">Live weather turns on when the server opens.</span></p>
+<p class="wt-note">With the quest active, carry Carbuncle's Ruby and zone into an area while its weather is up to collect that light. This shows where the lights are now, not which ones your character has. <span id="r-foot">Live weather appears once the server's live feed is on.</span></p>
 </article>
 <p class="muted wt-foot">Clock, moon, RSE, ferries and the conquest tally use the server's own formulas and tick in your browser. Weather, conquest standings and server status come live from the server.</p>
 </div></section>
@@ -141,8 +141,8 @@ var VT = (function () {
 })();
 
 (function(){
-  var LIVE_URL = "";
-  var RUBY_ZONES = ["West Ronfaure", "East Ronfaure", "North Gustaberg", "South Gustaberg", "West Sarutabaruta", "East Sarutabaruta", "La Theine Plateau", "Konschtat Highlands", "Tahrongi Canyon", "Valkurm Dunes", "Buburimu Peninsula", "Jugner Forest", "Batallia Downs", "Pashhow Marshlands", "Rolanberry Fields", "Meriphataud Mountains", "Sauromugue Champaign", "Beaucedine Glacier", "Xarcabard", "Yuhtunga Jungle", "Yhoator Jungle", "The Sanctuary of Zi'Tah", "Eastern Altepa Desert", "Western Altepa Desert", "Cape Teriggan"], RUBY = {"light": ["NONE", "SUNSHINE"], "fire": ["HOT_SPELL", "HEAT_WAVE"], "ice": ["SNOW", "BLIZZARDS"], "wind": ["WIND", "GALES"], "earth": ["DUST_STORM", "SAND_STORM"], "thunder": ["THUNDER", "THUNDERSTORMS"], "water": ["RAIN", "SQUALL"]};
+  var LIVE_URL = "https://live.timelessxi.gg/status.json";
+  var RUBY_ZONES = [[100, "West Ronfaure"], [101, "East Ronfaure"], [106, "North Gustaberg"], [107, "South Gustaberg"], [115, "West Sarutabaruta"], [116, "East Sarutabaruta"], [102, "La Theine Plateau"], [108, "Konschtat Highlands"], [117, "Tahrongi Canyon"], [103, "Valkurm Dunes"], [118, "Buburimu Peninsula"], [104, "Jugner Forest"], [105, "Batallia Downs"], [109, "Pashhow Marshlands"], [110, "Rolanberry Fields"], [119, "Meriphataud Mountains"], [120, "Sauromugue Champaign"], [111, "Beaucedine Glacier"], [112, "Xarcabard"], [123, "Yuhtunga Jungle"], [124, "Yhoator Jungle"], [121, "The Sanctuary of Zi'Tah"], [114, "Eastern Altepa Desert"], [125, "Western Altepa Desert"], [113, "Cape Teriggan"]], RUBY = {"light": ["NONE", "SUNSHINE"], "fire": ["HOT_SPELL", "HEAT_WAVE"], "ice": ["SNOW", "BLIZZARDS"], "wind": ["WIND", "GALES"], "earth": ["DUST_STORM", "SAND_STORM"], "thunder": ["THUNDER", "THUNDERSTORMS"], "water": ["RAIN", "SQUALL"]};
   function $(i){return document.getElementById(i);} function set(i,v){var e=$(i); if(e && e.innerHTML!==v) e.innerHTML=v;}
   function inn(ms){return 'in '+VT.dur(ms);} function pad(n){return ('0'+n).slice(-2);}
   function moonSvg(p,dir){ // lit fraction p (0-100); waning = lit on the left
@@ -168,16 +168,20 @@ var VT = (function () {
   }
   function ago(s){return VT.dur(s*1000);}
   function live(d){
-    if(d.online!==undefined) set('v-status',d.online?'<span class="wt-on">Online</span>':'<span class="wt-off">Offline</span>');
+    if(d.online===false){ set('v-status','<span class="wt-off">Offline</span>'); ['v-players','v-uptime','v-restart','q-regions'].forEach(function(i){set(i,'&mdash;');});
+      set('r-sum','<b>&mdash;</b><span>of 7 lights<br>available now</span>'); set('r-foot','Live weather returns when the server is back online.'); return; }
+    set('v-status','<span class="wt-on">Online</span>');
     if(d.players!==undefined) set('v-players',d.players+(d.players===1?' player':' players'));
     if(d.started){ set('v-uptime',ago(Date.now()/1000-d.started)); set('v-restart',new Date(d.started*1000).toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})); }
-    if(d.conquest&&d.conquest.length) set('q-regions',d.conquest.map(function(r){return r.region+': '+r.owner;}).join('<br>'));
+    if(d.conquest&&d.conquest.length){ var c={}; d.conquest.forEach(function(r){c[r.owner]=(c[r.owner]||0)+1;});
+      set('q-regions',["San d'Oria",'Bastok','Windurst','Beastmen','Neutral'].filter(function(n){return c[n];}).map(function(n){return n+' '+c[n];}).join(' &middot; '));
+      set('q-list',d.conquest.map(function(r){return '<li><span>'+r.region+'</span><b>'+r.owner+'</b></li>';}).join('')); $('q-more').hidden=false; }
     if(d.weather){ var n=0;
       Object.keys(RUBY).forEach(function(el){
-        var z=RUBY_ZONES.filter(function(zn){return RUBY[el].indexOf(d.weather[zn])>=0;});
+        var z=RUBY_ZONES.filter(function(zn){return RUBY[el].indexOf(d.weather[zn[0]])>=0;});
         if(z.length) n++;
         set('rl-'+el, z.length?(z.length+(z.length===1?' area now':' areas now')):'Not present now');
-        set('rz-'+el, z.map(function(zn){return '<li>'+zn+' <span>'+String(d.weather[zn]).toLowerCase().replace(/_/g,' ')+'</span></li>';}).join(''));
+        set('rz-'+el, z.map(function(zn){return '<li>'+zn[1]+' <span>'+(d.weather[zn[0]]==='NONE'?'clear':String(d.weather[zn[0]]).toLowerCase().replace(/_/g,' '))+'</span></li>';}).join(''));
         var li=document.querySelector('.wt-light[data-el="'+el+'"]'); li.classList.toggle('on',z.length>0); li.classList.toggle('off',!z.length);
       });
       set('r-sum','<b>'+n+'</b><span>of 7 lights<br>available now</span>'); set('r-foot','Refreshes every minute.');
