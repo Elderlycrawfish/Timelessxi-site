@@ -287,7 +287,7 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 .wt-page{position:relative;isolation:isolate}
 .wt-wall{position:fixed;z-index:-1;inset:0;pointer-events:none;overflow:hidden;
 background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40,52,74,0) 80%);opacity:.7}
-.wt-wall::before{content:"";position:absolute;inset:0;background:url(img/wall-misareaux.webp) center 42%/min(1240px,92vw) auto no-repeat;filter:brightness(.5)}
+.wt-wall::before{content:"";position:absolute;inset:0;background:url(img/wall-misareaux.webp) center 42%/min(1600px,112vw) auto no-repeat;filter:brightness(.5)}
 .wt-wall::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 30% 30% at 50% 40%,rgba(10,11,18,.4),rgba(10,11,18,0) 100%)}
 @media (max-width:760px){.wt-wall::before{background-size:auto 300px;background-position:42% 38%}}
 .wt-card{background:rgba(17,20,29,.92);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
