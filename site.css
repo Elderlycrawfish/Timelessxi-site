@@ -220,7 +220,7 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 .wt-clock{margin:28px auto 0;display:flex;flex-direction:column;align-items:center;gap:6px}
 .wt-day{font-family:var(--serif);font-size:20px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-right:-.32em}
 .wt-time{font-family:var(--serif);font-weight:300;font-size:clamp(72px,12vw,128px);line-height:1;color:var(--bright);font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.wt-date{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.wt-date{margin-top:24px;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
 .wt-moonbadge{margin-top:12px;display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card2);font-size:14px;color:var(--ice)}
 .wt-strip{margin:40px auto 0;max-width:1100px;display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:14px;background:var(--card2);overflow:hidden}
 .wt-strip>div{padding:16px 18px;text-align:left;border-left:1px solid var(--line2);display:flex;flex-direction:column;gap:5px;min-width:0}
