@@ -323,3 +323,4 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .wall-airship::before{background-image:url(img/wall-airship.webp);background-position:center 96px}
 .wall-ship::before{background-image:url(img/wall-ship.webp);background-position:center 96px}
 .wall-rules::before{background-image:url(img/wall-rules.webp);background-position:center 96px}
+.wall-taieu::before{background-image:url(img/wall-taieu.webp);background-position:center 96px}
