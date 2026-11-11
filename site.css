@@ -283,3 +283,14 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 .wt-qlist{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;font-size:13.5px}
 .wt-qlist li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-top:1px solid var(--line2)}
 .wt-qlist li span{color:var(--muted)}.wt-qlist li b{font-weight:500;color:var(--text)}
+/* World Time wallpaper (Misareaux falls at night) + card icons */
+.wt-page{position:relative;isolation:isolate}
+.wt-wall{position:absolute;z-index:-1;left:0;right:0;top:0;height:min(820px,62vw);pointer-events:none;overflow:hidden;
+background:url(img/wall-misareaux.webp) center 24px/min(1760px,122vw) auto no-repeat,radial-gradient(ellipse 58% 62% at 50% 30%,rgba(40,52,74,.5),rgba(40,52,74,0) 75%);opacity:.7}
+.wt-wall::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 30% 34% at 50% 34%,rgba(10,11,18,.45),rgba(10,11,18,0) 100%)}
+@media (max-width:760px){.wt-wall{height:460px;background-size:auto 400px,auto;background-position:42% 30px,center}}
+.wt-card{background:rgba(17,20,29,.92);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wt-strip{background:rgba(15,18,26,.88);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wt-card h3{display:flex;align-items:center;gap:12px}
+.wt-ic{flex:0 0 auto;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;color:var(--accent);background:rgba(143,178,230,.08);border:1px solid rgba(143,178,230,.22)}
+.wt-rubyhead h3{display:flex}
