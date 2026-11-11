@@ -158,7 +158,7 @@ code,.cmd{font-family:var(--mono);color:var(--accent);font-size:.92em}
 .bw{font-family:var(--serif);font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:.1em;background:linear-gradient(90deg,#c2c9d6 0%,#f1f3f7 45%,#bcd3ee 80%,#8fb8e4 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 6px rgba(159,187,224,.35))}
 
 /* footer */
-.tx-foot{border-top:1px solid #1a1f2c;background:#07080b;padding:52px 0 40px;margin-top:40px}
+.tx-foot{position:relative;z-index:1;border-top:1px solid #1a1f2c;background:#07080b;padding:52px 0 40px;margin-top:40px}
 .tx-foot .cols{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:32px}
 @media (max-width:860px){.tx-foot .cols{grid-template-columns:1fr 1fr}}
 .tx-foot h4{margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500}
