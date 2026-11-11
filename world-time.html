@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Time — Timeless XI: Reforged</title>
+<meta name="description" content="Timeless XI: a level 75 Final Fantasy XI private server, launching December 2026. The classic you love, carefully reforged.">
+<meta name="theme-color" content="#0c0d16">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="site.css?v=9120e17e80">
+
+</head>
+<body>
+<div class="tx-launch"><a href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span>Timeless XI launches <b>DECEMBER 2026</b></span><span class="go">Follow along in the Discord &rarr;</span></a></div>
+<header class="tx-head">
+<nav class="tx-nav" aria-label="Main">
+<a class="tx-brand" href="index.html"><img class="tx-mark" src="hourglass.svg" width="24" height="44" alt=""><span class="tx-word"><span class="tx-name">TIMELESS XI</span><span class="tx-sub">A LEVEL 75 FINAL FANTASY XI PRIVATE SERVER</span></span></a>
+<div class="tx-links"><a href="index.html">Home</a><details class="tx-drop"><summary>Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="tx-drop-panel"><a href="companions.html">Companions</a><a href="jobs.html">Jobs</a><a href="hunt.html">The Hunt</a><a href="time.html">Echoes of Time</a><a href="crafting.html">Crafting &amp; Trade</a><a href="quality-of-life.html">Quality of Life</a></div></details><a href="nm-tracker.html">NM Tracker</a><a href="rules.html">Rules</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a></div>
+<div class="tx-cta"><a class="btn sm" href="https://discord.gg/NUnJErbmh">Join the Discord</a></div>
+<details class="tx-menu"><summary aria-label="Menu"><svg class="tx-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="tx-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
+<div class="tx-menu-panel"><a href="index.html">Home</a><details class="tx-msub"><summary>Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><a class="sub" href="companions.html">Companions</a><a class="sub" href="jobs.html">Jobs</a><a class="sub" href="hunt.html">The Hunt</a><a class="sub" href="time.html">Echoes of Time</a><a class="sub" href="crafting.html">Crafting &amp; Trade</a><a class="sub" href="quality-of-life.html">Quality of Life</a></details><div class="tx-menu-label">Play</div><a href="nm-tracker.html">NM Tracker</a><a href="world-time.html" aria-current="page">World Time</a><a href="rules.html">Rules</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a><div class="tx-menu-actions"><a class="btn" href="https://discord.gg/NUnJErbmh">Join the Discord</a><a class="btn-ghost" href="getting-started.html">Get ready</a></div></div>
+</details>
+</nav>
+</header>
+<section class="wt-hero"><div class="wrap">
+<p class="eyebrow">World time</p>
+<h1 class="h1">Vana'diel Clock</h1>
+<div class="wt-clock">
+<div class="wt-day" id="w-day">&nbsp;</div>
+<div class="wt-time" id="w-time">--:--</div>
+<div class="wt-date">Vana'diel <span id="w-date">&nbsp;</span></div>
+<div class="wt-moonbadge"><svg id="w-moonic" width="22" height="22" viewBox="-11 -11 22 22" aria-hidden="true"></svg><span id="w-moon">&nbsp;</span></div>
+</div>
+<div class="wt-strip">
+<div><small>Next day</small><b id="s-next">&nbsp;</b></div>
+<div><small>Moon phase</small><b id="s-phase">&nbsp;</b></div>
+<div><small>Full moon</small><b id="s-full">&nbsp;</b></div>
+<div><small>RSE ends</small><b id="s-rse">&nbsp;</b></div>
+<div><small>Next ferry</small><b id="s-ferry">&nbsp;</b></div>
+</div>
+</div></section>
+<section class="sec tight"><div class="wrap">
+<div class="wt-grid">
+<article class="wt-card"><h3>World Clock</h3><dl><div class="wt-row"><dt>Date</dt><dd id="c-date">&mdash;</dd></div><div class="wt-row"><dt>Day</dt><dd id="c-day">&mdash;</dd></div><div class="wt-row"><dt>Time</dt><dd id="c-time">&mdash;</dd></div><div class="wt-row"><dt>Next day</dt><dd id="c-next">&mdash;</dd></div></dl></article>
+<article class="wt-card"><h3>Moon Phase</h3><dl><div class="wt-row"><dt>Phase</dt><dd id="m-name">&mdash;</dd></div><div class="wt-row"><dt>Percent</dt><dd id="m-pct">&mdash;</dd></div><div class="wt-row"><dt>Direction</dt><dd id="m-dir">&mdash;</dd></div><div class="wt-row"><dt>Next phase</dt><dd id="m-next">&mdash;</dd></div><div class="wt-row"><dt>Full moon</dt><dd id="m-full">&mdash;</dd></div><div class="wt-row"><dt>New moon</dt><dd id="m-new">&mdash;</dd></div></dl></article>
+<article class="wt-card"><h3>RSE Schedule</h3><dl><div class="wt-row"><dt>Current target</dt><dd id="r-race">&mdash;</dd></div><div class="wt-row"><dt>Location</dt><dd id="r-zone">&mdash;</dd></div><div class="wt-row"><dt>Ends</dt><dd id="r-ends">&mdash;</dd></div><div class="wt-row"><dt>Next target</dt><dd id="r-next">&mdash;</dd></div></dl></article>
+<article class="wt-card"><h3>Ferry Schedule</h3><div id="ferries" class="wt-ferries"></div><p class="wt-note">Departures run every 8 Vana'diel hours (3h 12m earth time).</p></article>
+<article class="wt-card"><h3>Conquest</h3><dl><div class="wt-row"><dt>Next tally</dt><dd id="q-tally">&mdash;</dd></div><div class="wt-row"><dt>Tally time</dt><dd id="q-when">&mdash;</dd></div><div class="wt-row"><dt>Regions</dt><dd id="q-regions"><span class="wt-soon">At launch</span></dd></div></dl></article>
+<article class="wt-card"><h3>Server Status</h3><dl><div class="wt-row"><dt>Status</dt><dd id="v-status"><span class="wt-soon">At launch</span></dd></div><div class="wt-row"><dt>Players</dt><dd id="v-players"><span class="wt-soon">At launch</span></dd></div><div class="wt-row"><dt>Uptime</dt><dd id="v-uptime"><span class="wt-soon">At launch</span></dd></div><div class="wt-row"><dt>Last restart</dt><dd id="v-restart"><span class="wt-soon">At launch</span></dd></div></dl></article>
+</div>
+<article class="wt-card wt-ruby">
+<div class="wt-rubyhead"><div><p class="eyebrow">Summoner &middot; I Can Hear a Rainbow</p><h3>Carbuncle's Ruby</h3><p class="muted">Find the seven lights. Only weather that counts in the 25 eligible outdoor areas appears here.</p></div>
+<div class="wt-rubysum" id="r-sum"><b>&mdash;</b><span>of 7 lights<br>available now</span></div></div>
+<ul class="wt-lights"><li class="wt-light" data-el="light"><div class="wt-lh"><span class="wt-dot el-light" aria-hidden="true"></span><b>Clear</b><span class="wt-lc" id="rl-light">At launch</span></div><p>Clear skies or sunshine</p><ul class="wt-lz" id="rz-light"></ul></li><li class="wt-light" data-el="fire"><div class="wt-lh"><span class="wt-dot el-fire" aria-hidden="true"></span><b>Fire</b><span class="wt-lc" id="rl-fire">At launch</span></div><p>Hot spells, heat waves</p><ul class="wt-lz" id="rz-fire"></ul></li><li class="wt-light" data-el="ice"><div class="wt-lh"><span class="wt-dot el-ice" aria-hidden="true"></span><b>Ice</b><span class="wt-lc" id="rl-ice">At launch</span></div><p>Snow, blizzards</p><ul class="wt-lz" id="rz-ice"></ul></li><li class="wt-light" data-el="wind"><div class="wt-lh"><span class="wt-dot el-wind" aria-hidden="true"></span><b>Wind</b><span class="wt-lc" id="rl-wind">At launch</span></div><p>Wind, gales</p><ul class="wt-lz" id="rz-wind"></ul></li><li class="wt-light" data-el="earth"><div class="wt-lh"><span class="wt-dot el-earth" aria-hidden="true"></span><b>Earth</b><span class="wt-lc" id="rl-earth">At launch</span></div><p>Dust storms, sandstorms</p><ul class="wt-lz" id="rz-earth"></ul></li><li class="wt-light" data-el="thunder"><div class="wt-lh"><span class="wt-dot el-thunder" aria-hidden="true"></span><b>Lightning</b><span class="wt-lc" id="rl-thunder">At launch</span></div><p>Thunder, thunderstorms</p><ul class="wt-lz" id="rz-thunder"></ul></li><li class="wt-light" data-el="water"><div class="wt-lh"><span class="wt-dot el-water" aria-hidden="true"></span><b>Water</b><span class="wt-lc" id="rl-water">At launch</span></div><p>Rain, squalls</p><ul class="wt-lz" id="rz-water"></ul></li></ul>
+<p class="wt-note">With the quest active, carry Carbuncle's Ruby and zone into an area while its weather is up to collect that light. This shows where the lights are now, not which ones your character has. <span id="r-foot">Live weather turns on when the server opens.</span></p>
+</article>
+<p class="muted wt-foot">Clock, moon, RSE, ferries and the conquest tally use the server's own formulas and tick in your browser. Weather, conquest standings and server status come live from the server.</p>
+</div></section>
+<footer class="tx-foot"><div class="wrap">
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+<div><div style="font-family:var(--serif);font-size:24px;letter-spacing:.18em">TIMELESS XI</div><div style="font-size:12px;letter-spacing:.32em;color:#9FBBE0">REFORGED</div></div>
+<a class="soon " href="https://discord.gg/NUnJErbmh"><span><b>COMING SOON</b><small>December 2026</small></span></a>
+</div>
+<nav aria-label="Features"><h4>Features</h4><a href="companions.html">Companions</a><a href="jobs.html">Jobs</a><a href="hunt.html">The Hunt</a><a href="time.html">Echoes of Time</a><a href="crafting.html">Crafting &amp; Trade</a><a href="quality-of-life.html">Quality of Life</a></nav>
+<nav aria-label="Play"><h4>Play</h4><a href="nm-tracker.html">NM Tracker</a><a href="world-time.html">World Time</a><a href="rules.html">Rules</a><a href="getting-started.html">Getting Started</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a></nav>
+<nav aria-label="Community"><h4>Community</h4><a href="https://discord.gg/NUnJErbmh">Discord</a><a href="rules.html">Rules</a></nav>
+</div>
+<p class="legal">Timeless XI is a free, fan-run project. It is not affiliated with, endorsed by or sponsored by Square Enix. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. All game content belongs to its respective owners.</p>
+</div></footer>
+<script>
+document.querySelectorAll('.tx-menu-panel a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.removeAttribute('open');});});
+document.addEventListener('click',function(e){document.querySelectorAll('.tx-drop[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details[open]').forEach(function(d){d.removeAttribute('open');});});
+</script>
+<script>/* Vana'diel time, computed exactly as the Timeless XI server (LandSandBoat) does:
+   src/common/vana_time.h, vanadiel_clock.h, earth_time.h; scripts/globals/transport.lua; scripts/utils/common.lua (moon). */
+var VT = (function () {
+  var EPOCH = 1009810800000;            // earth_time::vanadiel_epoch (ms)
+  var MIN = 60000, HOUR = 3600000, DAY = 86400000; // Vana'diel units in Vana ms
+  var DAYS = ['Firesday', 'Earthsday', 'Watersday', 'Windsday', 'Iceday', 'Lightningday', 'Lightsday', 'Darksday'];
+  var RACES = ['Hume Male', 'Hume Female', 'Elvaan Male', 'Elvaan Female', 'Tarutaru Male', 'Tarutaru Female', 'Mithra', 'Galka'];
+  var RSE_ZONES = ["Ordelle's Caves", 'Gusgen Mines', 'Maze of Shakhrami'];
+  var Y886 = 886 * 360;                  // the client's year offset (moon uses it too)
+  function vms(t) { return (t - EPOCH) * 25; }           // Vana ms since the epoch
+  function earth(v) { return v / 25 + EPOCH; }           // back to earth ms
+  function moonAt(day) {                                   // day = Vana days since epoch
+    var m = (day + Y886 + 26) % 84, phase, dir;
+    phase = m >= 42 ? Math.round(100 * ((m - 42) / 42)) : Math.round(100 * (1 - m / 42));
+    dir = (m === 42 || m === 0) ? 0 : (m < 42 ? 1 : 2);   // 1 waning, 2 waxing
+    var name;
+    if (dir === 0) name = phase >= 100 ? 'Full Moon' : 'New Moon';
+    else if (dir === 1) name = phase >= 94 ? 'Full Moon' : phase >= 61 ? 'Waning Gibbous' : phase >= 41 ? 'Last Quarter' : phase >= 11 ? 'Waning Crescent' : 'New Moon';
+    else name = phase >= 90 ? 'Full Moon' : phase >= 56 ? 'Waxing Gibbous' : phase >= 39 ? 'First Quarter' : phase >= 6 ? 'Waxing Crescent' : 'New Moon';
+    return { phase: phase, dir: dir, name: name };
+  }
+  function now(t) {
+    t = t || Date.now();
+    var v = vms(t), day = Math.floor(v / DAY), D = day + Y886;
+    var o = {
+      t: t, hour: Math.floor(v / HOUR) % 24, minute: Math.floor(v / MIN) % 60,
+      weekday: DAYS[((day % 8) + 8) % 8], dayIndex: ((day % 8) + 8) % 8,
+      year: Math.floor(D / 360), month: Math.floor((D % 360) / 30) + 1, mday: (D % 30) + 1,
+      nextDay: earth((day + 1) * DAY) - t
+    };
+    o.moon = moonAt(day);
+    var k, m;
+    for (k = 1; k < 90; k++) { m = moonAt(day + k); if (m.name !== o.moon.name) { o.nextPhase = { name: m.name, in: earth((day + k) * DAY) - t }; break; } }
+    for (k = (o.moon.name === 'Full Moon' ? 1 : 0); k < 90; k++) { if (moonAt(day + k).name === 'Full Moon' && moonAt(day + k - 1).name !== 'Full Moon') { o.fullMoon = earth((day + k) * DAY) - t; break; } }
+    for (k = 0; k < 90; k++) { if (moonAt(day + k).name === 'New Moon' && moonAt(day + k - 1).name !== 'New Moon') { o.newMoon = earth((day + k) * DAY) - t; break; } }
+    if (o.moon.name === 'Full Moon') o.fullMoonNow = true;
+    if (o.moon.name === 'New Moon') o.newMoonNow = true;
+    var week = Math.floor(day / 8);
+    o.rse = { race: RACES[((week % 8) + 8) % 8], zone: RSE_ZONES[((week % 3) + 3) % 3], ends: earth((week + 1) * 8 * DAY) - t,
+              nextRace: RACES[(((week + 1) % 8) + 8) % 8], nextZone: RSE_ZONES[(((week + 1) % 3) + 3) % 3] };
+    // Conquest tally: Monday 00:00 JST (earth_time::get_next_game_week)
+    var jst = t + 9 * 3600000, jd = new Date(jst), wd = (jd.getUTCDay() + 6) % 7; // 0 = Monday
+    var nextMid = Math.floor(jst / 86400000) * 86400000 + 86400000;
+    o.tally = nextMid + (6 - wd) * 86400000 - jst;
+    // Ferries: departures every 8 Vana hours (transport.lua: interval 480, depart offset 479 / 239)
+    function dep(offsetMin) { // next departure at minute-of-day ≡ offset+1 (mod 480)
+      var mins = v / MIN, cycle = 480, start = offsetMin + 1;
+      var next = Math.floor((mins - start) / cycle) * cycle + start + cycle;
+      return { at: ((next % 1440) + 1440) % 1440, in: earth(next * MIN) - t };
+    }
+    o.ferries = [
+      { from: 'Selbina', to: 'Mhaura', d: dep(479) }, { from: 'Mhaura', to: 'Selbina', d: dep(479) },
+      { from: 'Mhaura', to: 'Aht Urhgan Whitegate', d: dep(239) }, { from: 'Aht Urhgan Whitegate', to: 'Mhaura', d: dep(239) }
+    ];
+    return o;
+  }
+  function dur(ms) {
+    var s = Math.max(0, Math.round(ms / 1000)), d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60);
+    if (d) return d + 'd ' + h + 'h'; if (h) return h + 'h ' + m + 'm'; if (m) return m + 'm'; return s + 's';
+  }
+  function hhmm(min) { return ('0' + Math.floor(min / 60)).slice(-2) + ':' + ('0' + (min % 60)).slice(-2); }
+  return { now: now, dur: dur, hhmm: hhmm, moonAt: moonAt };
+})();
+
+(function(){
+  var LIVE_URL = "";
+  var RUBY_ZONES = ["West Ronfaure", "East Ronfaure", "North Gustaberg", "South Gustaberg", "West Sarutabaruta", "East Sarutabaruta", "La Theine Plateau", "Konschtat Highlands", "Tahrongi Canyon", "Valkurm Dunes", "Buburimu Peninsula", "Jugner Forest", "Batallia Downs", "Pashhow Marshlands", "Rolanberry Fields", "Meriphataud Mountains", "Sauromugue Champaign", "Beaucedine Glacier", "Xarcabard", "Yuhtunga Jungle", "Yhoator Jungle", "The Sanctuary of Zi'Tah", "Eastern Altepa Desert", "Western Altepa Desert", "Cape Teriggan"], RUBY = {"light": ["NONE", "SUNSHINE"], "fire": ["HOT_SPELL", "HEAT_WAVE"], "ice": ["SNOW", "BLIZZARDS"], "wind": ["WIND", "GALES"], "earth": ["DUST_STORM", "SAND_STORM"], "thunder": ["THUNDER", "THUNDERSTORMS"], "water": ["RAIN", "SQUALL"]};
+  function $(i){return document.getElementById(i);} function set(i,v){var e=$(i); if(e && e.innerHTML!==v) e.innerHTML=v;}
+  function inn(ms){return 'in '+VT.dur(ms);} function pad(n){return ('0'+n).slice(-2);}
+  function moonSvg(p,dir){ // lit fraction p (0-100); waning = lit on the left
+    var r=10,f=p/100,rx=Math.abs(1-2*f)*r,left=(dir===1), s1=left?0:1;
+    var d='M0 -'+r+' A'+r+' '+r+' 0 0 '+s1+' 0 '+r+' A'+rx+' '+r+' 0 0 '+((f>0.5)===left?0:1)+' 0 -'+r+'Z';
+    if(dir===0&&p>=100) d='M-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0Z';
+    return '<circle r="10" fill="#1b2232" stroke="#3a4558" stroke-width=".8"/>'+(p>0?'<path d="'+d+'" fill="#D6E1F0"/>':'');
+  }
+  function tick(){
+    var o=VT.now(), time=pad(o.hour)+':'+pad(o.minute), date=o.year+'/'+pad(o.month)+'/'+pad(o.mday), m=o.moon;
+    set('w-day',o.weekday); set('w-time',time); set('w-date',date); set('w-moon',m.name+' &middot; '+m.phase+'%');
+    var ic=moonSvg(m.phase,m.dir); if($('w-moonic').getAttribute('data-k')!==m.phase+'/'+m.dir){$('w-moonic').innerHTML=ic;$('w-moonic').setAttribute('data-k',m.phase+'/'+m.dir);}
+    var f=o.ferries.slice().sort(function(a,b){return a.d.in-b.d.in;})[0];
+    set('s-next',inn(o.nextDay)); set('s-phase',o.nextPhase.name+' '+inn(o.nextPhase.in)); set('s-full',o.fullMoonNow?'Now':inn(o.fullMoon));
+    set('s-rse',inn(o.rse.ends)); set('s-ferry',f.from.replace('Aht Urhgan ','')+' &rarr; '+f.to.replace('Aht Urhgan ','')+' '+inn(f.d.in));
+    set('c-date',date); set('c-day',o.weekday); set('c-time',time); set('c-next',inn(o.nextDay));
+    set('m-name',m.name); set('m-pct',m.phase+'%'); set('m-dir',['Turning','Waning','Waxing'][m.dir]); set('m-next',o.nextPhase.name+' '+inn(o.nextPhase.in));
+    set('m-full',o.fullMoonNow?'Now':inn(o.fullMoon)); set('m-new',o.newMoonNow?'Now':inn(o.newMoon));
+    set('r-race',o.rse.race); set('r-zone',o.rse.zone); set('r-ends',inn(o.rse.ends)); set('r-next',o.rse.nextRace+' at '+o.rse.nextZone);
+    set('ferries',o.ferries.map(function(x){return '<div class="wt-ferry"><b>'+x.from+' &rarr; '+x.to+'</b><span>'+VT.hhmm(x.d.at)+' Vana\'diel &middot; '+inn(x.d.in)+'</span></div>';}).join(''));
+    set('q-tally',inn(o.tally)); 
+    var tl=new Date(Date.now()+o.tally); set('q-when',tl.toLocaleString(undefined,{weekday:'short',hour:'numeric',minute:'2-digit'})+' your time');
+  }
+  function ago(s){return VT.dur(s*1000);}
+  function live(d){
+    if(d.online!==undefined) set('v-status',d.online?'<span class="wt-on">Online</span>':'<span class="wt-off">Offline</span>');
+    if(d.players!==undefined) set('v-players',d.players+(d.players===1?' player':' players'));
+    if(d.started){ set('v-uptime',ago(Date.now()/1000-d.started)); set('v-restart',new Date(d.started*1000).toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})); }
+    if(d.conquest&&d.conquest.length) set('q-regions',d.conquest.map(function(r){return r.region+': '+r.owner;}).join('<br>'));
+    if(d.weather){ var n=0;
+      Object.keys(RUBY).forEach(function(el){
+        var z=RUBY_ZONES.filter(function(zn){return RUBY[el].indexOf(d.weather[zn])>=0;});
+        if(z.length) n++;
+        set('rl-'+el, z.length?(z.length+(z.length===1?' area now':' areas now')):'Not present now');
+        set('rz-'+el, z.map(function(zn){return '<li>'+zn+' <span>'+String(d.weather[zn]).toLowerCase().replace(/_/g,' ')+'</span></li>';}).join(''));
+        var li=document.querySelector('.wt-light[data-el="'+el+'"]'); li.classList.toggle('on',z.length>0); li.classList.toggle('off',!z.length);
+      });
+      set('r-sum','<b>'+n+'</b><span>of 7 lights<br>available now</span>'); set('r-foot','Refreshes every minute.');
+    }
+  }
+  function poll(){ if(!LIVE_URL) return; fetch(LIVE_URL,{cache:'no-store'}).then(function(r){return r.json();}).then(live).catch(function(){}); }
+  tick(); setInterval(tick,1000); poll(); setInterval(poll,60000);
+})();
+</script>
+</body>
+</html>
