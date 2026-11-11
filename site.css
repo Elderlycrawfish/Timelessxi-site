@@ -320,3 +320,4 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .jx-notes{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:6px 28px;font-size:14px;color:var(--muted);line-height:1.55}
 .jx-notes strong{color:var(--text);font-weight:500}
 @media (max-width:760px){.jx-notes{grid-template-columns:1fr}}
+.wall-airship::before{background-image:url(img/wall-airship.webp);background-position:center 96px}
