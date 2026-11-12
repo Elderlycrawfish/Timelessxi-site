@@ -91,13 +91,18 @@ a.drop:hover,a.drop:focus{color:var(--bright);border-bottom-color:var(--accent);
 <form id="nm-form" role="search" style="display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:16px" onsubmit="return false">
 <label class="fld" style="flex:2 1 320px"><span>Search NMs, zones or drops</span><input id="nm-q" type="search" placeholder="e.g. Leaping Lizzy, Beadeaux, Ridill" autocomplete="off"></label>
 <label class="fld" style="flex:1 1 170px"><span>Status</span><select id="nm-status"><option value="all">All</option><option value="up">Up now</option><option value="waiting">Awaiting spawn</option></select></label>
-<label class="fld" style="flex:1 1 170px"><span>Type</span><select id="nm-type"><option value="all">All</option><option value="NM">NMs</option><option value="HNM">HNMs</option></select></label>
 <label class="fld" style="flex:1 1 200px"><span>Sort by</span><select id="nm-sort"><option value="status">Spawned first</option><option value="name">Name A–Z</option><option value="zone">Zone</option><option value="level">Level</option><option value="respawn">Respawn timer</option><option value="rate">Drop rate (rarest first)</option><option value="kills">Kills since drop</option></select></label>
 </form>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;margin:0 0 10px;font-size:14px"><p id="nm-count" class="muted" style="margin:0" aria-live="polite"></p><p class="muted" style="margin:0"><span style="color:var(--accent)">&#9670;</span> Drop rates are base rates with <strong style="color:var(--text)">no Treasure Hunter applied</strong>. Hover over (or tap) a drop to see the item's details and its drop rate with Treasure Hunter 2.</p></div>
 <div class="tblbox"><table class="tbl nmtbl"><thead><tr><th scope="col">Notorious Monster</th><th scope="col">Status</th><th scope="col">Respawn</th><th scope="col">Primary drop</th><th scope="col">Kills since drop</th><th scope="col">Last defeated by</th></tr></thead><tbody id="nm-body"><tr><td colspan="6" class="muted">Loading notorious monsters…</td></tr></tbody></table></div>
 <nav id="nm-pages" aria-label="Pages" style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:18px"></nav>
-<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); drop rates are the base rates from the server's drop tables with no Treasure Hunter (TH) applied, so Treasure Hunter will raise them; each item's pop-out also shows its rate at TH2, using the server's Treasure Hunter table. Drops that come from a guaranteed group (for example "always one of these") aren't changed by Treasure Hunter. Item details and icons are the game's own item text; click an item to open it on FFXIAH, or an NM's name to open its BG Wiki page. Hovering over an NM's name shows its picture from BG Wiki; where BG Wiki has no picture of that NM, it shows its monster family instead. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs spawn in windows shown once live data is on. Racing for a claim is fair; see the <a href="rules.html#holding-monsters">rules on holding monsters</a> for NM etiquette.</p>
+<div id="hnm" style="margin-top:56px">
+<p class="eyebrow">High-level notorious monsters</p>
+<h2 class="h2" style="margin:6px 0 10px">The six HNMs</h2>
+<p class="muted" style="max-width:720px;margin:0 0 18px">The land kings and dragons of Vana'diel. Unlike regular NMs, they spawn within a window rather than on a fixed timer, and each guards drops that alliances plan around.</p>
+<div class="tblbox"><table class="tbl nmtbl"><thead><tr><th scope="col">Notorious Monster</th><th scope="col">Status</th><th scope="col">Respawn</th><th scope="col">Primary drop</th><th scope="col">Kills since drop</th><th scope="col">Last defeated by</th></tr></thead><tbody id="hnm-body"><tr><td colspan="6" class="muted">Loading…</td></tr></tbody></table></div>
+</div>
+<p class="muted" style="font-size:13px;margin-top:22px">Primary drop = the highest-level piece of gear the NM drops (or its rarest item when it drops no gear); drop rates are the base rates from the server's drop tables with no Treasure Hunter (TH) applied, so Treasure Hunter will raise them; each item's pop-out also shows its rate at TH2, using the server's Treasure Hunter table. Drops that come from a guaranteed group (for example "always one of these") aren't changed by Treasure Hunter. Item details and icons are the game's own item text; click an item to open it on FFXIAH, or an NM's name to open its BG Wiki page. Hovering over an NM's name shows its picture from BG Wiki; where BG Wiki has no picture of that NM, it shows its monster family instead. Respawn = the NM's timer after it's defeated; time-of-day and weather requirements still apply. HNMs are listed in their own section below the main list and spawn in windows shown once live data is on. Racing for a claim is fair; see the <a href="rules.html#holding-monsters">rules on holding monsters</a> for NM etiquette.</p>
 </div></section></div>
 <footer class="tx-foot"><div class="wrap">
 <div class="cols">
@@ -122,7 +127,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
   // Live feed: set this to the server's status endpoint at launch. JSON shape (keyed by NM id):
   // {"updated":"ISO time","nms":{"<id>":{"status":"up"|"waiting","nextSpawn":<unix s|null>,"lastKill":<unix s>,"lastKiller":"Name","killsSinceDrop":<n>}}}
   var LIVE_URL = '';
-  var PER = 25, page = 0, all = [], live = null;
+  var PER = 25, page = 0, all = [], hnms = [], live = null;
   var $ = function(id){return document.getElementById(id);};
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function dur(sec){ if(sec==null) return '—'; sec=Math.max(0,Math.round(sec)); var h=Math.floor(sec/3600), m=Math.floor(sec%3600/60), s=sec%60;
@@ -137,9 +142,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
     return '<span class="st"><i></i>At launch</span>'; }
   function rank(n){ var s=state(n); return s.k==='up'?0:s.k==='due'?1:s.k==='eta'?2+s.t/1e6:3; }
   function filtered(){
-    var q=$('nm-q').value.trim().toLowerCase(), st=$('nm-status').value, ty=$('nm-type').value, so=$('nm-sort').value;
+    var q=$('nm-q').value.trim().toLowerCase(), st=$('nm-status').value, so=$('nm-sort').value;
     var r=all.filter(function(n){
-      if(ty!=='all' && n.type!==ty) return false;
       if(st!=='all'){ var s=state(n).k; if(st==='up' && s!=='up') return false; if(st==='waiting' && !(s==='eta'||s==='due')) return false; }
       if(!q) return true;
       return (n.name+' '+n.zone+' '+(n.drop?n.drop.item:'')).toLowerCase().indexOf(q)>=0; });
@@ -153,7 +157,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
     return r.sort(by[so]||by.status); }
   function render(){
     var r=filtered(), pages=Math.max(1,Math.ceil(r.length/PER)); if(page>=pages) page=pages-1;
-    var rows=r.slice(page*PER,(page+1)*PER).map(function(n){ var x=L(n);
+    var rows=r.slice(page*PER,(page+1)*PER).map(rowHtml).join('');
+    $('hnm-body').innerHTML=hnms.slice().sort(function(a,b){return (rank(a)-rank(b))||a.name.localeCompare(b.name);}).map(rowHtml).join('');
+    $('nm-body').innerHTML=rows||'<tr><td colspan="6" class="muted">No notorious monsters match that search.</td></tr>';
+    RENDER_REST(r,pages);
+  }
+  function rowHtml(n){ var x=L(n);
       var lv=n.level?(n.level[0]===n.level[1]?'Lv. '+n.level[0]:'Lv. '+n.level[0]+'–'+n.level[1]):'';
       var drop=n.drop?'<a class="drop" data-item="'+n.drop.itemId+'" data-rate="'+(n.drop.rate!=null?n.drop.rate:'')+'" data-th2="'+(n.drop.th2!=null?n.drop.th2:'')+'" href="https://www.ffxiah.com/item/'+n.drop.itemId+'" target="_blank" rel="noopener">'+esc(n.drop.item)+'</a><span class="rate">'+(n.drop.rate!=null?'Drop rate: '+n.drop.rate+'%':'Drop rate: to be announced')+'</span>':'—';
       return '<tr><th scope="row"><a class="nm-name" data-nm="'+esc(n.name)+'" data-zone="'+esc(n.zone)+(lv?' · '+lv:'')+'" href="'+wikiUrl(n.name)+'" target="_blank" rel="noopener">'+esc(n.name)+'</a>'+(n.type==='HNM'?'<span class="hnm">HNM</span>':'')+'<span class="nm-sub">'+esc(n.zone)+(lv?' · '+lv:'')+'</span></th>'
@@ -161,19 +170,19 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')document.que
         +'<td data-label="Respawn">'+(n.respawn?dur(n.respawn):'Window')+'</td>'
         +'<td data-label="Primary drop">'+drop+'</td>'
         +'<td data-label="Kills since drop">'+(x&&x.killsSinceDrop!=null?x.killsSinceDrop:'—')+'</td>'
-        +'<td data-label="Last defeated by">'+(x&&x.lastKiller?esc(x.lastKiller):'—')+'</td></tr>'; }).join('');
-    $('nm-body').innerHTML=rows||'<tr><td colspan="6" class="muted">No notorious monsters match that search.</td></tr>';
+        +'<td data-label="Last defeated by">'+(x&&x.lastKiller?esc(x.lastKiller):'—')+'</td></tr>'; }
+  function RENDER_REST(r,pages){
     $('nm-count').textContent=r.length+' of '+all.length+' notorious monsters'+(r.length>PER?' · page '+(page+1)+' of '+pages:'');
     var nav=$('nm-pages'); nav.innerHTML='';
     if(pages>1){ var mk=function(t,p,dis){var b=document.createElement('button');b.type='button';b.className='pg';b.textContent=t;b.disabled=dis;b.onclick=function(){page=p;render();document.getElementById('nm-form').scrollIntoView({behavior:'smooth'});};nav.appendChild(b);};
       mk('Previous',page-1,page===0); var sp=document.createElement('span');sp.className='muted';sp.style.fontSize='14px';sp.textContent=(page+1)+' / '+pages;nav.appendChild(sp); mk('Next',page+1,page>=pages-1); }
-    var up=0,wait=0; all.forEach(function(n){var k=state(n).k; if(k==='up')up++; else if(k==='eta'||k==='due')wait++;});
-    $('st-total').textContent=all.length; $('st-hnm').textContent=all.filter(function(n){return n.type==='HNM';}).length;
+    var up=0,wait=0; all.concat(hnms).forEach(function(n){var k=state(n).k; if(k==='up')up++; else if(k==='eta'||k==='due')wait++;});
+    $('st-total').textContent=all.length+hnms.length; $('st-hnm').textContent=hnms.length;
     $('st-up').textContent=live?up:'–'; $('st-wait').textContent=live?wait:'–';
   }
-  ['nm-q','nm-status','nm-type','nm-sort'].forEach(function(id){ $(id).addEventListener('input',function(){page=0;render();}); });
+  ['nm-q','nm-status','nm-sort'].forEach(function(id){ $(id).addEventListener('input',function(){page=0;render();}); });
   var q=new URLSearchParams(location.search).get('q'); if(q) $('nm-q').value=q;
-  fetch('data/nms.json').then(function(r){return r.json();}).then(function(d){ all=d.nms; render(); pollLive(); });
+  fetch('data/nms.json').then(function(r){return r.json();}).then(function(d){ all=d.nms.filter(function(n){return n.type!=='HNM';}); hnms=d.nms.filter(function(n){return n.type==='HNM';}); render(); pollLive(); });
   function pollLive(){ if(!LIVE_URL) return;
     fetch(LIVE_URL,{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){ live=d;
       $('nm-live').innerHTML='<span class="tx-pulse" aria-hidden="true"></span><div><strong style="color:var(--text)">Live from the server.</strong> <span class="muted">Updated '+new Date(d.updated).toLocaleTimeString()+'.</span></div>'; render(); })
