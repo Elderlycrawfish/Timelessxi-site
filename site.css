@@ -323,10 +323,13 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .wall-airship::before{background-image:url(img/wall-airship.webp);background-position:center 96px}
 .wall-ship::before{background-image:url(img/wall-ship.webp);background-position:center 96px}
 .wall-rules::before{background-image:url(img/wall-rules.webp);background-position:center 96px}
-.wall-taieu::before{background-image:url(img/wall-taieu.webp);background-position:center 96px}
+.wall-nm::before{background-image:url(img/wall-nm.webp);background-position:center 96px}
 .wall-echo::before{background-image:url(img/wall-echo.webp);background-position:center 96px}
 .wall-craft::before{background-image:url(img/wall-craft.webp);background-position:center 96px}
 .wall-hunt::before{background-image:url(img/wall-hunt.webp);background-position:center 96px}
 .wall-jobs::before{background-image:url(img/wall-jobs.webp);background-position:center 96px}
 .wall-companions::before{background-image:url(img/wall-companions.webp);background-position:center 96px}
 .wall-news::before{background-image:url(img/wall-news.webp);background-position:center 96px}
+
+.wall-home::before{background-image:url(img/wall-home.webp);background-position:center 40px}
+.home-wall .wt-wall{position:absolute;inset:0 0 auto 0;height:1100px}
