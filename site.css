@@ -328,3 +328,4 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .wall-craft::before{background-image:url(img/wall-craft.webp);background-position:center 96px}
 .wall-hunt::before{background-image:url(img/wall-hunt.webp);background-position:center 96px}
 .wall-jobs::before{background-image:url(img/wall-jobs.webp);background-position:center 96px}
+.wall-companions::before{background-image:url(img/wall-companions.webp);background-position:center 96px}
