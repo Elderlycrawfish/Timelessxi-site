@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account — Timeless XI: Reforged</title>
+<meta name="description" content="Timeless XI: a level 75 Final Fantasy XI private server, launching December 2026. The classic you love, carefully reforged.">
+<meta name="theme-color" content="#0c0d16">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="site.css?v=932fad3dac">
+
+</head>
+<body>
+<div class="tx-launch"><a href="https://discord.gg/NUnJErbmh"><span class="tx-pulse" aria-hidden="true"></span><span>Timeless XI launches <b>DECEMBER 2026</b></span><span class="go">Follow along in the Discord &rarr;</span></a></div>
+<header class="tx-head">
+<nav class="tx-nav" aria-label="Main">
+<a class="tx-brand" href="index.html"><img class="tx-mark" src="hourglass.svg" width="24" height="44" alt=""><span class="tx-word"><span class="tx-name">TIMELESS XI</span><span class="tx-sub">A LEVEL 75 FINAL FANTASY XI PRIVATE SERVER</span></span></a>
+<div class="tx-links"><a href="index.html">Home</a><details class="tx-drop"><summary>Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="tx-drop-panel"><a href="companions.html">Companions</a><a href="jobs.html">Jobs</a><a href="hunt.html">The Hunt</a><a href="time.html">Echoes of Time</a><a href="crafting.html">Crafting &amp; Trade</a><a href="quality-of-life.html">Quality of Life</a></div></details><a href="nm-tracker.html">NM Tracker</a><a href="world-time.html">World Time</a><a href="rules.html">Rules</a><details class="tx-drop"><summary>Getting Started <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="tx-drop-panel"><a href="getting-started.html">First Steps</a><a href="new-player-guide.html">New Player Guide</a></div></details><a href="news.html">News</a></div>
+<div class="tx-cta"><a class="btn-ghost sm tx-acct" href="account.html" aria-current="page">Log in</a><a class="btn sm" href="https://discord.gg/NUnJErbmh">Join the Discord</a></div>
+<details class="tx-menu"><summary aria-label="Menu"><svg class="tx-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="tx-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
+<div class="tx-menu-panel"><a href="index.html">Home</a><details class="tx-msub"><summary>Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><a class="sub" href="companions.html">Companions</a><a class="sub" href="jobs.html">Jobs</a><a class="sub" href="hunt.html">The Hunt</a><a class="sub" href="time.html">Echoes of Time</a><a class="sub" href="crafting.html">Crafting &amp; Trade</a><a class="sub" href="quality-of-life.html">Quality of Life</a></details><div class="tx-menu-label">Play</div><a href="nm-tracker.html">NM Tracker</a><a href="world-time.html">World Time</a><a href="rules.html">Rules</a><details class="tx-msub"><summary>Getting Started <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><a class="sub" href="getting-started.html">First Steps</a><a class="sub" href="new-player-guide.html">New Player Guide</a></details><a href="news.html">News</a><div class="tx-menu-actions"><a class="btn-ghost tx-acct" href="account.html">Log in</a><a class="btn" href="https://discord.gg/NUnJErbmh">Join the Discord</a><a class="btn-ghost" href="getting-started.html">Get ready</a></div></div>
+</details>
+</nav>
+</header>
+<div class="wt-page"><div class="wt-wall wall-account" aria-hidden="true"></div>
+<section class="phero"><div class="narrow">
+<p class="eyebrow">Your account</p>
+<h1 class="h1" id="ac-title">Log in</h1>
+<p class="lead" id="ac-lead">One account for the game, the launcher and this website. Log in to see your characters, their gear, everything in their storage, and their Auction House activity.</p>
+</div></section>
+<section class="sec tight"><div class="wrap">
+<div id="ac-out" class="ac-out" hidden>
+<div class="ac-card ac-form">
+<div class="ac-tabs" role="tablist"><button type="button" class="ac-tab" id="tab-login" aria-selected="true">Log in</button><button type="button" class="ac-tab" id="tab-reg" aria-selected="false">Create account</button></div>
+<form id="f-login" autocomplete="on">
+<label class="fld"><span>Username</span><input id="l-user" name="username" autocomplete="username" maxlength="16" required></label>
+<label class="fld"><span>Password</span><input id="l-pass" name="password" type="password" autocomplete="current-password" maxlength="32" required></label>
+<label class="ac-check"><input id="l-rem" type="checkbox" checked> Stay logged in on this device</label>
+<button class="btn ac-submit" type="submit">Log in</button>
+<p class="ac-msg" id="l-msg" role="alert"></p>
+</form>
+<form id="f-reg" hidden autocomplete="off">
+<label class="fld"><span>Username</span><input id="r-user" autocomplete="username" maxlength="16" required><small>3 to 16 letters or numbers. This is also your game login.</small></label>
+<label class="fld"><span>Password</span><input id="r-pass" type="password" autocomplete="new-password" maxlength="32" required><small>6 to 32 characters.</small></label>
+<label class="fld"><span>Confirm password</span><input id="r-pass2" type="password" autocomplete="new-password" maxlength="32" required></label>
+<label class="ac-check"><input id="r-rules" type="checkbox" required> I've read and agree to the <a href="rules.html">server rules</a></label>
+<button class="btn ac-submit" type="submit">Create account</button>
+<p class="ac-msg" id="r-msg" role="alert"></p>
+</form>
+</div>
+<div class="ac-card ac-side">
+<h3 class="h3">One account, everywhere</h3>
+<ul class="abl">
+<li><strong>The game:</strong> the same username and password log you in through the launcher.</li>
+<li><strong>Your characters:</strong> gear, jobs, crafts, nation rank and points at a glance.</li>
+<li><strong>Your items:</strong> inventory, Mog Safe, Locker, Satchel, Sack, Case, all eight Wardrobes and the delivery box.</li>
+<li><strong>The Auction House:</strong> your listings, what sold, what you bought, and price history for any item.</li>
+</ul>
+<p class="muted" style="font-size:13.5px">The website is view-only: nothing here moves items, gil or listings. New to Timeless XI? Start with <a href="getting-started.html">First Steps</a>.</p>
+</div>
+</div>
+<div id="ac-down" class="callout" hidden><span class="tx-pulse" aria-hidden="true"></span><div><strong style="color:var(--text)">Accounts open when the server does.</strong> <span class="muted">Log in and sign-up connect to the game server, which opens in December 2026. Follow the launch in the <a href="https://discord.gg/NUnJErbmh">Discord</a>.</span></div></div>
+<div id="ac-in" hidden>
+<div class="ac-bar"><div class="ac-chars" id="ac-chars" role="tablist" aria-label="Characters"></div><button type="button" class="btn-ghost sm" id="ac-logout">Log out</button></div>
+<div id="ac-none" class="callout" hidden><div><strong style="color:var(--text)">No characters yet.</strong> <span class="muted">Create one in game and it appears here. See <a href="getting-started.html">First Steps</a>.</span></div></div>
+<div id="ac-char"></div>
+</div>
+</div></section></div>
+<div class="icard" id="ac-card" role="tooltip"></div>
+<footer class="tx-foot"><div class="wrap">
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+<div><div style="font-family:var(--serif);font-size:24px;letter-spacing:.18em">TIMELESS XI</div><div style="font-size:12px;letter-spacing:.32em;color:#9FBBE0">REFORGED</div></div>
+<a class="soon " href="https://discord.gg/NUnJErbmh"><span><b>COMING SOON</b><small>December 2026</small></span></a>
+</div>
+<nav aria-label="Features"><h4>Features</h4><a href="companions.html">Companions</a><a href="jobs.html">Jobs</a><a href="hunt.html">The Hunt</a><a href="time.html">Echoes of Time</a><a href="crafting.html">Crafting &amp; Trade</a><a href="quality-of-life.html">Quality of Life</a></nav>
+<nav aria-label="Play"><h4>Play</h4><a href="nm-tracker.html">NM Tracker</a><a href="world-time.html">World Time</a><a href="rules.html">Rules</a><a href="getting-started.html">First Steps</a><a href="new-player-guide.html">New Player Guide</a><a href="news.html">News</a></nav>
+<nav aria-label="Community"><h4>Community</h4><a href="https://discord.gg/NUnJErbmh">Discord</a><a href="rules.html">Rules</a></nav>
+</div>
+<p class="legal">Timeless XI is a free, fan-run project. It is not affiliated with, endorsed by or sponsored by Square Enix. FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. All game content belongs to its respective owners.</p>
+</div></footer>
+<script>
+document.querySelectorAll('.tx-menu-panel a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.removeAttribute('open');});});
+document.addEventListener('click',function(e){document.querySelectorAll('.tx-drop[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
+document.querySelectorAll('.tx-drop').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.tx-drop[open]').forEach(function(o){if(o!==d)o.removeAttribute('open');});});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details[open]').forEach(function(d){d.removeAttribute('open');});});
+</script>
+<script>try{if(localStorage.getItem('txToken')||sessionStorage.getItem('txToken'))document.querySelectorAll('.tx-acct').forEach(function(a){a.textContent='My account';});}catch(e){}</script>
+<script>
+var API="https://api.timelessxi.gg";
+
+(function(){
+  var $=function(i){return document.getElementById(i);};
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function num(n){return Number(n||0).toLocaleString('en-US');}
+  function tok(){try{return localStorage.getItem('txToken')||sessionStorage.getItem('txToken');}catch(e){return null;}}
+  function setTok(t,rem){try{localStorage.removeItem('txToken');sessionStorage.removeItem('txToken');if(t)(rem?localStorage:sessionStorage).setItem('txToken',t);}catch(e){}}
+  function api(path,opt){opt=opt||{};var h={'Content-Type':'application/json'};var t=tok();if(t)h.Authorization='Bearer '+t;
+    return fetch(API+path,{method:opt.method||'GET',headers:h,body:opt.body?JSON.stringify(opt.body):undefined}).then(function(r){
+      return r.json().catch(function(){return {};}).then(function(j){if(!r.ok){var e=new Error(j.error||'Something went wrong.');e.status=r.status;throw e;}return j;});});}
+  // ---------- items (game help text + icon sprites, data/items/<id>>>8)
+  var IB={};
+  function block(id){var b=id>>8; if(!IB[b]) IB[b]=fetch('data/items/'+b+'.json').then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}); return IB[b];}
+  function item(id){return block(id).then(function(d){return d[id]||null;});}
+  function iconHtml(id,it,sz){sz=sz||32; if(!it||!it.i) return '<span class="ac-ic ac-ic0" style="width:'+sz+'px;height:'+sz+'px"></span>';
+    var k=id&255, s=sz/32; return '<span class="ac-ic" style="width:'+sz+'px;height:'+sz+'px;background:url(data/items/'+(id>>8)+'.webp) -'+(k%16)*sz+'px -'+Math.floor(k/16)*sz+'px/'+512*s+'px '+512*s+'px"></span>';}
+  function descHtml(d){return (d||[]).map(function(x){return typeof x==='string'?esc(x).replace(/\n/g,'<br>'):'<i class="el el-'+x.el+'"></i>';}).join('');}
+  var card=$('ac-card');
+  function showCard(el,id,extra){item(id).then(function(it){ if(!it) return;
+    card.innerHTML='<div class="ih">'+iconHtml(id,it,32)+'<span class="in">'+esc(it.name)+'</span><span class="tags">'+(it.rare?'<span class="rare">Rare</span>':'')+(it.ex?'<span class="ex">Ex</span>':'')+'</span></div>'
+      +(it.head?'<div class="ik">'+esc(it.head)+'</div>':'')+'<div class="is">'+descHtml(it.desc)+'</div>'+(it.foot?'<div class="il">'+esc(it.foot)+'</div>':'')+(extra?'<div class="ix">'+extra+'</div>':'');
+    var r=el.getBoundingClientRect(), w=card.offsetWidth||300, x=Math.min(innerWidth-w-12,Math.max(12,r.left)), y=r.bottom+8;
+    card.classList.add('on'); var h=card.offsetHeight; if(y+h>innerHeight-8) y=Math.max(8,r.top-h-8); card.style.left=x+'px'; card.style.top=y+'px';});}
+  function hideCard(){card.classList.remove('on');}
+  document.addEventListener('mouseover',function(e){var el=e.target.closest('[data-item]'); if(el) showCard(el,+el.dataset.item,el.dataset.extra); else if(!e.target.closest('#ac-card')) hideCard();});
+  document.addEventListener('focusin',function(e){var el=e.target.closest('[data-item]'); if(el) showCard(el,+el.dataset.item,el.dataset.extra);});
+  document.addEventListener('click',function(e){var el=e.target.closest('[data-item]'); if(el&&matchMedia('(hover: none)').matches){e.preventDefault(); showCard(el,+el.dataset.item,el.dataset.extra);} else if(!el) hideCard();});
+  function fillIcons(root){root.querySelectorAll('[data-fill]').forEach(function(el){var id=+el.dataset.fill; item(id).then(function(it){
+    var ic=el.querySelector('.ac-icw'); if(ic) ic.innerHTML=iconHtml(id,it,+(ic.dataset.sz||32)); var n=el.querySelector('.ac-nm'); if(n) n.textContent=it?it.name:'Item #'+id;});});}
+  // ---------- logged out
+  function showOut(){ acct('Log in'); $('ac-in').hidden=true; $('ac-out').hidden=false; $('ac-title').textContent='Log in'; }
+  function tab(reg){$('tab-login').setAttribute('aria-selected',!reg);$('tab-reg').setAttribute('aria-selected',reg);$('f-login').hidden=reg;$('f-reg').hidden=!reg;$('ac-title').textContent=reg?'Create account':'Log in';}
+  $('tab-login').onclick=function(){tab(false);}; $('tab-reg').onclick=function(){tab(true);};
+  if(location.hash==='#register') tab(true);
+  $('f-login').onsubmit=function(e){e.preventDefault(); var m=$('l-msg'); m.textContent='Logging in…'; m.className='ac-msg';
+    api('/api/login',{method:'POST',body:{username:$('l-user').value.trim(),password:$('l-pass').value,remember:$('l-rem').checked}})
+    .then(function(d){setTok(d.token,$('l-rem').checked); $('l-pass').value=''; m.textContent=''; showIn(d);})
+    .catch(function(err){m.textContent=err.status?err.message:'Can\'t reach the account server right now.'; m.className='ac-msg err';});};
+  $('f-reg').onsubmit=function(e){e.preventDefault(); var m=$('r-msg'); m.className='ac-msg err';
+    var u=$('r-user').value.trim(), p=$('r-pass').value;
+    if(!/^[A-Za-z0-9]{3,16}$/.test(u)){m.textContent='Usernames are 3 to 16 letters or numbers.';return;}
+    if(p.length<6||p.length>32){m.textContent='Passwords are 6 to 32 characters.';return;}
+    if(p!==$('r-pass2').value){m.textContent='The passwords don\'t match.';return;}
+    m.className='ac-msg'; m.textContent='Creating your account…';
+    api('/api/register',{method:'POST',body:{username:u,password:p}}).then(function(){
+      return api('/api/login',{method:'POST',body:{username:u,password:p,remember:true}});})
+    .then(function(d){setTok(d.token,true); $('r-pass').value=$('r-pass2').value=''; m.textContent=''; showIn(d);})
+    .catch(function(err){m.textContent=err.status?err.message:'Can\'t reach the account server right now.'; m.className='ac-msg err';});};
+  $('ac-logout').onclick=function(){api('/api/logout',{method:'POST'}).catch(function(){}); setTok(null); chars=[]; showOut(); scrollTo(0,0);};
+  // ---------- logged in
+  var chars=[], cur=0, view='overview', cache={};
+  var JOBN={WAR:'Warrior',MNK:'Monk',WHM:'White Mage',BLM:'Black Mage',RDM:'Red Mage',THF:'Thief',PLD:'Paladin',DRK:'Dark Knight',BST:'Beastmaster',BRD:'Bard',RNG:'Ranger',SAM:'Samurai',NIN:'Ninja',DRG:'Dragoon',SMN:'Summoner',BLU:'Blue Mage',COR:'Corsair',PUP:'Puppetmaster',DNC:'Dancer',SCH:'Scholar',GEO:'Geomancer',RUN:'Rune Fencer'};
+  var ERA=['WAR','MNK','WHM','BLM','RDM','THF','PLD','DRK','BST','BRD','RNG','SAM','NIN','DRG','SMN','BLU','COR','PUP'];
+  function ji(j,sz){return '<img class="jic" src="data/jobicons/'+j.toLowerCase()+'.png" width="'+sz+'" height="'+sz+'" alt="">';}
+  function acct(t){document.querySelectorAll('.tx-acct').forEach(function(a){a.textContent=t;});}
+  function showIn(d){ acct('My account'); chars=d.characters||[]; $('ac-out').hidden=true; $('ac-in').hidden=false;
+    $('ac-title').textContent='Welcome back, '+d.account.login; $('ac-lead').textContent='Your characters on Timeless XI. Everything here is view-only and updates from the game server whenever you open it.';
+    $('ac-none').hidden=chars.length>0;
+    $('ac-chars').innerHTML=chars.map(function(c,i){return '<button type="button" class="ac-pill" role="tab" data-i="'+i+'">'+(c.online?'<i class="ac-on" title="Online"></i>':'')+esc(c.name)+'</button>';}).join('');
+    $('ac-chars').querySelectorAll('.ac-pill').forEach(function(b){b.onclick=function(){cur=+b.dataset.i; render();};});
+    var want=(location.hash.match(/char=([^&]+)/)||[])[1]; if(want){chars.forEach(function(c,i){if(c.name.toLowerCase()===decodeURIComponent(want).toLowerCase())cur=i;});}
+    if(cur>=chars.length) cur=0; render(); }
+  function hours(s){var h=Math.floor(s/3600);return h>=24?Math.floor(h/24)+'d '+(h%24)+'h':h+'h '+Math.floor(s%3600/60)+'m';}
+  var SLOTS=['main','sub','ranged','ammo','head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet'];
+  var SLN={main:'Main',sub:'Sub',ranged:'Range',ammo:'Ammo',head:'Head',neck:'Neck',ear1:'Ear',ear2:'Ear',body:'Body',hands:'Hands',ring1:'Ring',ring2:'Ring',back:'Back',waist:'Waist',legs:'Legs',feet:'Feet'};
+  function render(){ if(!chars.length){$('ac-char').innerHTML='';return;}
+    var c=chars[cur]; try{history.replaceState(null,'','#char='+encodeURIComponent(c.name)+(view!=='overview'?'&'+view:''));}catch(e){}
+    $('ac-chars').querySelectorAll('.ac-pill').forEach(function(b){b.setAttribute('aria-selected',+b.dataset.i===cur);});
+    var gear={}; (c.gear||[]).forEach(function(g){gear[g.slot]=g.itemId;});
+    var grid=SLOTS.map(function(s){var id=gear[s]; return id?'<button type="button" class="ac-slot" data-item="'+id+'" data-fill="'+id+'" aria-label="'+SLN[s]+'"><span class="ac-icw" data-sz="40"></span></button>':'<span class="ac-slot empty">'+SLN[s]+'</span>';}).join('');
+    var nat=c.nation||{}; var tabs=[['overview','Overview'],['items','Items'],['ah','Auction House']];
+    $('ac-char').innerHTML='<div class="ac-prof"><div class="ac-who"><div class="ac-av">'+ji(c.mainJob||'WAR',44)+'</div><div><h2 class="h2 ac-name">'+esc(c.name)+(c.online?' <span class="ac-onl"><i class="ac-on"></i>Online</span>':'')+'</h2>'
+      +'<div class="ac-meta"><span class="ac-job">'+esc(c.mainJob)+' '+c.mainLevel+(c.subJob?' / '+esc(c.subJob)+' '+c.subLevel:'')+'</span><span>'+esc(c.race)+' · '+esc(c.gender)+(c.gm?' · GM':'')+'</span></div></div></div>'
+      +'<div class="ac-badges"><span>'+esc(nat.name||'')+' · Rank '+(nat.rank||1)+'</span>'+(c.linkshell?'<span><i class="ac-ls" style="background:'+lsColor(c.linkshell.color)+'"></i>'+esc(c.linkshell.name)+'</span>':'')+'</div></div>'
+      +'<div class="ac-vtabs" role="tablist">'+tabs.map(function(t){return '<button type="button" class="ac-vtab" data-v="'+t[0]+'" aria-selected="'+(view===t[0])+'">'+t[1]+'</button>';}).join('')+'</div>'
+      +'<div id="ac-view"></div>';
+    $('ac-char').querySelectorAll('.ac-vtab').forEach(function(b){b.onclick=function(){view=b.dataset.v; render();};});
+    var v=$('ac-view');
+    if(view==='overview'){
+      var jobs={}; (c.jobs||[]).forEach(function(j){jobs[j.job]=j;});
+      v.innerHTML='<div class="ac-grid2"><div class="ac-card"><h4 class="ac-h">Equipment</h4><div class="ac-gear">'+grid+'</div></div>'
+        +'<div class="ac-card"><h4 class="ac-h">Character</h4><dl class="ac-dl">'
+        +'<div><dt>Gil</dt><dd>'+num(c.gil)+'</dd></div><div><dt>Location</dt><dd>'+esc(c.zone)+'</dd></div><div><dt>Title</dt><dd>'+esc(c.title||'—')+'</dd></div>'
+        +'<div><dt>Play time</dt><dd>'+hours(c.playtime||0)+'</dd></div><div><dt>Nation ranks</dt><dd>San d\'Oria '+c.ranks.sandoria+' · Bastok '+c.ranks.bastok+' · Windurst '+c.ranks.windurst+'</dd></div>'
+        +'<div><dt>Created</dt><dd>'+esc((c.created||'').slice(0,10))+'</dd></div></dl></div></div>'
+        +'<div class="ac-card"><h4 class="ac-h">Jobs</h4><div class="ac-jobs">'+ERA.map(function(j){var x=jobs[j]||{level:0}; return '<div class="ac-jb'+(x.level?'':' off')+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span><b>'+(x.level||'—')+'</b></div>';}).join('')+'</div></div>'
+        +'<div class="ac-grid2"><div class="ac-card"><h4 class="ac-h">Crafts</h4><div class="ac-rows">'+(c.crafts||[]).map(function(k){return '<div><span>'+esc(k.craft)+'</span><b>'+k.level.toFixed(1)+'</b><em>'+esc(k.rank)+'</em></div>';}).join('')+'</div></div>'
+        +'<div class="ac-card"><h4 class="ac-h">Points</h4><div class="ac-rows">'+[['Conquest points',c.points.conquest],['Imperial standing',c.points.imperialStanding],['Beastmen\'s seals',c.points.beastmenSeals],['Kindred\'s seals',c.points.kindredSeals],['Kindred\'s crests',c.points.kindredCrests],['High kindred\'s crests',c.points.highKindredCrests],['Allied notes',c.points.alliedNotes],['Guild points',c.points.guildPoints]].map(function(p){return '<div><span>'+p[0]+'</span><b>'+num(p[1])+'</b></div>';}).join('')+'</div></div></div>';
+      fillIcons(v);
+    } else if(view==='items') loadItems(c,v); else loadAH(c,v);
+  }
+  function lsColor(c){c=c||0; var r=(c&15)*17,g=(c>>4&15)*17,b=(c>>8&15)*17; return 'rgb('+r+','+g+','+b+')';}
+  var curBox=0, q='';
+  function loadItems(c,v){ v.innerHTML='<p class="muted">Loading items…</p>';
+    (cache['i'+c.id]||(cache['i'+c.id]=api('/api/char/'+c.id+'/items'))).then(function(d){
+      var cs=d.containers||[]; if(!cs.some(function(x){return x.id===curBox;})) curBox=cs.length?cs[0].id:0;
+      var ids={}; cs.forEach(function(x){x.items.forEach(function(it){ids[it.itemId>>8]=1;});});
+      Promise.all(Object.keys(ids).map(function(b){return block(b<<8);})).then(function(){ drawItems(c,v,cs); });
+    }).catch(function(e){ if(e.status===401){setTok(null);showOut();} v.innerHTML='<p class="muted">'+esc(e.message)+'</p>'; cache['i'+c.id]=null; });}
+  function nameOf(id){var b=IB[id>>8]; return b&&b.then?null:null;}
+  function drawItems(c,v,cs){
+    var names={}; Promise.all(cs.map(function(x){return Promise.all(x.items.map(function(it){return item(it.itemId).then(function(d){names[it.itemId]=d?d.name:'Item #'+it.itemId;});}));})).then(function(){
+      var html='<div class="ac-boxbar"><div class="ac-boxes">'+cs.map(function(x){var n=x.items.length; return '<button type="button" class="ac-box" data-b="'+x.id+'" aria-selected="'+(x.id===curBox)+'">'+esc(x.name)+' <small>'+(x.id==='delivery'?n:n+'/'+x.size)+'</small></button>';}).join('')+'</div>'
+        +'<label class="fld ac-find"><span class="sr">Find an item</span><input id="ac-q" type="search" placeholder="Find an item in every bag" value="'+esc(q)+'"></label></div><div id="ac-list"></div>';
+      v.innerHTML=html;
+      v.querySelectorAll('.ac-box').forEach(function(b){b.onclick=function(){curBox=b.dataset.b==='delivery'?'delivery':+b.dataset.b; q=''; drawItems(c,v,cs);};});
+      var inp=$('ac-q'); inp.oninput=function(){q=inp.value; list();}; 
+      function row(x,it){var n=names[it.itemId]; var tags=(it.equipped?'<span class="ac-tag">Equipped</span>':'')+(it.bazaar?'<span class="ac-tag">Bazaar '+num(it.bazaar)+'</span>':'')+(it.from?'<span class="ac-tag">'+(it.box==='incoming'?'From ':'To ')+esc(it.from)+'</span>':'');
+        return '<button type="button" class="ac-it" data-item="'+it.itemId+'" data-fill="'+it.itemId+'"><span class="ac-icw"></span>'+(it.qty>1?'<span class="ac-qty">'+it.qty+'</span>':'')+'<span class="ac-nm">'+esc(n)+'</span>'+(x?'<span class="ac-in">'+esc(x)+'</span>':'')+tags+'</button>';}
+      function list(){ var L=$('ac-list'), s=q.trim().toLowerCase();
+        if(s){ var hits=[]; cs.forEach(function(x){x.items.forEach(function(it){if((names[it.itemId]||'').toLowerCase().indexOf(s)>=0) hits.push(row(x.name,it));});});
+          L.innerHTML=hits.length?'<div class="ac-items">'+hits.join('')+'</div>':'<p class="muted">Nothing called “'+esc(q)+'” in any bag.</p>'; }
+        else { var x=cs.filter(function(y){return y.id===curBox;})[0]; if(!x){L.innerHTML='';return;}
+          L.innerHTML=x.items.length?'<div class="ac-items">'+x.items.map(function(it){return row(null,it);}).join('')+'</div>':'<p class="muted">Empty.</p>'; }
+        fillIcons(L); }
+      list(); });
+  }
+  function dt(s){return s?new Date(s*1000).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}):'—';}
+  function ahTable(rows,kind){ if(!rows.length) return '<p class="muted">'+({listings:'Nothing on sale right now.',sold:'No sales yet.',bought:'No purchases yet.',hist:'No sales recorded yet.'})[kind]+'</p>';
+    return '<div class="tblbox"><table class="tbl ac-ah"><thead><tr><th>Item</th><th>Price</th>'+(kind==='listings'?'<th>Listed</th>':kind==='hist'?'<th>Seller</th><th>Buyer</th><th>Date</th>':'<th>'+(kind==='sold'?'Buyer':'Seller')+'</th><th>Date</th>')+'</tr></thead><tbody>'
+      +rows.map(function(r){return '<tr><td><span class="ac-iline" data-item="'+r.itemId+'" data-fill="'+r.itemId+'" tabindex="0"><span class="ac-icw" data-sz="24"></span><span class="ac-nm"></span>'+(r.stack?' <span class="ac-tag">Stack</span>':'')+'</span></td><td>'+num(r.sold||r.price)+' gil</td>'
+        +(kind==='listings'?'<td>'+dt(r.listed)+'</td>':kind==='hist'?'<td>'+esc(r.seller||'')+'</td><td>'+esc(r.buyer||'')+'</td><td>'+dt(r.soldAt)+'</td>':'<td>'+esc(kind==='sold'?r.buyer:r.seller)+'</td><td>'+dt(r.soldAt)+'</td>')+'</tr>';}).join('')+'</tbody></table></div>';}
+  function loadAH(c,v){ v.innerHTML='<p class="muted">Loading the Auction House…</p>';
+    (cache['a'+c.id]||(cache['a'+c.id]=api('/api/char/'+c.id+'/ah'))).then(function(d){
+      v.innerHTML='<div class="ac-card"><h4 class="ac-h">On sale now <small>'+d.listings.length+'</small></h4>'+ahTable(d.listings,'listings')+'</div>'
+        +'<div class="ac-grid2"><div class="ac-card"><h4 class="ac-h">Sold</h4>'+ahTable(d.sold,'sold')+'</div><div class="ac-card"><h4 class="ac-h">Bought</h4>'+ahTable(d.bought,'bought')+'</div></div>'
+        +'<div class="ac-card"><h4 class="ac-h">Price history</h4><p class="muted" style="margin:0 0 12px">Look up what any item sells for on the Auction House.</p>'
+        +'<div class="ac-pc"><label class="fld"><span>Item</span><input id="pc-q" type="search" placeholder="e.g. Scorpion Harness" autocomplete="off"></label><div id="pc-res" class="ac-res"></div></div><div id="pc-out"></div></div>';
+      fillIcons(v); var t=null;
+      $('pc-q').oninput=function(){clearTimeout(t); var s=this.value.trim(); if(s.length<2){$('pc-res').innerHTML='';return;}
+        t=setTimeout(function(){api('/api/ah/search?q='+encodeURIComponent(s)).then(function(r){
+          $('pc-res').innerHTML=r.results.map(function(x){return '<button type="button" class="ac-it sm" data-pick="'+x.itemId+'" data-st="'+(x.stackable?1:0)+'" data-fill="'+x.itemId+'"><span class="ac-icw" data-sz="24"></span><span class="ac-nm"></span></button>';}).join('')||'<p class="muted">No Auction House items match.</p>';
+          fillIcons($('pc-res')); $('pc-res').querySelectorAll('[data-pick]').forEach(function(b){b.onclick=function(){price(+b.dataset.pick,0,b.dataset.st==='1');};}); });},250);};
+      function price(id,stack,stackable){ $('pc-out').innerHTML='<p class="muted">Loading…</p>';
+        api('/api/ah/item/'+id+'?stack='+stack).then(function(r){
+          $('pc-out').innerHTML='<div class="ac-pchead"><span class="ac-iline" data-item="'+id+'" data-fill="'+id+'" tabindex="0"><span class="ac-icw"></span><span class="ac-nm"></span></span>'
+            +(stackable?'<span class="ac-seg"><button type="button" data-s="0" aria-selected="'+(!stack)+'">Single</button><button type="button" data-s="1" aria-selected="'+(!!stack)+'">Stack</button></span>':'')
+            +'<span class="ac-stat"><b>'+r.onSale+'</b> on sale'+(r.lowest!=null?' · lowest <b>'+num(r.lowest)+'</b> gil':'')+'</span></div>'+ahTable(r.history,'hist');
+          fillIcons($('pc-out')); $('pc-out').querySelectorAll('[data-s]').forEach(function(b){b.onclick=function(){price(id,+b.dataset.s,true);};}); })
+        .catch(function(e){$('pc-out').innerHTML='<p class="muted">'+esc(e.message)+'</p>';}); }
+    }).catch(function(e){ if(e.status===401){setTok(null);showOut();} v.innerHTML='<p class="muted">'+esc(e.message)+'</p>'; cache['a'+c.id]=null; });}
+  // ---------- start
+  var hv=(location.hash.match(/&(items|ah)/)||[])[1]; if(hv) view=hv;
+  if(tok()) api('/api/me').then(showIn).catch(function(e){ if(e.status){setTok(null); showOut();} else { $('ac-down').hidden=false; showOut(); } });
+  else { showOut(); api('/api/status').catch(function(){ $('ac-down').hidden=false; }); }
+})();
+</script>
+</body>
+</html>
