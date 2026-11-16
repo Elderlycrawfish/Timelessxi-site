@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=571b3c7e46">
+<link rel="stylesheet" href="site.css?v=60ea36d3f7">
 
 </head>
 <body>
@@ -157,25 +157,45 @@ var API="https://api.timelessxi.gg";
   function hours(s){var h=Math.floor(s/3600);return h>=24?Math.floor(h/24)+'d '+(h%24)+'h':h+'h '+Math.floor(s%3600/60)+'m';}
   var SLOTS=['main','sub','ranged','ammo','head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet'];
   var SLN={main:'Main',sub:'Sub',ranged:'Range',ammo:'Ammo',head:'Head',neck:'Neck',ear1:'Ear',ear2:'Ear',body:'Body',hands:'Hands',ring1:'Ring',ring2:'Ring',back:'Back',waist:'Waist',legs:'Legs',feet:'Feet'};
+  var PT={};
+  function portrait(c){ var p=c.portrait; if(!p) return;
+    var k=c.id+':'+p.updated;
+    (PT[k]||(PT[k]=fetch(API+'/api/char/'+c.id+'/portrait.jpg?v='+p.updated,{headers:{Authorization:'Bearer '+tok()}}).then(function(r){if(!r.ok) throw 0; return r.blob();}).then(function(b){return URL.createObjectURL(b);})))
+    .then(function(url){ if(chars[cur]!==c) return;
+      var rows=Math.ceil(p.frames/p.cols);
+      function put(el,scale,ox,oy,i){ if(!el) return; var x=(i%p.cols)*p.w*scale, y=Math.floor(i/p.cols)*p.h*scale;
+        el.style.backgroundImage='url('+url+')'; el.style.backgroundSize=(p.cols*p.w*scale)+'px '+(rows*p.h*scale)+'px';
+        el.style.backgroundPosition=(-x+ox)+'px '+(-y+oy)+'px'; }
+      var av=$('ac-av'); if(av){ av.innerHTML=''; av.classList.add('has'); put(av,92/p.w,-12,-2,0); }
+      var el=$('ac-pt'); if(!el) return; el.classList.add('on'); el.tabIndex=0;
+      var f=0, sx=0, f0=0, drag=false; put(el,1,0,0,0);
+      el.onpointerdown=function(e){drag=true; sx=e.clientX; f0=f; try{el.setPointerCapture(e.pointerId);}catch(x){} el.classList.add('drag');};
+      el.onpointermove=function(e){ if(!drag) return; var n=f0-Math.round((e.clientX-sx)/8); f=((n%p.frames)+p.frames)%p.frames; put(el,1,0,0,f); };
+      el.onpointerup=el.onpointercancel=function(){drag=false; el.classList.remove('drag');};
+      el.ondblclick=function(){f=0; put(el,1,0,0,0);};
+      el.onkeydown=function(e){ if(e.key==='ArrowLeft'||e.key==='ArrowRight'){ f=(f+(e.key==='ArrowLeft'?1:p.frames-1))%p.frames; put(el,1,0,0,f); e.preventDefault(); } };
+    }).catch(function(){ PT[k]=null; var el=$('ac-pt'); if(el) el.remove(); });
+  }
   function render(){ if(!chars.length){$('ac-char').innerHTML='';return;}
     var c=chars[cur]; try{history.replaceState(null,'','#char='+encodeURIComponent(c.name)+(view!=='overview'?'&'+view:''));}catch(e){}
     $('ac-chars').querySelectorAll('.ac-pill').forEach(function(b){b.setAttribute('aria-selected',+b.dataset.i===cur);});
     var gear={}; (c.gear||[]).forEach(function(g){gear[g.slot]=g.itemId;});
     var grid=SLOTS.map(function(s){var id=gear[s]; return id?'<button type="button" class="ac-slot" data-item="'+id+'" data-fill="'+id+'" aria-label="'+SLN[s]+'"><span class="ac-icw" data-sz="40"></span></button>':'<span class="ac-slot empty">'+SLN[s]+'</span>';}).join('');
     var nat=c.nation||{}; var tabs=[['overview','Overview'],['items','Items'],['ah','Auction House']];
-    $('ac-char').innerHTML='<div class="ac-prof"><div class="ac-who"><div class="ac-av">'+ji(c.mainJob||'WAR',44)+'</div><div><h2 class="h2 ac-name">'+esc(c.name)+(c.online?' <span class="ac-onl"><i class="ac-on"></i>Online</span>':'')+'</h2>'
+    $('ac-char').innerHTML='<div class="ac-prof"><div class="ac-who"><div class="ac-av" id="ac-av">'+ji(c.mainJob||'WAR',44)+'</div><div><h2 class="h2 ac-name">'+esc(c.name)+(c.online?' <span class="ac-onl"><i class="ac-on"></i>Online</span>':'')+'</h2>'
       +'<div class="ac-meta"><span class="ac-job">'+esc(c.mainJob)+' '+c.mainLevel+(c.subJob?' / '+esc(c.subJob)+' '+c.subLevel:'')+'</span><span>'+esc(c.race)+' · '+esc(c.gender)+(c.gm?' · GM':'')+'</span></div></div></div>'
       +'<div class="ac-badges"><span>'+esc(nat.name||'')+' · Rank '+(nat.rank||1)+'</span>'+(c.linkshell?'<span><i class="ac-ls" style="background:'+lsColor(c.linkshell.color)+'"></i>'+esc(c.linkshell.name)+'</span>':'')+'</div></div>'
       +'<div class="ac-vtabs" role="tablist">'+tabs.map(function(t){return '<button type="button" class="ac-vtab" data-v="'+t[0]+'" aria-selected="'+(view===t[0])+'">'+t[1]+'</button>';}).join('')+'</div>'
       +'<div id="ac-view"></div>';
     $('ac-char').querySelectorAll('.ac-vtab').forEach(function(b){b.onclick=function(){view=b.dataset.v; render();};});
+    portrait(c);
     var v=$('ac-view');
     if(view==='overview'){
       var jobs={}; (c.jobs||[]).forEach(function(j){jobs[j.job]=j;});
-      v.innerHTML='<div class="ac-top"><div class="ac-card"><h4 class="ac-h">Character</h4><dl class="ac-dl">'
+      v.innerHTML='<div class="ac-top"><div class="ac-card"><h4 class="ac-h">Character</h4><div class="ac-cbody">'+(c.portrait?'<div class="ac-pt" id="ac-pt" title="Drag to turn" role="img" aria-label="'+esc(c.name)+'"><span class="ac-pthint">&#9666; drag to turn &#9656;</span></div>':'')+'<dl class="ac-dl">'
         +'<div><dt>Gil</dt><dd>'+num(c.gil)+'</dd></div><div><dt>Location</dt><dd>'+esc(c.zone)+'</dd></div><div><dt>Title</dt><dd>'+esc(c.title||'—')+'</dd></div>'
         +'<div><dt>Play Time</dt><dd>'+hours(c.playtime||0)+'</dd></div><div><dt>Nation Ranks</dt><dd>San d\'Oria '+c.ranks.sandoria+' · Bastok '+c.ranks.bastok+' · Windurst '+c.ranks.windurst+'</dd></div>'
-        +'<div><dt>Created</dt><dd>'+esc((c.created||'').slice(0,10))+'</dd></div></dl></div>'
+        +'<div><dt>Created</dt><dd>'+esc((c.created||'').slice(0,10))+'</dd></div></dl></div></div>'
         +'<div class="ac-card ac-eq"><h4 class="ac-h">Equipment</h4><div class="ac-gear">'+grid+'</div></div></div>'
         +'<div class="ac-card"><h4 class="ac-h">Jobs</h4><div class="ac-jobs">'+ERA.map(function(j){var x=jobs[j]||{level:0}; return '<div class="ac-jb'+(x.level?'':' off')+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span><b>'+(x.level||'—')+'</b></div>';}).join('')+'</div></div>'
         +'<div class="ac-grid2"><div class="ac-card"><h4 class="ac-h">Crafts</h4><div class="ac-rows">'+CRAFTS.concat((c.crafts||[]).some(function(k){return k.craft==='Synergy'&&k.level>0;})?['Synergy']:[]).map(function(n){var k=(c.crafts||[]).filter(function(x){return x.craft===n;})[0]||{level:0,rank:'Amateur'}; return '<div'+(k.level?'':' class="off"')+'><span>'+n+'</span><b>'+k.level.toFixed(1)+'</b><em>'+esc(k.rank)+'</em></div>';}).join('')+'</div></div>'
