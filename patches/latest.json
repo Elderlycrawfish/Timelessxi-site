@@ -1,6 +1,6 @@
 {
  "version": "2026.11.12",
- "published": "2026-11-16T19:09:17Z",
+ "published": "2026-11-17T15:45:39Z",
  "notes": "Key item Talisman key is now the Celestial Talisman, with new text. Every adventurer has it: click the cermet doors of Ve'Lugannon Palace and The Shrine of Ru'Avitau to flip their switches.",
  "json": {
   "url": "https://timelessxi.gg/patches/2026.11.12/timeless_patches.json",
@@ -13,15 +13,15 @@
   "size": 1190280
  },
  "launcher": {
-  "version": "1.14.0",
-  "url": "https://timelessxi.gg/downloads/TimelessXI-Setup-1.14.0.zip",
-  "sha1": "732705a47fb708d9391c934e1975ac0e32d52328",
-  "size": 19008506
+  "version": "1.15.0",
+  "url": "https://timelessxi.gg/downloads/TimelessXI-Setup-1.15.0.zip",
+  "sha1": "b112df8a7fda8b4dac6ed65c604d809ae9676ce6",
+  "size": 19070162
  },
  "setup": {
-  "version": "1.14.0",
+  "version": "1.15.0",
   "url": "https://timelessxi.gg/downloads/TimelessXI-Setup.exe",
-  "sha1": "73784b33c79bb6375eaa568601861e7525cf3133",
-  "size": 19412992
+  "sha1": "f65a8a5d454f5e8306fee2860e92cc8608e0dfd8",
+  "size": 19456000
  }
 }
