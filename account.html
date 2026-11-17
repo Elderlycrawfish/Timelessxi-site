@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=a6f53fe5be">
+<link rel="stylesheet" href="site.css?v=1acaa9c2f0">
 
 </head>
 <body>
@@ -139,7 +139,7 @@ var API="https://api.timelessxi.gg";
       return api('/api/login',{method:'POST',body:{username:u,password:p,remember:true}});})
     .then(function(d){setTok(d.token,true); $('r-pass').value=$('r-pass2').value=''; m.textContent=''; showIn(d);})
     .catch(function(err){m.textContent=err.status?err.message:'Can\'t reach the account server right now.'; m.className='ac-msg err';});};
-  $('ac-logout').onclick=function(){api('/api/logout',{method:'POST'}).catch(function(){}); setTok(null); chars=[]; showOut(); scrollTo(0,0);};
+  $('ac-logout').onclick=function(){ creating=false;api('/api/logout',{method:'POST'}).catch(function(){}); setTok(null); chars=[]; showOut(); scrollTo(0,0);};
   // ---------- logged in
   var chars=[], cur=0, view='overview', cache={};
   var JOBN={WAR:'Warrior',MNK:'Monk',WHM:'White Mage',BLM:'Black Mage',RDM:'Red Mage',THF:'Thief',PLD:'Paladin',DRK:'Dark Knight',BST:'Beastmaster',BRD:'Bard',RNG:'Ranger',SAM:'Samurai',NIN:'Ninja',DRG:'Dragoon',SMN:'Summoner',BLU:'Blue Mage',COR:'Corsair',PUP:'Puppetmaster',DNC:'Dancer',SCH:'Scholar',GEO:'Geomancer',RUN:'Rune Fencer'};
@@ -165,55 +165,150 @@ var API="https://api.timelessxi.gg";
   function lsColor(c){c=c||0; var r=(c&15)*17,g=(c>>4&15)*17,b=(c>>8&15)*17; return 'rgb('+r+','+g+','+b+')';}
   function box(title,inner,cls,extra){return '<section class="ax-card'+(cls?' '+cls:'')+'"><header class="ax-ch"><h3>'+title+'</h3>'+(extra||'')+'</header>'+inner+'</section>';}
 
-  function showIn(d){ acct('My Account'); chars=d.characters||[]; $('ac-out').hidden=true; $('ac-in').hidden=false;
+  var MAXCH=3, creating=false;
+  function showIn(d,pick){ acct('My Account'); chars=d.characters||[]; $('ac-out').hidden=true; $('ac-in').hidden=false;
     document.querySelector('.phero').classList.add('ax-slim');
-    $('ac-title').textContent='Welcome Back, '+d.account.login; $('ac-lead').textContent='Every victory, every level, every hard-won treasure. Your story so far, Champion of Vana\u2019diel.';
-    $('ac-none').hidden=chars.length>0;
-    $('ac-chars').innerHTML=chars.map(function(c,i){return '<button type="button" class="ax-pick" role="tab" data-i="'+i+'"><span class="ax-face" id="face-'+c.id+'">'+ji(c.mainJob||'WAR',22)+'</span><span class="ax-pn">'+esc(c.name)+'</span>'+(c.online?'<i class="ax-dot on" title="Online"></i>':'')+'</button>';}).join('');
-    $('ac-chars').querySelectorAll('.ax-pick').forEach(function(b){b.onclick=function(){cur=+b.dataset.i; render();};});
-    var want=(location.hash.match(/char=([^&]+)/)||[])[1]; if(want){chars.forEach(function(c,i){if(c.name.toLowerCase()===decodeURIComponent(want).toLowerCase())cur=i;});}
-    if(cur>=chars.length) cur=0; render();
-    chars.forEach(function(c){ sheet(c).then(function(s){ if(!s) return; var f=$('face-'+c.id); if(f){f.innerHTML=''; f.classList.add('has'); head(f,s,30);} }); }); }
+    $('ac-title').textContent='Welcome Back, '+d.account.login; $('ac-lead').textContent='Every victory, every level, every hard-won treasure. Your story so far, Champion of Vana’diel.';
+    $('ac-none').hidden=true;
+    var want=pick||(location.hash.match(/char=([^&]+)/)||[])[1]; if(want){chars.forEach(function(c,i){if(c.name.toLowerCase()===decodeURIComponent(want).toLowerCase())cur=i;});}
+    if(cur>=chars.length) cur=0;
+    creating=!chars.length||/(^|[#&])create/.test(location.hash)&&chars.length<MAXCH;
+    picks(); if(creating) creator(); else render();
+    chars.forEach(function(c){ face(c).then(function(url){ var f=$('face-'+c.id); if(url&&f){f.innerHTML=''; f.classList.add('has'); f.style.backgroundImage='url('+url+')';} }); }); }
 
-  // ---------- portraits (the launcher uploads each character's 36-frame turntable)
-  var PT={};
+  function picks(){
+    var html=chars.map(function(c,i){return '<button type="button" class="ax-pick" role="tab" data-i="'+i+'" aria-selected="'+(!creating&&i===cur)+'"><span class="ax-face" id="face-'+c.id+'">'+ji(c.mainJob||'WAR',22)+'</span><span class="ax-pn">'+esc(c.name)+'</span>'+(c.online?'<i class="ax-dot on" title="Online"></i>':'')+'</button>';}).join('');
+    if(chars.length<MAXCH) html+='<button type="button" class="ax-pick ax-new" id="ax-new" aria-selected="'+creating+'"><span class="ax-face ax-plus" aria-hidden="true">+</span><span class="ax-pn">Create Character</span><small>'+chars.length+' of '+MAXCH+'</small></button>';
+    $('ac-chars').innerHTML=html;
+    $('ac-chars').querySelectorAll('.ax-pick[data-i]').forEach(function(b){b.onclick=function(){cur=+b.dataset.i; creating=false; picks(); render(); chars.forEach(function(c){face(c).then(function(url){var f=$('face-'+c.id); if(url&&f){f.innerHTML=''; f.classList.add('has'); f.style.backgroundImage='url('+url+')';}});});};});
+    var nb=$('ax-new'); if(nb) nb.onclick=function(){ creating=true; picks(); creator(); };
+  }
+
+  // ---------- portraits: the launcher uploads each character's turntable (p4: whole body, 600x800 frames) + head picture
+  var PT={}, FACES={};
+  function authed(url){ return fetch(API+url,{headers:{Authorization:'Bearer '+tok()}}).then(function(r){if(!r.ok) throw 0; return r.blob();}).then(function(b){return URL.createObjectURL(b);}); }
   function sheet(c){ var p=c.portrait; if(!p) return Promise.resolve(null); var k=c.id+':'+p.updated;
-    return (PT[k]||(PT[k]=fetch(API+'/api/char/'+c.id+'/portrait.jpg?v='+p.updated,{headers:{Authorization:'Bearer '+tok()}})
-      .then(function(r){if(!r.ok) throw 0; return r.blob();}).then(function(b){return {url:URL.createObjectURL(b),p:p};}).catch(function(){PT[k]=null; return null;}))); }
-  function put(el,s,scale,ox,oy,i){ var p=s.p, rows=Math.ceil(p.frames/p.cols), x=(i%p.cols)*p.w*scale, y=Math.floor(i/p.cols)*p.h*scale;
-    el.style.backgroundImage='url('+s.url+')'; el.style.backgroundSize=(p.cols*p.w*scale)+'px '+(rows*p.h*scale)+'px'; el.style.backgroundPosition=(-x+ox)+'px '+(-y+oy)+'px'; }
-  // Head only, facing front, cut like the launcher's face icons (its 46x46 square at 27,4 of a 100x96 shoulders-up frame).
-  function head(el,s,d){ var p=s.p, k=p.w/100, N=p.frames, fi=((Math.round(-20/(360/N)))%N+N)%N, sc=d/(46*k);
-    put(el,s,sc,-27*k*sc,-4*k*sc,fi); }
-  function portrait(c){ sheet(c).then(function(s){ if(!s||chars[cur]!==c) return;
-      var av=$('ax-av'); if(av){ av.innerHTML=''; av.classList.add('has'); head(av,s,76); }
-      var el=$('ac-pt'); if(!el) return;
-      el.innerHTML='<span class="ax-pthint">&#9666; Drag to turn &#9656; &middot; Scroll to zoom</span><span class="ax-zoom"><button type="button" data-z="1" aria-label="Zoom in">+</button><button type="button" data-z="-1" aria-label="Zoom out">&minus;</button></span>';
+    return (PT[k]||(PT[k]=authed('/api/char/'+c.id+'/portrait.jpg?v='+p.updated).then(function(url){
+      return new Promise(function(ok){ var img=new Image(); img.onload=function(){ok({img:img,url:url,p:p});}; img.onerror=function(){ok(null);}; img.src=url; }); }).catch(function(){PT[k]=null; return null;}))); }
+  // head picture: p4 uploads its own; older sheets are cut like the launcher's face icons
+  function face(c){ var p=c.portrait; if(!p) return Promise.resolve(null); var k=c.id+':'+p.updated;
+    if(FACES[k]) return FACES[k];
+    if(p.face) return (FACES[k]=authed('/api/char/'+c.id+'/face.jpg?v='+p.updated).catch(function(){FACES[k]=null; return null;}));
+    return (FACES[k]=sheet(c).then(function(s){ if(!s) return null; var kk=p.w/100, N=p.frames, fi=((Math.round(-20/(360/N)))%N+N)%N;
+      var cv=document.createElement('canvas'); cv.width=cv.height=96; var x=(fi%p.cols)*p.w, y=Math.floor(fi/p.cols)*p.h;
+      cv.getContext('2d').drawImage(s.img,x+27*kk,y+4*kk,46*kk,46*kk,0,0,96,96); return cv.toDataURL('image/jpeg',.9); })); }
+
+  function portrait(c){
+    face(c).then(function(url){ var av=$('ax-av'); if(url&&av&&chars[cur]===c){ av.innerHTML=''; av.classList.add('has'); av.style.backgroundImage='url('+url+')'; } });
+    sheet(c).then(function(s){ if(!s||chars[cur]!==c||creating) return;
+      var el=$('ac-pt'); if(!el) return; var p=s.p, m=p.meta&&p.meta.v>=4?p.meta:null;
+      el.innerHTML='<canvas></canvas><span class="ax-pthint">&#9666; Drag to turn &#9656; &middot; Scroll to zoom</span><span class="ax-zoom"><button type="button" data-z="1" aria-label="Zoom in">+</button><button type="button" data-z="-1" aria-label="Zoom out">&minus;</button></span>';
       el.classList.add('on'); el.tabIndex=0;
-      // Same rules as the launcher: frame i is DefaultYaw + i*360/frames, DefaultYaw = front + 20 degrees.
-      // Open at a random angle within 25 degrees either side of facing front; double-click faces front again.
-      var N=s.p.frames, step=360/N, front=Math.round(-20/step);
+      var cv=el.querySelector('canvas'), ctx=cv.getContext('2d'), dpr=Math.min(2,window.devicePixelRatio||1);
+      var VW=el.clientWidth, VH=el.clientHeight; cv.width=Math.round(VW*dpr); cv.height=Math.round(VH*dpr);
+      // Same rules as the launcher: frame i is DefaultYaw + i*360/frames (DefaultYaw = front + 20 degrees);
+      // open within 25 degrees either side of facing front; double-click faces front at the starting zoom.
+      var N=p.frames, step=360/N, front=((Math.round(-20/step))%N+N)%N;
       var f=((front+Math.round((Math.random()*2-1)*25/step))%N+N)%N, sx=0, f0=0, drag=false;
-      // Zoom: 1 = the whole uploaded frame (zooming out further would show the empty edge below the shoulders), up to 2x on the face.
-      var base=el.clientWidth/s.p.w, z=1, ZMAX=2, FX=s.p.w*0.5, FY=s.p.h*0.4;
-      var draw=function(){ var sc=base*z; put(el,s,sc,-FX*base*(z-1),-FY*base*(z-1),f); el.classList.toggle('zoomed',z>1.001);
-        el.querySelector('[data-z="1"]').disabled=z>=ZMAX-0.001; el.querySelector('[data-z="-1"]').disabled=z<=1.001; };
-      var zoom=function(to){ z=Math.max(1,Math.min(ZMAX,to)); draw(); };
+      // Zoom = how much of the frame's height is visible (h, a fraction of the frame).
+      // Whole-body sheets: h = 1 shows the whole character (the most you can zoom out), m.sh is the launcher's
+      // shoulders-up view (where it starts), and zooming in further closes on the head.
+      var aspect=VW/VH, H0, HMIN, HMAX, centre;
+      if(m){ var head=(m.hb-m.hy), hc=(m.hy+m.hb)/2, sc=m.sy+m.sh/2; HMAX=Math.min(1,p.w/(p.h*aspect)); H0=Math.min(HMAX,m.sh); HMIN=Math.min(H0,head*1.9);
+        centre=function(h){ var c= h>=H0 ? sc+(0.5-sc)*(HMAX>H0?(h-H0)/(HMAX-H0):0) : hc+(sc-hc)*(H0>HMIN?(h-HMIN)/(H0-HMIN):0); return Math.max(h/2,Math.min(1-h/2,c)); }; }
+      else { HMAX=Math.min(1,p.w/(p.h*aspect)); H0=HMAX; HMIN=HMAX/2; centre=function(h){ return Math.max(h/2,Math.min(1-h/2,0.4+(0.5-0.4)*(h-HMIN)/(HMAX-HMIN||1))); }; }
+      var h=H0;
+      var draw=function(){ var fx=(f%p.cols)*p.w, fy=Math.floor(f/p.cols)*p.h, sh=h*p.h, sw=sh*aspect, top=(centre(h)-h/2)*p.h;
+        ctx.imageSmoothingQuality='high'; ctx.drawImage(s.img, fx+(p.w-sw)/2, fy+top, sw, sh, 0, 0, cv.width, cv.height);
+        el.classList.toggle('zoomed',Math.abs(h-H0)>1e-3);
+        el.querySelector('[data-z="1"]').disabled=h<=HMIN+1e-4; el.querySelector('[data-z="-1"]').disabled=h>=HMAX-1e-4; };
+      var zoom=function(to){ h=Math.max(HMIN,Math.min(HMAX,to)); draw(); };
       draw();
-      var pts={}, pinch0=0, z0=1;
-      el.onpointerdown=function(e){ if(e.target.closest('.ax-zoom')) return; pts[e.pointerId]=e.clientX+','+e.clientY; try{el.setPointerCapture(e.pointerId);}catch(x){}
-        var k=Object.keys(pts); if(k.length===2){ var a=pts[k[0]].split(','), b=pts[k[1]].split(','); pinch0=Math.hypot(a[0]-b[0],a[1]-b[1]); z0=z; drag=false; }
+      var pts={}, pinch0=0, h0=h;
+      el.onpointerdown=function(e){ if(e.target.closest('.ax-zoom')) return; pts[e.pointerId]=[e.clientX,e.clientY]; try{el.setPointerCapture(e.pointerId);}catch(x){}
+        var k=Object.keys(pts); if(k.length===2){ pinch0=Math.hypot(pts[k[0]][0]-pts[k[1]][0],pts[k[0]][1]-pts[k[1]][1]); h0=h; drag=false; }
         else { drag=true; sx=e.clientX; f0=f; el.classList.add('drag'); } };
-      el.onpointermove=function(e){ if(!(e.pointerId in pts)) return; pts[e.pointerId]=e.clientX+','+e.clientY; var k=Object.keys(pts);
-        if(k.length===2&&pinch0){ var a=pts[k[0]].split(','), b=pts[k[1]].split(','); zoom(z0*Math.hypot(a[0]-b[0],a[1]-b[1])/pinch0); return; }
+      el.onpointermove=function(e){ if(!(e.pointerId in pts)) return; pts[e.pointerId]=[e.clientX,e.clientY]; var k=Object.keys(pts);
+        if(k.length===2&&pinch0){ zoom(h0*pinch0/Math.max(1,Math.hypot(pts[k[0]][0]-pts[k[1]][0],pts[k[0]][1]-pts[k[1]][1]))); return; }
         if(!drag) return; var n=f0-Math.round((e.clientX-sx)/8); f=((n%N)+N)%N; draw(); };
       el.onpointerup=el.onpointercancel=function(e){ delete pts[e.pointerId]; if(Object.keys(pts).length<2) pinch0=0; drag=false; el.classList.remove('drag'); };
-      el.addEventListener('wheel',function(e){ e.preventDefault(); zoom(z*Math.pow(1.0015,-e.deltaY)); },{passive:false});
-      el.querySelectorAll('[data-z]').forEach(function(b){ b.onclick=function(e){ e.stopPropagation(); zoom(z+(+b.dataset.z)*0.25); }; b.ondblclick=function(e){e.stopPropagation();}; });
-      el.ondblclick=function(){ f=((front%N)+N)%N; z=1; draw(); };
+      el.addEventListener('wheel',function(e){ e.preventDefault(); zoom(h*Math.pow(1.0015,e.deltaY)); },{passive:false});
+      el.querySelectorAll('[data-z]').forEach(function(b){ b.onclick=function(e){ e.stopPropagation(); zoom(h*(+b.dataset.z>0?0.8:1.25)); }; b.ondblclick=function(e){e.stopPropagation();}; });
+      el.ondblclick=function(){ f=front; h=H0; draw(); };
       el.onkeydown=function(e){ if(e.key==='ArrowLeft'||e.key==='ArrowRight'){ f=(f+(e.key==='ArrowLeft'?1:N-1))%N; draw(); e.preventDefault(); }
-        else if(e.key==='+'||e.key==='='){ zoom(z+0.25); e.preventDefault(); } else if(e.key==='-'||e.key==='_'){ zoom(z-0.25); e.preventDefault(); } };
-  }); }
+        else if(e.key==='+'||e.key==='='){ zoom(h*0.8); e.preventDefault(); } else if(e.key==='-'||e.key==='_'){ zoom(h*1.25); e.preventDefault(); } };
+    }); }
+
+  // ---------- character creation (same choices as the game's character creation)
+  var RACES=[[1,'Hume','Male'],[2,'Hume','Female'],[3,'Elvaan','Male'],[4,'Elvaan','Female'],[5,'Tarutaru','Male'],[6,'Tarutaru','Female'],[7,'Mithra','Female'],[8,'Galka','Male']];
+  var START_JOBS=['WAR','MNK','WHM','BLM','RDM','THF'];
+  var NATION_INFO=[[0,"San d’Oria",'The Kingdom of San d’Oria. Elvaan knights, cathedral spires and the forests of Ronfaure.'],
+    [1,'Bastok','The Republic of Bastok. Hume and Galka miners, furnaces and the rocky Gustaberg.'],
+    [2,'Windurst','The Federation of Windurst. Tarutaru magic, the Star Tree and the plains of Sarutabaruta.']];
+  var CREATOR=null, NEW={race:1,face:0,size:1,job:1,nation:0,name:''};
+  function faceName(f){ return (Math.floor(f/2)+1)+(f%2?'B':'A'); }
+  function creatorArt(){ return CREATOR||(CREATOR=fetch('data/creator/manifest.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})); }
+  function creator(){ try{history.replaceState(null,'','#create');}catch(e){}
+    var v=$('ac-char');
+    var gender=function(r){return r[2]==='Male'?'♂':'♀';};
+    v.innerHTML='<div class="ax-hero ax-create">'
+      +'<div class="ax-left"><div class="ax-pt ax-cpv" id="ax-cpv"><span class="ax-ptnone" id="ax-cpvtxt"></span></div>'
+        +'<div class="ax-csum" id="ax-csum"></div></div>'
+      +'<div class="ax-main"><h2 class="ax-name">New Adventurer</h2><p class="ax-note ax-cintro">Choose who you’ll be in Vana’diel. Your character is ready the moment you finish here: log in through the launcher and your story begins with the opening cutscene. ('+chars.length+' of '+MAXCH+' characters on this account.)</p>'
+        +'<div class="ax-step"><h4>Name</h4><div class="ax-namebox"><input id="cr-name" maxlength="15" autocomplete="off" spellcheck="false" placeholder="3 to 15 letters" value="'+esc(NEW.name)+'"><span id="cr-namemsg" class="ax-namemsg"></span></div></div>'
+        +'<div class="ax-step"><h4>Race</h4><div class="ax-opts ax-races">'+RACES.map(function(r){return '<button type="button" class="ax-opt" data-race="'+r[0]+'"><span class="ax-racepic" data-racepic="'+r[0]+'"></span><b>'+r[1]+'</b><small>'+gender(r)+' '+r[2]+'</small></button>';}).join('')+'</div></div>'
+        +'<div class="ax-step"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div>'
+        +'<div class="ax-step ax-two-steps"><div><h4>Size</h4><div class="ax-seg2">'+['Small','Medium','Large'].map(function(n,i){return '<button type="button" class="ax-opt sm" data-size="'+i+'">'+n+'</button>';}).join('')+'</div></div>'
+          +'<div><h4>Job</h4><div class="ax-opts ax-jobsel">'+START_JOBS.map(function(j,i){return '<button type="button" class="ax-opt sm" data-job="'+(i+1)+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span></button>';}).join('')+'</div></div></div>'
+        +'<div class="ax-step"><h4>Nation</h4><div class="ax-opts ax-natsel">'+NATION_INFO.map(function(n){return '<button type="button" class="ax-opt" data-nation="'+n[0]+'">'+crest(n[0],36)+'<b>'+n[1]+'</b><small>'+n[2]+'</small></button>';}).join('')+'</div></div>'
+        +'<div class="ax-cact"><button type="button" class="btn" id="cr-go">Create Character</button>'+(chars.length?'<button type="button" class="btn-ghost sm" id="cr-cancel">Cancel</button>':'')+'<span class="ac-msg" id="cr-msg" role="alert"></span></div>'
+      +'</div></div>';
+    creatorArt().then(function(art){ if(!art) return;
+      v.querySelectorAll('[data-racepic]').forEach(function(el){ el.style.backgroundImage='url(data/creator/face_'+el.dataset.racepic+'_0.webp)'; el.classList.add('has'); });
+      sync(); });
+    function sync(){
+      v.querySelectorAll('[data-race]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.race===NEW.race);});
+      v.querySelectorAll('[data-size]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.size===NEW.size);});
+      v.querySelectorAll('[data-job]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.job===NEW.job);});
+      v.querySelectorAll('[data-nation]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.nation===NEW.nation);});
+      creatorArt().then(function(art){
+        var fh=''; for(var i=0;i<16;i++) fh+='<button type="button" class="ax-opt ax-face2" data-face="'+i+'" aria-pressed="'+(i===NEW.face)+'" aria-label="Face '+faceName(i)+'">'+(art?'<span class="ax-facepic" style="background-image:url(data/creator/face_'+NEW.race+'_'+i+'.webp)"></span>':'')+'<b>'+faceName(i)+'</b></button>';
+        $('cr-faces').innerHTML=fh; $('cr-facelbl').textContent='Face '+faceName(NEW.face)+' · hair and features change with each one';
+        $('cr-faces').querySelectorAll('[data-face]').forEach(function(b){b.onclick=function(){NEW.face=+b.dataset.face; sync();};});
+        var r=RACES[NEW.race-1], pv=$('ax-cpv');
+        if(art){ pv.style.backgroundImage='url(data/creator/race_'+NEW.race+'.webp)'; pv.classList.add('has'); $('ax-cpvtxt').innerHTML=''; }
+        else { $('ax-cpvtxt').innerHTML='<span class="ax-cglyph">'+gender(r)+'</span><small>'+r[1]+' '+r[2]+'</small>'; }
+        $('ax-csum').innerHTML=[['Name',NEW.name||'—'],['Race',r[1]+' '+gender(r)],['Face',faceName(NEW.face)],['Size',['Small','Medium','Large'][NEW.size]],['Job',JOBN[START_JOBS[NEW.job-1]]],['Nation',NATION_INFO[NEW.nation][1]]]
+          .map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('');
+      });
+    }
+    v.querySelectorAll('[data-race]').forEach(function(b){b.onclick=function(){NEW.race=+b.dataset.race; sync();};});
+    v.querySelectorAll('[data-size]').forEach(function(b){b.onclick=function(){NEW.size=+b.dataset.size; sync();};});
+    v.querySelectorAll('[data-job]').forEach(function(b){b.onclick=function(){NEW.job=+b.dataset.job; sync();};});
+    v.querySelectorAll('[data-nation]').forEach(function(b){b.onclick=function(){NEW.nation=+b.dataset.nation; sync();};});
+    var ni=$('cr-name'), nm=$('cr-namemsg'), nt=null, nameOk=false;
+    function checkName(){ var raw=ni.value.trim(); NEW.name=raw?raw[0].toUpperCase()+raw.slice(1).toLowerCase():''; sync(); nameOk=false;
+      if(!raw){ nm.textContent=''; nm.className='ax-namemsg'; return; }
+      if(!/^[A-Za-z]{3,15}$/.test(raw)){ nm.textContent='3 to 15 letters, no spaces, numbers or symbols.'; nm.className='ax-namemsg bad'; return; }
+      nm.textContent='Checking…'; nm.className='ax-namemsg';
+      clearTimeout(nt); nt=setTimeout(function(){ api('/api/char/namecheck?name='+encodeURIComponent(raw)).then(function(r){ if(ni.value.trim()!==raw) return;
+        nameOk=r.ok; nm.textContent=r.ok?r.name+' is available.':r.error; nm.className='ax-namemsg '+(r.ok?'good':'bad'); }).catch(function(e){ nm.textContent=e.message; nm.className='ax-namemsg bad'; }); },350); }
+    ni.oninput=checkName; if(NEW.name) checkName();
+    ni.addEventListener('keydown',function(e){ if(e.key===' ') e.preventDefault(); });
+    var cc=$('cr-cancel'); if(cc) cc.onclick=function(){ creating=false; try{history.replaceState(null,'','#');}catch(e){} picks(); render(); };
+    $('cr-go').onclick=function(){ var msg=$('cr-msg'), btn=this;
+      if(!NEW.name){ msg.textContent='Choose a name first.'; msg.className='ac-msg err'; ni.focus(); return; }
+      btn.disabled=true; msg.textContent='Creating '+NEW.name+'…'; msg.className='ac-msg';
+      api('/api/char/create',{method:'POST',body:{name:NEW.name,race:NEW.race,face:NEW.face,size:NEW.size,job:NEW.job,nation:NEW.nation}})
+      .then(function(r){ var made=r.name; NEW={race:1,face:0,size:1,job:1,nation:0,name:''}; creating=false;
+        return api('/api/me').then(function(d){ try{history.replaceState(null,'','#char='+encodeURIComponent(made));}catch(e){} showIn(d,made);
+          var n=$('ax-welcome'); if(n) n.remove(); var w=document.createElement('div'); w.id='ax-welcome'; w.className='callout ax-welcome';
+          w.innerHTML='<div><strong style="color:var(--text)">Welcome to Vana’diel, '+esc(made)+'!</strong> <span class="muted">Your character is ready. Log in through the launcher to begin; the opening cutscene plays on your first log-in. Open the launcher once and '+esc(made)+'’s portrait appears here too.</span></div>';
+          $('ac-char').prepend(w); }); })
+      .catch(function(e){ btn.disabled=false; msg.textContent=e.status?e.message:'Can’t reach the account server right now.'; msg.className='ac-msg err'; if(e.status===401){setTok(null);showOut();} });
+    };
+    sync();
+  }
 
   var SLOTS=['main','sub','ranged','ammo','head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet'];
   var SLN={main:'Main',sub:'Sub',ranged:'Range',ammo:'Ammo',head:'Head',neck:'Neck',ear1:'Ear',ear2:'Ear',body:'Body',hands:'Hands',ring1:'Ring',ring2:'Ring',back:'Back',waist:'Waist',legs:'Legs',feet:'Feet'};
@@ -230,7 +325,8 @@ var API="https://api.timelessxi.gg";
     var grid=SLOTS.map(function(s){var id=gear[s]; return id?'<button type="button" class="ax-slot" data-item="'+id+'" data-fill="'+id+'" aria-label="'+SLN[s]+'"><span class="ac-icw" data-sz="40"></span></button>':'<span class="ax-slot empty" title="'+SLN[s]+': empty">'+SLN[s]+'</span>';}).join('');
     var nat=c.nation||{}, job=esc(c.mainJob)+' '+c.mainLevel+(c.subJob?' / '+esc(c.subJob)+' '+c.subLevel:'');
     var info=[['Location','flag',esc(c.zone||'—')],['Play Time','hourglass',hours(c.playtime||0)],['Title','star',esc(c.title||'—')],['Last Played','moon',ago(c)],
-      ['Total Job Levels','sword',(function(){var t=0; (c.jobs||[]).forEach(function(j){if(ERA.indexOf(j.job)>=0) t+=j.level||0;}); return num(t)+' <small class="ax-of">of 1,350</small>';})()],['Adventurer Since','leaf',since(c)]];
+      ['Total Job Levels','sword',(function(){var t=0; (c.jobs||[]).forEach(function(j){if(ERA.indexOf(j.job)>=0) t+=j.level||0;}); return num(t)+' <small class="ax-of">of 1,350</small>';})()],['Adventurer Since','leaf',since(c)],
+      ['Face','star',faceName(c.face||0)],['Size','info',['Small','Medium','Large'][c.size]||'—'],['Merit Points','sword','<span id="ax-merit">—</span>']];
     $('ac-char').innerHTML='<div class="ax-hero">'
       +'<div class="ax-left"><div class="ax-pt" id="ac-pt" role="img" aria-label="'+esc(c.name)+'"><span class="ax-ptnone">'+ji(c.mainJob||'WAR',56)+'<small>Open the launcher to add<br>'+esc(c.name)+'\'s portrait</small></span></div>'
       +'<div class="ax-gear">'+grid+'</div></div>'
@@ -254,6 +350,7 @@ var API="https://api.timelessxi.gg";
   }
 
   function heroExp(c,d){ var el=$('ax-exp'); if(!el) return; var e=d.exp||{}, m=d.merits||{};
+    var mp=$('ax-merit'); if(mp) mp.textContent=num(m.points||0);
     var sk=(d.skills||[]).filter(function(x){return x.cap;}), capd=sk.filter(function(x){return x.value>=x.cap;}).length;
     var j75=(c.jobs||[]).filter(function(j){return j.level>=75;}).length, top=(c.crafts||[]).filter(function(k){return k.craft!=='Synergy';}).reduce(function(a,k){return k.level>a.level?k:a;},{craft:'—',level:0});
     var hl=$('ax-hl'); if(hl) hl.innerHTML=[[j75+'<small>/18</small>','Jobs at Level 75'],[capd+'<small>/'+sk.length+'</small>','Skills Capped'],
