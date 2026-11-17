@@ -577,3 +577,5 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .ax-zoom button:hover:not(:disabled){border-color:var(--ax-goldt);color:#fff}
 .ax-zoom button:disabled{opacity:.35;cursor:default}
 @media (hover:none){.ax-pt.on .ax-zoom{opacity:1}}
+.ft-brand{display:flex;flex-direction:column;gap:14px;align-items:center;width:max-content;max-width:100%}
+@media (max-width:860px){.ft-brand{grid-column:1/-1;margin:0 auto 6px}}
