@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=252f1bca99">
+<link rel="stylesheet" href="site.css?v=4f511b4166">
 
 </head>
 <body>
@@ -144,8 +144,8 @@ var API="https://api.timelessxi.gg";
   var chars=[], cur=0, view='overview', cache={};
   var JOBN={WAR:'Warrior',MNK:'Monk',WHM:'White Mage',BLM:'Black Mage',RDM:'Red Mage',THF:'Thief',PLD:'Paladin',DRK:'Dark Knight',BST:'Beastmaster',BRD:'Bard',RNG:'Ranger',SAM:'Samurai',NIN:'Ninja',DRG:'Dragoon',SMN:'Summoner',BLU:'Blue Mage',COR:'Corsair',PUP:'Puppetmaster',DNC:'Dancer',SCH:'Scholar',GEO:'Geomancer',RUN:'Rune Fencer'};
   var ERA=['WAR','MNK','WHM','BLM','RDM','THF','PLD','DRK','BST','BRD','RNG','SAM','NIN','DRG','SMN','BLU','COR','PUP'];
-  // craft -> that guild's apron (Synergy has no apron: fire crystal)
-  var CRAFTS=[['Fishing',14400],['Woodworking',14392],['Smithing',14393],['Goldsmithing',14394],['Clothcraft',14395],['Leathercraft',14396],['Bonecraft',14397],['Alchemy',14398],['Cooking',14399],['Synergy',4096]];
+  // craft -> that guild's apron (Synergy is out of era)
+  var CRAFTS=[['Fishing',14400],['Woodworking',14392],['Smithing',14393],['Goldsmithing',14394],['Clothcraft',14395],['Leathercraft',14396],['Bonecraft',14397],['Alchemy',14398],['Cooking',14399]];
   // skill -> a weapon, armour piece or spell scroll that stands for it
   var SKICON={1:16385,2:16448,3:16535,4:16583,5:16640,6:16705,7:16774,8:16835,9:16896,10:16966,11:17042,12:17088,25:17152,26:17217,27:17280,28:12696,29:13014,30:12301,31:16460,32:4636,33:4609,34:4651,35:4664,36:4752,37:4838,38:4102,39:1179,40:4976,41:17354,42:17345,43:4099};
   // game menu icons (data/ui/menu.png, 32px cells)
@@ -233,7 +233,7 @@ var API="https://api.timelessxi.gg";
 
   function heroExp(c,d){ var el=$('ax-exp'); if(!el) return; var e=d.exp||{}, m=d.merits||{};
     var sk=(d.skills||[]).filter(function(x){return x.cap;}), capd=sk.filter(function(x){return x.value>=x.cap;}).length;
-    var j75=(c.jobs||[]).filter(function(j){return j.level>=75;}).length, top=(c.crafts||[]).reduce(function(a,k){return k.level>a.level?k:a;},{craft:'—',level:0});
+    var j75=(c.jobs||[]).filter(function(j){return j.level>=75;}).length, top=(c.crafts||[]).filter(function(k){return k.craft!=='Synergy';}).reduce(function(a,k){return k.level>a.level?k:a;},{craft:'—',level:0});
     var hl=$('ax-hl'); if(hl) hl.innerHTML=[[j75+'<small>/18</small>','Jobs at Level 75'],[capd+'<small>/'+sk.length+'</small>','Skills Capped'],
       [top.level?(top.level>=100?'100':top.level.toFixed(1)):'—','Best Craft'+(top.level?' · '+esc(top.craft):'')],[num((d.record||{}).enemies_defeated||0),'Enemies Defeated']]
       .map(function(x){return '<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>';}).join('');
@@ -260,15 +260,12 @@ var API="https://api.timelessxi.gg";
     var currency='<div class="ax-cur">'+cur_.map(function(x){return '<div class="ax-kv">'+'<span>'+ic(x[0],24)+x[1]+'</span><b'+(x[2]?'':' class="z"')+'>'+num(x[2])+'</b></div>';}).join('')+'</div>';
     v.innerHTML='<div class="ax-grid">'
       +box('Jobs',jobsHtml,'w12','<span class="ax-sub">'+(c.jobs||[]).filter(function(j){return j.level>=75;}).length+' of 18 at Level 75</span>')
-      +'<div class="ax-col w7">'
-        +box('Crafts',crafts,'','<span class="ax-sub">'+(c.crafts||[]).filter(function(k){return k.level>0;}).length+' of 10 started</span>')
-        +box('Currencies & Points',currency,'')
-      +'</div><div class="ax-col w5">'
-        +box('Fame',fame,'','<span class="ax-sub">Level 1 to 9</span>')
-        +box('Nations',nations,'')
-        +box('Auction House','<div id="ax-ahg" class="ax-load">Loading listings…</div>','','<button type="button" class="ax-link" data-go="ah">Open &rsaquo;</button>')
-      +'</div>'
-      +box('Storage','<div id="ax-store" class="ax-load">Loading storage…</div>','w12','<button type="button" class="ax-link" data-go="items">Open Items &rsaquo;</button>')
+      +box('Crafts',crafts.replace('ax-list','ax-list ax-cols'),'w7','<span class="ax-sub">'+(c.crafts||[]).filter(function(k){return k.level>0&&k.craft!=='Synergy';}).length+' of 9 started</span>')
+      +box('Fame',fame,'w5','<span class="ax-sub">Level 1 to 9</span>')
+      +box('Currencies & Points',currency,'w7')
+      +box('Nations',nations,'w5')
+      +box('Storage','<div id="ax-store" class="ax-load">Loading storage…</div>','w7','<button type="button" class="ax-link" data-go="items">Open Items &rsaquo;</button>')
+      +box('Auction House','<div id="ax-ahg" class="ax-load">Loading listings…</div>','w5','<button type="button" class="ax-link" data-go="ah">Open &rsaquo;</button>')
       +box('Adventurer\'s Record','<div id="ax-rec" class="ax-load">Loading…</div>','w12','<span class="ax-sub">Lifetime totals</span>')
       +'</div>';
     fillIc(v);

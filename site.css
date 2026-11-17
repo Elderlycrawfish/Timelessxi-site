@@ -565,3 +565,9 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .ax-hl span{font-size:12px;color:var(--ax-faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:1000px){.ax-col.w7,.ax-col.w5{grid-column:span 12}.ax-hl{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ax-of{color:var(--ax-faint);font-size:12.5px}
+.ax-grid{align-items:stretch}
+.ax-card{display:flex;flex-direction:column}
+.ax-list.ax-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 24px}
+.ax-bags{grid-template-columns:repeat(auto-fill,minmax(134px,1fr))}
+.ax-bag span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:760px){.ax-list.ax-cols{grid-template-columns:1fr}}
