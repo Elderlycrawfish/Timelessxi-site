@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=82e4d1d897">
+<link rel="stylesheet" href="site.css?v=252f1bca99">
 
 </head>
 <body>
@@ -144,8 +144,8 @@ var API="https://api.timelessxi.gg";
   var chars=[], cur=0, view='overview', cache={};
   var JOBN={WAR:'Warrior',MNK:'Monk',WHM:'White Mage',BLM:'Black Mage',RDM:'Red Mage',THF:'Thief',PLD:'Paladin',DRK:'Dark Knight',BST:'Beastmaster',BRD:'Bard',RNG:'Ranger',SAM:'Samurai',NIN:'Ninja',DRG:'Dragoon',SMN:'Summoner',BLU:'Blue Mage',COR:'Corsair',PUP:'Puppetmaster',DNC:'Dancer',SCH:'Scholar',GEO:'Geomancer',RUN:'Rune Fencer'};
   var ERA=['WAR','MNK','WHM','BLM','RDM','THF','PLD','DRK','BST','BRD','RNG','SAM','NIN','DRG','SMN','BLU','COR','PUP'];
-  // craft -> a signature material's game icon
-  var CRAFTS=[['Fishing',17015],['Woodworking',708],['Smithing',651],['Goldsmithing',745],['Clothcraft',829],['Leathercraft',850],['Bonecraft',880],['Alchemy',4112],['Cooking',4381],['Synergy',4096]];
+  // craft -> that guild's apron (Synergy has no apron: fire crystal)
+  var CRAFTS=[['Fishing',14400],['Woodworking',14392],['Smithing',14393],['Goldsmithing',14394],['Clothcraft',14395],['Leathercraft',14396],['Bonecraft',14397],['Alchemy',14398],['Cooking',14399],['Synergy',4096]];
   // skill -> a weapon, armour piece or spell scroll that stands for it
   var SKICON={1:16385,2:16448,3:16535,4:16583,5:16640,6:16705,7:16774,8:16835,9:16896,10:16966,11:17042,12:17088,25:17152,26:17217,27:17280,28:12696,29:13014,30:12301,31:16460,32:4636,33:4609,34:4651,35:4664,36:4752,37:4838,38:4102,39:1179,40:4976,41:17354,42:17345,43:4099};
   // game menu icons (data/ui/menu.png, 32px cells)
@@ -208,7 +208,7 @@ var API="https://api.timelessxi.gg";
     var grid=SLOTS.map(function(s){var id=gear[s]; return id?'<button type="button" class="ax-slot" data-item="'+id+'" data-fill="'+id+'" aria-label="'+SLN[s]+'"><span class="ac-icw" data-sz="40"></span></button>':'<span class="ax-slot empty" title="'+SLN[s]+': empty">'+SLN[s]+'</span>';}).join('');
     var nat=c.nation||{}, job=esc(c.mainJob)+' '+c.mainLevel+(c.subJob?' / '+esc(c.subJob)+' '+c.subLevel:'');
     var info=[['Location','flag',esc(c.zone||'—')],['Play Time','hourglass',hours(c.playtime||0)],['Title','star',esc(c.title||'—')],['Last Played','moon',ago(c)],
-      ['Linkshell','info',c.linkshell?'<i class="ax-ls" style="background:'+lsColor(c.linkshell.color)+'"></i>'+esc(c.linkshell.name):'—'],['Adventurer Since','leaf',since(c)]];
+      ['Total Job Levels','sword',(function(){var t=0; (c.jobs||[]).forEach(function(j){if(ERA.indexOf(j.job)>=0) t+=j.level||0;}); return num(t)+' <small class="ax-of">of 1,350</small>';})()],['Adventurer Since','leaf',since(c)]];
     $('ac-char').innerHTML='<div class="ax-hero">'
       +'<div class="ax-left"><div class="ax-pt" id="ac-pt" role="img" aria-label="'+esc(c.name)+'"><span class="ax-ptnone">'+ji(c.mainJob||'WAR',56)+'<small>Open the launcher to add<br>'+esc(c.name)+'\'s portrait</small></span></div>'
       +'<div class="ax-gear">'+grid+'</div></div>'
@@ -256,7 +256,7 @@ var API="https://api.timelessxi.gg";
       return '<div class="ax-natc'+(mine?' mine':'')+'"><span class="ax-crest">'+crest(n[0],40)+'<b>'+(n[2]||1)+'</b></span><span>'+n[1]+'</span><small>'+(mine?'Your nation':'Rank '+(n[2]||1))+'</small></div>';}).join('')+'</div>'
       +'<div class="ax-kv"><span>'+crest((c.nation||{}).id,18)+'Conquest Points</span><b>'+num(c.points.conquest)+'</b></div>';
     var pts=c.points||{}, cur_=[[1126,"Beastmen's Seals",pts.beastmenSeals],[1127,"Kindred's Seals",pts.kindredSeals],[2955,"Kindred's Crests",pts.kindredCrests],[2956,"High Kindred's Crests",pts.highKindredCrests],
-      [129,'Imperial Standing',pts.imperialStanding],[513,'Allied Notes',pts.alliedNotes],[17015,'Guild Points',pts.guildPoints]];
+      [129,'Imperial Standing',pts.imperialStanding],[14400,'Guild Points',pts.guildPoints]];
     var currency='<div class="ax-cur">'+cur_.map(function(x){return '<div class="ax-kv">'+'<span>'+ic(x[0],24)+x[1]+'</span><b'+(x[2]?'':' class="z"')+'>'+num(x[2])+'</b></div>';}).join('')+'</div>';
     v.innerHTML='<div class="ax-grid">'
       +box('Jobs',jobsHtml,'w12','<span class="ax-sub">'+(c.jobs||[]).filter(function(j){return j.level>=75;}).length+' of 18 at Level 75</span>')
