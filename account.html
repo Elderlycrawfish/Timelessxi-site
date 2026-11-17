@@ -173,7 +173,7 @@ var API="https://api.timelessxi.gg";
     $('ac-chars').querySelectorAll('.ax-pick').forEach(function(b){b.onclick=function(){cur=+b.dataset.i; render();};});
     var want=(location.hash.match(/char=([^&]+)/)||[])[1]; if(want){chars.forEach(function(c,i){if(c.name.toLowerCase()===decodeURIComponent(want).toLowerCase())cur=i;});}
     if(cur>=chars.length) cur=0; render();
-    chars.forEach(function(c){ sheet(c).then(function(s){ if(!s) return; var f=$('face-'+c.id); if(f){f.innerHTML=''; f.classList.add('has'); put(f,s,34/s.p.w,-4,-1,0);} }); }); }
+    chars.forEach(function(c){ sheet(c).then(function(s){ if(!s) return; var f=$('face-'+c.id); if(f){f.innerHTML=''; f.classList.add('has'); head(f,s,30);} }); }); }
 
   // ---------- portraits (the launcher uploads each character's 36-frame turntable)
   var PT={};
@@ -182,8 +182,11 @@ var API="https://api.timelessxi.gg";
       .then(function(r){if(!r.ok) throw 0; return r.blob();}).then(function(b){return {url:URL.createObjectURL(b),p:p};}).catch(function(){PT[k]=null; return null;}))); }
   function put(el,s,scale,ox,oy,i){ var p=s.p, rows=Math.ceil(p.frames/p.cols), x=(i%p.cols)*p.w*scale, y=Math.floor(i/p.cols)*p.h*scale;
     el.style.backgroundImage='url('+s.url+')'; el.style.backgroundSize=(p.cols*p.w*scale)+'px '+(rows*p.h*scale)+'px'; el.style.backgroundPosition=(-x+ox)+'px '+(-y+oy)+'px'; }
+  // Head only, facing front, cut like the launcher's face icons (its 46x46 square at 27,4 of a 100x96 shoulders-up frame).
+  function head(el,s,d){ var p=s.p, k=p.w/100, N=p.frames, fi=((Math.round(-20/(360/N)))%N+N)%N, sc=d/(46*k);
+    put(el,s,sc,-27*k*sc,-4*k*sc,fi); }
   function portrait(c){ sheet(c).then(function(s){ if(!s||chars[cur]!==c) return;
-      var av=$('ax-av'); if(av){ av.innerHTML=''; av.classList.add('has'); put(av,s,96/s.p.w,-14,-4,0); }
+      var av=$('ax-av'); if(av){ av.innerHTML=''; av.classList.add('has'); head(av,s,76); }
       var el=$('ac-pt'); if(!el) return;
       el.innerHTML='<span class="ax-pthint">&#9666; Drag to turn &#9656; &middot; Scroll to zoom</span><span class="ax-zoom"><button type="button" data-z="1" aria-label="Zoom in">+</button><button type="button" data-z="-1" aria-label="Zoom out">&minus;</button></span>';
       el.classList.add('on'); el.tabIndex=0;
