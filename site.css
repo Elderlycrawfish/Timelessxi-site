@@ -571,3 +571,9 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .ax-bags{grid-template-columns:repeat(auto-fill,minmax(134px,1fr))}
 .ax-bag span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:760px){.ax-list.ax-cols{grid-template-columns:1fr}}
+.ax-zoom{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:4px;opacity:0;transition:opacity .2s}
+.ax-pt.on:hover .ax-zoom,.ax-pt.on:focus-within .ax-zoom,.ax-pt.zoomed .ax-zoom{opacity:1}
+.ax-zoom button{width:26px;height:26px;border-radius:6px;border:1px solid rgba(255,255,255,.18);background:rgba(10,13,20,.72);color:#dce1ea;font:500 16px/1 var(--sans);cursor:pointer;padding:0}
+.ax-zoom button:hover:not(:disabled){border-color:var(--ax-goldt);color:#fff}
+.ax-zoom button:disabled{opacity:.35;cursor:default}
+@media (hover:none){.ax-pt.on .ax-zoom{opacity:1}}

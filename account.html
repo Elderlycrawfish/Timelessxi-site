@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=4f511b4166">
+<link rel="stylesheet" href="site.css?v=ef2146f88d">
 
 </head>
 <body>
@@ -184,13 +184,32 @@ var API="https://api.timelessxi.gg";
     el.style.backgroundImage='url('+s.url+')'; el.style.backgroundSize=(p.cols*p.w*scale)+'px '+(rows*p.h*scale)+'px'; el.style.backgroundPosition=(-x+ox)+'px '+(-y+oy)+'px'; }
   function portrait(c){ sheet(c).then(function(s){ if(!s||chars[cur]!==c) return;
       var av=$('ax-av'); if(av){ av.innerHTML=''; av.classList.add('has'); put(av,s,96/s.p.w,-14,-4,0); }
-      var el=$('ac-pt'); if(!el) return; el.innerHTML='<span class="ax-pthint">&#9666; Drag to turn &#9656;</span>'; el.classList.add('on'); el.tabIndex=0;
-      var sc=el.clientWidth/s.p.w, f=0, sx=0, f0=0, drag=false; var draw=function(){put(el,s,sc,0,0,f);}; draw();
-      el.onpointerdown=function(e){drag=true; sx=e.clientX; f0=f; try{el.setPointerCapture(e.pointerId);}catch(x){} el.classList.add('drag');};
-      el.onpointermove=function(e){ if(!drag) return; var n=f0-Math.round((e.clientX-sx)/8); f=((n%s.p.frames)+s.p.frames)%s.p.frames; draw(); };
-      el.onpointerup=el.onpointercancel=function(){drag=false; el.classList.remove('drag');};
-      el.ondblclick=function(){f=0; draw();};
-      el.onkeydown=function(e){ if(e.key==='ArrowLeft'||e.key==='ArrowRight'){ f=(f+(e.key==='ArrowLeft'?1:s.p.frames-1))%s.p.frames; draw(); e.preventDefault(); } };
+      var el=$('ac-pt'); if(!el) return;
+      el.innerHTML='<span class="ax-pthint">&#9666; Drag to turn &#9656; &middot; Scroll to zoom</span><span class="ax-zoom"><button type="button" data-z="1" aria-label="Zoom in">+</button><button type="button" data-z="-1" aria-label="Zoom out">&minus;</button></span>';
+      el.classList.add('on'); el.tabIndex=0;
+      // Same rules as the launcher: frame i is DefaultYaw + i*360/frames, DefaultYaw = front + 20 degrees.
+      // Open at a random angle within 25 degrees either side of facing front; double-click faces front again.
+      var N=s.p.frames, step=360/N, front=Math.round(-20/step);
+      var f=((front+Math.round((Math.random()*2-1)*25/step))%N+N)%N, sx=0, f0=0, drag=false;
+      // Zoom: 1 = the whole uploaded frame (zooming out further would show the empty edge below the shoulders), up to 2x on the face.
+      var base=el.clientWidth/s.p.w, z=1, ZMAX=2, FX=s.p.w*0.5, FY=s.p.h*0.4;
+      var draw=function(){ var sc=base*z; put(el,s,sc,-FX*base*(z-1),-FY*base*(z-1),f); el.classList.toggle('zoomed',z>1.001);
+        el.querySelector('[data-z="1"]').disabled=z>=ZMAX-0.001; el.querySelector('[data-z="-1"]').disabled=z<=1.001; };
+      var zoom=function(to){ z=Math.max(1,Math.min(ZMAX,to)); draw(); };
+      draw();
+      var pts={}, pinch0=0, z0=1;
+      el.onpointerdown=function(e){ if(e.target.closest('.ax-zoom')) return; pts[e.pointerId]=e.clientX+','+e.clientY; try{el.setPointerCapture(e.pointerId);}catch(x){}
+        var k=Object.keys(pts); if(k.length===2){ var a=pts[k[0]].split(','), b=pts[k[1]].split(','); pinch0=Math.hypot(a[0]-b[0],a[1]-b[1]); z0=z; drag=false; }
+        else { drag=true; sx=e.clientX; f0=f; el.classList.add('drag'); } };
+      el.onpointermove=function(e){ if(!(e.pointerId in pts)) return; pts[e.pointerId]=e.clientX+','+e.clientY; var k=Object.keys(pts);
+        if(k.length===2&&pinch0){ var a=pts[k[0]].split(','), b=pts[k[1]].split(','); zoom(z0*Math.hypot(a[0]-b[0],a[1]-b[1])/pinch0); return; }
+        if(!drag) return; var n=f0-Math.round((e.clientX-sx)/8); f=((n%N)+N)%N; draw(); };
+      el.onpointerup=el.onpointercancel=function(e){ delete pts[e.pointerId]; if(Object.keys(pts).length<2) pinch0=0; drag=false; el.classList.remove('drag'); };
+      el.addEventListener('wheel',function(e){ e.preventDefault(); zoom(z*Math.pow(1.0015,-e.deltaY)); },{passive:false});
+      el.querySelectorAll('[data-z]').forEach(function(b){ b.onclick=function(e){ e.stopPropagation(); zoom(z+(+b.dataset.z)*0.25); }; b.ondblclick=function(e){e.stopPropagation();}; });
+      el.ondblclick=function(){ f=((front%N)+N)%N; z=1; draw(); };
+      el.onkeydown=function(e){ if(e.key==='ArrowLeft'||e.key==='ArrowRight'){ f=(f+(e.key==='ArrowLeft'?1:N-1))%N; draw(); e.preventDefault(); }
+        else if(e.key==='+'||e.key==='='){ zoom(z+0.25); e.preventDefault(); } else if(e.key==='-'||e.key==='_'){ zoom(z-0.25); e.preventDefault(); } };
   }); }
 
   var SLOTS=['main','sub','ranged','ammo','head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet'];
