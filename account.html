@@ -167,7 +167,7 @@ var API="https://api.timelessxi.gg";
 
   function showIn(d){ acct('My Account'); chars=d.characters||[]; $('ac-out').hidden=true; $('ac-in').hidden=false;
     document.querySelector('.phero').classList.add('ax-slim');
-    $('ac-title').textContent='Welcome Back, '+d.account.login; $('ac-lead').textContent='Every victory, every level, every hard-won treasure. Your story so far, Champion of Vana'diel.';
+    $('ac-title').textContent='Welcome Back, '+d.account.login; $('ac-lead').textContent='Every victory, every level, every hard-won treasure. Your story so far, Champion of Vana\u2019diel.';
     $('ac-none').hidden=chars.length>0;
     $('ac-chars').innerHTML=chars.map(function(c,i){return '<button type="button" class="ax-pick" role="tab" data-i="'+i+'"><span class="ax-face" id="face-'+c.id+'">'+ji(c.mainJob||'WAR',22)+'</span><span class="ax-pn">'+esc(c.name)+'</span>'+(c.online?'<i class="ax-dot on" title="Online"></i>':'')+'</button>';}).join('');
     $('ac-chars').querySelectorAll('.ax-pick').forEach(function(b){b.onclick=function(){cur=+b.dataset.i; render();};});
