@@ -625,10 +625,16 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .ax-racepic:not(.has){display:none}
 .ax-face2{padding:8px 4px}.ax-face2 b{font-size:13px}
 .ax-facepic{width:100%;aspect-ratio:1;border-radius:8px;background:#0c1018 no-repeat center/cover;display:block}
+.ax-facepic.none{background:linear-gradient(160deg,#18203a,#0c1018)}
+.ax-lfaces h4{margin:6px 0 10px;font:600 11.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ax-faint)}
+.ax-lfaces h4 small{font-weight:500;letter-spacing:.02em;text-transform:none;color:var(--ax-muted);font-size:12.5px;margin-left:8px}
+.ax-lfaces .ax-faces{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.ax-lfaces .ax-face2{padding:5px 3px 4px}.ax-lfaces .ax-face2 b{font-size:12px}
+.ax-tface b{color:#e9c98a}
 .ax-natsel .ax-opt{padding:14px 12px}.ax-natsel small{max-width:30ch}
 .ax-cact{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;padding-top:18px;border-top:1px solid var(--ax-line)}
 .ax-cact .btn{border:0;cursor:pointer;font-family:var(--sans)}.ax-cact .btn:disabled{opacity:.6;cursor:default}
 .ax-cact .ac-msg{margin:0}
 .ax-welcome{margin-bottom:16px}
-@media (max-width:1000px){.ax-races{grid-template-columns:repeat(2,minmax(0,1fr))}.ax-faces{grid-template-columns:repeat(4,minmax(0,1fr))}.ax-two-steps{grid-template-columns:1fr}}
+@media (max-width:1000px){.ax-races{grid-template-columns:repeat(2,minmax(0,1fr))}.ax-two-steps{grid-template-columns:1fr}}
 @media (max-width:760px){.ax-pt,.ax-gear{width:260px}.ax-natsel{grid-template-columns:1fr}.ax-jobsel{grid-template-columns:repeat(2,minmax(0,1fr))}}

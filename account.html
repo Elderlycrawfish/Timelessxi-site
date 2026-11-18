@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=1acaa9c2f0">
+<link rel="stylesheet" href="site.css?v=da9771d912">
 
 </head>
 <body>
@@ -249,17 +249,23 @@ var API="https://api.timelessxi.gg";
   var CUSTOM_FACES={7:[[16,'1C','Moonlit Platinum'],[17,'2C','Chestnut Caramel'],[18,'2D','Ember'],[19,'3C','Mocha Honey'],[20,'4C','Dark Chocolate Copper'],[21,'5C','Smoky Ash'],[22,'6C','Espresso Frost'],[23,'7C','Cherry Wine'],[24,'8C','Copper Sunset']]};
   function customFace(f,race){ var l=CUSTOM_FACES[race]||[]; for(var i=0;i<l.length;i++) if(l[i][0]===f) return l[i]; return null; }
   function faceName(f,race){ var c=f>15?customFace(f,race||7):null; return c?c[1]:(Math.floor(f/2)+1)+(f%2?'B':'A'); }
+  // every face of a race in style order: 1A 1B 1C, 2A 2B 2C 2D ... (the Timeless faces after their style's A and B)
+  function faceList(race){ var out=[], cl=CUSTOM_FACES[race]||[];
+    for(var s=1;s<=8;s++){ out.push([2*s-2,s+'A']); out.push([2*s-1,s+'B']);
+      cl.filter(function(c){return +c[1].charAt(0)===s;}).sort(function(a,b){return a[1]<b[1]?-1:1;}).forEach(function(c){ out.push([c[0],c[1],c[2]]); }); }
+    return out; }
+  function hasArt(art,key,race,face){ if(!art) return false; var m=art[key]; if(!m) return key==='faces'&&face<16; var l=m[race]||[]; return l.indexOf(face)>=0; }
   function creatorArt(){ return CREATOR||(CREATOR=fetch('data/creator/manifest.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})); }
   function creator(){ try{history.replaceState(null,'','#create');}catch(e){}
     var v=$('ac-char');
     var gender=function(r){return r[2]==='Male'?'♂':'♀';};
     v.innerHTML='<div class="ax-hero ax-create">'
       +'<div class="ax-left"><div class="ax-pt ax-cpv" id="ax-cpv"><span class="ax-ptnone" id="ax-cpvtxt"></span></div>'
-        +'<div class="ax-csum" id="ax-csum"></div></div>'
+        +'<div class="ax-csum" id="ax-csum"></div>'
+        +'<div class="ax-lfaces"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div></div>'
       +'<div class="ax-main"><h2 class="ax-name">New Adventurer</h2><p class="ax-note ax-cintro">Choose who you’ll be in Vana’diel. Your character is ready the moment you finish here: log in through the launcher and your story begins with the opening cutscene. ('+chars.length+' of '+MAXCH+' characters on this account.)</p>'
         +'<div class="ax-step"><h4>Name</h4><div class="ax-namebox"><input id="cr-name" maxlength="15" autocomplete="off" spellcheck="false" placeholder="3 to 15 letters" value="'+esc(NEW.name)+'"><span id="cr-namemsg" class="ax-namemsg"></span></div></div>'
         +'<div class="ax-step"><h4>Race</h4><div class="ax-opts ax-races">'+RACES.map(function(r){return '<button type="button" class="ax-opt" data-race="'+r[0]+'"><span class="ax-racepic" data-racepic="'+r[0]+'"></span><b>'+r[1]+'</b><small>'+gender(r)+' '+r[2]+'</small></button>';}).join('')+'</div></div>'
-        +'<div class="ax-step"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div><div id="cr-cfaces"></div></div>'
         +'<div class="ax-step ax-two-steps"><div><h4>Size</h4><div class="ax-seg2">'+['Small','Medium','Large'].map(function(n,i){return '<button type="button" class="ax-opt sm" data-size="'+i+'">'+n+'</button>';}).join('')+'</div></div>'
           +'<div><h4>Job</h4><div class="ax-opts ax-jobsel">'+START_JOBS.map(function(j,i){return '<button type="button" class="ax-opt sm" data-job="'+(i+1)+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span></button>';}).join('')+'</div></div></div>'
         +'<div class="ax-step"><h4>Nation</h4><div class="ax-opts ax-natsel">'+NATION_INFO.map(function(n){return '<button type="button" class="ax-opt" data-nation="'+n[0]+'">'+crest(n[0],36)+'<b>'+n[1]+'</b><small>'+n[2]+'</small></button>';}).join('')+'</div></div>'
@@ -274,14 +280,15 @@ var API="https://api.timelessxi.gg";
       v.querySelectorAll('[data-job]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.job===NEW.job);});
       v.querySelectorAll('[data-nation]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.nation===NEW.nation);});
       creatorArt().then(function(art){
-        var fh=''; for(var i=0;i<16;i++) fh+='<button type="button" class="ax-opt ax-face2" data-face="'+i+'" aria-pressed="'+(i===NEW.face)+'" aria-label="Face '+faceName(i)+'">'+(art?'<span class="ax-facepic" style="background-image:url(data/creator/face_'+NEW.race+'_'+i+'.webp)"></span>':'')+'<b>'+faceName(i)+'</b></button>';
-        $('cr-faces').innerHTML=fh;
-        var cl=CUSTOM_FACES[NEW.race]||[], cf=$('cr-cfaces'), cur=customFace(NEW.face,NEW.race);
-        cf.innerHTML=cl.length?'<h4 style="margin-top:16px">Timeless Hair Colours <small>shown in game through the Timeless launcher</small></h4><div class="ax-opts" style="grid-template-columns:repeat(3,minmax(0,1fr))">'+cl.map(function(c){return '<button type="button" class="ax-opt" data-face="'+c[0]+'" aria-pressed="'+(c[0]===NEW.face)+'" aria-label="Face '+c[1]+', '+c[2]+'"><b>'+c[1]+'</b><small>'+c[2]+'</small></button>';}).join('')+'</div>':'';
-        $('cr-facelbl').textContent='Face '+faceName(NEW.face,NEW.race)+(cur?' · '+cur[2]:' · hair and features change with each one');
-        v.querySelectorAll('#cr-faces [data-face],#cr-cfaces [data-face]').forEach(function(b){b.onclick=function(){NEW.face=+b.dataset.face; sync();};});
+        var cur=customFace(NEW.face,NEW.race);
+        var fl=faceList(NEW.race); $('cr-faces').style.gridTemplateColumns='repeat('+(fl.length>16&&fl.length%5===0?5:4)+',minmax(0,1fr))';
+        $('cr-faces').innerHTML=fl.map(function(f){ var pic=hasArt(art,'faces',NEW.race,f[0]);
+          return '<button type="button" class="ax-opt ax-face2'+(f[2]?' ax-tface':'')+'" data-face="'+f[0]+'" aria-pressed="'+(f[0]===NEW.face)+'" aria-label="Face '+f[1]+(f[2]?', '+f[2]:'')+'"'+(f[2]?' title="'+f[2]+' (Timeless hair colour)"':'')+'>'
+            +(art?'<span class="ax-facepic'+(pic?'':' none')+'"'+(pic?' style="background-image:url(data/creator/face_'+NEW.race+'_'+f[0]+'.webp)"':'')+'></span>':'')+'<b>'+f[1]+'</b></button>'; }).join('');
+        $('cr-facelbl').textContent=faceName(NEW.face,NEW.race)+(cur?' · '+cur[2]:'');
+        v.querySelectorAll('#cr-faces [data-face]').forEach(function(b){b.onclick=function(){NEW.face=+b.dataset.face; sync();};});
         var r=RACES[NEW.race-1], pv=$('ax-cpv');
-        if(art){ pv.style.backgroundImage='url(data/creator/race_'+NEW.race+'.webp)'; pv.classList.add('has'); $('ax-cpvtxt').innerHTML=''; }
+        if(art){ pv.style.backgroundImage='url(data/creator/'+(hasArt(art,'bodies',NEW.race,NEW.face)?'body_'+NEW.race+'_'+NEW.face:'race_'+NEW.race)+'.webp)'; pv.classList.add('has'); $('ax-cpvtxt').innerHTML=''; }
         else { $('ax-cpvtxt').innerHTML='<span class="ax-cglyph">'+gender(r)+'</span><small>'+r[1]+' '+r[2]+'</small>'; }
         $('ax-csum').innerHTML=[['Name',NEW.name||'—'],['Race',r[1]+' '+gender(r)],['Face',faceName(NEW.face,NEW.race)+((customFace(NEW.face,NEW.race)||[])[2]?' · '+customFace(NEW.face,NEW.race)[2]:'')],['Size',['Small','Medium','Large'][NEW.size]],['Job',JOBN[START_JOBS[NEW.job-1]]],['Nation',NATION_INFO[NEW.nation][1]]]
           .map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('');
