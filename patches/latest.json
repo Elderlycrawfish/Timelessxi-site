@@ -1,15 +1,15 @@
 {
- "version": "2026.11.17",
- "published": "2026-11-18T01:29:55Z",
- "notes": "New Mithra hair colours: nine Timeless colours (faces 1C-8C and 2D), so every Mithra style comes in brown, red and blonde or silver. Pick one when you create a character on the website.",
+ "version": "2026.11.18",
+ "published": "2026-11-18T04:30:55Z",
+ "notes": "Mithra hair colour 5C is now Smoky Blonde: golden blonde with smoky lowlights.",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.17/timeless_patches.json",
-  "sha1": "8da69189f0241729c274234653e31262dc351fde",
+  "url": "https://timelessxi.gg/patches/2026.11.18/timeless_patches.json",
+  "sha1": "14bfca07d4387261a6a304ac93394f59eb8b963c",
   "size": 810566
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.17/timeless_patches.bin",
-  "sha1": "1cfef49ab4a711ba340ea01f00a003f96ff7cb87",
+  "url": "https://timelessxi.gg/patches/2026.11.18/timeless_patches.bin",
+  "sha1": "b0f3e72e44c6d0c29c9d1e981521ae39f6372c79",
   "size": 1490202
  },
  "launcher": {
