@@ -1,16 +1,16 @@
 {
- "version": "2026.11.18",
- "published": "2026-11-18T04:30:55Z",
- "notes": "Mithra hair colour 5C is now Smoky Blonde: golden blonde with smoky lowlights.",
+ "version": "2026.11.18b",
+ "published": "2026-11-18T15:38:11Z",
+ "notes": "HD Mithra faces: every Mithra face (all 16 standard faces and the 9 Timeless hair colours) now has a 1024x1024 texture with detailed hair, new eyes, crisp markings and a cleaner smile.",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.18/timeless_patches.json",
-  "sha1": "14bfca07d4387261a6a304ac93394f59eb8b963c",
-  "size": 810566
+  "url": "https://timelessxi.gg/patches/2026.11.18b/timeless_patches.json",
+  "sha1": "e4d5d091abd8a1924e1b0496ddbaaf21bcec8ab0",
+  "size": 817114
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.18/timeless_patches.bin",
-  "sha1": "b0f3e72e44c6d0c29c9d1e981521ae39f6372c79",
-  "size": 1490202
+  "url": "https://timelessxi.gg/patches/2026.11.18b/timeless_patches.bin",
+  "sha1": "9742eeff2b0efbdb08d10d3b5703ccafa9d8f06d",
+  "size": 27829130
  },
  "launcher": {
   "version": "1.15.0",
