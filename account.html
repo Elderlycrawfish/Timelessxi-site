@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=fd9c71b19a">
+<link rel="stylesheet" href="site.css?v=f8da35a626">
 
 </head>
 <body>
@@ -271,75 +271,86 @@ var API="https://api.timelessxi.gg";
     return out; }
   function hasArt(art,key,race,face){ if(!art) return false; var m=art[key]; if(!m) return key==='faces'&&face<16; var l=m[race]||[]; return l.indexOf(face)>=0; }
   function creatorArt(){ return CREATOR||(CREATOR=fetch('data/creator/manifest.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})); }
-  function creator(){ try{history.replaceState(null,'','#create');}catch(e){}
+  // ed = a character: Edit Character (only face and size change; the rest is shown greyed out)
+  function creator(ed){ try{history.replaceState(null,'','#'+(ed?'char='+encodeURIComponent(ed.name):'create'));}catch(e){}
+    var N=ed?{race:ed.raceId||1,face:ed.face||0,size:ed.size||0,job:START_JOBS.indexOf(ed.mainJob)+1,nation:(ed.nation||{}).id||0,name:ed.name}:NEW;
+    var LK=ed?' ax-locked':'', DIS=ed?' disabled':'';
     var v=$('ac-char');
     var gender=function(r){return r[2]==='Male'?'♂':'♀';};
     v.innerHTML='<div class="ax-hero ax-create">'
       +'<div class="ax-left"><div class="ax-pt ax-cpv" id="ax-cpv"><span class="ax-ptnone" id="ax-cpvtxt"></span></div>'
         +'<div class="ax-csum" id="ax-csum"></div></div>'
-      +'<div class="ax-main"><h2 class="ax-name">New Adventurer</h2><p class="ax-note ax-cintro">Choose who you’ll be in Vana’diel. Your character is ready the moment you finish here: log in through the launcher and your story begins with the opening cutscene. ('+chars.length+' of '+MAXCH+' characters on this account.)</p>'
-        +'<div class="ax-step"><h4>Name</h4><div class="ax-namebox"><input id="cr-name" maxlength="15" autocomplete="off" spellcheck="false" placeholder="3 to 15 letters" value="'+esc(NEW.name)+'"><span id="cr-namemsg" class="ax-namemsg"></span></div></div>'
-        +'<div class="ax-step"><h4>Race</h4><div class="ax-opts ax-races">'+RACES.map(function(r){return '<button type="button" class="ax-opt" data-race="'+r[0]+'"><span class="ax-racepic" data-racepic="'+r[0]+'"></span><b>'+r[1]+'</b><small>'+gender(r)+' '+r[2]+'</small></button>';}).join('')+'</div></div>'
+      +'<div class="ax-main"><h2 class="ax-name">'+(ed?'Edit '+esc(ed.name):'New Adventurer')+'</h2><p class="ax-note ax-cintro">'+(ed?'Fancy a new look? Pick a new face or size. Everything else stays just as it is. Log out of the game before saving; the new look shows the next time you log in.':'Choose who you’ll be in Vana’diel. Your character is ready the moment you finish here: log in through the launcher and your story begins with the opening cutscene. ('+chars.length+' of '+MAXCH+' characters on this account.)')+'</p>'
+        +'<div class="ax-step'+LK+'"><h4>Name</h4><div class="ax-namebox"><input id="cr-name" maxlength="15" autocomplete="off" spellcheck="false" placeholder="3 to 15 letters" value="'+esc(N.name)+'"'+DIS+'><span id="cr-namemsg" class="ax-namemsg"></span></div></div>'
+        +'<div class="ax-step'+LK+'"><h4>Race</h4><div class="ax-opts ax-races">'+RACES.map(function(r){return '<button type="button" class="ax-opt" data-race="'+r[0]+'"'+DIS+'><span class="ax-racepic" data-racepic="'+r[0]+'"></span><b>'+r[1]+'</b><small>'+gender(r)+' '+r[2]+'</small></button>';}).join('')+'</div></div>'
       +'</div>'
       +'<div class="ax-step ax-cfaces ax-cfull"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div>'
       +'<div class="ax-main ax-cfull">'
         +'<div class="ax-step ax-two-steps"><div><h4>Size</h4><div class="ax-seg2">'+['Small','Medium','Large'].map(function(n,i){return '<button type="button" class="ax-opt sm" data-size="'+i+'">'+n+'</button>';}).join('')+'</div></div>'
-          +'<div><h4>Job</h4><div class="ax-opts ax-jobsel">'+START_JOBS.map(function(j,i){return '<button type="button" class="ax-opt sm" data-job="'+(i+1)+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span></button>';}).join('')+'</div></div></div>'
-        +'<div class="ax-step"><h4>Nation</h4><div class="ax-opts ax-natsel">'+NATION_INFO.map(function(n){return '<button type="button" class="ax-opt" data-nation="'+n[0]+'">'+crest(n[0],36)+'<b>'+n[1]+'</b><small>'+n[2]+'</small></button>';}).join('')+'</div></div>'
+          +'<div class="'+LK+'"><h4>Job</h4><div class="ax-opts ax-jobsel">'+START_JOBS.map(function(j,i){return '<button type="button" class="ax-opt sm" data-job="'+(i+1)+'"'+DIS+'>'+ji(j,22)+'<span>'+JOBN[j]+'</span></button>';}).join('')+'</div></div></div>'
+        +'<div class="ax-step'+LK+'"><h4>Nation</h4><div class="ax-opts ax-natsel">'+NATION_INFO.map(function(n){return '<button type="button" class="ax-opt" data-nation="'+n[0]+'"'+DIS+'>'+crest(n[0],36)+'<b>'+n[1]+'</b><small>'+n[2]+'</small></button>';}).join('')+'</div></div>'
       +'</div>'
-      +'<div class="ax-cact ax-cfull"><button type="button" class="btn" id="cr-go">Create Character</button>'+(chars.length?'<button type="button" class="btn-ghost sm" id="cr-cancel">Cancel</button>':'')+'<span class="ac-msg" id="cr-msg" role="alert"></span></div>'
+      +'<div class="ax-cact ax-cfull"><button type="button" class="btn" id="cr-go">'+(ed?'Save Changes':'Create Character')+'</button>'+(chars.length||ed?'<button type="button" class="btn-ghost sm" id="cr-cancel">Cancel</button>':'')+'<span class="ac-msg" id="cr-msg" role="alert"></span></div>'
       +'</div>';
     creatorArt().then(function(art){ if(!art) return;
       v.querySelectorAll('[data-racepic]').forEach(function(el){ el.style.backgroundImage='url(data/creator/face_'+el.dataset.racepic+'_0.webp)'; el.classList.add('has'); });
       sync(); });
     function sync(){
-      v.querySelectorAll('[data-race]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.race===NEW.race);});
-      v.querySelectorAll('[data-size]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.size===NEW.size);});
-      v.querySelectorAll('[data-job]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.job===NEW.job);});
-      v.querySelectorAll('[data-nation]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.nation===NEW.nation);});
+      v.querySelectorAll('[data-race]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.race===N.race);});
+      v.querySelectorAll('[data-size]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.size===N.size);});
+      v.querySelectorAll('[data-job]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.job===N.job);});
+      v.querySelectorAll('[data-nation]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.nation===N.nation);});
       creatorArt().then(function(art){
-        var cur=customFace(NEW.face,NEW.race);
-        var fl=faceList(NEW.race), rows=Math.ceil(fl.length/9); $('cr-faces').style.gridTemplateColumns='repeat('+Math.ceil(fl.length/rows)+',minmax(0,1fr))';
-        $('cr-faces').innerHTML=fl.map(function(f){ var pic=hasArt(art,'faces',NEW.race,f[0]);
-          return '<button type="button" class="ax-opt ax-face2'+(f[2]?' ax-tface':'')+'" data-face="'+f[0]+'" aria-pressed="'+(f[0]===NEW.face)+'" aria-label="Face '+f[1]+(f[2]?', '+f[2]:'')+'"'+(f[2]?' title="'+f[2]+' (Timeless hair colour)"':'')+'>'
-            +(art?'<span class="ax-facepic'+(pic?'':' none')+'"'+(pic?' style="background-image:url(data/creator/face_'+NEW.race+'_'+f[0]+'.webp)"':'')+'></span>':'')+'<b>'+f[1]+'</b></button>'; }).join('');
-        $('cr-facelbl').textContent=faceName(NEW.face,NEW.race)+(cur?' · '+cur[2]:'');
-        v.querySelectorAll('#cr-faces [data-face]').forEach(function(b){b.onclick=function(){NEW.face=+b.dataset.face; sync();};});
-        var r=RACES[NEW.race-1], pv=$('ax-cpv');
-        var sp=art&&art.spin&&(art.spin[NEW.race]||{})[NEW.face];
-        if(sp){ var key=NEW.race+'_'+NEW.face;
+        var cur=customFace(N.face,N.race);
+        var fl=faceList(N.race), rows=Math.ceil(fl.length/9); $('cr-faces').style.gridTemplateColumns='repeat('+Math.ceil(fl.length/rows)+',minmax(0,1fr))';
+        $('cr-faces').innerHTML=fl.map(function(f){ var pic=hasArt(art,'faces',N.race,f[0]);
+          return '<button type="button" class="ax-opt ax-face2'+(f[2]?' ax-tface':'')+'" data-face="'+f[0]+'" aria-pressed="'+(f[0]===N.face)+'" aria-label="Face '+f[1]+(f[2]?', '+f[2]:'')+'"'+(f[2]?' title="'+f[2]+' (Timeless hair colour)"':'')+'>'
+            +(art?'<span class="ax-facepic'+(pic?'':' none')+'"'+(pic?' style="background-image:url(data/creator/face_'+N.race+'_'+f[0]+'.webp)"':'')+'></span>':'')+'<b>'+f[1]+'</b></button>'; }).join('');
+        $('cr-facelbl').textContent=faceName(N.face,N.race)+(cur?' · '+cur[2]:'');
+        v.querySelectorAll('#cr-faces [data-face]').forEach(function(b){b.onclick=function(){N.face=+b.dataset.face; sync();};});
+        var r=RACES[N.race-1], pv=$('ax-cpv');
+        var sp=art&&art.spin&&(art.spin[N.race]||{})[N.face];
+        if(sp){ var key=N.race+'_'+N.face;
           if(pv.dataset.spin!==key){ pv.dataset.spin=key; var im=new Image();
             im.onload=function(){ if(pv.dataset.spin!==key) return; pv.style.backgroundImage=''; pv.classList.add('has');
-              if(SPINKEEP.race!==NEW.race){ SPINKEEP={race:NEW.race}; }
+              if(SPINKEEP.race!==N.race){ SPINKEEP={race:N.race}; }
               var close=sp.close?{img:null}:null;
               spinView(pv, im, sp, {clear:true, full:true, keep:SPINKEEP, headx:1.3, close:close});
               if(close){ var ic=new Image(); ic.onload=function(){ if(pv.dataset.spin!==key) return; close.img=ic; if(close.redraw) close.redraw(); }; ic.src='data/creator/spinc_'+key+'.webp'; } };
             im.src='data/creator/spin_'+key+'.webp'; } }
         else if(art){ if(pv.dataset.spin){ pv.dataset.spin=''; pv.innerHTML='<span class="ax-ptnone" id="ax-cpvtxt"></span>'; pv.classList.remove('on','zoomed'); pv.onwheel=pv.onpointerdown=pv.onpointermove=pv.ondblclick=pv.onkeydown=null; }
-          pv.style.backgroundImage='url(data/creator/'+(hasArt(art,'bodies',NEW.race,NEW.face)?'body_'+NEW.race+'_'+NEW.face:'race_'+NEW.race)+'.webp)'; pv.classList.add('has'); var t=$('ax-cpvtxt'); if(t) t.innerHTML=''; }
+          pv.style.backgroundImage='url(data/creator/'+(hasArt(art,'bodies',N.race,N.face)?'body_'+N.race+'_'+N.face:'race_'+N.race)+'.webp)'; pv.classList.add('has'); var t=$('ax-cpvtxt'); if(t) t.innerHTML=''; }
         else if($('ax-cpvtxt')) { $('ax-cpvtxt').innerHTML='<span class="ax-cglyph">'+gender(r)+'</span><small>'+r[1]+' '+r[2]+'</small>'; }
-        $('ax-csum').innerHTML=[['Name',NEW.name||'—'],['Race',r[1]+' '+gender(r)],['Face',faceName(NEW.face,NEW.race)+((customFace(NEW.face,NEW.race)||[])[2]?' · '+customFace(NEW.face,NEW.race)[2]:'')],['Size',['Small','Medium','Large'][NEW.size]],['Job',JOBN[START_JOBS[NEW.job-1]]],['Nation',NATION_INFO[NEW.nation][1]]]
+        $('ax-csum').innerHTML=[['Name',N.name||'—'],['Race',r[1]+' '+gender(r)],['Face',faceName(N.face,N.race)+((customFace(N.face,N.race)||[])[2]?' · '+customFace(N.face,N.race)[2]:'')],['Size',['Small','Medium','Large'][N.size]],['Job',N.job?JOBN[START_JOBS[N.job-1]]:(JOBN[ed&&ed.mainJob]||(ed&&ed.mainJob)||'—')],['Nation',NATION_INFO[N.nation][1]]]
           .map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('');
       });
     }
-    v.querySelectorAll('[data-race]').forEach(function(b){b.onclick=function(){NEW.race=+b.dataset.race; if(NEW.face>15&&!customFace(NEW.face,NEW.race)) NEW.face=0; sync();};});
-    v.querySelectorAll('[data-size]').forEach(function(b){b.onclick=function(){NEW.size=+b.dataset.size; sync();};});
-    v.querySelectorAll('[data-job]').forEach(function(b){b.onclick=function(){NEW.job=+b.dataset.job; sync();};});
-    v.querySelectorAll('[data-nation]').forEach(function(b){b.onclick=function(){NEW.nation=+b.dataset.nation; sync();};});
+    if(!ed) v.querySelectorAll('[data-race]').forEach(function(b){b.onclick=function(){N.race=+b.dataset.race; if(N.face>15&&!customFace(N.face,N.race)) N.face=0; sync();};});
+    v.querySelectorAll('[data-size]').forEach(function(b){b.onclick=function(){N.size=+b.dataset.size; sync();};});
+    if(!ed) v.querySelectorAll('[data-job]').forEach(function(b){b.onclick=function(){N.job=+b.dataset.job; sync();};});
+    if(!ed) v.querySelectorAll('[data-nation]').forEach(function(b){b.onclick=function(){N.nation=+b.dataset.nation; sync();};});
     var ni=$('cr-name'), nm=$('cr-namemsg'), nt=null, nameOk=false;
-    function checkName(){ var raw=ni.value.trim(); NEW.name=raw?raw[0].toUpperCase()+raw.slice(1).toLowerCase():''; sync(); nameOk=false;
+    function checkName(){ var raw=ni.value.trim(); N.name=raw?raw[0].toUpperCase()+raw.slice(1).toLowerCase():''; sync(); nameOk=false;
       if(!raw){ nm.textContent=''; nm.className='ax-namemsg'; return; }
       if(!/^[A-Za-z]{3,15}$/.test(raw)){ nm.textContent='3 to 15 letters, no spaces, numbers or symbols.'; nm.className='ax-namemsg bad'; return; }
       nm.textContent='Checking…'; nm.className='ax-namemsg';
       clearTimeout(nt); nt=setTimeout(function(){ api('/api/char/namecheck?name='+encodeURIComponent(raw)).then(function(r){ if(ni.value.trim()!==raw) return;
         nameOk=r.ok; nm.textContent=r.ok?r.name+' is available.':r.error; nm.className='ax-namemsg '+(r.ok?'good':'bad'); }).catch(function(e){ nm.textContent=e.message; nm.className='ax-namemsg bad'; }); },350); }
-    ni.oninput=checkName; if(NEW.name) checkName();
+    if(!ed){ ni.oninput=checkName; if(N.name) checkName(); }
     ni.addEventListener('keydown',function(e){ if(e.key===' ') e.preventDefault(); });
     var cc=$('cr-cancel'); if(cc) cc.onclick=function(){ creating=false; try{history.replaceState(null,'','#');}catch(e){} picks(); render(); };
-    $('cr-go').onclick=function(){ var msg=$('cr-msg'), btn=this;
-      if(!NEW.name){ msg.textContent='Choose a name first.'; msg.className='ac-msg err'; ni.focus(); return; }
-      btn.disabled=true; msg.textContent='Creating '+NEW.name+'…'; msg.className='ac-msg';
-      api('/api/char/create',{method:'POST',body:{name:NEW.name,race:NEW.race,face:NEW.face,size:NEW.size,job:NEW.job,nation:NEW.nation}})
+    if(ed) $('cr-go').onclick=function(){ var msg=$('cr-msg'), btn=this;
+      btn.disabled=true; msg.textContent='Saving…'; msg.className='ac-msg';
+      api('/api/char/'+ed.id+'/look',{method:'POST',body:{face:N.face,size:N.size}})
+      .then(function(){ creating=false; return api('/api/me').then(function(d){ showIn(d,ed.name);
+          var w=document.createElement('div'); w.className='callout ax-welcome'; w.innerHTML='<div><strong style="color:var(--text)">'+esc(ed.name)+'’s new look is saved.</strong> <span class="muted">It shows the next time you log in. Open the launcher once to refresh the portrait here too.</span></div>';
+          $('ac-char').prepend(w); }); })
+      .catch(function(e){ btn.disabled=false; msg.textContent=e.status?e.message:'Can’t reach the account server right now.'; msg.className='ac-msg err'; if(e.status===401){setTok(null);showOut();} });
+    };
+    else $('cr-go').onclick=function(){ var msg=$('cr-msg'), btn=this;
+      if(!N.name){ msg.textContent='Choose a name first.'; msg.className='ac-msg err'; ni.focus(); return; }
+      btn.disabled=true; msg.textContent='Creating '+N.name+'…'; msg.className='ac-msg';
+      api('/api/char/create',{method:'POST',body:{name:N.name,race:N.race,face:N.face,size:N.size,job:N.job,nation:N.nation}})
       .then(function(r){ var made=r.name; NEW={race:1,face:0,size:1,job:1,nation:0,name:''}; creating=false;
         return api('/api/me').then(function(d){ try{history.replaceState(null,'','#char='+encodeURIComponent(made));}catch(e){} showIn(d,made);
           var n=$('ax-welcome'); if(n) n.remove(); var w=document.createElement('div'); w.id='ax-welcome'; w.className='callout ax-welcome';
@@ -366,6 +377,7 @@ var API="https://api.timelessxi.gg";
     b.onclick=function(){ if(m.hidden){ m.hidden=false; b.setAttribute('aria-expanded','true'); document.addEventListener('click',out,true); } else close(); };
     m.onkeydown=function(e){ if(e.key==='Escape'){ close(); b.focus(); } };
     $('ax-del').onclick=function(){ close(); confirmDelete(c); };
+    $('ax-edit').onclick=function(){ close(); creator(c); window.scrollTo({top:$('ac-char').getBoundingClientRect().top+window.scrollY-120,behavior:'smooth'}); };
   }
   function confirmDelete(c){
     var o=document.createElement('div'); o.className='ax-modal'; o.setAttribute('role','dialog'); o.setAttribute('aria-modal','true'); o.setAttribute('aria-labelledby','axd-t');
@@ -408,7 +420,7 @@ var API="https://api.timelessxi.gg";
         +'<div class="ax-tags"><span class="ax-pill">'+job+'</span><span class="ax-rg">'+esc(c.race)+' · '+esc(c.gender)+'</span>'+(c.gm?'<span class="ax-chip">GM</span>':'')
         +'<span class="ax-status'+(c.online?' on':'')+'"><i class="ax-dot'+(c.online?' on':'')+'"></i>'+(c.online?'Online':'Offline')+'</span></div></div>'
         +'<div class="ax-optwrap"><button type="button" class="btn-ghost sm ax-optbtn" id="ax-optbtn" aria-haspopup="menu" aria-expanded="false">Options <span aria-hidden="true">&#9662;</span></button>'
-        +'<div class="ax-menu" id="ax-menu" role="menu" hidden><button type="button" role="menuitem" class="ax-mi danger" id="ax-del">Delete Character</button></div></div></div>'
+        +'<div class="ax-menu" id="ax-menu" role="menu" hidden><button type="button" role="menuitem" class="ax-mi" id="ax-edit">Edit Character</button><button type="button" role="menuitem" class="ax-mi danger" id="ax-del">Delete Character</button></div></div></div>'
         +'<div class="ax-natrow"><span class="ax-crest" title="'+esc(nat.name||'')+', Rank '+(nat.rank||1)+'">'+crest(nat.id,34)+'<b>'+(nat.rank||1)+'</b></span>'
         +'<span class="ax-nat">'+esc(nat.name||'')+'<small>Rank '+(nat.rank||1)+'</small></span>'
         +'<span class="ax-gil">'+ui('gil',26)+'<b>'+num(c.gil)+'</b><small>gil</small></span></div>'
