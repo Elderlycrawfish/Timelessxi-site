@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=b8116402fa">
+<link rel="stylesheet" href="site.css?v=fd9c71b19a">
 
 </head>
 <body>
@@ -358,6 +358,39 @@ var API="https://api.timelessxi.gg";
   function ahData(c){return cache['a'+c.id]||(cache['a'+c.id]=api('/api/char/'+c.id+'/ah').catch(function(e){cache['a'+c.id]=null; throw e;}));}
   function lost(e){ if(e&&e.status===401){ setTok(null); showOut(); } }
 
+  // ---------- character options: delete (same as the game's character select; the slot opens for a new character)
+  function options(c){
+    var b=$('ax-optbtn'), m=$('ax-menu'); if(!b) return;
+    var close=function(){ m.hidden=true; b.setAttribute('aria-expanded','false'); document.removeEventListener('click',out,true); };
+    var out=function(e){ if(!e.target.closest('.ax-optwrap')) close(); };
+    b.onclick=function(){ if(m.hidden){ m.hidden=false; b.setAttribute('aria-expanded','true'); document.addEventListener('click',out,true); } else close(); };
+    m.onkeydown=function(e){ if(e.key==='Escape'){ close(); b.focus(); } };
+    $('ax-del').onclick=function(){ close(); confirmDelete(c); };
+  }
+  function confirmDelete(c){
+    var o=document.createElement('div'); o.className='ax-modal'; o.setAttribute('role','dialog'); o.setAttribute('aria-modal','true'); o.setAttribute('aria-labelledby','axd-t');
+    o.innerHTML='<div class="ax-dlg"><h3 id="axd-t">Delete '+esc(c.name)+'?</h3>'
+      +'<p class="ax-warn"><b>This can’t be undone.</b> '+esc(c.name)+' will be deleted from the game along with every level, item, gil and quest. The name stays taken.</p>'
+      +'<p class="muted">The character slot opens up again for a new character.</p>'
+      +'<label class="ax-dlgl" for="axd-n">Type <b>'+esc(c.name)+'</b> to confirm</label><input id="axd-n" autocomplete="off" spellcheck="false">'
+      +'<div class="ax-dlga"><button type="button" class="btn ax-danger" id="axd-go" disabled>Delete Character</button><button type="button" class="btn-ghost sm" id="axd-no">Cancel</button><span class="ac-msg" id="axd-msg" role="alert"></span></div></div>';
+    document.body.appendChild(o);
+    var inp=o.querySelector('#axd-n'), go=o.querySelector('#axd-go'), msg=o.querySelector('#axd-msg');
+    var shut=function(){ o.remove(); var b=$('ax-optbtn'); if(b) b.focus(); };
+    o.querySelector('#axd-no').onclick=shut; o.onclick=function(e){ if(e.target===o) shut(); };
+    o.onkeydown=function(e){ if(e.key==='Escape') shut(); };
+    inp.oninput=function(){ go.disabled=inp.value.trim().toLowerCase()!==c.name.toLowerCase(); };
+    inp.focus();
+    go.onclick=function(){ go.disabled=true; msg.textContent='Deleting…'; msg.className='ac-msg';
+      api('/api/char/'+c.id+'/delete',{method:'POST',body:{confirm:inp.value.trim()}})
+      .then(function(){ o.remove(); cur=0; try{history.replaceState(null,'','#');}catch(e){}
+        return api('/api/me').then(function(d){ showIn(d);
+          var w=document.createElement('div'); w.className='callout ax-welcome'; w.innerHTML='<div><strong style="color:var(--text)">'+esc(c.name)+' has been deleted.</strong> <span class="muted">The slot is free for a new character.</span></div>';
+          $('ac-char').prepend(w); }); })
+      .catch(function(e){ go.disabled=false; msg.textContent=e.status?e.message:'Can’t reach the account server right now.'; msg.className='ac-msg err'; if(e.status===401){ o.remove(); setTok(null); showOut(); } });
+    };
+  }
+
   function render(){ if(!chars.length){$('ac-char').innerHTML='';return;}
     var c=chars[cur]; try{history.replaceState(null,'','#char='+encodeURIComponent(c.name)+(view!=='overview'?'&'+view:''));}catch(e){}
     $('ac-chars').querySelectorAll('.ax-pick').forEach(function(b){b.setAttribute('aria-selected',+b.dataset.i===cur);});
@@ -373,7 +406,9 @@ var API="https://api.timelessxi.gg";
       +'<div class="ax-main">'
         +'<div class="ax-namerow"><div class="ax-av" id="ax-av">'+ji(c.mainJob||'WAR',40)+'</div><div><h2 class="ax-name">'+esc(c.name)+'</h2>'
         +'<div class="ax-tags"><span class="ax-pill">'+job+'</span><span class="ax-rg">'+esc(c.race)+' · '+esc(c.gender)+'</span>'+(c.gm?'<span class="ax-chip">GM</span>':'')
-        +'<span class="ax-status'+(c.online?' on':'')+'"><i class="ax-dot'+(c.online?' on':'')+'"></i>'+(c.online?'Online':'Offline')+'</span></div></div></div>'
+        +'<span class="ax-status'+(c.online?' on':'')+'"><i class="ax-dot'+(c.online?' on':'')+'"></i>'+(c.online?'Online':'Offline')+'</span></div></div>'
+        +'<div class="ax-optwrap"><button type="button" class="btn-ghost sm ax-optbtn" id="ax-optbtn" aria-haspopup="menu" aria-expanded="false">Options <span aria-hidden="true">&#9662;</span></button>'
+        +'<div class="ax-menu" id="ax-menu" role="menu" hidden><button type="button" role="menuitem" class="ax-mi danger" id="ax-del">Delete Character</button></div></div></div>'
         +'<div class="ax-natrow"><span class="ax-crest" title="'+esc(nat.name||'')+', Rank '+(nat.rank||1)+'">'+crest(nat.id,34)+'<b>'+(nat.rank||1)+'</b></span>'
         +'<span class="ax-nat">'+esc(nat.name||'')+'<small>Rank '+(nat.rank||1)+'</small></span>'
         +'<span class="ax-gil">'+ui('gil',26)+'<b>'+num(c.gil)+'</b><small>gil</small></span></div>'
@@ -383,6 +418,7 @@ var API="https://api.timelessxi.gg";
       +'<nav class="ax-tabs" role="tablist">'+TABS.map(function(t){return '<button type="button" class="ax-tab" data-v="'+t[0]+'" aria-selected="'+(view===t[0])+'">'+t[1]+'</button>';}).join('')+'</nav>'
       +'<div id="ac-view"></div>';
     $('ac-char').querySelectorAll('.ax-tab').forEach(function(b){b.onclick=function(){view=b.dataset.v; render();};});
+    options(c);
     fillIcons($('ac-char')); portrait(c);
     details(c).then(function(d){ if(chars[cur]===c) heroExp(c,d); }).catch(lost);
     var v=$('ac-view');
