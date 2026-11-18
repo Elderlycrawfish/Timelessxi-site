@@ -214,7 +214,7 @@ var API="https://api.timelessxi.gg";
       // Whole-body sheets: h = 1 shows the whole character (the most you can zoom out), m.sh is the launcher's
       // shoulders-up view (where it starts), and zooming in further closes on the head.
       var aspect=VW/VH, H0, HMIN, HMAX, centre;
-      if(m){ var head=(m.hb-m.hy), hc=(m.hy+m.hb)/2, sc=m.sy+m.sh/2; HMAX=Math.min(1,p.w/(p.h*aspect)); H0=Math.min(HMAX,m.sh); HMIN=Math.min(H0,head*1.9);
+      if(m){ var head=(m.hb-m.hy), hc=(m.hy+m.hb)/2, sc=m.sy+m.sh/2; HMAX=Math.min(1,p.w/(p.h*aspect)); H0=Math.min(HMAX,m.sh); HMIN=Math.min(H0,head*1.15);
         centre=function(h){ var c= h>=H0 ? sc+(0.5-sc)*(HMAX>H0?(h-H0)/(HMAX-H0):0) : hc+(sc-hc)*(H0>HMIN?(h-HMIN)/(H0-HMIN):0); return Math.max(h/2,Math.min(1-h/2,c)); }; }
       else { HMAX=Math.min(1,p.w/(p.h*aspect)); H0=HMAX; HMIN=HMAX/2; centre=function(h){ return Math.max(h/2,Math.min(1-h/2,0.4+(0.5-0.4)*(h-HMIN)/(HMAX-HMIN||1))); }; }
       var h=H0;
