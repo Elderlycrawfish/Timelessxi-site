@@ -1,15 +1,15 @@
 {
- "version": "2026.11.18c",
- "published": "2026-11-18T16:21:32Z",
- "notes": "Mithra: white and silver hair is now a softer, muted white, and Timeless colour 3C is now Raven Black.",
+ "version": "2026.11.18d",
+ "published": "2026-11-18T16:34:54Z",
+ "notes": "Mithra Timeless colour 1C is now Wheat Blonde, with softer hair ends on the cheeks.",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.18c/timeless_patches.json",
-  "sha1": "e011bead535526d6fecdfc283fc64fcb1a3a4054",
+  "url": "https://timelessxi.gg/patches/2026.11.18d/timeless_patches.json",
+  "sha1": "218fe780bbb4b2c89ebad5c5e15fda347f03751a",
   "size": 817114
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.18c/timeless_patches.bin",
-  "sha1": "7c555e98efc16ea7774d4130a7fbcd72c5212c9b",
+  "url": "https://timelessxi.gg/patches/2026.11.18d/timeless_patches.bin",
+  "sha1": "bb2d978aac0322c6285f04062972cd3baf0fc5b9",
   "size": 27829130
  },
  "launcher": {

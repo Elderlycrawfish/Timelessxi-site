@@ -261,7 +261,7 @@ var API="https://api.timelessxi.gg";
     [1,'Bastok','The Republic of Bastok. Hume and Galka miners, furnaces and the rocky Gustaberg.'],
     [2,'Windurst','The Federation of Windurst. Tarutaru magic, the Star Tree and the plains of Sarutabaruta.']];
   var SPINKEEP={}, CREATOR=null, NEW={race:1,face:0,size:1,job:1,nation:0,name:''};
-  var CUSTOM_FACES={7:[[16,'1C','Moonlit Platinum'],[17,'2C','Chestnut Caramel'],[18,'2D','Ember'],[19,'3C','Raven Black'],[20,'4C','Dark Chocolate Copper'],[21,'5C','Smoky Ash'],[22,'6C','Espresso Frost'],[23,'7C','Cherry Wine'],[24,'8C','Copper Sunset']]};
+  var CUSTOM_FACES={7:[[16,'1C','Wheat Blonde'],[17,'2C','Chestnut Caramel'],[18,'2D','Ember'],[19,'3C','Raven Black'],[20,'4C','Dark Chocolate Copper'],[21,'5C','Smoky Ash'],[22,'6C','Espresso Frost'],[23,'7C','Cherry Wine'],[24,'8C','Copper Sunset']]};
   function customFace(f,race){ var l=CUSTOM_FACES[race]||[]; for(var i=0;i<l.length;i++) if(l[i][0]===f) return l[i]; return null; }
   function faceName(f,race){ var c=f>15?customFace(f,race||7):null; return c?c[1]:(Math.floor(f/2)+1)+(f%2?'B':'A'); }
   // every face of a race in style order: 1A 1B 1C, 2A 2B 2C 2D ... (the Timeless faces after their style's A and B)
