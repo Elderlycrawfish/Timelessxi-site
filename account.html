@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=82e38610de">
+<link rel="stylesheet" href="site.css?v=b8116402fa">
 
 </head>
 <body>
@@ -274,11 +274,11 @@ var API="https://api.timelessxi.gg";
       +'<div class="ax-main"><h2 class="ax-name">New Adventurer</h2><p class="ax-note ax-cintro">Choose who you’ll be in Vana’diel. Your character is ready the moment you finish here: log in through the launcher and your story begins with the opening cutscene. ('+chars.length+' of '+MAXCH+' characters on this account.)</p>'
         +'<div class="ax-step"><h4>Name</h4><div class="ax-namebox"><input id="cr-name" maxlength="15" autocomplete="off" spellcheck="false" placeholder="3 to 15 letters" value="'+esc(NEW.name)+'"><span id="cr-namemsg" class="ax-namemsg"></span></div></div>'
         +'<div class="ax-step"><h4>Race</h4><div class="ax-opts ax-races">'+RACES.map(function(r){return '<button type="button" class="ax-opt" data-race="'+r[0]+'"><span class="ax-racepic" data-racepic="'+r[0]+'"></span><b>'+r[1]+'</b><small>'+gender(r)+' '+r[2]+'</small></button>';}).join('')+'</div></div>'
+        +'<div class="ax-step ax-cfaces"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div>'
         +'<div class="ax-step ax-two-steps"><div><h4>Size</h4><div class="ax-seg2">'+['Small','Medium','Large'].map(function(n,i){return '<button type="button" class="ax-opt sm" data-size="'+i+'">'+n+'</button>';}).join('')+'</div></div>'
           +'<div><h4>Job</h4><div class="ax-opts ax-jobsel">'+START_JOBS.map(function(j,i){return '<button type="button" class="ax-opt sm" data-job="'+(i+1)+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span></button>';}).join('')+'</div></div></div>'
         +'<div class="ax-step"><h4>Nation</h4><div class="ax-opts ax-natsel">'+NATION_INFO.map(function(n){return '<button type="button" class="ax-opt" data-nation="'+n[0]+'">'+crest(n[0],36)+'<b>'+n[1]+'</b><small>'+n[2]+'</small></button>';}).join('')+'</div></div>'
       +'</div>'
-      +'<div class="ax-step ax-cfaces"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div>'
       +'<div class="ax-cact ax-cfull"><button type="button" class="btn" id="cr-go">Create Character</button>'+(chars.length?'<button type="button" class="btn-ghost sm" id="cr-cancel">Cancel</button>':'')+'<span class="ac-msg" id="cr-msg" role="alert"></span></div>'
       +'</div>';
     creatorArt().then(function(art){ if(!art) return;

@@ -635,7 +635,6 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 @media (max-width:1000px){.ax-races{grid-template-columns:repeat(2,minmax(0,1fr))}.ax-two-steps{grid-template-columns:1fr}}
 @media (max-width:760px){.ax-pt,.ax-gear{width:260px}.ax-natsel{grid-template-columns:1fr}.ax-jobsel{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-.ax-cfaces,.ax-cfull{grid-column:1/-1}
-.ax-cfaces{margin-top:4px}
-.ax-cfaces .ax-faces{gap:10px}
+.ax-cfull{grid-column:1/-1}
+.ax-cfaces .ax-faces{gap:8px}
 @media (max-width:1000px){.ax-cfaces .ax-faces{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
