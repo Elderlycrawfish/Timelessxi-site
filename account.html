@@ -261,7 +261,7 @@ var API="https://api.timelessxi.gg";
     [1,'Bastok','The Republic of Bastok. Hume and Galka miners, furnaces and the rocky Gustaberg.'],
     [2,'Windurst','The Federation of Windurst. Tarutaru magic, the Star Tree and the plains of Sarutabaruta.']];
   var SPINKEEP={}, CREATOR=null, NEW={race:1,face:0,size:1,job:1,nation:0,name:''};
-  var CUSTOM_FACES={7:[[16,'1C','Moonlit Platinum'],[17,'2C','Chestnut Caramel'],[18,'2D','Ember'],[19,'3C','Mocha Honey'],[20,'4C','Dark Chocolate Copper'],[21,'5C','Smoky Blonde'],[22,'6C','Espresso Frost'],[23,'7C','Cherry Wine'],[24,'8C','Copper Sunset']]};
+  var CUSTOM_FACES={7:[[16,'1C','Moonlit Platinum'],[17,'2C','Chestnut Caramel'],[18,'2D','Ember'],[19,'3C','Mocha Honey'],[20,'4C','Dark Chocolate Copper'],[21,'5C','Smoky Ash'],[22,'6C','Espresso Frost'],[23,'7C','Cherry Wine'],[24,'8C','Copper Sunset']]};
   function customFace(f,race){ var l=CUSTOM_FACES[race]||[]; for(var i=0;i<l.length;i++) if(l[i][0]===f) return l[i]; return null; }
   function faceName(f,race){ var c=f>15?customFace(f,race||7):null; return c?c[1]:(Math.floor(f/2)+1)+(f%2?'B':'A'); }
   // every face of a race in style order: 1A 1B 1C, 2A 2B 2C 2D ... (the Timeless faces after their style's A and B)
@@ -280,7 +280,9 @@ var API="https://api.timelessxi.gg";
       +'<div class="ax-main"><h2 class="ax-name">New Adventurer</h2><p class="ax-note ax-cintro">Choose who you’ll be in Vana’diel. Your character is ready the moment you finish here: log in through the launcher and your story begins with the opening cutscene. ('+chars.length+' of '+MAXCH+' characters on this account.)</p>'
         +'<div class="ax-step"><h4>Name</h4><div class="ax-namebox"><input id="cr-name" maxlength="15" autocomplete="off" spellcheck="false" placeholder="3 to 15 letters" value="'+esc(NEW.name)+'"><span id="cr-namemsg" class="ax-namemsg"></span></div></div>'
         +'<div class="ax-step"><h4>Race</h4><div class="ax-opts ax-races">'+RACES.map(function(r){return '<button type="button" class="ax-opt" data-race="'+r[0]+'"><span class="ax-racepic" data-racepic="'+r[0]+'"></span><b>'+r[1]+'</b><small>'+gender(r)+' '+r[2]+'</small></button>';}).join('')+'</div></div>'
-        +'<div class="ax-step ax-cfaces"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div>'
+      +'</div>'
+      +'<div class="ax-step ax-cfaces ax-cfull"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div>'
+      +'<div class="ax-main ax-cfull">'
         +'<div class="ax-step ax-two-steps"><div><h4>Size</h4><div class="ax-seg2">'+['Small','Medium','Large'].map(function(n,i){return '<button type="button" class="ax-opt sm" data-size="'+i+'">'+n+'</button>';}).join('')+'</div></div>'
           +'<div><h4>Job</h4><div class="ax-opts ax-jobsel">'+START_JOBS.map(function(j,i){return '<button type="button" class="ax-opt sm" data-job="'+(i+1)+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span></button>';}).join('')+'</div></div></div>'
         +'<div class="ax-step"><h4>Nation</h4><div class="ax-opts ax-natsel">'+NATION_INFO.map(function(n){return '<button type="button" class="ax-opt" data-nation="'+n[0]+'">'+crest(n[0],36)+'<b>'+n[1]+'</b><small>'+n[2]+'</small></button>';}).join('')+'</div></div>'
