@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=da9771d912">
+<link rel="stylesheet" href="site.css?v=82e38610de">
 
 </head>
 <body>
@@ -201,7 +201,13 @@ var API="https://api.timelessxi.gg";
   function portrait(c){
     face(c).then(function(url){ var av=$('ax-av'); if(url&&av&&chars[cur]===c){ av.innerHTML=''; av.classList.add('has'); av.style.backgroundImage='url('+url+')'; } });
     sheet(c).then(function(s){ if(!s||chars[cur]!==c||creating) return;
-      var el=$('ac-pt'); if(!el) return; var p=s.p, m=p.meta&&p.meta.v>=4?p.meta:null;
+      var el=$('ac-pt'); if(!el) return; spinView(el, s.img, s.p, {}); }); }
+
+  // 360-degree turntable viewer for a sprite sheet p = {frames, cols, w, h, meta}: drag/arrows turn, wheel/pinch/buttons zoom.
+  // opts.clear: transparent frames (clear before drawing); opts.full: open zoomed out on the whole character;
+  // opts.keep: {f, h} carried over from the previous view (the creator keeps the turn and zoom when the face changes).
+  function spinView(el, img, p, opts){
+      opts=opts||{}; var m=p.meta&&p.meta.v>=4?p.meta:null;
       el.innerHTML='<canvas></canvas><span class="ax-pthint">&#9666; Drag to turn &#9656; &middot; Scroll to zoom</span><span class="ax-zoom"><button type="button" data-z="1" aria-label="Zoom in">+</button><button type="button" data-z="-1" aria-label="Zoom out">&minus;</button></span>';
       el.classList.add('on'); el.tabIndex=0;
       var cv=el.querySelector('canvas'), ctx=cv.getContext('2d'), dpr=Math.min(2,window.devicePixelRatio||1);
@@ -217,10 +223,13 @@ var API="https://api.timelessxi.gg";
       if(m){ var head=(m.hb-m.hy), hc=(m.hy+m.hb)/2, sc=m.sy+m.sh/2; HMAX=Math.min(1,p.w/(p.h*aspect)); H0=Math.min(HMAX,m.sh); HMIN=Math.min(H0,head*1.15);
         centre=function(h){ var c= h>=H0 ? sc+(0.5-sc)*(HMAX>H0?(h-H0)/(HMAX-H0):0) : hc+(sc-hc)*(H0>HMIN?(h-HMIN)/(H0-HMIN):0); return Math.max(h/2,Math.min(1-h/2,c)); }; }
       else { HMAX=Math.min(1,p.w/(p.h*aspect)); H0=HMAX; HMIN=HMAX/2; centre=function(h){ return Math.max(h/2,Math.min(1-h/2,0.4+(0.5-0.4)*(h-HMIN)/(HMAX-HMIN||1))); }; }
-      var h=H0;
+      var START=opts.full?HMAX:H0, h=START;
+      if(opts.keep&&opts.keep.h){ f=opts.keep.f%N; h=Math.max(HMIN,Math.min(HMAX,opts.keep.h)); }
       var draw=function(){ var fx=(f%p.cols)*p.w, fy=Math.floor(f/p.cols)*p.h, sh=h*p.h, sw=sh*aspect, top=(centre(h)-h/2)*p.h;
-        ctx.imageSmoothingQuality='high'; ctx.drawImage(s.img, fx+(p.w-sw)/2, fy+top, sw, sh, 0, 0, cv.width, cv.height);
-        el.classList.toggle('zoomed',Math.abs(h-H0)>1e-3);
+        if(opts.clear) ctx.clearRect(0,0,cv.width,cv.height);
+        ctx.imageSmoothingQuality='high'; ctx.drawImage(img, fx+(p.w-sw)/2, fy+top, sw, sh, 0, 0, cv.width, cv.height);
+        if(opts.keep){ opts.keep.f=f; opts.keep.h=h; }
+        el.classList.toggle('zoomed',Math.abs(h-START)>1e-3);
         el.querySelector('[data-z="1"]').disabled=h<=HMIN+1e-4; el.querySelector('[data-z="-1"]').disabled=h>=HMAX-1e-4; };
       var zoom=function(to){ h=Math.max(HMIN,Math.min(HMAX,to)); draw(); };
       draw();
@@ -230,14 +239,14 @@ var API="https://api.timelessxi.gg";
         else { drag=true; sx=e.clientX; f0=f; el.classList.add('drag'); } };
       el.onpointermove=function(e){ if(!(e.pointerId in pts)) return; pts[e.pointerId]=[e.clientX,e.clientY]; var k=Object.keys(pts);
         if(k.length===2&&pinch0){ zoom(h0*pinch0/Math.max(1,Math.hypot(pts[k[0]][0]-pts[k[1]][0],pts[k[0]][1]-pts[k[1]][1]))); return; }
-        if(!drag) return; var n=f0-Math.round((e.clientX-sx)/8); f=((n%N)+N)%N; draw(); };
+        if(!drag) return; var n=f0-Math.round((e.clientX-sx)/(8*36/N)); f=((n%N)+N)%N; draw(); };
       el.onpointerup=el.onpointercancel=function(e){ delete pts[e.pointerId]; if(Object.keys(pts).length<2) pinch0=0; drag=false; el.classList.remove('drag'); };
-      el.addEventListener('wheel',function(e){ e.preventDefault(); zoom(h*Math.pow(1.0015,e.deltaY)); },{passive:false});
+      el.onwheel=function(e){ e.preventDefault(); zoom(h*Math.pow(1.0015,e.deltaY)); };
       el.querySelectorAll('[data-z]').forEach(function(b){ b.onclick=function(e){ e.stopPropagation(); zoom(h*(+b.dataset.z>0?0.8:1.25)); }; b.ondblclick=function(e){e.stopPropagation();}; });
-      el.ondblclick=function(){ f=front; h=H0; draw(); };
+      el.ondblclick=function(){ f=front; h=START; draw(); };
       el.onkeydown=function(e){ if(e.key==='ArrowLeft'||e.key==='ArrowRight'){ f=(f+(e.key==='ArrowLeft'?1:N-1))%N; draw(); e.preventDefault(); }
         else if(e.key==='+'||e.key==='='){ zoom(h*0.8); e.preventDefault(); } else if(e.key==='-'||e.key==='_'){ zoom(h*1.25); e.preventDefault(); } };
-    }); }
+  }
 
   // ---------- character creation (same choices as the game's character creation)
   var RACES=[[1,'Hume','Male'],[2,'Hume','Female'],[3,'Elvaan','Male'],[4,'Elvaan','Female'],[5,'Tarutaru','Male'],[6,'Tarutaru','Female'],[7,'Mithra','Female'],[8,'Galka','Male']];
@@ -245,7 +254,7 @@ var API="https://api.timelessxi.gg";
   var NATION_INFO=[[0,"San d’Oria",'The Kingdom of San d’Oria. Elvaan knights, cathedral spires and the forests of Ronfaure.'],
     [1,'Bastok','The Republic of Bastok. Hume and Galka miners, furnaces and the rocky Gustaberg.'],
     [2,'Windurst','The Federation of Windurst. Tarutaru magic, the Star Tree and the plains of Sarutabaruta.']];
-  var CREATOR=null, NEW={race:1,face:0,size:1,job:1,nation:0,name:''};
+  var SPINKEEP={}, CREATOR=null, NEW={race:1,face:0,size:1,job:1,nation:0,name:''};
   var CUSTOM_FACES={7:[[16,'1C','Moonlit Platinum'],[17,'2C','Chestnut Caramel'],[18,'2D','Ember'],[19,'3C','Mocha Honey'],[20,'4C','Dark Chocolate Copper'],[21,'5C','Smoky Ash'],[22,'6C','Espresso Frost'],[23,'7C','Cherry Wine'],[24,'8C','Copper Sunset']]};
   function customFace(f,race){ var l=CUSTOM_FACES[race]||[]; for(var i=0;i<l.length;i++) if(l[i][0]===f) return l[i]; return null; }
   function faceName(f,race){ var c=f>15?customFace(f,race||7):null; return c?c[1]:(Math.floor(f/2)+1)+(f%2?'B':'A'); }
@@ -261,16 +270,17 @@ var API="https://api.timelessxi.gg";
     var gender=function(r){return r[2]==='Male'?'♂':'♀';};
     v.innerHTML='<div class="ax-hero ax-create">'
       +'<div class="ax-left"><div class="ax-pt ax-cpv" id="ax-cpv"><span class="ax-ptnone" id="ax-cpvtxt"></span></div>'
-        +'<div class="ax-csum" id="ax-csum"></div>'
-        +'<div class="ax-lfaces"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div></div>'
+        +'<div class="ax-csum" id="ax-csum"></div></div>'
       +'<div class="ax-main"><h2 class="ax-name">New Adventurer</h2><p class="ax-note ax-cintro">Choose who you’ll be in Vana’diel. Your character is ready the moment you finish here: log in through the launcher and your story begins with the opening cutscene. ('+chars.length+' of '+MAXCH+' characters on this account.)</p>'
         +'<div class="ax-step"><h4>Name</h4><div class="ax-namebox"><input id="cr-name" maxlength="15" autocomplete="off" spellcheck="false" placeholder="3 to 15 letters" value="'+esc(NEW.name)+'"><span id="cr-namemsg" class="ax-namemsg"></span></div></div>'
         +'<div class="ax-step"><h4>Race</h4><div class="ax-opts ax-races">'+RACES.map(function(r){return '<button type="button" class="ax-opt" data-race="'+r[0]+'"><span class="ax-racepic" data-racepic="'+r[0]+'"></span><b>'+r[1]+'</b><small>'+gender(r)+' '+r[2]+'</small></button>';}).join('')+'</div></div>'
         +'<div class="ax-step ax-two-steps"><div><h4>Size</h4><div class="ax-seg2">'+['Small','Medium','Large'].map(function(n,i){return '<button type="button" class="ax-opt sm" data-size="'+i+'">'+n+'</button>';}).join('')+'</div></div>'
           +'<div><h4>Job</h4><div class="ax-opts ax-jobsel">'+START_JOBS.map(function(j,i){return '<button type="button" class="ax-opt sm" data-job="'+(i+1)+'">'+ji(j,22)+'<span>'+JOBN[j]+'</span></button>';}).join('')+'</div></div></div>'
         +'<div class="ax-step"><h4>Nation</h4><div class="ax-opts ax-natsel">'+NATION_INFO.map(function(n){return '<button type="button" class="ax-opt" data-nation="'+n[0]+'">'+crest(n[0],36)+'<b>'+n[1]+'</b><small>'+n[2]+'</small></button>';}).join('')+'</div></div>'
-        +'<div class="ax-cact"><button type="button" class="btn" id="cr-go">Create Character</button>'+(chars.length?'<button type="button" class="btn-ghost sm" id="cr-cancel">Cancel</button>':'')+'<span class="ac-msg" id="cr-msg" role="alert"></span></div>'
-      +'</div></div>';
+      +'</div>'
+      +'<div class="ax-step ax-cfaces"><h4>Face <small id="cr-facelbl"></small></h4><div class="ax-opts ax-faces" id="cr-faces"></div></div>'
+      +'<div class="ax-cact ax-cfull"><button type="button" class="btn" id="cr-go">Create Character</button>'+(chars.length?'<button type="button" class="btn-ghost sm" id="cr-cancel">Cancel</button>':'')+'<span class="ac-msg" id="cr-msg" role="alert"></span></div>'
+      +'</div>';
     creatorArt().then(function(art){ if(!art) return;
       v.querySelectorAll('[data-racepic]').forEach(function(el){ el.style.backgroundImage='url(data/creator/face_'+el.dataset.racepic+'_0.webp)'; el.classList.add('has'); });
       sync(); });
@@ -281,15 +291,23 @@ var API="https://api.timelessxi.gg";
       v.querySelectorAll('[data-nation]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.nation===NEW.nation);});
       creatorArt().then(function(art){
         var cur=customFace(NEW.face,NEW.race);
-        var fl=faceList(NEW.race); $('cr-faces').style.gridTemplateColumns='repeat('+(fl.length>16&&fl.length%5===0?5:4)+',minmax(0,1fr))';
+        var fl=faceList(NEW.race), rows=Math.ceil(fl.length/9); $('cr-faces').style.gridTemplateColumns='repeat('+Math.ceil(fl.length/rows)+',minmax(0,1fr))';
         $('cr-faces').innerHTML=fl.map(function(f){ var pic=hasArt(art,'faces',NEW.race,f[0]);
           return '<button type="button" class="ax-opt ax-face2'+(f[2]?' ax-tface':'')+'" data-face="'+f[0]+'" aria-pressed="'+(f[0]===NEW.face)+'" aria-label="Face '+f[1]+(f[2]?', '+f[2]:'')+'"'+(f[2]?' title="'+f[2]+' (Timeless hair colour)"':'')+'>'
             +(art?'<span class="ax-facepic'+(pic?'':' none')+'"'+(pic?' style="background-image:url(data/creator/face_'+NEW.race+'_'+f[0]+'.webp)"':'')+'></span>':'')+'<b>'+f[1]+'</b></button>'; }).join('');
         $('cr-facelbl').textContent=faceName(NEW.face,NEW.race)+(cur?' · '+cur[2]:'');
         v.querySelectorAll('#cr-faces [data-face]').forEach(function(b){b.onclick=function(){NEW.face=+b.dataset.face; sync();};});
         var r=RACES[NEW.race-1], pv=$('ax-cpv');
-        if(art){ pv.style.backgroundImage='url(data/creator/'+(hasArt(art,'bodies',NEW.race,NEW.face)?'body_'+NEW.race+'_'+NEW.face:'race_'+NEW.race)+'.webp)'; pv.classList.add('has'); $('ax-cpvtxt').innerHTML=''; }
-        else { $('ax-cpvtxt').innerHTML='<span class="ax-cglyph">'+gender(r)+'</span><small>'+r[1]+' '+r[2]+'</small>'; }
+        var sp=art&&art.spin&&(art.spin[NEW.race]||{})[NEW.face];
+        if(sp){ var key=NEW.race+'_'+NEW.face;
+          if(pv.dataset.spin!==key){ pv.dataset.spin=key; var im=new Image();
+            im.onload=function(){ if(pv.dataset.spin!==key) return; pv.style.backgroundImage=''; pv.classList.add('has');
+              if(SPINKEEP.race!==NEW.race){ SPINKEEP={race:NEW.race}; }
+              spinView(pv, im, sp, {clear:true, full:true, keep:SPINKEEP}); };
+            im.src='data/creator/spin_'+key+'.webp'; } }
+        else if(art){ if(pv.dataset.spin){ pv.dataset.spin=''; pv.innerHTML='<span class="ax-ptnone" id="ax-cpvtxt"></span>'; pv.classList.remove('on','zoomed'); pv.onwheel=pv.onpointerdown=pv.onpointermove=pv.ondblclick=pv.onkeydown=null; }
+          pv.style.backgroundImage='url(data/creator/'+(hasArt(art,'bodies',NEW.race,NEW.face)?'body_'+NEW.race+'_'+NEW.face:'race_'+NEW.race)+'.webp)'; pv.classList.add('has'); var t=$('ax-cpvtxt'); if(t) t.innerHTML=''; }
+        else if($('ax-cpvtxt')) { $('ax-cpvtxt').innerHTML='<span class="ax-cglyph">'+gender(r)+'</span><small>'+r[1]+' '+r[2]+'</small>'; }
         $('ax-csum').innerHTML=[['Name',NEW.name||'—'],['Race',r[1]+' '+gender(r)],['Face',faceName(NEW.face,NEW.race)+((customFace(NEW.face,NEW.race)||[])[2]?' · '+customFace(NEW.face,NEW.race)[2]:'')],['Size',['Small','Medium','Large'][NEW.size]],['Job',JOBN[START_JOBS[NEW.job-1]]],['Nation',NATION_INFO[NEW.nation][1]]]
           .map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('');
       });
