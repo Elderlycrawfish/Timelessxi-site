@@ -1,15 +1,15 @@
 {
- "version": "2026.11.18b",
- "published": "2026-11-18T15:38:11Z",
- "notes": "HD Mithra faces: every Mithra face (all 16 standard faces and the 9 Timeless hair colours) now has a 1024x1024 texture with detailed hair, new eyes, crisp markings and a cleaner smile.",
+ "version": "2026.11.18c",
+ "published": "2026-11-18T16:21:32Z",
+ "notes": "Mithra: white and silver hair is now a softer, muted white, and Timeless colour 3C is now Raven Black.",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.18b/timeless_patches.json",
-  "sha1": "e4d5d091abd8a1924e1b0496ddbaaf21bcec8ab0",
+  "url": "https://timelessxi.gg/patches/2026.11.18c/timeless_patches.json",
+  "sha1": "e011bead535526d6fecdfc283fc64fcb1a3a4054",
   "size": 817114
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.18b/timeless_patches.bin",
-  "sha1": "9742eeff2b0efbdb08d10d3b5703ccafa9d8f06d",
+  "url": "https://timelessxi.gg/patches/2026.11.18c/timeless_patches.bin",
+  "sha1": "7c555e98efc16ea7774d4130a7fbcd72c5212c9b",
   "size": 27829130
  },
  "launcher": {
