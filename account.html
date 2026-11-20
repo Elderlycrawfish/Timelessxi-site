@@ -263,11 +263,12 @@ var API="https://api.timelessxi.gg";
   var SPINKEEP={}, CREATOR=null, NEW={race:1,face:0,size:1,job:1,nation:0,name:''};
   var CUSTOM_FACES={7:[[16,'1C','Wheat Blonde'],[17,'2C','Chestnut Caramel'],[18,'2D','Ember'],[19,'3C','Raven Black'],[20,'4C','Dark Chocolate Copper'],[21,'5C','Smoky Ash'],[22,'6C','Espresso Frost'],[23,'7C','Cherry Wine'],[24,'8C','Copper Sunset']]};
   function customFace(f,race){ var l=CUSTOM_FACES[race]||[]; for(var i=0;i<l.length;i++) if(l[i][0]===f) return l[i]; return null; }
-  // One model per style (2026-11-19): a new character picks a style (its A face); hair, eye and other colours are the
-  // Timeless client's custom look (/look). Older characters keep their B face or Timeless colour (shown as its style).
-  function styleOf(f,race){ var c=f>15?customFace(f,race||7):null; return c?(+c[1].charAt(0)):Math.floor(f/2)+1; }
-  function faceName(f,race){ return 'Style '+styleOf(f,race); }
-  function faceList(race){ var out=[]; for(var s=1;s<=8;s++) out.push([2*s-2,''+s]); return out; }
+  function faceName(f,race){ var c=f>15?customFace(f,race||7):null; return c?c[1]:(Math.floor(f/2)+1)+(f%2?'B':'A'); }
+  // every face of a race in style order: 1A 1B 1C, 2A 2B 2C 2D ... (the Timeless faces after their style's A and B)
+  function faceList(race){ var out=[], cl=CUSTOM_FACES[race]||[];
+    for(var s=1;s<=8;s++){ out.push([2*s-2,s+'A']); out.push([2*s-1,s+'B']);
+      cl.filter(function(c){return +c[1].charAt(0)===s;}).sort(function(a,b){return a[1]<b[1]?-1:1;}).forEach(function(c){ out.push([c[0],c[1],c[2]]); }); }
+    return out; }
   function hasArt(art,key,race,face){ if(!art) return false; var m=art[key]; if(!m) return key==='faces'&&face<16; var l=m[race]||[]; return l.indexOf(face)>=0; }
   function creatorArt(){ return CREATOR||(CREATOR=fetch('data/creator/manifest.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})); }
   // ed = a character: Edit Character (only face and size change; the rest is shown greyed out)
@@ -303,10 +304,10 @@ var API="https://api.timelessxi.gg";
         var cur=customFace(N.face,N.race);
         var fl=faceList(N.race), rows=Math.ceil(fl.length/9); $('cr-faces').style.gridTemplateColumns='repeat('+Math.ceil(fl.length/rows)+',minmax(0,1fr))';
         $('cr-faces').innerHTML=fl.map(function(f){ var pic=hasArt(art,'faces',N.race,f[0]);
-          return '<button type="button" class="ax-opt ax-face2" data-face="'+f[0]+'" aria-pressed="'+(+f[1]===styleOf(N.face,N.race))+'" aria-label="Style '+f[1]+'">'
+          return '<button type="button" class="ax-opt ax-face2'+(f[2]?' ax-tface':'')+'" data-face="'+f[0]+'" aria-pressed="'+(f[0]===N.face)+'" aria-label="Face '+f[1]+(f[2]?', '+f[2]:'')+'"'+(f[2]?' title="'+f[2]+' (Timeless hair colour)"':'')+'>'
             +(art?'<span class="ax-facepic'+(pic?'':' none')+'"'+(pic?' style="background-image:url(data/creator/face_'+N.race+'_'+f[0]+'.webp)"':'')+'></span>':'')+'<b>'+f[1]+'</b></button>'; }).join('');
-        $('cr-facelbl').textContent=faceName(N.face,N.race)+' · colours are yours to pick in game with /look';
-        v.querySelectorAll('#cr-faces [data-face]').forEach(function(b){b.onclick=function(){ if(styleOf(+b.dataset.face,N.race)!==styleOf(N.face,N.race)) N.face=+b.dataset.face; sync();};});
+        $('cr-facelbl').textContent=faceName(N.face,N.race)+(cur?' · '+cur[2]:'');
+        v.querySelectorAll('#cr-faces [data-face]').forEach(function(b){b.onclick=function(){N.face=+b.dataset.face; sync();};});
         var r=RACES[N.race-1], pv=$('ax-cpv');
         var sp=art&&art.spin&&(art.spin[N.race]||{})[N.face];
         if(sp){ var key=N.race+'_'+N.face;
@@ -320,7 +321,7 @@ var API="https://api.timelessxi.gg";
         else if(art){ if(pv.dataset.spin){ pv.dataset.spin=''; pv.innerHTML='<span class="ax-ptnone" id="ax-cpvtxt"></span>'; pv.classList.remove('on','zoomed'); pv.onwheel=pv.onpointerdown=pv.onpointermove=pv.ondblclick=pv.onkeydown=null; }
           pv.style.backgroundImage='url(data/creator/'+(hasArt(art,'bodies',N.race,N.face)?'body_'+N.race+'_'+N.face:'race_'+N.race)+'.webp)'; pv.classList.add('has'); var t=$('ax-cpvtxt'); if(t) t.innerHTML=''; }
         else if($('ax-cpvtxt')) { $('ax-cpvtxt').innerHTML='<span class="ax-cglyph">'+gender(r)+'</span><small>'+r[1]+' '+r[2]+'</small>'; }
-        $('ax-csum').innerHTML=[['Name',N.name||'—'],['Race',r[1]+' '+gender(r)],['Face',faceName(N.face,N.race)],['Size',['Small','Medium','Large'][N.size]],['Job',N.job?JOBN[START_JOBS[N.job-1]]:(JOBN[ed&&ed.mainJob]||(ed&&ed.mainJob)||'—')],['Nation',NATION_INFO[N.nation][1]]]
+        $('ax-csum').innerHTML=[['Name',N.name||'—'],['Race',r[1]+' '+gender(r)],['Face',faceName(N.face,N.race)+((customFace(N.face,N.race)||[])[2]?' · '+customFace(N.face,N.race)[2]:'')],['Size',['Small','Medium','Large'][N.size]],['Job',N.job?JOBN[START_JOBS[N.job-1]]:(JOBN[ed&&ed.mainJob]||(ed&&ed.mainJob)||'—')],['Nation',NATION_INFO[N.nation][1]]]
           .map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('');
       });
     }
