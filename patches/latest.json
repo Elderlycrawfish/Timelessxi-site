@@ -23,5 +23,18 @@
   "url": "https://timelessxi.gg/downloads/TimelessXI-Setup.exe",
   "sha1": "f65a8a5d454f5e8306fee2860e92cc8608e0dfd8",
   "size": 19456000
+ },
+ "hd": {
+  "version": "hd-2026.11.23",
+  "json": {
+   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.23/timeless_patches.json",
+   "sha1": "59657e357f422a52247deefcc9b553391d15414f",
+   "size": 44549
+  },
+  "bin": {
+   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.23/timeless_hd.bin.gz",
+   "sha1": "621eb986b0e490197235115db3dd3f7339263815",
+   "size": 41497450
+  }
  }
 }
