@@ -165,20 +165,20 @@ var API="https://api.timelessxi.gg";
   function lsColor(c){c=c||0; var r=(c&15)*17,g=(c>>4&15)*17,b=(c>>8&15)*17; return 'rgb('+r+','+g+','+b+')';}
   function box(title,inner,cls,extra){return '<section class="ax-card'+(cls?' '+cls:'')+'"><header class="ax-ch"><h3>'+title+'</h3>'+(extra||'')+'</header>'+inner+'</section>';}
 
-  var MAXCH=3, creating=false;
+  var MAXCH=3, creating=false, CREATE_OPEN=false;   // Create Character on the website (off for now: characters are made in game)
   function showIn(d,pick){ acct('My Account'); chars=d.characters||[]; $('ac-out').hidden=true; $('ac-in').hidden=false;
     document.querySelector('.phero').classList.add('ax-slim');
     $('ac-title').textContent='Welcome Back, '+d.account.login; $('ac-lead').textContent='Every victory, every level, every hard-won treasure. Your story so far, Champion of Vana’diel.';
-    $('ac-none').hidden=true;
+    $('ac-none').hidden=!!chars.length||CREATE_OPEN;
     var want=pick||(location.hash.match(/char=([^&]+)/)||[])[1]; if(want){chars.forEach(function(c,i){if(c.name.toLowerCase()===decodeURIComponent(want).toLowerCase())cur=i;});}
     if(cur>=chars.length) cur=0;
-    creating=!chars.length||/(^|[#&])create/.test(location.hash)&&chars.length<MAXCH;
+    creating=CREATE_OPEN&&(!chars.length||/(^|[#&])create/.test(location.hash)&&chars.length<MAXCH);
     picks(); if(creating) creator(); else render();
     chars.forEach(function(c){ face(c).then(function(url){ var f=$('face-'+c.id); if(url&&f){f.innerHTML=''; f.classList.add('has'); f.style.backgroundImage='url('+url+')';} }); }); }
 
   function picks(){
     var html=chars.map(function(c,i){return '<button type="button" class="ax-pick" role="tab" data-i="'+i+'" aria-selected="'+(!creating&&i===cur)+'"><span class="ax-face" id="face-'+c.id+'">'+ji(c.mainJob||'WAR',22)+'</span><span class="ax-pn">'+esc(c.name)+'</span>'+(c.online?'<i class="ax-dot on" title="Online"></i>':'')+'</button>';}).join('');
-    if(chars.length<MAXCH) html+='<button type="button" class="ax-pick ax-new" id="ax-new" aria-selected="'+creating+'"><span class="ax-face ax-plus" aria-hidden="true">+</span><span class="ax-pn">Create Character</span><small>'+chars.length+' of '+MAXCH+'</small></button>';
+    if(CREATE_OPEN&&chars.length<MAXCH) html+='<button type="button" class="ax-pick ax-new" id="ax-new" aria-selected="'+creating+'"><span class="ax-face ax-plus" aria-hidden="true">+</span><span class="ax-pn">Create Character</span><small>'+chars.length+' of '+MAXCH+'</small></button>';
     $('ac-chars').innerHTML=html;
     $('ac-chars').querySelectorAll('.ax-pick[data-i]').forEach(function(b){b.onclick=function(){cur=+b.dataset.i; creating=false; picks(); render(); chars.forEach(function(c){face(c).then(function(url){var f=$('face-'+c.id); if(url&&f){f.innerHTML=''; f.classList.add('has'); f.style.backgroundImage='url('+url+')';}});});};});
     var nb=$('ax-new'); if(nb) nb.onclick=function(){ creating=true; picks(); creator(); };
