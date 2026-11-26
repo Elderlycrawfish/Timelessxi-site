@@ -814,3 +814,10 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .nextp-bg{filter:brightness(.42)}.nextp:hover .nextp-bg{filter:brightness(.55)}
 .lightbox img{filter:brightness(.8)}
 .media.emblem .em-art{width:min(36%,150px);height:auto;object-fit:contain}
+/* text-only scenes (no photo yet) */
+.tspot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start;padding-top:28px;border-top:1px solid var(--line)}
+.tspot-head .h2{margin:0}.tspot-head .hook{font-size:clamp(22px,2.3vw,30px)}
+.tspot-body{display:flex;flex-direction:column;gap:12px;padding-top:30px}
+@media (max-width:860px){.tspot{grid-template-columns:1fr;gap:10px}.tspot-body{padding-top:0}}
+.tx-drop-panel a{display:block;padding:10px 14px}
+.mc{display:block}
