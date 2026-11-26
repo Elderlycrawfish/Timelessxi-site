@@ -838,3 +838,7 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .oh-soon{align-self:flex-start;padding:4px 10px;border:1px solid #e3c98e;border-radius:999px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#e3c98e}
 @media (max-width:900px){.oh-grid{grid-template-columns:1fr 1fr}.oh,.oh.big{grid-column:span 1}}
 @media (max-width:600px){.oh-grid{grid-template-columns:1fr}}
+/* path pages: the wallpaper stays behind the page while scrolling (2026-11-26) */
+.fpage{background:transparent}
+.fh-shade{background:linear-gradient(180deg,rgba(10,11,18,.2) 0%,rgba(10,11,18,0) 35%,rgba(10,11,18,.45) 80%,rgba(10,11,18,.55) 100%),linear-gradient(90deg,rgba(10,11,18,.65),rgba(10,11,18,0) 65%)}
+.fhero{border-bottom:0}
