@@ -821,3 +821,20 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 @media (max-width:860px){.tspot{grid-template-columns:1fr;gap:10px}.tspot-body{padding-top:0}}
 .tx-drop-panel a{display:block;padding:10px 14px}
 .mc{display:block}
+/* Only on Timeless XI (headline features) */
+.oh-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px}
+.oh-head .h2{margin:8px 0 0;font-size:clamp(36px,4.4vw,60px)}
+.oh-why{margin:0;max-width:430px;color:var(--muted);line-height:1.65}
+.oh-why strong{color:var(--ice);font-weight:500}
+.oh-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.oh{grid-column:span 2;position:relative;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--card);display:flex;flex-direction:column;gap:10px}
+.oh.big{grid-column:span 3;min-height:250px;justify-content:flex-end;padding:34px;background:radial-gradient(90% 90% at 100% 0%,rgba(143,178,230,.16),rgba(17,20,29,0) 60%),var(--card)}
+.oh h3{margin:0;font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.15;color:var(--text)}
+.oh.big h3{font-size:36px}
+.oh p{margin:0;color:var(--muted);line-height:1.6;font-size:15.5px}
+.oh-big{font-family:var(--serif);font-size:68px;line-height:1;color:var(--accent)}
+.oh-sub{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:-4px}
+.oh-dots{display:flex;gap:8px}.oh-dots i{width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.12)}
+.oh-soon{align-self:flex-start;padding:4px 10px;border:1px solid #e3c98e;border-radius:999px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#e3c98e}
+@media (max-width:900px){.oh-grid{grid-template-columns:1fr 1fr}.oh,.oh.big{grid-column:span 1}}
+@media (max-width:600px){.oh-grid{grid-template-columns:1fr}}
