@@ -1,10 +1,10 @@
 {
- "version": "hd-2026.11.23",
+ "version": "hd-2026.11.27",
  "groups": [
   "HD faces"
  ],
  "blobSize": 122794528,
- "blobSha1": "2b3594245e2ac0c5adfc1af78034a86cfc4a027c",
+ "blobSha1": "823e04e1e2c10ffc75af913412b812572e87e3ea",
  "files": [
   {
    "path": "FTABLE.DAT",
@@ -913,7 +913,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065200,
-   "newSha1": "84fdfe11ec0f5fd70361a964e5b28419c9254c9e",
+   "newSha1": "dec198163a2592f09c0af066fee153c0652a6f1d",
    "data": 224
   },
   {
@@ -921,7 +921,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065200,
-   "newSha1": "19feb629ed4369302cfa349e3d4f875e93e6b434",
+   "newSha1": "abec15a15506f84d7feb71c7783c2bb7239c8ff6",
    "data": 1065424
   },
   {
@@ -929,7 +929,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072640,
-   "newSha1": "60fe5a2348b53aa7bd863a58293cefe76573b021",
+   "newSha1": "c27e9bf4dbd02de2be58066a9c6da4a5b747e2eb",
    "data": 2130624
   },
   {
@@ -937,7 +937,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072512,
-   "newSha1": "0fb2fd32d5e60b6b7d7f9cd76e1760a691c6ce15",
+   "newSha1": "d98e6747f084b5e7ca51b749f10c574ec749ab7a",
    "data": 3203264
   },
   {
@@ -945,7 +945,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064096,
-   "newSha1": "7a6e3142f41905dae42990c5defaf65a681fd798",
+   "newSha1": "341c7bf41a4c4c5a04f0e37de8c1866e9c14e61e",
    "data": 4275776
   },
   {
@@ -953,7 +953,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064160,
-   "newSha1": "026ace7ec5e5407fd7e09e8a67a495d83142b28a",
+   "newSha1": "be6b503e038e2a017a88d289d3938bc0d0912075",
    "data": 5339872
   },
   {
@@ -961,7 +961,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1068832,
-   "newSha1": "4eb16ccdfb4915a7a4a45abeed84aa4c8abb5e2c",
+   "newSha1": "608a9e3c452b53b60e1a9e94d9aff1e9ced7cef6",
    "data": 6404032
   },
   {
@@ -969,7 +969,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1068832,
-   "newSha1": "635eaea01da4bbd02193c5b982daa6f40f67ba4a",
+   "newSha1": "5de5bcbf29738e17af47f1733f97be0e306e9379",
    "data": 7472864
   },
   {
@@ -977,7 +977,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1062192,
-   "newSha1": "0ea780edd2b1d99912cf65ebfc59cefd6d329193",
+   "newSha1": "a910fa2f469fe2f6874f14088fcb059b80f7d6de",
    "data": 8541696
   },
   {
@@ -985,7 +985,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1062192,
-   "newSha1": "8841c47dc19ae880b84b2af3c916f31f3a3a2a99",
+   "newSha1": "1247454be92c137abd578212cdc486a7a2c93486",
    "data": 9603888
   },
   {
@@ -993,7 +993,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063744,
-   "newSha1": "2d7ba6b4f3139c66b0c1054886ae32b08df6124b",
+   "newSha1": "268d9dc70715bc648cc388a15abeb96ae221b77a",
    "data": 10666080
   },
   {
@@ -1001,7 +1001,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063744,
-   "newSha1": "a776a941eed696cea5efd2891606ce220aa68a2c",
+   "newSha1": "efdfe6fd82745cae71854f8f8b40585411062a8c",
    "data": 11729824
   },
   {
@@ -1009,7 +1009,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063200,
-   "newSha1": "621a74d5d6ffacd0549a8650bccafe760b129d58",
+   "newSha1": "2aefe250d28d0f40b25aa29dc1677c8d80bedd01",
    "data": 12793568
   },
   {
@@ -1017,7 +1017,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063200,
-   "newSha1": "0cabe0e0e177e07a98ceda218d0ec0ffe383d5d2",
+   "newSha1": "af2c75ec66419914404beacc3d7583d425177dd5",
    "data": 13856768
   },
   {
@@ -1025,7 +1025,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064176,
-   "newSha1": "8fe90bd8f5ce791d733ae888149aebcc66023151",
+   "newSha1": "1997eeed494ca5a15203016b5c3c455b48635467",
    "data": 14919968
   },
   {
@@ -1033,7 +1033,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064176,
-   "newSha1": "1f0ab7b21aa953c5091a73cf806ca0247af3fc22",
+   "newSha1": "71eda5867bad8bd88cc84be6e1484e25eda5dee9",
    "data": 15984144
   },
   {
@@ -1041,7 +1041,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065728,
-   "newSha1": "55c159d218cc314398e77fa8d6ed4820cd9ca88b",
+   "newSha1": "7c353addb2fff98f4e94e7e8d8a9527d99cb7b90",
    "data": 17048320
   },
   {
@@ -1049,7 +1049,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065728,
-   "newSha1": "e347f32b74430f7242ee8ada8d41c958cea690aa",
+   "newSha1": "961276ef6cd5bedaba06774693619445f3dea632",
    "data": 18114048
   },
   {
@@ -1057,7 +1057,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074928,
-   "newSha1": "54f631c4b96b0b323924d172803e311950f3a2d9",
+   "newSha1": "a52077eb15544045a3c4dff8567dd9aea6ff5028",
    "data": 19179776
   },
   {
@@ -1065,7 +1065,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074928,
-   "newSha1": "808e160259619885ee45fc7dd3b056e1a98e5aae",
+   "newSha1": "a01f8d113edec92daca863c765a775c3585279f8",
    "data": 20254704
   },
   {
@@ -1073,7 +1073,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073584,
-   "newSha1": "34bdbbd4cc7a89f495d21a6c647afc9e976ac723",
+   "newSha1": "7585d145a13ff35d4df258ae70e70072bd5ecc3f",
    "data": 21329632
   },
   {
@@ -1081,7 +1081,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073584,
-   "newSha1": "81ac1f8fe01c86d8dd9fbec188d747382171f2d6",
+   "newSha1": "6f85e6226b4f6b9cab7792d65ba23f0c626d752c",
    "data": 22403216
   },
   {
@@ -1089,7 +1089,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072784,
-   "newSha1": "e4846e61a360207287c18960faa2a9e2c3ee36f5",
+   "newSha1": "0b1c6364952f9d4a22f8e786f54cc5e93eb27a44",
    "data": 23476800
   },
   {
@@ -1097,7 +1097,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072848,
-   "newSha1": "5e231057d3b3836a692c7a3c6a581845c0f51155",
+   "newSha1": "7ce78e6a3fa8f5aaad293b369223e2bd856ff291",
    "data": 24549584
   },
   {
@@ -1105,7 +1105,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071488,
-   "newSha1": "22389f20c15f73cbae57a6abd6b98483b9d82c9c",
+   "newSha1": "6a4b75efb1e15cbc1d14747c6e3c0fce1b20ad8f",
    "data": 25622432
   },
   {
@@ -1113,7 +1113,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071488,
-   "newSha1": "3c7b8777d1e24b0e2a6561021b6d93948683150b",
+   "newSha1": "3077f635968a2b874dc13f4c37274ad717168f84",
    "data": 26693920
   },
   {
@@ -1121,7 +1121,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1070608,
-   "newSha1": "f44c53ce1ac190abff8d81e5dc59b64e53948bc5",
+   "newSha1": "a43474ca6a5aca5fd4acaa7a966a5db6597273ad",
    "data": 27765408
   },
   {
@@ -1129,7 +1129,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1070608,
-   "newSha1": "c08078bebfed61ede553246fbf7e7c6ce728bbdb",
+   "newSha1": "217d0d909839190fa22e37c6a102c69d0681a14b",
    "data": 28836016
   },
   {
@@ -1137,7 +1137,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1062368,
-   "newSha1": "5371d56376c9337ec193cf3cfc8dcbd1742a36b1",
+   "newSha1": "95f030c209027427d492151ef0cb5043849b19f6",
    "data": 29906624
   },
   {
@@ -1145,7 +1145,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1062368,
-   "newSha1": "8259cb8bfd851ca05a650049d375be263b184bd1",
+   "newSha1": "387bb2247d039bc3c614cdb98c28506517866f77",
    "data": 30968992
   },
   {
@@ -1153,7 +1153,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065488,
-   "newSha1": "79d510bafb3c0b62ff636b83ea4294809cf6d20f",
+   "newSha1": "73f734b869444a97008ec6e20736875cba62cbee",
    "data": 32031360
   },
   {
@@ -1161,7 +1161,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065488,
-   "newSha1": "35060018e38328c9bb3dc365d8e1379af56fbabd",
+   "newSha1": "5403f52a666dbadd7fdbd518f5bd3e8994940917",
    "data": 33096848
   },
   {
@@ -1169,7 +1169,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065536,
-   "newSha1": "2cdadc7b61b4c0cf49643375cc33f19a6cc3972d",
+   "newSha1": "66b43bc0ab943b287b4ca65caa420f83729c76ac",
    "data": 34162336
   },
   {
@@ -1177,7 +1177,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065472,
-   "newSha1": "d9f0e8daefbd1a4634bf301eedea9c688a850533",
+   "newSha1": "0f9ec6c15634519b746d248d6a0d6a7f0cf3b555",
    "data": 35227872
   },
   {
@@ -1185,7 +1185,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065424,
-   "newSha1": "b4591f2f23d346270a77370033fb067932d6346f",
+   "newSha1": "890e8c2798d240200f964c8d48b0ef4d232fbf03",
    "data": 36293344
   },
   {
@@ -1193,7 +1193,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065424,
-   "newSha1": "5eda77b32a65f238a490a67345e8a2f5e3369c50",
+   "newSha1": "e7eabe94fdf4e5c6abc8bd340f3401ad93dbde0e",
    "data": 37358768
   },
   {
@@ -1201,7 +1201,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064560,
-   "newSha1": "a27d26c8be11d83592dcd9e12e66a206aab24a6e",
+   "newSha1": "912af248401490ae21259730341e52f254db799f",
    "data": 38424192
   },
   {
@@ -1209,7 +1209,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064560,
-   "newSha1": "0d19bdec6f278d58b4f85645cb19bab37d87776e",
+   "newSha1": "64db5962d5c9ac600f7949f465092672aa7a7aa3",
    "data": 39488752
   },
   {
@@ -1217,7 +1217,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064560,
-   "newSha1": "07f943f0c245a55267a16c736da4e364a8d5c268",
+   "newSha1": "4e8a4b248585ab6339f7738afc0fb22acecb0d5c",
    "data": 40553312
   },
   {
@@ -1225,7 +1225,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064560,
-   "newSha1": "08174a90d1e29ef5aea90ff22bdc05700155a105",
+   "newSha1": "27aa778f437c4c974a04004a3041e2753d1572cc",
    "data": 41617872
   },
   {
@@ -1233,7 +1233,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064976,
-   "newSha1": "7f9ac651bd236618433fc213d6340a86be999b64",
+   "newSha1": "4f61980d92a49fa8f40b16dfc28c018b3145ccd2",
    "data": 42682432
   },
   {
@@ -1241,7 +1241,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064976,
-   "newSha1": "215564fe410fe1155086511a7cc2ccb4eb370d20",
+   "newSha1": "4f69260e011bbfe065606de4b7c5d03063243d37",
    "data": 43747408
   },
   {
@@ -1249,7 +1249,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064240,
-   "newSha1": "a558fb5fe0c80070dfe204bff058c6dea6a958f1",
+   "newSha1": "fd3a4305b5e94d41b106469f2dd295bc03a2e0f7",
    "data": 44812384
   },
   {
@@ -1257,7 +1257,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064240,
-   "newSha1": "e0dff2b18f2dcc2c057322d6551a5fd49b6268db",
+   "newSha1": "87b1e8157247bb7575a139d23442a08802ac4e82",
    "data": 45876624
   },
   {
@@ -1265,7 +1265,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1068448,
-   "newSha1": "3efab7d2ea187b2425f36667e1a6e802fd41758c",
+   "newSha1": "e6a45d08a79f825b9c34f0c40715e87c09c31351",
    "data": 46940864
   },
   {
@@ -1273,7 +1273,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1068448,
-   "newSha1": "52d43302140c5f6f3e3d9acf8ce597cbd1c30b2c",
+   "newSha1": "f580176f6d418eb2f5d06ce325df55bae9f46af7",
    "data": 48009312
   },
   {
@@ -1281,7 +1281,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065168,
-   "newSha1": "9fcafbfdb96e46ed8e7f67b55dace4359aede253",
+   "newSha1": "7c8394a1f74281ec398581f9ddf353f23460fd75",
    "data": 49077760
   },
   {
@@ -1289,7 +1289,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065168,
-   "newSha1": "9d452c2a9f3d78f0266b0cb837a7a214db16ce92",
+   "newSha1": "7e36c064015cf95820da39e1f3ea600fec625e27",
    "data": 50142928
   },
   {
@@ -1297,7 +1297,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1076080,
-   "newSha1": "09f749e7817aa47ec0ed30c76388db76868e84e7",
+   "newSha1": "801c3a970c36e2e232806edf9dbd15756f91e388",
    "data": 51208096
   },
   {
@@ -1305,7 +1305,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1075888,
-   "newSha1": "2e4cfdceb0da9b82a1bde75c57eff7a86c5a9d6c",
+   "newSha1": "7af71b8088a1eacee60f31f39723b4d052b0bfb6",
    "data": 52284176
   },
   {
@@ -1313,7 +1313,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065312,
-   "newSha1": "bce5eeaa81e9cfedf9ab1934857b6c387cdeb719",
+   "newSha1": "a5ff9286e725d63845a3d7e91c9fd03c4bbc4d73",
    "data": 53360064
   },
   {
@@ -1321,7 +1321,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065312,
-   "newSha1": "21fea776f84ae4c06afbf22c466d8637eb8eabcf",
+   "newSha1": "79faa3803b99eba273100c71a2ea1b1ec89d211d",
    "data": 54425376
   },
   {
@@ -1329,7 +1329,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1077232,
-   "newSha1": "1164751412b668f1dc5f6551470f420063873658",
+   "newSha1": "e7400e74aa39a532dfddeba537fc6ae0515bfe41",
    "data": 55490688
   },
   {
@@ -1337,7 +1337,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1076960,
-   "newSha1": "e264f9c0b233adcd5fd42a90edddbfd1141fd27c",
+   "newSha1": "3301aaa48df65819f4171b5eca011b520ccfc695",
    "data": 56567920
   },
   {
@@ -1345,7 +1345,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064496,
-   "newSha1": "64daa6418a49c013cb6ea41d59758a471cfca760",
+   "newSha1": "e81c6ec2d1adc30a3df753ceeafc388129f99f64",
    "data": 57644880
   },
   {
@@ -1353,7 +1353,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064368,
-   "newSha1": "7d2a1b6470d0c88afc50d36d2e458ad3cf8c5563",
+   "newSha1": "ef7b9d91dfe74ad0954303aa30549308edd63daf",
    "data": 58709376
   },
   {
@@ -1361,7 +1361,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064592,
-   "newSha1": "d1f472f1ba061901e8466b869a08bfb064a5c7a2",
+   "newSha1": "2e869347102a269df97f8a417dfe2896aed6b22c",
    "data": 59773744
   },
   {
@@ -1369,7 +1369,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1064592,
-   "newSha1": "483914ddc68595e6612e86a6faecb2f949a7f65b",
+   "newSha1": "11e129f8c0582664aa4f22054cf0c79bedbddcfa",
    "data": 60838336
   },
   {
@@ -1377,7 +1377,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065360,
-   "newSha1": "38e5dea4c7e16a48199706452fce07f1c0f662d6",
+   "newSha1": "c8247f420d58315ddaa9220a20edf114d5463be1",
    "data": 61902928
   },
   {
@@ -1385,7 +1385,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1065168,
-   "newSha1": "c943487ba0bb99b2ac6ef96a0c0a5459276aae00",
+   "newSha1": "82ecd7568d5e103980cda7c38e2dd7e53ce8c63b",
    "data": 62968288
   },
   {
@@ -1393,7 +1393,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063808,
-   "newSha1": "e847aed1d99e2bcf9a1b55d30a43b78ae4406cfc",
+   "newSha1": "d857b12b4c6a83d5e609098d6417bbaa8149f22e",
    "data": 64033456
   },
   {
@@ -1401,7 +1401,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063808,
-   "newSha1": "5373e62cf720494983110720cd507710023d0011",
+   "newSha1": "97638095c32baed173b8b6b31b902adf36ed2f44",
    "data": 65097264
   },
   {
@@ -1409,7 +1409,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073952,
-   "newSha1": "3b8e13661ae011e0fda3b63d43770dbff9f4f4a9",
+   "newSha1": "9b82b909d57cc5ae654ee368e7295f490ca27e06",
    "data": 66161072
   },
   {
@@ -1417,7 +1417,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074016,
-   "newSha1": "51b7d4654b43772fd0a9bcfdbab695a5e11bdcc0",
+   "newSha1": "fddf3942ae2afde91ed3893102b8115ae9a8cd81",
    "data": 67235024
   },
   {
@@ -1425,7 +1425,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072400,
-   "newSha1": "9bf721b48333218aca44b216f042dcbad740bb39",
+   "newSha1": "7553c134a14cc02ef78f52f7ca37dfeaff5b6ad5",
    "data": 68309040
   },
   {
@@ -1433,7 +1433,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072400,
-   "newSha1": "08a377bce3d0cc6adbf2cf0e507386666dfe597a",
+   "newSha1": "a9549b3d82a9de1639bc03bbcc224736b0d763b6",
    "data": 69381440
   },
   {
@@ -1441,7 +1441,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073808,
-   "newSha1": "de66b12327413bcdafac8401cc4578eff04520bd",
+   "newSha1": "5ad53ad52714e423ede679616bebe59415d19d5b",
    "data": 70453840
   },
   {
@@ -1449,7 +1449,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073808,
-   "newSha1": "5b07710748df629fe89ca9e08a8740d00e86158a",
+   "newSha1": "4b7598a33e063a1f9728af60343a6aab31bf629f",
    "data": 71527648
   },
   {
@@ -1457,7 +1457,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072928,
-   "newSha1": "fbd86635c1dae661a4ffd49b9b090f549b605242",
+   "newSha1": "bd8082c1edf144d39f8ebfa3a60affa1dd4d13c9",
    "data": 72601456
   },
   {
@@ -1465,7 +1465,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072928,
-   "newSha1": "248beebbb65107303f5880708fe6e31e7052f50a",
+   "newSha1": "656962ee6d1ca5caf953979b6c355db5eb0b31ca",
    "data": 73674384
   },
   {
@@ -1473,7 +1473,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073936,
-   "newSha1": "546d65e495685ead67d4520be90dd1f5bdcb672c",
+   "newSha1": "1d6a6fe4541313b3290023be480345baf15008ff",
    "data": 74747312
   },
   {
@@ -1481,7 +1481,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073936,
-   "newSha1": "8b1cec8aab6ba349398a94415baaa702d3f57e49",
+   "newSha1": "3e28811ade2a5c063711a7e724655d1a35be79bf",
    "data": 75821248
   },
   {
@@ -1489,7 +1489,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071808,
-   "newSha1": "82b2d444ab24b862b2132a99b45711406cea0b02",
+   "newSha1": "fc269d3c5706d9ad21884375821f102996f3363b",
    "data": 76895184
   },
   {
@@ -1497,7 +1497,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071808,
-   "newSha1": "b684de4184734562137e64055e0d457215bd9486",
+   "newSha1": "040cd70f0dece0f9b67abf77bac9c0aeefbba3af",
    "data": 77966992
   },
   {
@@ -1505,7 +1505,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074480,
-   "newSha1": "fccf27fc1ede730f73b31b58a2ae1b3ac9154885",
+   "newSha1": "07b429b0400932b17069b55034462825983a8038",
    "data": 79038800
   },
   {
@@ -1513,7 +1513,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074480,
-   "newSha1": "539b40b3a05ab14b76121159fc21d7d0b656fa83",
+   "newSha1": "7eade614311d61f1bf7ba0cab2b50c657a5bab6b",
    "data": 80113280
   },
   {
@@ -1521,7 +1521,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072272,
-   "newSha1": "1830e67b6c95a874a754817bd67ca54b1354f0f5",
+   "newSha1": "67b2de71f42ecbae380a82e18ebec57ae4eff4bd",
    "data": 81187760
   },
   {
@@ -1529,7 +1529,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1072272,
-   "newSha1": "951783fd082a573557873bbd23358ba40c5b952e",
+   "newSha1": "cc2a96f7751bb9de95dd9a4001008ca15ee32b93",
    "data": 82260032
   },
   {
@@ -1537,7 +1537,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073680,
-   "newSha1": "9832ffcefb311d21de875d8b23743ffcdaf3d977",
+   "newSha1": "7076d76da606a6cb44494da4bd764b4aca3511c1",
    "data": 83332304
   },
   {
@@ -1545,7 +1545,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073680,
-   "newSha1": "4cd279fb5f4d4a1440194c8e74cc77984e938996",
+   "newSha1": "f6c11e851971e10ee713e9488586784b09341aa3",
    "data": 84405984
   },
   {
@@ -1553,7 +1553,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073600,
-   "newSha1": "9219d8e9e8cd50939bc5792c0169881fbfcdd6f5",
+   "newSha1": "d69136d624f7948a46790fa00c2a79890ff17894",
    "data": 85479664
   },
   {
@@ -1561,7 +1561,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073600,
-   "newSha1": "5aafec0ac5e6372591c81a68389ba475a69d9795",
+   "newSha1": "2be91b9fee586569f1e21fc76a686e0aeb514865",
    "data": 86553264
   },
   {
@@ -1569,7 +1569,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074144,
-   "newSha1": "013e38da493430e0d8c5880cc4aff323431879b3",
+   "newSha1": "e5c39107859d3c56289abe8ff77bca52ca8aa8bb",
    "data": 87626864
   },
   {
@@ -1577,7 +1577,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074144,
-   "newSha1": "3d80dbef34a574b1d943ce9ab6e0e71c23af628f",
+   "newSha1": "6d0ee5339c32d848da2a27f4ee0c368f27d4fdd9",
    "data": 88701008
   },
   {
@@ -1585,7 +1585,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073664,
-   "newSha1": "2113f8d1cf3f217f141ef57448ccb61fd1a8b46f",
+   "newSha1": "9311353ef32ac93577b330f2427fa8df1d9c6567",
    "data": 89775152
   },
   {
@@ -1593,7 +1593,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073664,
-   "newSha1": "2e78837c143d8792c06932beacca98383073ab58",
+   "newSha1": "3cd3352f1805b4b9bb934505fd09f1c23bc84fd7",
    "data": 90848816
   },
   {
@@ -1601,7 +1601,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071984,
-   "newSha1": "b3a4699bef2d99505eb6e94fc1e29600760c9f74",
+   "newSha1": "c5a1dd00386b973d0651a031c3944c8b3e36ca53",
    "data": 91922480
   },
   {
@@ -1609,7 +1609,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071984,
-   "newSha1": "2a5fa9b92e235dbb679308593bd7b12a8dad2f14",
+   "newSha1": "19c84139094c3a65386a4af88319bbf6800f6165",
    "data": 92994464
   },
   {
@@ -1617,7 +1617,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074144,
-   "newSha1": "c46cf1fd75414f2c22102bd94444e0bf37fd4467",
+   "newSha1": "8c16db9fa4fbaf0a3eb61344b0e015f9b794a71a",
    "data": 94066448
   },
   {
@@ -1625,7 +1625,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074144,
-   "newSha1": "00e80020ac0094c27cefef9f1ad9000fa965beb2",
+   "newSha1": "e99bbfdeb4db5b1648bd745e7aefe00d6d418f98",
    "data": 95140592
   },
   {
@@ -1633,7 +1633,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074224,
-   "newSha1": "ea75a478687124bf8944df764315716f1bd76e85",
+   "newSha1": "4626ab8e5aaa42ef842cde68bfd1f051d06e6985",
    "data": 96214736
   },
   {
@@ -1641,7 +1641,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1074224,
-   "newSha1": "742c6c4aa7cfdd2523a9ffb5900cdc751465fa77",
+   "newSha1": "574eafa20c61f36da33f35137db2c7638d770fbb",
    "data": 97288960
   },
   {
@@ -1649,7 +1649,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073680,
-   "newSha1": "2436b790adcc0712c83079edefd6ec21a9364ac6",
+   "newSha1": "162aea6937ab69d214a17ada6a2eb4aa8cd9d096",
    "data": 98363184
   },
   {
@@ -1657,7 +1657,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1073760,
-   "newSha1": "4b2fef24441235b6a4fe29257239e30d91e04fba",
+   "newSha1": "f54a6af820b503fbbd78126d020da86af0c826a0",
    "data": 99436864
   },
   {
@@ -1665,7 +1665,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071552,
-   "newSha1": "c11e79156df3d2036d19ee7879f1e67ec4bfa81c",
+   "newSha1": "d91632e306c3120ae9ff52be269333890a5cdb12",
    "data": 100510624
   },
   {
@@ -1673,7 +1673,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1071552,
-   "newSha1": "f8b2a945b2e8c7619b0aa922ea38a558a872f6b2",
+   "newSha1": "ed37e01b1df67b87ac73ac8d89cdb72ca4b7fbc2",
    "data": 101582176
   },
   {
@@ -1689,7 +1689,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1062352,
-   "newSha1": "7fb3622b6d9dde3d1978b2475859e073a47ae7ea",
+   "newSha1": "060fd1d6b5b5d2cb23108f827afc64f4317be856",
    "data": 106861808
   },
   {
@@ -1697,7 +1697,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1062016,
-   "newSha1": "51bfbb1d47da79008bf2e35d5d0a1b52a0260a72",
+   "newSha1": "8cc340d0d7e4a43132910142b9d004213127bc19",
    "data": 107924160
   },
   {
@@ -1705,7 +1705,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1062016,
-   "newSha1": "e4401ade45a10267fcc4729603d4443fd168a9e1",
+   "newSha1": "95e6b178632a0bc8909f84da310000792d766bee",
    "data": 108986176
   },
   {
@@ -1713,7 +1713,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061840,
-   "newSha1": "8c32a2ac1f017dfa095d76e879e871ddac1f7740",
+   "newSha1": "ba4c3e10cada526b51fe656ae2fff14b04db77c5",
    "data": 110048192
   },
   {
@@ -1721,7 +1721,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061840,
-   "newSha1": "d016adcb8993d37dbac4a6e549105cdef998978e",
+   "newSha1": "e7810a391c75138d608f57781be3522302edd26c",
    "data": 111110032
   },
   {
@@ -1729,7 +1729,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061184,
-   "newSha1": "3c600746d19a582d1193110f89a2163b5d80a3c7",
+   "newSha1": "5875faac7cbdfc8da88ea67394adeecae160c8ce",
    "data": 112171872
   },
   {
@@ -1737,7 +1737,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061184,
-   "newSha1": "2d89338374baab0f16369c1c877132a07aab03dc",
+   "newSha1": "68b772b69bef5b7466640309d18954acd90bca45",
    "data": 113233056
   },
   {
@@ -1745,7 +1745,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063072,
-   "newSha1": "de721ccf03a6116e9908ce4f1e61a2be663e2752",
+   "newSha1": "08cafbaa5f56e62f6a87cb91f36d437e0623e90b",
    "data": 114294240
   },
   {
@@ -1753,7 +1753,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063072,
-   "newSha1": "aaa7eacea87ac35c8586167273b31bbdea903b2d",
+   "newSha1": "74faecf91eab309e29784e5b6db1aa373df0a75d",
    "data": 115357312
   },
   {
@@ -1761,7 +1761,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063424,
-   "newSha1": "f078550b5939126d1dd28089c60cbfb83fcd04a0",
+   "newSha1": "198fe40486d7ee0a9a37373197669fbae2e86ca0",
    "data": 116420384
   },
   {
@@ -1769,7 +1769,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1063424,
-   "newSha1": "9415130993a4f4708730a3e06e96d026ee67e2e8",
+   "newSha1": "5fab3ca570315c4c38cf620f69b0ba59ba10a79f",
    "data": 117483808
   },
   {
@@ -1777,7 +1777,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061984,
-   "newSha1": "141ba216431a374ac804f9b039f6d841f5a308cc",
+   "newSha1": "8be0de5776425d4b2ce03174c7f8e2ed55d9120d",
    "data": 118547232
   },
   {
@@ -1785,7 +1785,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061984,
-   "newSha1": "0bffad0bc39b0842266696f131bcd9a3c38eb56b",
+   "newSha1": "103f13a421cff3fcfaa382d070078b4f6b39eee3",
    "data": 119609216
   },
   {
@@ -1793,7 +1793,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061664,
-   "newSha1": "39cc5e00339a4050592a3c84a665af1da649e2b5",
+   "newSha1": "ad7d13ce5e943682670bf9c5c1da16ab4de15c1d",
    "data": 120671200
   },
   {
@@ -1801,7 +1801,7 @@
    "kind": "new",
    "group": "HD faces",
    "length": 1061664,
-   "newSha1": "b85da1db073301cd1420ea48ba8a9b1c5f91f9f1",
+   "newSha1": "5f16c5b8777445054b2e9fd0393004f816925dbf",
    "data": 121732864
   }
  ]

@@ -1,15 +1,15 @@
 {
- "version": "2026.11.18d",
- "published": "2026-11-18T16:34:54Z",
- "notes": "Mithra Timeless colour 1C is now Wheat Blonde, with softer hair ends on the cheeks.",
+ "version": "2026.11.27b",
+ "published": "2026-11-27T09:16:03Z",
+ "notes": "HD hair redrawn in strands on every race, clean HD eyebrows, Mithra faces without their own markings, smoother skin; recolour fixes.",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.18d/timeless_patches.json",
-  "sha1": "218fe780bbb4b2c89ebad5c5e15fda347f03751a",
+  "url": "https://timelessxi.gg/patches/2026.11.27b/timeless_patches.json",
+  "sha1": "0c6b97c46cd45b699d6d32c978302bc5027ce2de",
   "size": 817114
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.18d/timeless_patches.bin",
-  "sha1": "bb2d978aac0322c6285f04062972cd3baf0fc5b9",
+  "url": "https://timelessxi.gg/patches/2026.11.27b/timeless_patches.bin",
+  "sha1": "9b7bb4984e6b5598dc0a4c878f95f62932a03a94",
   "size": 27829130
  },
  "launcher": {
@@ -18,23 +18,23 @@
   "sha1": "b112df8a7fda8b4dac6ed65c604d809ae9676ce6",
   "size": 19070162
  },
+ "hd": {
+  "version": "hd-2026.11.27",
+  "json": {
+   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.27/timeless_patches.json",
+   "sha1": "7aa920d2bbda09d5852fdb100174d140b58e7f84",
+   "size": 44549
+  },
+  "bin": {
+   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.27/timeless_hd.bin.gz",
+   "sha1": "7c981d03f33b3ed8b752066067fadfcc21f90ad2",
+   "size": 35263653
+  }
+ },
  "setup": {
   "version": "1.15.0",
   "url": "https://timelessxi.gg/downloads/TimelessXI-Setup.exe",
   "sha1": "f65a8a5d454f5e8306fee2860e92cc8608e0dfd8",
   "size": 19456000
- },
- "hd": {
-  "version": "hd-2026.11.23",
-  "json": {
-   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.23/timeless_patches.json",
-   "sha1": "59657e357f422a52247deefcc9b553391d15414f",
-   "size": 44549
-  },
-  "bin": {
-   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.23/timeless_hd.bin.gz",
-   "sha1": "621eb986b0e490197235115db3dd3f7339263815",
-   "size": 41497450
-  }
  }
 }
