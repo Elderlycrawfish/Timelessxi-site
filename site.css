@@ -842,3 +842,13 @@ background:radial-gradient(ellipse 48% 30% at 50% 26%,rgba(40,52,74,.32),rgba(40
 .fpage{background:transparent}
 .fh-shade{background:linear-gradient(180deg,rgba(10,11,18,.2) 0%,rgba(10,11,18,0) 35%,rgba(10,11,18,.45) 80%,rgba(10,11,18,.55) 100%),linear-gradient(90deg,rgba(10,11,18,.65),rgba(10,11,18,0) 65%)}
 .fhero{border-bottom:0}
+/* YouTube, loaded on press */
+.ytlite{position:relative;aspect-ratio:16/9;cursor:pointer}
+.ytlite .yt-poster{filter:brightness(.6)}
+.yt-play{all:unset;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;color:var(--ice)}
+.yt-play:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+.yt-play:hover .playmark{background:rgba(143,178,230,.25);border-color:var(--ice)}
+.yt-title{font-family:var(--serif);font-size:clamp(26px,3vw,40px)}
+.yt-sub{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.ytlite iframe,.ytlb-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ytlb-box{position:relative;width:min(92vw,1280px);aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}
