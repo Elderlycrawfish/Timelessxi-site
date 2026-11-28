@@ -1,15 +1,15 @@
 {
- "version": "2026.11.27b",
- "published": "2026-11-27T09:16:03Z",
- "notes": "HD hair redrawn in strands on every race, clean HD eyebrows, Mithra faces without their own markings, smoother skin; recolour fixes.",
+ "version": "2026.11.28",
+ "published": "2026-11-28T06:19:11Z",
+ "notes": "Faces: neck, crown and forehead lines fixed, eyelids clear of hair colour, light hair in HD strands, Mithra ears and strip, two-tone by height, hair that didn't recolour",
  "json": {
-  "url": "https://timelessxi.gg/patches/2026.11.27b/timeless_patches.json",
-  "sha1": "0c6b97c46cd45b699d6d32c978302bc5027ce2de",
-  "size": 817114
+  "url": "https://timelessxi.gg/patches/2026.11.28/timeless_patches.json",
+  "sha1": "89fd0437e9988e3edf9b37f02c3799a75bd2040e",
+  "size": 817113
  },
  "bin": {
-  "url": "https://timelessxi.gg/patches/2026.11.27b/timeless_patches.bin",
-  "sha1": "9b7bb4984e6b5598dc0a4c878f95f62932a03a94",
+  "url": "https://timelessxi.gg/patches/2026.11.28/timeless_patches.bin",
+  "sha1": "a0e6b7e95d1043a456776705dd442b451fd49e4e",
   "size": 27829130
  },
  "launcher": {
@@ -19,16 +19,16 @@
   "size": 19070162
  },
  "hd": {
-  "version": "hd-2026.11.27",
+  "version": "hd-2026.11.28",
   "json": {
-   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.27/timeless_patches.json",
-   "sha1": "7aa920d2bbda09d5852fdb100174d140b58e7f84",
+   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.28/timeless_patches.json",
+   "sha1": "ee03d7609edeb94a51c677cbaed84814f2ecd87b",
    "size": 44549
   },
   "bin": {
-   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.27/timeless_hd.bin.gz",
-   "sha1": "7c981d03f33b3ed8b752066067fadfcc21f90ad2",
-   "size": 35263653
+   "url": "https://timelessxi.gg/patches/hd/hd-2026.11.28/timeless_hd.bin.gz",
+   "sha1": "a3a6964d83fffa52363df8ac6e7843621186fca6",
+   "size": 35784930
   }
  },
  "setup": {
